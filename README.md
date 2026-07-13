@@ -68,7 +68,6 @@ ViromeCity/
 │   ├── components/           ← body heatmap (interactive + small-multiples)
 │   └── assets/               ← css · img (Fivi) · data
 ├── data/                     ← source datasets + references
-│   ├── hvp_metadata.csv
 │   └── references.md
 └── planning/                 ← behind the scenes (All in prep)
     ├── overview.pptx          ← project deck
