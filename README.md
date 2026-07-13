@@ -69,9 +69,8 @@ ViromeCity/
 │   └── assets/               ← css · img (Fivi) · data
 ├── data/                     ← source datasets + references
 │   ├── hvp_metadata.csv
-│   ├── hvp_pipeline_recommendations.csv
 │   └── references.md
-└── planning/                 ← behind the scenes
+└── planning/                 ← behind the scenes (All in prep)
     ├── overview.pptx          ← project deck
     ├── skeleton.md            ← the annotated content skeleton
     └── decisions.md           ← the running decision log
