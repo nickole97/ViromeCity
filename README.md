@@ -36,7 +36,7 @@ live in.
 - **[What](https://nickole97.github.io/ViromeCity/sections/what.html)** — we define what a virus is: its anatomy, what it's
   made of, and the ways it can be categorized.
 - **[Why](https://nickole97.github.io/ViromeCity/sections/why.html)** — three to four short, comic‑style sections telling real,
-  historical stories of how studying viromes has shaped human health.
+  historical stories of how studying viromes has shaped human health. [IN PREP]
 - **[Where](https://nickole97.github.io/ViromeCity/sections/where.html)** — we start asking where viruses are found, and — especially
   in the human body — how the way we search for them changes depending on several factors.
 - **[How‑to](https://nickole97.github.io/ViromeCity/sections/how-to.html)** — finally, which of everything you just learned you
