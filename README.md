@@ -26,14 +26,70 @@ Before running a virome analysis, it helps to have a few things clear — and th
 this guide gives you: the foundations you need to start thinking about the viral world we
 live in.
  
-- **[What](docs/sections/what.html)** — we define what a virus is: its anatomy, what it's
+ **[What](https://nickole97.github.io/ViromeCity/sections/what.html)** — we define what a virus is: its anatomy, what it's
   made of, and the ways it can be categorized.
-- **[Why](docs/sections/why.html)** — three to four short, comic‑style sections telling real,
+- **[Why](https://nickole97.github.io/ViromeCity/sections/why.html)** — three to four short, comic‑style sections telling real,
   historical stories of how studying viromes has shaped human health.
-- **[Where](docs/sections/where.html)** — we start asking where viruses are found, and — especially
+- **[Where](https://nickole97.github.io/ViromeCity/sections/where.html)** — we start asking where viruses are found, and — especially
   in the human body — how the way we search for them changes depending on several factors.
-- **[How‑to](docs/sections/how-to.html)** — finally, which of everything you just learned you
+- **[How‑to](https://nickole97.github.io/ViromeCity/sections/how-to.html)** — finally, which of everything you just learned you
   need to account for when designing your experiment, from sampling all the way to the
   bioinformatic analysis.
-> ℹ️ Chapter links open the rendered pages once **GitHub Pages** is enabled. Until then,
-> GitHub shows the HTML source.
+
+## 🗺️ Sections & status
+ 
+| Section | What's in it | Status |
+|---|---|---|
+| ① Welcome | Importance of the virome + the What/Why/Where framing | ⬜ Pending |
+| ①a What | What a virus is · anatomy of a virion · morphologies · **3 classification axes** | ✅ Draft |
+| ② Why | Human evolution · Ecological · Medical · Life itself | ⬜ Pending |
+| ③ Where | Everywhere but tiny → shotgun → composition → body heatmap → the noise problem | ✅ Draft |
+| ④ How‑to | Convert (RT) · enrich (VLP) · platform · bioinformatics → decision tree | ✅ Draft |
+| Wizard | "Fivi's Kitchen" → tailored recipe → future API/AI | 🧪 Prototype |
+ 
+**The three classification axes** (inside What): **Host** · **Gene content** · **State/lifestyle**.
+ 
+---
+ 
+## 📂 Repository layout
+ 
+```
+ViromeCity/
+├── README.md                 ← you are here
+├── docs/                     ← the published book (GitHub Pages)
+│   ├── sections/             ← what / where / how-to (.html)
+│   ├── components/           ← body heatmap (interactive + small-multiples)
+│   └── assets/               ← css · img (Fivi) · data
+├── data/                     ← source datasets + references
+│   ├── hvp_metadata.csv
+│   ├── hvp_pipeline_recommendations.csv
+│   └── references.md
+└── planning/                 ← behind the scenes
+    ├── overview.pptx          ← project deck
+    ├── skeleton.md            ← the annotated content skeleton
+    └── decisions.md           ← the running decision log
+```
+ 
+---
+ 
+## 🔬 A note on the data
+ 
+The `hvp_metadata.csv` viral/host fractions are **literature estimates**, not direct
+Human Virome Program measurements. They are meant for **planning intuition**, not as
+exact figures. See `data/references.md` for sources.
+ 
+---
+ 
+## 🎨 Design status
+ 
+Content first, design later — on purpose. The **Virome City** visual identity
+(watercolor / city‑street motif, cover, palette) is deferred to the end so the design
+serves finished content instead of forcing it.
+ 
+---
+ 
+## 🚀 Viewing locally
+ 
+Every section is a self‑contained HTML file — just open it in a browser.
+Once published via GitHub Pages, the book will live at
+`https://nickole97.github.io/ViromeCity/`.
