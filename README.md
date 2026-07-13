@@ -26,7 +26,7 @@ Before running a virome analysis, it helps to have a few things clear — and th
 this guide gives you: the foundations you need to start thinking about the viral world we
 live in.
  
- **[What](https://nickole97.github.io/ViromeCity/sections/what.html)** — we define what a virus is: its anatomy, what it's
+- **[What](https://nickole97.github.io/ViromeCity/sections/what.html)** — we define what a virus is: its anatomy, what it's
   made of, and the ways it can be categorized.
 - **[Why](https://nickole97.github.io/ViromeCity/sections/why.html)** — three to four short, comic‑style sections telling real,
   historical stories of how studying viromes has shaped human health.
