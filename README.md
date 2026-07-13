@@ -77,14 +77,6 @@ ViromeCity/
  
 ---
  
-## 🔬 A note on the data
- 
-The `hvp_metadata.csv` viral/host fractions are **literature estimates**, not direct
-Human Virome Program measurements. They are meant for **planning intuition**, not as
-exact figures. See `data/references.md` for sources.
- 
----
- 
 ## 🎨 Design status
  
 Content first, design later — on purpose. The **Virome City** visual identity
