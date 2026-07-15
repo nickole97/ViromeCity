@@ -51,11 +51,9 @@ turns all of that into a recipe: pick your sample, your target and your experien
 cooks a method plan for your exact case — including the times when the honest answer is
 *"you don't need metagenomics at all."*
  
-<a href="https://nickole97.github.io/ViromeCity/kitchen/">
-  <img src="docs/assets/img/fivi-kitchen-hero.png" width="300" alt="Fivi's Kitchen — open the wizard"/>
-</a>
-> 🍳 **[Open Fivi's Kitchen →](https://nickole97.github.io/ViromeCity/kitchen/)**
-
+[<img src="docs/assets/img/fivi-kitchen-hero.png" width="300" alt="Fivi's Kitchen — open the wizard"/>](https://nickole97.github.io/ViromeCity/kitchen/)
+ 
+🍳 **[Open Fivi's Kitchen →](https://nickole97.github.io/ViromeCity/kitchen/)**
 
 ## 🗺️ Sections & status
  
