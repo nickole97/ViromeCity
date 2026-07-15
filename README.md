@@ -4,7 +4,7 @@
 This is a repository of the creation of an illustrated, interactive tool (book/website) guide that walks a researcher from a human‑virome
 sample **idea**, to all the following challenges, to the analysis.
 
-<img src="docs/assets/img/Fivi.png" align="right" width="120" hspace="60" alt="Fivi, the bacteriophage mascot"/>
+<img src="docs/assets/img/Fivi.png" align="right" width="120" hspace="200" alt="Fivi, the bacteriophage mascot"/>
 
 
 > Built for a **mixed audience** — PhD/postdoc experts *and* beginning students.<br/>
