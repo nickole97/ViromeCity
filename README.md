@@ -42,6 +42,20 @@ live in.
 - **[How‑to](https://nickole97.github.io/ViromeCity/sections/how-to.html)** — finally, which of everything you just learned you
   need to account for when designing your experiment, from sampling all the way to the
   bioinformatic analysis.
+  
+## 🍳 Then the tool — Fivi's Kitchen
+
+After all the context, you should know *what* a virus is, *why* it matters, *where* it hides, and
+*how* the methods work. **[Fivi's Kitchen](https://nickole97.github.io/ViromeCity/kitchen/)**
+turns all of that into a recipe: pick your sample, your target and your experience, and Fivi
+cooks a method plan for your exact case — including the times when the honest answer is
+*"you don't need metagenomics at all."*
+ 
+<a href="https://nickole97.github.io/ViromeCity/kitchen/">
+  <img src="docs/assets/img/fivi-kitchen-hero.png" width="300" alt="Fivi's Kitchen — open the wizard"/>
+</a>
+> 🍳 **[Open Fivi's Kitchen →](https://nickole97.github.io/ViromeCity/kitchen/)**
+
 
 ## 🗺️ Sections & status
  
