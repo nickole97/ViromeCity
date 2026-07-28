@@ -1,0 +1,10 @@
+---
+title: "Where viruses hide"
+subtitle: "Everywhere, but tiny."
+---
+
+::: {.callout-note appearance="simple"}
+This chapter has not been migrated yet. The current draft lives in the old site.
+:::
+
+Shotgun sequencing, composition across the body, the body heatmap, and the noise problem.

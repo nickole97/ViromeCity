@@ -1,0 +1,10 @@
+---
+title: "Why the virome matters"
+subtitle: "Four short stories, told as comics."
+---
+
+::: {.callout-note appearance="simple"}
+This chapter has not been migrated yet. The current draft lives in the old site.
+:::
+
+Human evolution, ecology, medicine, and life itself — real cases where studying viromes changed what we do.

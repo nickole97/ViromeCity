@@ -1,0 +1,56 @@
+project:
+  type: book
+  output-dir: docs
+  resources:
+    - kitchen/
+    - components/
+    # kitchen/ builds image paths in JS (`${IMG}${...}.png`), which Quarto cannot
+    # discover by static analysis. Ship the whole folder or those images 404.
+    - assets/img/
+    # GitHub Pages skips folders starting with "_" (e.g. site_libs) without this.
+    # Declared as a resource so `quarto render` recreates it on every build.
+    - .nojekyll
+
+book:
+  title: "Virome City"
+  subtitle: "Adventures in the human virome"
+  author: "Nickole"
+  site-url: https://nickole97.github.io/ViromeCity/
+  repo-url: https://github.com/nickole97/ViromeCity/
+  repo-branch: main
+  repo-actions: [edit, issue]
+  search: true
+  page-navigation: true
+  sidebar:
+    style: docked
+    collapse-level: 2
+  chapters:
+    - index.qmd
+    - part: "The four questions"
+      chapters:
+        - sections/what.qmd
+        - sections/why.qmd
+        - sections/where.qmd
+        - sections/how-to.qmd
+    - part: "Then the tool"
+      chapters:
+        - sections/kitchen.qmd
+  appendices:
+    - sections/references.qmd
+  page-footer:
+    left: "Virome City — a guide to your first human virome."
+    right: "Built with [Quarto](https://quarto.org)."
+
+lang: en
+
+format:
+  html:
+    theme:
+      - cosmo
+      - assets/styles.scss
+    toc: true
+    toc-title: "On this page"
+    toc-depth: 3
+    number-sections: false
+    link-external-newwindow: true
+    fig-cap-location: bottom

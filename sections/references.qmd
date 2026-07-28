@@ -1,0 +1,10 @@
+---
+title: "References"
+subtitle: "Sources, datasets and further reading."
+---
+
+::: {.callout-note appearance="simple"}
+This chapter has not been migrated yet. The current draft lives in the old site.
+:::
+
+Everything cited across the book, plus the datasets behind the figures.

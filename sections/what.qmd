@@ -1,0 +1,10 @@
+---
+title: "What is a virus?"
+subtitle: "The smallest thing you'll spend this whole guide chasing."
+---
+
+::: {.callout-note appearance="simple"}
+This chapter has not been migrated yet. The current draft lives in the old site.
+:::
+
+Anatomy of a virion, the parts, the morphologies, and the three classification axes: host, gene content, state.

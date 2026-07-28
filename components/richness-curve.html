@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viral richness across the lifespan</title>
+<style>
+ :root{ --paper:#FBF9F4; --ink:#20201C; --muted:#6E6C63; --line:#E4E1D8; --surface:#FFFFFF; --accent:#0F6E56;
+   --purple:#7F77DD; --coral:#E88A3C; --star:#D99A00;
+   --sans:"Spline Sans",ui-sans-serif,system-ui,sans-serif; --display:"Fraunces",Georgia,serif; --mono:ui-monospace,monospace; }
+ @media (prefers-color-scheme: dark){ :root{ --paper:#17181A; --ink:#ECEAE3; --muted:#9B998F; --line:#33342F; --surface:#1F2022; --accent:#3FB08C; --purple:#A7A0F0; --coral:#F0A45C; --star:#E7B93B; } }
+ *{box-sizing:border-box}
+ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;display:flex;justify-content:center;padding:30px 18px}
+ .doc{width:100%;max-width:760px}
+ .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin:0 0 8px}
+ h2{font-family:var(--display);font-weight:600;font-size:26px;line-height:1.15;margin:0 0 6px;letter-spacing:-.01em}
+ .dek{font-size:14.5px;color:var(--muted);margin:0 0 18px}
+ .card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:18px 14px 12px}
+ .legend{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin:2px 0 6px;font-size:12.5px}
+ .legend span{display:inline-flex;align-items:center;gap:7px;color:var(--ink)}
+ .swatch{width:22px;height:0;border-top-width:3px;border-top-style:solid;display:inline-block}
+ svg{display:block;width:100%;height:auto}
+ .axis-line{stroke:var(--line);stroke-width:1.5}
+ .grid{stroke:var(--line);stroke-width:1;stroke-dasharray:3 4;opacity:.7}
+ .xlab{font-family:var(--sans);font-size:12.5px;font-weight:600;fill:var(--ink)}
+ .xsub{font-family:var(--mono);font-size:10px;fill:var(--muted)}
+ .ylab{font-family:var(--mono);font-size:11px;fill:var(--muted)}
+ .anno{font-family:var(--sans);font-size:11px;fill:var(--muted);font-style:italic}
+ .star{font-size:18px;fill:var(--star)}
+ .starnum{font-family:var(--mono);font-size:10px;font-weight:700;fill:var(--star)}
+ .notes{margin:14px 2px 2px;border-top:1px solid var(--line);padding-top:12px}
+ .notes h3{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 9px}
+ .notes ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+ .notes li{display:flex;gap:9px;font-size:12.5px;line-height:1.45}
+ .notes .st{color:var(--star);font-weight:700;flex:0 0 auto;font-family:var(--mono)}
+ .cap{font-size:12px;color:var(--muted);line-height:1.5;margin:12px 2px 4px;border-top:1px solid var(--line);padding-top:10px}
+</style></head><body>
+<div class="doc">
+ <p class="eyebrow">Virome × age</p>
+ <h2>Viral richness across the human lifespan</h2>
+ <p class="dek">How many kinds of virus live in the gut — with a few genuinely odd moments marked ✦.</p>
+
+ <div class="card">
+   <div class="legend">
+     <span><i class="swatch" style="border-top-color:var(--accent);border-top-width:4px"></i> Total viral richness</span>
+     <span><i class="swatch" style="border-top-color:var(--purple);border-top-style:dashed"></i> crAss-like phages</span>
+     <span><i class="swatch" style="border-top-color:var(--coral);border-top-style:dashed"></i> Eukaryotic viruses</span>
+   </div>
+
+   <svg viewBox="0 0 760 470" role="img" aria-label="Line chart of gut viral richness across life, with five starred findings.">
+     <text x="20" y="220" class="ylab" transform="rotate(-90 20 220)" text-anchor="middle">relative level (schematic, not to scale)</text>
+     <line class="grid" x1="70" y1="60"  x2="730" y2="60"/>
+     <line class="grid" x1="70" y1="140" x2="730" y2="140"/>
+     <line class="grid" x1="70" y1="220" x2="730" y2="220"/>
+     <line class="grid" x1="70" y1="300" x2="730" y2="300"/>
+     <line class="axis-line" x1="70" y1="60" x2="70" y2="380"/>
+     <line class="axis-line" x1="70" y1="380" x2="730" y2="380"/>
+     <text x="64" y="66" class="ylab" text-anchor="end">high</text>
+     <text x="64" y="384" class="ylab" text-anchor="end">low</text>
+
+     <polyline fill="none" stroke="var(--coral)" stroke-width="2.4" stroke-dasharray="6 5" stroke-linecap="round" stroke-linejoin="round"
+       points="70,348 235,156 400,246 565,278 730,274"/>
+     <polyline fill="none" stroke="var(--purple)" stroke-width="2.4" stroke-dasharray="6 5" stroke-linecap="round" stroke-linejoin="round"
+       points="70,364 235,316 400,252 565,172 730,124"/>
+     <polyline fill="none" stroke="var(--accent)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"
+       points="70,364 235,150 400,220 565,60 730,188"/>
+     <g fill="var(--accent)" stroke="var(--surface)" stroke-width="2">
+       <circle cx="70" cy="364" r="5.5"/><circle cx="235" cy="150" r="5.5"/><circle cx="400" cy="220" r="5.5"/><circle cx="565" cy="60" r="6.5"/><circle cx="730" cy="188" r="5.5"/>
+     </g>
+
+     <text x="565" y="46" class="anno" text-anchor="middle">peak</text>
+
+     <g>
+       <text x="72"  y="352" class="star" text-anchor="middle">&#10022;</text><text x="83" y="347" class="starnum">1</text>
+       <text x="126" y="278" class="star" text-anchor="middle">&#10022;</text><text x="137" y="273" class="starnum">2</text>
+       <text x="182" y="206" class="star" text-anchor="middle">&#10022;</text><text x="193" y="201" class="starnum">3</text>
+       <text x="246" y="134" class="star" text-anchor="middle">&#10022;</text><text x="257" y="129" class="starnum">4</text>
+       <text x="712" y="176" class="star" text-anchor="middle">&#10022;</text><text x="723" y="171" class="starnum">5</text>
+     </g>
+
+     <g text-anchor="middle">
+       <text x="70"  y="404" class="xlab">Birth</text>
+       <text x="235" y="404" class="xlab">Infancy</text><text x="235" y="420" class="xsub">0&#8211;3 yr</text>
+       <text x="400" y="404" class="xlab">Childhood</text><text x="400" y="420" class="xsub">3&#8211;18 yr</text>
+       <text x="565" y="404" class="xlab">Adulthood</text><text x="565" y="420" class="xsub">18&#8211;65 yr</text>
+       <text x="730" y="404" class="xlab">Elderly</text><text x="730" y="420" class="xsub">65+ yr</text>
+     </g>
+   </svg>
+
+   <div class="notes">
+     <h3>&#10022; odd &amp; interesting moments</h3>
+     <ul>
+       <li><span class="st">&#10022;1</span><span><b>At birth &#8212; nearly virus-free.</b> The newborn gut starts almost empty; particles reach ~10&#8319;/g within a month.</span></li>
+       <li><span class="st">&#10022;2</span><span><b>~1 month &#8212; viruses from within.</b> The first wave isn't caught from outside &#8212; they're <b>prophages induced from the baby's own pioneer bacteria</b>.</span></li>
+       <li><span class="st">&#10022;3</span><span><b>~4 months &#8212; milk shapes the virome.</b> Viruses that infect human cells appear, and <b>breastfeeding</b> modulates which ones take hold.</span></li>
+       <li><span class="st">&#10022;4</span><span><b>Infancy &#8212; a virus that mirrors immunity.</b> <b>Anelloviruses (TTV)</b> dominate, tracking an immature immune system, then fall as immunity matures.</span></li>
+       <li><span class="st">&#10022;5</span><span><b>Old age &#8212; the sleepers wake.</b> <b>Latent viruses reactivate</b>, and virome shifts have been linked to cognitive decline.</span></li>
+     </ul>
+   </div>
+
+   <p class="cap"><b>Reading the lines:</b> total richness climbs through infancy, dips in childhood, peaks in adulthood, then falls in old age. Underneath, <span style="color:var(--coral)">eukaryotic viruses</span> are high in infancy then settle low, while <span style="color:var(--purple)">crAss-like phages</span> keep climbing with age. Shape is schematic &#8212; from Gregory et al. 2020 (<i>Cell Host &amp; Microbe</i>), Liang et al. 2020 (<i>Nature</i>) and Lim et al. 2015 (<i>Nat. Medicine</i>) &#8212; not exact values.</p>
+ </div>
+</div>
+</body></html>

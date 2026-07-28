@@ -1,0 +1,10 @@
+---
+title: "How to design the experiment"
+subtitle: "From your sample to your pipeline."
+---
+
+::: {.callout-note appearance="simple"}
+This chapter has not been migrated yet. The current draft lives in the old site.
+:::
+
+Convert (RT), enrich (VLP), pick a platform, then the bioinformatics — ending in the decision tree.

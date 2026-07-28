@@ -1,0 +1,13 @@
+---
+title: "Fivi's Kitchen"
+subtitle: "The wizard that turns the four questions into a recipe."
+---
+
+::: {.callout-note appearance="simple"}
+This chapter has not been migrated yet. The current draft lives in the old site.
+:::
+
+Pick your sample, your target and your experience. Fivi cooks a method plan for your exact case.
+
+[Open Fivi's Kitchen &rarr;](../kitchen/index.html){.btn .btn-primary}
+
