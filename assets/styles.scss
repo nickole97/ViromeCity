@@ -80,7 +80,14 @@ main.content { max-width: 46rem; }
 
 // Beats are real h2 headings so they appear in the page's table of contents,
 // but they read as small labels rather than section titles.
-.beat, h2.beat {
+//
+// `:not(section)` is load-bearing. Pandoc copies a heading's classes onto the
+// <section> it wraps it in, so `## Title {.beat}` yields BOTH <section
+// class="beat"> and <h2 class="beat">. Styling the bare `.beat` therefore hits
+// the section, and text-transform / font-size / letter-spacing are inherited —
+// so every paragraph, card and link inside the section turns uppercase and
+// tiny. Keep the section excluded.
+.beat:not(section) {
   font-family: var(--sans) !important;
   font-size: .65rem !important;
   font-weight: 500;
@@ -94,8 +101,17 @@ main.content { max-width: 46rem; }
   line-height: 1.4;
 }
 
-// A single-author book doesn't need a byline on every page.
-.quarto-title-meta { display: none; }
+// A single-author book doesn't need a byline on every page. The author stays in
+// the metadata (<meta name="author">, search index); only the visible block goes.
+//
+// The second selector matches Quarto's own, which sets `display: grid` at
+// specificity (1,3,0). A bare `.quarto-title-meta` is (0,1,0) and loses no
+// matter how late it lands in the bundle. The bare one is kept as the fallback
+// for title blocks that aren't `.default`.
+.quarto-title-meta,
+#title-block-header.quarto-title-block.default .quarto-title-meta {
+  display: none;
+}
 
 .dek { color: var(--muted); font-size: 1.05rem; }
 
