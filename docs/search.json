@@ -4,7 +4,37 @@
     "href": "index.html",
     "title": "Virome City",
     "section": "",
-    "text": "Hi — I’m Fivi, a bacteriophage.\nI’ll walk you through your first virome. Four questions, then we cook.\nBuilt for a mixed audience: researchers who want the technical detail, and students meeting the virome for the first time.\n\n\nHuman viromes are tiny, noisy, and sample-dependent. Small early choices — which sample, which enrichment, DNA or RNA, which pipeline — quietly decide what you can see at the end.\nThis guide makes those choices legible.\nThe route\nFour questions, in order — then the tool that turns your answers into a method.\n\n\nWhat ### What is a virus? Its anatomy, what it’s made of, and the three axes we use to classify it: host, gene content, and state.\nWhy ### Why the virome matters Short comic-style stories of how studying viromes has shaped human health — evolution, ecology, medicine.\nWhere ### Where viruses hide Everywhere, but tiny. How the way you search changes across the body — and where the noise comes from.\nHow-to ### How to design the experiment Convert, enrich, sequence, analyze. What all of the above means for your protocol, from sampling to bioinformatics.\nThen the tool ### Fivi’s Kitchen Pick your sample, your target and your experience. Fivi cooks a method plan for your exact case — including the times when the honest answer is “you don’t need metagenomics at all.”\n\n\nHow to read this\nThe chapters build on each other, so the first time through, read them in order. After that, the sidebar and the search box are there for looking things up.\nEach page ends with a link to the next one. If you only have ten minutes and a sample in the freezer, skip to Fivi’s Kitchen — it will tell you what you still need to go back and read.\nStatus\nContent first, design later — on purpose. The Virome City visual identity (watercolor, city-street motif, cover) is deferred until the writing is done, so that the design serves finished content instead of forcing it.\n\n\n\n\n\n\n\nChapter\nStatus\n\n\n\n\nWhat\nDraft\n\n\nWhy\nIn preparation\n\n\nWhere\nDraft\n\n\nHow-to\nDraft\n\n\nFivi’s Kitchen\nLive",
+    "text": "The route\nHuman viromes are tiny, noisy, and sample-dependent. Small early choices — which sample, which enrichment, DNA or RNA, which pipeline — quietly decide what you can see at the end.\nThis guide makes those choices legible.\nFour questions, in order — then the tool that turns your answers into a method.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Virome City</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#the-route",
+    "href": "index.html#the-route",
+    "title": "Virome City",
+    "section": "",
+    "text": "What What is a virus?\nIts anatomy, what it’s made of, and the three axes we use to classify it: host, gene content, and state.\n\n\nWhy Why the virome matters\nShort comic-style stories of how studying viromes has shaped human health — evolution, ecology, medicine.\n\n\nWhere Where viruses hide\nEverywhere, but tiny. How the way you search changes across the body — and where the noise comes from.\n\n\nHow-to How to design the experiment\nConvert, enrich, sequence, analyze. What all of the above means for your protocol, from sampling to bioinformatics.\n\n\nThen the tool Fivi’s Kitchen\nPick your sample, your target and your experience. Fivi cooks a method plan for your exact case — including the times when the honest answer is “you don’t need metagenomics at all.”",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Virome City</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#how-to-read-this",
+    "href": "index.html#how-to-read-this",
+    "title": "Virome City",
+    "section": "How to read this",
+    "text": "How to read this\nThe chapters build on each other, so the first time through, read them in order. After that, the sidebar and the search box are there for looking things up.\nEach page ends with a link to the next one. If you only have ten minutes and a sample in the freezer, skip to Fivi’s Kitchen — it will tell you what you still need to go back and read.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Virome City</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#status",
+    "href": "index.html#status",
+    "title": "Virome City",
+    "section": "Status",
+    "text": "Status\nContent first, design later — on purpose. The Virome City visual identity (watercolor, city-street motif, cover) is deferred until the writing is done, so that the design serves finished content instead of forcing it.\n\n\n\n\n\n\n\nChapter\nStatus\n\n\n\n\nWhat\nDraft\n\n\nWhy\nIn preparation\n\n\nWhere\nDraft\n\n\nHow-to\nDraft\n\n\nFivi’s Kitchen\nLive",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Virome City</span>"
     ]

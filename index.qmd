@@ -1,7 +1,6 @@
 ---
 title: "Virome City"
 subtitle: "A guide to navigate & analyze your first human virome — and not get lost trying."
-toc: false
 ---
 
 ::: hero
@@ -23,39 +22,56 @@ see at the end.
 
 This guide makes those choices **legible**.
 
-[The route]{.beat}
+## The route {.beat}
 
 Four questions, in order — then the tool that turns your answers into a method.
 
 ::: route
-- [What]{.q}
-  ### [What is a virus?](sections/what.qmd)
-  Its anatomy, what it's made of, and the three axes we use to classify it:
-  host, gene content, and state.
 
-- [Why]{.q}
-  ### [Why the virome matters](sections/why.qmd)
-  Short comic-style stories of how studying viromes has shaped human health —
-  evolution, ecology, medicine.
+::: stop
+[What]{.q}
+[What is a virus?](sections/what.qmd){.stop-title}
 
-- [Where]{.q}
-  ### [Where viruses hide](sections/where.qmd)
-  Everywhere, but tiny. How the way you search changes across the body — and
-  where the noise comes from.
-
-- [How-to]{.q}
-  ### [How to design the experiment](sections/how-to.qmd)
-  Convert, enrich, sequence, analyze. What all of the above means for your
-  protocol, from sampling to bioinformatics.
-
-- [Then the tool]{.q}
-  ### [Fivi's Kitchen](sections/kitchen.qmd)
-  Pick your sample, your target and your experience. Fivi cooks a method plan for
-  your exact case — including the times when the honest answer is
-  *"you don't need metagenomics at all."*
+Its anatomy, what it's made of, and the three axes we use to classify it: host,
+gene content, and state.
 :::
 
-[How to read this]{.beat}
+::: {.stop .pending}
+[Why]{.q}
+[Why the virome matters](sections/why.qmd){.stop-title}
+
+Short comic-style stories of how studying viromes has shaped human health —
+evolution, ecology, medicine.
+:::
+
+::: stop
+[Where]{.q}
+[Where viruses hide](sections/where.qmd){.stop-title}
+
+Everywhere, but tiny. How the way you search changes across the body — and where
+the noise comes from.
+:::
+
+::: stop
+[How-to]{.q}
+[How to design the experiment](sections/how-to.qmd){.stop-title}
+
+Convert, enrich, sequence, analyze. What all of the above means for your protocol,
+from sampling to bioinformatics.
+:::
+
+::: stop
+[Then the tool]{.q}
+[Fivi's Kitchen](sections/kitchen.qmd){.stop-title}
+
+Pick your sample, your target and your experience. Fivi cooks a method plan for
+your exact case — including the times when the honest answer is *"you don't need
+metagenomics at all."*
+:::
+
+:::
+
+## How to read this {.beat}
 
 The chapters build on each other, so the first time through, read them in order.
 After that, the sidebar and the search box are there for looking things up.
@@ -64,7 +80,7 @@ Each page ends with a link to the next one. If you only have ten minutes and a
 sample in the freezer, skip to [Fivi's Kitchen](sections/kitchen.qmd) — it will
 tell you what you still need to go back and read.
 
-[Status]{.beat}
+## Status {.beat}
 
 Content first, design later — on purpose. The Virome City visual identity
 (watercolor, city-street motif, cover) is deferred until the writing is done, so

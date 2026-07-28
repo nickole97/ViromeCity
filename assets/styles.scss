@@ -20,8 +20,6 @@ $toc-color: #63656E !default;
 
 /*-- scss:rules --*/
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Spline+Sans:wght@400;500;600&display=swap');
-
 :root {
   // --- page layer: the quiet one ---
   --paper:       #FFFFFF;
@@ -80,17 +78,24 @@ main.content { max-width: 46rem; }
   margin-bottom: .6em;
 }
 
-.beat {
-  font-family: var(--sans);
-  font-size: .65rem;
+// Beats are real h2 headings so they appear in the page's table of contents,
+// but they read as small labels rather than section titles.
+.beat, h2.beat {
+  font-family: var(--sans) !important;
+  font-size: .65rem !important;
+  font-weight: 500;
   letter-spacing: .07em;
   text-transform: uppercase;
   color: var(--muted);
   border-top: 1px solid var(--line);
   padding-top: .7em;
-  margin-top: 2.6em;
-  margin-bottom: .2em;
+  margin-top: 2.8em;
+  margin-bottom: .8em;
+  line-height: 1.4;
 }
+
+// A single-author book doesn't need a byline on every page.
+.quarto-title-meta { display: none; }
 
 .dek { color: var(--muted); font-size: 1.05rem; }
 
@@ -198,55 +203,75 @@ a.card-plain {
 }
 
 // ---------- the route: the book's spine, used on the cover ----------
+// Built from explicit .stop divs, not a markdown list — list markup fights
+// Bootstrap and swallows the headings.
 .route {
-  list-style: none;
-  padding-left: 1.9rem;
-  margin: 0;
   position: relative;
+  padding-left: 34px;
+  margin: 0 0 1em;
 
   &::before {
     content: "";
     position: absolute;
-    left: .42rem;
-    top: 1.2rem;
-    bottom: 2.6rem;
+    left: 7px;
+    top: 26px;
+    bottom: 26px;
     width: 2px;
     background: var(--line);
   }
+}
 
-  li {
-    position: relative;
-    margin-bottom: .7rem;
+.stop {
+  position: relative;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: .95rem 1.15rem 1.05rem;
+  margin-bottom: .75rem;
+  background: var(--paper);
 
-    &::before {
-      content: "";
-      position: absolute;
-      left: -1.9rem;
-      top: 1.25rem;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background: var(--paper);
-      border: 2px solid var(--accent);
-    }
+  &::before {
+    content: "";
+    position: absolute;
+    left: -33px;
+    top: 24px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: var(--paper);
+    border: 2px solid var(--accent);
   }
 
-  li.pending::before { border-color: var(--line-strong); }
-
-  h3 { font-size: 1.15rem; margin: 0 0 .25rem; }
-  p  { margin: 0; font-size: .88rem; color: var(--muted); line-height: 1.55; }
+  p { margin: 0; font-size: .88rem; line-height: 1.55; color: var(--muted); }
 
   .q {
+    display: block;
     font-family: var(--sans);
     font-size: .62rem;
+    font-weight: 500;
     letter-spacing: .07em;
     text-transform: uppercase;
     color: var(--accent);
-    display: block;
-    margin-bottom: .2rem;
+    margin-bottom: .15rem;
   }
 
-  li.pending .q { color: var(--muted); }
+  .stop-title {
+    display: block;
+    font-family: var(--display);
+    font-size: 1.16rem;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--ink);
+    text-decoration: none;
+    margin-bottom: .4rem;
+
+    &:hover { color: var(--accent); }
+  }
+}
+
+.stop.pending {
+  &::before { border-color: var(--line-strong); }
+  .q { color: var(--muted); }
+  .stop-title { color: var(--muted); }
 }
 
 // ---------- figures ----------

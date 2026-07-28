@@ -54,3 +54,4 @@ format:
     number-sections: false
     link-external-newwindow: true
     fig-cap-location: bottom
+    include-in-header: assets/fonts.html
