@@ -1,2 +1,7 @@
 /.quarto/
 .DS_Store
+
+# Borradores en tránsito. Ver _incoming/LEEME.md — el contenido publicable
+# vive en sections/*.qmd, no aquí.
+/_incoming/*
+!/_incoming/LEEME.md
