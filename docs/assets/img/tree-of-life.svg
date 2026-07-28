@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.38 428.51">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #7f77dd;
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke: #3c3489;
+      }
+
+      .cls-1, .cls-4, .cls-5, .cls-6, .cls-7 {
+        stroke-width: 1.25px;
+      }
+
+      .cls-1, .cls-8, .cls-3, .cls-9, .cls-5, .cls-10, .cls-7, .cls-11 {
+        stroke-linecap: round;
+      }
+
+      .cls-1, .cls-8, .cls-9, .cls-6, .cls-10, .cls-11 {
+        stroke-linejoin: round;
+      }
+
+      .cls-2 {
+        fill: #afa9ec;
+      }
+
+      .cls-2, .cls-4, .cls-12, .cls-13, .cls-3, .cls-5, .cls-14, .cls-7 {
+        stroke-miterlimit: 2;
+      }
+
+      .cls-2, .cls-12, .cls-13, .cls-14 {
+        stroke-width: .75px;
+      }
+
+      .cls-4, .cls-12 {
+        fill: #d85a30;
+      }
+
+      .cls-4, .cls-12, .cls-5, .cls-14 {
+        stroke: #993c1d;
+      }
+
+      .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21 {
+        font-weight: 700;
+      }
+
+      .cls-15, .cls-16, .cls-18, .cls-19, .cls-20, .cls-21 {
+        font-family: Georgia-Bold, Georgia;
+      }
+
+      .cls-15, .cls-16, .cls-20 {
+        font-size: 14px;
+      }
+
+      .cls-15, .cls-18 {
+        fill: #0f6e56;
+      }
+
+      .cls-16, .cls-19 {
+        fill: #993c1d;
+      }
+
+      .cls-13 {
+        fill: #5dcaa5;
+      }
+
+      .cls-13, .cls-6, .cls-7 {
+        stroke: #0f6e56;
+      }
+
+      .cls-8 {
+        stroke: #d85a30;
+      }
+
+      .cls-8, .cls-22, .cls-3, .cls-9, .cls-5, .cls-10, .cls-7, .cls-11 {
+        fill: none;
+      }
+
+      .cls-8, .cls-9, .cls-10, .cls-11 {
+        stroke-width: 5px;
+      }
+
+      .cls-23 {
+        fill: #b7b4a8;
+      }
+
+      .cls-17 {
+        font-family: CourierNewPS-BoldMT, 'Courier New';
+        font-size: 9.17px;
+        letter-spacing: .05em;
+      }
+
+      .cls-17, .cls-18, .cls-24, .cls-19, .cls-20, .cls-25, .cls-21 {
+        isolation: isolate;
+      }
+
+      .cls-17, .cls-25, .cls-26 {
+        fill: #6e6c63;
+      }
+
+      .cls-27 {
+        fill: #e1f5ee;
+      }
+
+      .cls-22 {
+        stroke: #6e6c63;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-18, .cls-19, .cls-21 {
+        font-size: 15.72px;
+      }
+
+      .cls-3 {
+        stroke-width: 1.5px;
+      }
+
+      .cls-9 {
+        stroke: #7f77dd;
+      }
+
+      .cls-20, .cls-21 {
+        fill: #3c3489;
+      }
+
+      .cls-14 {
+        fill: #f0997b;
+      }
+
+      .cls-6 {
+        fill: #1d9e75;
+      }
+
+      .cls-28 {
+        fill: #faece7;
+      }
+
+      .cls-10 {
+        stroke: #1d9e75;
+      }
+
+      .cls-29 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-30 {
+        letter-spacing: -.09em;
+      }
+
+      .cls-25 {
+        font-family: CourierNewPSMT, 'Courier New';
+        font-size: 11px;
+      }
+
+      .cls-31 {
+        fill: #eeedfe;
+      }
+
+      .cls-11 {
+        stroke: #b7b4a8;
+      }
+
+      .cls-32 {
+        fill: #6d6b62;
+        font-family: ArialMT, Arial;
+        font-size: 12px;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g>
+      <g>
+        <g>
+          <polygon class="cls-1" points="79.78 106.91 88.55 113.74 87.17 123.89 76.89 128.13 68.12 121.3 69.5 111.15 79.78 106.91"/>
+          <rect class="cls-1" x="73.95" y="127.14" width="4.37" height="13.03" rx="1" ry="1" transform="translate(18.71 -9.04) rotate(7.75)"/>
+          <rect class="cls-1" x="69.05" y="139.18" width="12.23" height="3.26" rx="1" ry="1" transform="translate(19.67 -8.85) rotate(7.75)"/>
+        </g>
+        <g>
+          <path class="cls-3" d="M70.62,141.83l-7.38,8.86"/>
+          <path class="cls-3" d="M72.35,142.07l-3.17,10.37"/>
+          <path class="cls-3" d="M79.27,143.01l4.74,10.51"/>
+          <path class="cls-3" d="M77.54,142.77l.29,10.84"/>
+        </g>
+        <polygon class="cls-2" points="74.32 114.63 79.02 112.45 82.98 115.8 82.35 120.41 77.64 122.59 73.69 119.24 74.32 114.63"/>
+      </g>
+      <text class="cls-17" transform="translate(55.85 168.09)"><tspan x="0" y="0">infects</tspan></text>
+      <path class="cls-26" d="M79.82,182.86l-3.18,7.14-3.18-7.14h6.35Z"/>
+      <path class="cls-31" d="M38.2,192.55h76.88c7.24,0,13.1,5.87,13.1,13.1h0c0,7.24-5.87,13.1-13.1,13.1H38.2c-7.24,0-13.1-5.87-13.1-13.1h0c0-7.24,5.87-13.1,13.1-13.1Z"/>
+      <text class="cls-21" transform="translate(42.65 210.02)"><tspan x="0" y="0">Bacteria</tspan></text>
+      <line class="cls-22" x1="76.64" y1="182.86" x2="76.64" y2="172.99"/>
+    </g>
+    <g>
+      <g>
+        <path class="cls-6" d="M242.62,111.31c8.74,7.86,8.74,24.46,0,35.82-8.74-11.36-8.74-27.95,0-35.82Z"/>
+        <ellipse class="cls-13" cx="242.62" cy="128.78" rx="3.93" ry="7.43"/>
+        <g>
+          <path class="cls-7" d="M240.44,146.25c-2.33,2.33-2.77,4.8-1.31,7.43"/>
+          <path class="cls-7" d="M244.81,146.25c2.33,2.33,2.77,4.8,1.31,7.43"/>
+        </g>
+      </g>
+      <text class="cls-17" transform="translate(221.83 168.09)"><tspan x="0" y="0">infects</tspan></text>
+      <path class="cls-27" d="M204.18,192.55h76.88c7.24,0,13.1,5.87,13.1,13.1h0c0,7.24-5.87,13.1-13.1,13.1h-76.88c-7.24,0-13.1-5.87-13.1-13.1h0c0-7.24,5.87-13.1,13.1-13.1Z"/>
+      <text class="cls-18" transform="translate(209.19 210.02)"><tspan x="0" y="0">Archaea</tspan></text>
+      <path class="cls-26" d="M245.8,184.23l-3.18,7.14-3.18-7.14h6.35Z"/>
+      <line class="cls-22" x1="242.62" y1="184.23" x2="242.62" y2="174.35"/>
+    </g>
+    <g>
+      <g>
+        <g>
+          <line class="cls-5" x1="421.71" y1="130.53" x2="427.38" y2="130.53"/>
+          <line class="cls-5" x1="417.77" y1="139.7" x2="421.71" y2="143.63"/>
+          <line class="cls-5" x1="408.6" y1="143.63" x2="408.6" y2="149.31"/>
+          <line class="cls-5" x1="399.43" y1="139.7" x2="395.5" y2="143.63"/>
+          <line class="cls-5" x1="395.5" y1="130.53" x2="389.82" y2="130.53"/>
+          <line class="cls-5" x1="399.43" y1="121.35" x2="395.5" y2="117.42"/>
+          <line class="cls-5" x1="408.6" y1="117.42" x2="408.6" y2="111.74"/>
+          <line class="cls-5" x1="417.77" y1="121.35" x2="421.71" y2="117.42"/>
+        </g>
+        <g>
+          <circle class="cls-12" cx="427.38" cy="130.53" r="1.75"/>
+          <circle class="cls-12" cx="421.71" cy="143.63" r="1.75"/>
+          <circle class="cls-12" cx="408.6" cy="149.31" r="1.75"/>
+          <circle class="cls-12" cx="395.5" cy="143.63" r="1.75"/>
+          <circle class="cls-12" cx="389.82" cy="130.53" r="1.75"/>
+          <circle class="cls-12" cx="395.5" cy="117.42" r="1.75"/>
+          <circle class="cls-12" cx="408.6" cy="111.74" r="1.75"/>
+          <circle class="cls-12" cx="421.71" cy="117.42" r="1.75"/>
+        </g>
+        <circle class="cls-4" cx="408.6" cy="130.53" r="13.1"/>
+        <circle class="cls-14" cx="408.6" cy="130.53" r="5.68"/>
+      </g>
+      <text class="cls-17" transform="translate(387.81 168.09)"><tspan x="0" y="0">infects</tspan></text>
+      <path class="cls-28" d="M370.16,192.55h76.88c7.24,0,13.1,5.87,13.1,13.1h0c0,7.24-5.87,13.1-13.1,13.1h-76.88c-7.24,0-13.1-5.87-13.1-13.1h0c0-7.24,5.87-13.1,13.1-13.1Z"/>
+      <text class="cls-19" transform="translate(374.77 210.02)"><tspan x="0" y="0">Eukarya</tspan></text>
+      <path class="cls-26" d="M411.78,184.23l-3.18,7.14-3.18-7.14h6.35Z"/>
+      <line class="cls-22" x1="408.6" y1="184.23" x2="408.6" y2="174.35"/>
+    </g>
+    <g>
+      <path class="cls-11" d="M229.57,403.17v-47.26"/>
+      <path class="cls-11" d="M229.57,355.91c64.99-40.44,129.98-80.88,194.97-121.32"/>
+      <path class="cls-9" d="M229.57,355.91c-53.45-36.93-106.9-73.86-160.36-110.78"/>
+      <path class="cls-10" d="M318.59,300.52c-25.32-21.6-50.65-43.21-75.97-64.81"/>
+      <path class="cls-8" d="M318.59,300.52c35.32-21.98,70.64-43.95,105.95-65.93"/>
+    </g>
+    <circle class="cls-23" cx="229.57" cy="405.38" r="4.5"/>
+    <text class="cls-25" transform="translate(184.56 421.03)"><tspan x="0" y="0">shared ancestor</tspan></text>
+    <text class="cls-20" transform="translate(6.7 11.85)"><tspan x="0" y="0">Bacteriophages</tspan></text>
+    <text class="cls-32" transform="translate(0 33.17)"><tspan x="0" y="0">The most abundant virus on </tspan><tspan x="0" y="14.4">Earth — dominates gut and </tspan><tspan x="0" y="28.8">saliva. Injects only its </tspan><tspan x="0" y="43.2">genome; the capsid stays </tspan><tspan x="0" y="57.6">outside.</tspan></text>
+    <g class="cls-24">
+      <text class="cls-15" transform="translate(181.15 11.85)"><tspan x="0" y="0">Archaeal viruses</tspan></text>
+    </g>
+    <text class="cls-32" transform="translate(176.32 33.44)"><tspan x="0" y="0">Understudied. Hosts range </tspan><tspan x="0" y="14.4">from extremophiles to gut </tspan><tspan x="0" y="28.8">microbes. Wildly diverse </tspan><tspan x="0" y="43.2">morpholog</tspan><tspan class="cls-29" x="56.7" y="43.2">y</tspan><tspan x="61.81" y="43.2">. </tspan></text>
+    <g class="cls-24">
+      <text class="cls-16" transform="translate(355.39 12.07)"><tspan x="0" y="0">Eukaryotic viruses</tspan></text>
+    </g>
+    <text class="cls-32" transform="translate(357.06 32.25)"><tspan x="0" y="0">Enters the host cell whole. </tspan><tspan x="0" y="14.4">Includes classic pathogens </tspan><tspan x="0" y="28.8">like herpes, papilloma, and </tspan><tspan x="0" y="43.2">HI</tspan><tspan class="cls-30" x="12" y="43.2">V</tspan><tspan x="18.9" y="43.2">.</tspan></text>
+  </g>
+</svg>
