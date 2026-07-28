@@ -24,6 +24,9 @@ book:
   sidebar:
     style: docked
     collapse-level: 2
+    # Fivi is the wordmark. The groups are fixed, not accordions — the chevrons
+    # and the collapse triggers are turned off in assets/styles.scss.
+    logo: assets/img/Fivi.png
   chapters:
     - index.qmd
     - part: "The four questions"
@@ -35,8 +38,11 @@ book:
     - part: "Then the tool"
       chapters:
         - sections/kitchen.qmd
-  appendices:
-    - sections/references.qmd
+  # Appendices are out of the book until References has content — an empty
+  # appendix group in the sidebar reads as a defect. Restore this block (and
+  # sections/references.qmd is still in the repo) once there is something to cite.
+  # appendices:
+  #   - sections/references.qmd
   page-footer:
     left: "Virome City — a guide to your first human virome."
     right: "Built with [Quarto](https://quarto.org)."
