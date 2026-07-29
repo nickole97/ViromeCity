@@ -54,6 +54,11 @@ format:
     theme:
       - cosmo
       - assets/styles.scss
+    # The reading measure. Set here rather than as a max-width in the stylesheet
+    # so that .column-body-outset and .column-page size themselves against it —
+    # capping main.content instead breaks the grid on any page that uses them.
+    grid:
+      body-width: 736px
     toc: true
     toc-title: "On this page"
     toc-depth: 3

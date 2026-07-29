@@ -44,7 +44,40 @@
     "href": "sections/what.html",
     "title": "What is a virus?",
     "section": "",
-    "text": "This chapter has not been migrated yet. The current draft lives in the old site.\n\n\n\nAnatomy of a virion, the parts, the morphologies, and the three classification axes: host, gene content, state.",
+    "text": "The parts — 3 core + 1 optional\nStarting a new analysis is exciting, but before you jump into methods and sequencing types, you need to understand what you’re actually looking for. This chapter covers the basics: simple ideas, but very important for your virome analysis.\nViruses are the tiniest known packages of life — barely alive, arguably not alive at all — yet the most abundant biological entities on the planet.\nTheir structure is simple: a piece of genetic material — RNA or DNA, single- or double-stranded — wrapped in a protein shell called the capsid. Some viruses add an outer lipid envelope, stolen from the host and studded with surface proteins that help them latch onto host cells (like a coronavirus’s spikes).",
+    "crumbs": [
+      "The four questions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/what.html#the-parts-3-core-1-optional",
+    "href": "sections/what.html#the-parts-3-core-1-optional",
+    "title": "What is a virus?",
+    "section": "",
+    "text": "1 Genome — the nucleic acid (DNA or RNA); the instructions you sequence.\n2 Capsid — the protein shell that packages and protects the genome.\n3 Surface / attachment proteins — how it recognizes and enters a host.\n+4 Envelope (optional) — a lipid membrane borrowed from the host; only some viruses have one.\n\n\n\n\n\n\n\n\nFigure 2.1: Anatomy of a virion.",
+    "crumbs": [
+      "The four questions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/what.html#and-many-shapes",
+    "href": "sections/what.html#and-many-shapes",
+    "title": "What is a virus?",
+    "section": "And many shapes",
+    "text": "And many shapes\nSame simple idea, built many ways:\n\n\n\n\nicosahedral\n\n\n\n\n\nhelical\n\n\n\n\n\ncomplex (phage)\n\n\n\n\n\nenveloped\n\n\n\n\nIllustration in progress\nFinal morphologies figure — matched to the anatomy style above. These are quick placeholders.",
+    "crumbs": [
+      "The four questions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/what.html#the-classification-three-ways-to-read-a-virus",
+    "href": "sections/what.html#the-classification-three-ways-to-read-a-virus",
+    "title": "What is a virus?",
+    "section": "The classification — three ways to read a virus",
+    "text": "The classification — three ways to read a virus\nViruses are abundant and extremely diverse, and their phylogeny and taxonomy can get complicated. To keep things clear, we’ll sort them along three axes that help us understand their biology and how to explore them: their host, their genome type, and their physical state.\n\nAxis 1 · Host\nwho we infect — the main one\nRemember we said viruses are barely alive — arguably not alive at all? That comes down to one thing: viruses don’t carry the machinery to replicate their own genome, the way other living organisms do. They borrow that machinery from another living being — and that being is what we call the host.\n\n\n\n\n\n\n\nFigure 2.2: Viruses aren’t a domain of their own — they sit off the tree, and each type infects a branch of it. Archaeal and eukaryotic viruses ride the branch that Archaea and Eukarya share.\n\n\n\n\n\n\nAxis 2 · Gene content\nwhat our genome is made of — RNA or DNA, single or double strands\nEvery viral genome is one of four combinations: RNA or DNA, single- or double-stranded. Depending on what you’re looking for, your prep changes: if you’re after RNA viruses, you need an extra reverse-transcription step, so a DNA-only prep quietly misses every single one of them.\n\n\n\n\n\nRNA\n\n\nDNA\n\n\nOne strand (ss)\n\n\n\nssRNA\ncoronavirus, influenza\n\n\n\nssDNA\nAnelloviridae (TTV), Microviridae\n\n\nTwo strands (ds)\n\n\n\ndsRNA\nrotavirus\n\n\n\ndsDNA\nmost phages, herpes, adenovirus\n\n\n\n\nAxis 3 · State\nhow we live relative to the host — and it branches\nSome viruses live as free particles; others are written right into the host’s own genome. This is the axis that matters most when you analyze: a free virion is what virus-like particle (VLP) preps enrich for, while an integrated one hides inside the host’s contigs and needs different tools to spot. Match your method to the state you’re after, or you may miss the virus entirely.\n\n\n\nstate · 1\n\nstate: exogenous\nExogenous\nA free particle that infects from outside — the classic virion.\n\n\n→ can integrate into the host genome →\n\n\nstate · 2\n\nstate: endogenous\nEndogenous\nGenome written into the host’s DNA — inherited or long-resident, not a free particle.\n\n\n\nendogenous forms, by host\n\n\n\nProphages bacterial host\n\n\n\nProviruses archaeal host\n\n\n\nERVs eukaryotic host\n\nretroviral non-retroviral (EVEs)\n\n\n\n\n\n\n\nKeep this axis in mind. State is the one that matters most for analysis — it can decide whether your method finds me at all. We cash it in under How-to.",
     "crumbs": [
       "The four questions",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"

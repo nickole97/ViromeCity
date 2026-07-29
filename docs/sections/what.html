@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-c87c19423827afec8dfe39272306c8f0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-98afb7a1cb98960f8bdbdb5677632133.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -173,11 +173,24 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-parts-3-core-1-optional" id="toc-the-parts-3-core-1-optional" class="nav-link active" data-scroll-target="#the-parts-3-core-1-optional">The parts — 3 core + 1 optional</a></li>
+  <li><a href="#and-many-shapes" id="toc-and-many-shapes" class="nav-link" data-scroll-target="#and-many-shapes">And many shapes</a></li>
+  <li><a href="#the-classification-three-ways-to-read-a-virus" id="toc-the-classification-three-ways-to-read-a-virus" class="nav-link" data-scroll-target="#the-classification-three-ways-to-read-a-virus">The classification — three ways to read a virus</a>
+  <ul class="collapse">
+  <li><a href="#axis-1-host" id="toc-axis-1-host" class="nav-link" data-scroll-target="#axis-1-host">Axis 1 · Host</a></li>
+  <li><a href="#axis-2-gene-content" id="toc-axis-2-gene-content" class="nav-link" data-scroll-target="#axis-2-gene-content">Axis 2 · Gene content</a></li>
+  <li><a href="#axis-3-state" id="toc-axis-3-state" class="nav-link" data-scroll-target="#axis-3-state">Axis 3 · State</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/nickole97/ViromeCity/edit/main/sections/what.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nickole97/ViromeCity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../sections/what.html">The four questions</a></li><li class="breadcrumb-item"><a href="../sections/what.html"><span class="chapter-title">What is a virus?</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -199,19 +212,179 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="callout callout-style-simple callout-note">
-<div class="callout-body d-flex">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<p>Starting a new analysis is exciting, but before you jump into methods and sequencing types, you need to understand what you’re actually looking for. This chapter covers the basics: simple ideas, but <strong>very</strong> important for your virome analysis.</p>
+<p>Viruses are the tiniest known packages of <strong>life</strong> — barely alive, arguably not alive at all — yet the <strong>most abundant biological entities</strong> on the planet.</p>
+<p>Their structure is simple: a piece of genetic material — <strong>RNA or DNA</strong>, single- or double-stranded — wrapped in a protein shell called the <strong>capsid</strong>. Some viruses add an outer <strong>lipid envelope</strong>, stolen from the host and studded with <strong>surface proteins</strong> that help them latch onto host cells (like a coronavirus’s spikes).</p>
+<section id="the-parts-3-core-1-optional" class="level2 beat">
+<h2 class="beat anchored" data-anchor-id="the-parts-3-core-1-optional">The parts — 3 core + 1 optional</h2>
+<div class="parts">
+<ul>
+<li><span class="n">1</span> <span class="t"><strong>Genome</strong> — the nucleic acid (DNA or RNA); the instructions you sequence.</span></li>
+<li><span class="n">2</span> <span class="t"><strong>Capsid</strong> — the protein shell that packages and protects the genome.</span></li>
+<li><span class="n">3</span> <span class="t"><strong>Surface / attachment proteins</strong> — how it recognizes and enters a host.</span></li>
+<li><span class="n opt">+4</span> <span class="t opt"><strong>Envelope</strong> <em>(optional)</em> — a lipid membrane borrowed from the host; only some viruses have one.</span></li>
+</ul>
 </div>
-<div class="callout-body-container">
-<p>This chapter has not been migrated yet. The current draft lives in the old site.</p>
+<div id="fig-anatomy" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Cross-section of a virion showing surface proteins, lipid envelope, capsid and genome.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-anatomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/img/what/virion-anatomy.svg" class="img-fluid figure-img" alt="Cross-section of a virion showing surface proteins, lipid envelope, capsid and genome.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-anatomy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.1: Anatomy of a virion.
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="and-many-shapes" class="level2 beat page-columns page-full">
+<h2 class="beat anchored" data-anchor-id="and-many-shapes">And many shapes</h2>
+<p>Same simple idea, built many ways:</p>
+<div class="morph column-body-outset">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/img/what/morph-icosahedral.svg" class="img-fluid figure-img" alt="Icosahedral virus silhouette."></p>
+<figcaption>icosahedral</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/img/what/morph-helical.svg" class="img-fluid figure-img" alt="Helical virus silhouette."></p>
+<figcaption>helical</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/img/what/morph-complex-phage.svg" class="img-fluid figure-img" alt="Complex bacteriophage silhouette with head and tail."></p>
+<figcaption>complex (phage)</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../assets/img/what/morph-enveloped.svg" class="img-fluid figure-img" alt="Enveloped virus silhouette with surface spikes."></p>
+<figcaption>enveloped</figcaption>
+</figure>
+</div>
+</div>
+<div class="draftnote">
+<p><span class="tag">Illustration in progress</span></p>
+<p>Final morphologies figure — matched to the anatomy style above. These are quick placeholders.</p>
+</div>
+</section>
+<section id="the-classification-three-ways-to-read-a-virus" class="level2 beat page-columns page-full">
+<h2 class="beat anchored" data-anchor-id="the-classification-three-ways-to-read-a-virus">The classification — three ways to read a virus</h2>
+<p>Viruses are abundant and extremely diverse, and their phylogeny and taxonomy can get complicated. To keep things clear, we’ll sort them along <strong>three axes</strong> that help us understand their biology and how to explore them: their <strong>host</strong>, their <strong>genome type</strong>, and their <strong>physical state</strong>.</p>
+<section id="axis-1-host" class="level3 axis page-columns page-full">
+<h3 class="axis anchored" data-anchor-id="axis-1-host">Axis 1 · Host</h3>
+<p><span class="axsub">who we infect — the main one</span></p>
+<p>Remember we said viruses are barely alive — arguably not alive at all? That comes down to one thing: viruses don’t carry the machinery to replicate their own genome, the way other living organisms do. They borrow that machinery from another living being — and that being is what we call the <strong>host</strong>.</p>
+<div class="page-columns page-full">
+<div id="fig-tree" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full" alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya.">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca" class="page-columns page-full">
+<img src="../assets/img/what/tree-of-life.svg" class="img-fluid figure-img column-body-outset" alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2.2: Viruses aren’t a domain of their own — <strong>they sit off the tree</strong>, and each type infects a branch of it. Archaeal and eukaryotic viruses ride the branch that Archaea and Eukarya share.
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="axis-2-gene-content" class="level3 axis page-columns page-full">
+<h3 class="axis anchored" data-anchor-id="axis-2-gene-content">Axis 2 · Gene content</h3>
+<p><span class="axsub">what our genome is made of — RNA or DNA, single or double strands</span></p>
+<p>Every viral genome is one of four combinations: <strong>RNA or DNA, single- or double-stranded</strong>. Depending on what you’re looking for, your prep changes: if you’re after RNA viruses, you need an extra <strong>reverse-transcription</strong> step, so a DNA-only prep quietly misses every single one of them.</p>
+<div class="mx column-body-outset">
+<div class="mx-corner">
+
+</div>
+<div class="mh">
+<p>RNA</p>
+</div>
+<div class="mh">
+<p>DNA</p>
+</div>
+<div class="rh">
+<p>One strand <span class="rh-sub">(ss)</span></p>
+</div>
+<div class="cell">
+<p><img src="../assets/img/what/genome-ssrna.svg" class="img-fluid" alt="Single-stranded RNA genome."></p>
+<p><span class="cell-title">ssRNA</span></p>
+<p>coronavirus, influenza</p>
+</div>
+<div class="cell">
+<p><img src="../assets/img/what/genome-ssdna.svg" class="img-fluid" alt="Single-stranded DNA genome."></p>
+<p><span class="cell-title">ssDNA</span></p>
+<p>Anelloviridae (TTV), Microviridae</p>
+</div>
+<div class="rh">
+<p>Two strands <span class="rh-sub">(ds)</span></p>
+</div>
+<div class="cell">
+<p><img src="../assets/img/what/genome-dsrna.svg" class="img-fluid" alt="Double-stranded RNA genome."></p>
+<p><span class="cell-title">dsRNA</span></p>
+<p>rotavirus</p>
+</div>
+<div class="cell">
+<p><img src="../assets/img/what/genome-dsdna.svg" class="img-fluid" alt="Double-stranded DNA genome."></p>
+<p><span class="cell-title">dsDNA</span></p>
+<p>most phages, herpes, adenovirus</p>
+</div>
+</div>
+</section>
+<section id="axis-3-state" class="level3 axis page-columns page-full">
+<h3 class="axis anchored" data-anchor-id="axis-3-state">Axis 3 · State</h3>
+<p><span class="axsub">how we live relative to the host — and it branches</span></p>
+<p>Some viruses live as <strong>free particles</strong>; others are <strong>written right into the host’s own genome</strong>. This is the axis that matters most when you analyze: a free virion is what virus-like particle (VLP) preps enrich for, while an integrated one hides inside the host’s contigs and needs different tools to spot. Match your method to the state you’re after, or you may miss the virus entirely.</p>
+<div class="state-tree column-body-outset">
+<div class="st-row">
+<div class="st-main">
+<p><span class="num">state · 1</span></p>
+<p><img src="../assets/img/what/state-exogenous.svg" class="img-fluid" alt="A free viral particle outside a cell."></p>
+<p><span class="badge">state: exogenous</span></p>
+<p><span class="card-title">Exogenous</span></p>
+<p>A free particle that infects from outside — the classic virion.</p>
+</div>
+<div class="st-arrow">
+<p>→ <span class="st-note">can integrate into the host genome</span> →</p>
+</div>
+<div class="st-main">
+<p><span class="num">state · 2</span></p>
+<p><img src="../assets/img/what/state-endogenous.svg" class="img-fluid" alt="A viral genome integrated into host DNA."></p>
+<p><span class="badge">state: endogenous</span></p>
+<p><span class="card-title">Endogenous</span></p>
+<p>Genome written into the host’s DNA — inherited or long-resident, not a free particle.</p>
+</div>
+</div>
+<div class="st-branch">
+<p><span class="st-branch-label">endogenous forms, by host</span></p>
+<div class="st-chips">
+<div class="chip">
+<p><img src="../assets/img/what/endogenous-prophage.svg" class="img-fluid" alt="Prophage integrated in a bacterial genome."></p>
+<p><strong>Prophages</strong> <span class="chip-sub">bacterial host</span></p>
+</div>
+<div class="chip">
+<p><img src="../assets/img/what/endogenous-provirus.svg" class="img-fluid" alt="Provirus in an archaeal genome."></p>
+<p><strong>Proviruses</strong> <span class="chip-sub">archaeal host</span></p>
+</div>
+<div class="chip">
+<p><img src="../assets/img/what/endogenous-erv.svg" class="img-fluid" alt="Endogenous retrovirus in a eukaryotic genome."></p>
+<p><strong>ERVs</strong> <span class="chip-sub">eukaryotic host</span></p>
+<div class="subchips">
+<p><span class="subchip">retroviral</span> <span class="subchip">non-retroviral (EVEs)</span></p>
 </div>
 </div>
 </div>
-<p>Anatomy of a virion, the parts, the morphologies, and the three classification axes: host, gene content, state.</p>
+</div>
+</div>
+<div class="fivi">
+<p><img src="../assets/img/fivi-surprised.png" class="img-fluid" alt="Fivi, looking surprised."></p>
+<p><strong>Keep this axis in mind.</strong> State is the one that matters most for analysis — it can decide whether your method finds me <em>at all</em>. We cash it in under <a href="../sections/how-to.html">How-to</a>.</p>
+</div>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -638,7 +811,7 @@ ul.task-list li input[type="checkbox"] {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions"><ul><li><a href="https://github.com/nickole97/ViromeCity/edit/main/sections/what.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nickole97/ViromeCity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/nickole97/ViromeCity/edit/main/sections/what.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nickole97/ViromeCity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>Built with <a href="https://quarto.org">Quarto</a>.</p>
 </div>

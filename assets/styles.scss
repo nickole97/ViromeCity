@@ -64,8 +64,10 @@ h3 { font-size: 1.15rem; margin-top: 1.7em; }
 
 p { margin-bottom: 1.05em; }
 
-// The reading column. Wider than Quarto's default, which reads cramped.
-main.content { max-width: 46rem; }
+// The reading column is set with `grid: body-width:` in _quarto.yml, not here.
+// A max-width on main.content breaks any page that uses .column-page or
+// .column-body-outset: Quarto turns <main> into the full-width grid on those
+// pages, and capping it slides the whole column under the sidebar.
 
 // Small caps utility label — eyebrows, beats, status lines.
 .eyebrow {
@@ -165,27 +167,38 @@ main.content { max-width: 46rem; }
 
 // ---------- Fivi ----------
 // Use as:  ::: fivi
-//          Fivi says something here.
+//          ![](../assets/img/fivi-surprised.png)
+//
+//          Fivi says something here, in first person.
 //          :::
+//
+// The portrait is an <img> in the chapter, not a CSS background, for two
+// reasons: each aside picks the expression that fits what she is saying, and
+// the cover hero (assets/img/Fivi.png) stays cover-only.
 .fivi {
   display: flex;
   gap: .8rem;
   align-items: flex-start;
   background: var(--fivi-bg);
   border-radius: var(--radius);
-  padding: .8rem 1rem;
+  padding: .9rem 1.1rem;
   margin: 1.6em 0;
   font-size: .88rem;
   line-height: 1.5;
   color: var(--fivi-ink);
 
-  p { margin: 0; }
+  p { margin: 0 0 .5em; }
+  p:last-child { margin-bottom: 0; }
 
-  &::before {
-    content: "";
-    flex: 0 0 34px;
-    height: 34px;
-    background: url("assets/img/Fivi.png") center / contain no-repeat;
+  // Quarto wraps a lone image in <figure>; collapse it — this is a portrait,
+  // not a figure, and it must not pick up figure margins or a caption slot.
+  figure, p:has(> img) { margin: 0; flex: 0 0 auto; }
+
+  img {
+    flex: 0 0 auto;
+    width: 42px;
+    height: auto;
+    display: block;
   }
 }
 
@@ -487,6 +500,261 @@ figcaption {
       }
     }
   }
+}
+
+// ---------- chapter: What is a virus? ----------
+// Patterns the What chapter introduces. Kept generic where they will recur in
+// later chapters (.parts, .axis, .cards) and specific where they will not.
+
+// Axis headings. Same `:not(section)` guard as .beat and for the same reason:
+// Pandoc copies a heading's classes onto its wrapping <section>, and font-size
+// and letter-spacing are inherited. See the note above .beat.
+.axis:not(section) {
+  font-family: var(--sans) !important;
+  font-size: .95rem !important;
+  font-weight: 600;
+  letter-spacing: 0;
+  color: var(--ink);
+  margin-top: 2.2em;
+  margin-bottom: .2em;
+}
+
+// The trailing gloss on an axis heading — "who we infect", "what our genome is
+// made of". A separate line so the table of contents stays short.
+.axsub {
+  display: block;
+  font-family: var(--sans);
+  font-size: .84rem;
+  color: var(--muted);
+  margin: 0 0 1em;
+}
+
+// Numbered anatomy of a virion: three core parts and one optional.
+.parts {
+  margin: 1em 0 1.7em;
+
+  ul { list-style: none; padding-left: 0; margin: 0; }
+
+  // The label and the text are each a single span: with display:flex every
+  // child of the <li> would become its own column, splitting "Genome" away
+  // from its description.
+  li {
+    display: flex;
+    gap: .75rem;
+    align-items: baseline;
+    margin-bottom: .6em;
+  }
+
+  .t { flex: 1 1 auto; }
+
+  .n {
+    flex: 0 0 1.75rem;
+    font-family: var(--sans);
+    font-size: .7rem;
+    font-weight: 600;
+    text-align: center;
+    color: var(--accent);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: .18rem 0;
+  }
+
+  // The envelope is optional, and the list says so quietly rather than in prose.
+  .n.opt { color: var(--muted); border-style: dashed; }
+  .opt   { color: var(--muted); }
+}
+
+// Morphology row: four small silhouettes, captioned.
+.morph {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.1rem;
+  margin: 1.2em 0 1.7em;
+
+  figure { margin: 0; text-align: center; }
+  img { width: 100%; max-width: 84px; height: auto; margin: 0 auto; }
+  figcaption { margin-top: .45rem; text-align: center; }
+}
+
+// Gene-content matrix: RNA/DNA across, single/double strand down.
+.mx {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: .75rem;
+  margin: 1.2em 0 1.7em;
+
+  .mh, .rh {
+    font-family: var(--sans);
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    align-self: center;
+  }
+
+  .mh { text-align: center; padding-bottom: .2rem; }
+  .rh { text-align: right; line-height: 1.3; }
+  .rh-sub { display: block; font-weight: 400; letter-spacing: 0; text-transform: none; }
+
+  .cell {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: .9rem;
+    text-align: center;
+  }
+
+  .cell img { width: 100%; max-width: 76px; height: auto; margin: 0 auto .4rem; display: block; }
+  .cell p { margin: 0; font-size: .8rem; color: var(--muted); line-height: 1.45; }
+  .cell figure, .cell p:has(> img) { margin: 0; }
+}
+
+// Card titles inside grids. Not headings: they would land in the table of
+// contents and claim a document outline they do not deserve.
+.cell-title, .card-title {
+  display: block;
+  font-family: var(--display);
+  font-weight: 600;
+  color: var(--ink);
+  line-height: 1.2;
+}
+
+.cell-title { font-size: 1rem; margin-bottom: .2rem; }
+.card-title { font-size: 1.15rem; margin: .35rem 0 .3rem; }
+
+// State axis: two states, with the branch of endogenous forms under them.
+.state-tree { margin: 1.2em 0 1.7em; }
+
+.st-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.st-main {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1rem 1.1rem;
+  text-align: center;
+
+  img { width: 100%; max-width: 76px; height: auto; margin: .2rem auto .5rem; display: block; }
+  p { margin: 0; font-size: .84rem; color: var(--muted); line-height: 1.5; }
+}
+
+.num {
+  display: block;
+  font-family: var(--sans);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+// Neutral for now. The semantic colour pass maps exogenous and endogenous onto
+// the figure palette; until then a badge must not invent its own colour.
+.badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .05em;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: .12rem .5rem;
+  margin-bottom: .1rem;
+}
+
+.st-arrow {
+  font-size: 1.1rem;
+  color: var(--line-strong);
+  text-align: center;
+  line-height: 1.2;
+
+  span {
+    display: block;
+    font-family: var(--sans);
+    font-size: .68rem;
+    color: var(--muted);
+    max-width: 8.5rem;
+    line-height: 1.35;
+    margin: .2rem auto;
+  }
+}
+
+.st-branch { margin-top: 1.3rem; }
+
+.st-branch-label {
+  display: block;
+  font-family: var(--sans);
+  font-size: .62rem;
+  font-weight: 500;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: .5rem;
+}
+
+.st-chips {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .8rem;
+}
+
+.chip {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: .8rem .9rem;
+  text-align: center;
+
+  img { width: 100%; max-width: 46px; height: auto; margin: 0 auto .35rem; display: block; }
+  figure, p:has(> img) { margin: 0; }
+  p { margin: 0; }
+  strong { display: block; font-size: .92rem; color: var(--ink); }
+  .chip-sub { display: block; font-size: .74rem; color: var(--muted); margin-top: .1rem; font-weight: 400; }
+}
+
+.subchips {
+  margin-top: .4rem;
+
+  .subchip {
+    display: inline-block;
+    font-size: .66rem;
+    color: var(--muted);
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: .06rem .4rem;
+    margin: .1rem .1rem 0;
+  }
+}
+
+// A note to ourselves that survives into the page on purpose: the book says
+// out loud which figures are still placeholders.
+.draftnote {
+  border: 1.5px dashed var(--line-strong);
+  border-radius: var(--radius);
+  padding: .8rem 1rem;
+  margin: 1em 0 1.6em;
+
+  .tag {
+    display: block;
+    font-family: var(--sans);
+    font-size: .62rem;
+    font-weight: 500;
+    letter-spacing: .07em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin: 0 0 .3em;
+  }
+
+  p:first-child { margin: 0 0 .3em; }
+
+  p:last-child { margin: 0; font-size: .82rem; color: var(--muted); line-height: 1.5; }
 }
 
 // ---------- quality floor ----------

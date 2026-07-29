@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" role="img" aria-label="Cross-section of a virus particle: a lipid envelope studded with surface proteins, a capsid protein shell, and the genome coiled inside.">
+        <circle cx="180" cy="150" r="90" fill="none" stroke="#B4B2A9" stroke-width="5"/>
+        <g stroke="#7F77DD" stroke-width="3" stroke-linecap="round"><line x1="180" y1="60" x2="180" y2="44"/><line x1="244" y1="86" x2="255" y2="75"/><line x1="270" y1="150" x2="286" y2="150"/><line x1="244" y1="214" x2="255" y2="225"/><line x1="116" y1="214" x2="105" y2="225"/><line x1="90" y1="150" x2="74" y2="150"/><line x1="116" y1="86" x2="105" y2="75"/></g>
+        <g fill="#7F77DD"><circle cx="180" cy="42" r="4"/><circle cx="257" cy="73" r="4"/><circle cx="288" cy="150" r="4"/><circle cx="257" cy="227" r="4"/><circle cx="103" cy="227" r="4"/><circle cx="72" cy="150" r="4"/><circle cx="103" cy="73" r="4"/></g>
+        <circle cx="180" cy="150" r="52" fill="#EEEDFE" stroke="#7F77DD" stroke-width="2.5"/>
+        <path d="M150 150 q 10 -18 20 0 q 10 18 20 0 q 10 -18 20 0" fill="none" stroke="#1D9E75" stroke-width="3" stroke-linecap="round"/>
+        <line x1="257" y1="73" x2="322" y2="68" stroke="#9A988C" stroke-width="1.5"/><circle cx="257" cy="73" r="2.5" fill="#9A988C"/>
+        <text class="lt" x="330" y="64">Surface proteins</text>
+        <text class="ls" x="330" y="82">attachment; enveloped viruses only</text>
+        <line x1="250" y1="108" x2="322" y2="116" stroke="#9A988C" stroke-width="1.5"/><circle cx="250" cy="108" r="2.5" fill="#9A988C"/>
+        <text class="lt" x="330" y="118">Envelope (lipid)</text>
+        <text class="ls" x="330" y="136">a stolen membrane; many viruses lack it</text>
+        <line x1="224" y1="162" x2="322" y2="168" stroke="#9A988C" stroke-width="1.5"/><circle cx="224" cy="162" r="2.5" fill="#9A988C"/>
+        <text class="lt" x="330" y="170">Capsid</text>
+        <text class="ls" x="330" y="188">protein shell that protects the genome</text>
+        <line x1="180" y1="150" x2="322" y2="222" stroke="#9A988C" stroke-width="1.5"/><circle cx="180" cy="150" r="2.5" fill="#9A988C"/>
+        <text class="lt" x="330" y="222">Genome</text>
+        <text class="ls" x="330" y="240">RNA or DNA; single- or double-stranded</text>
+      </svg>

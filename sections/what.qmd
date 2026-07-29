@@ -3,8 +3,209 @@ title: "What is a virus?"
 subtitle: "The smallest thing you'll spend this whole guide chasing."
 ---
 
-::: {.callout-note appearance="simple"}
-This chapter has not been migrated yet. The current draft lives in the old site.
+Starting a new analysis is exciting, but before you jump into methods and
+sequencing types, you need to understand what you're actually looking for. This
+chapter covers the basics: simple ideas, but **very** important for your virome
+analysis.
+
+Viruses are the tiniest known packages of **life** — barely alive, arguably not
+alive at all — yet the **most abundant biological entities** on the planet.
+
+Their structure is simple: a piece of genetic material — **RNA or DNA**, single-
+or double-stranded — wrapped in a protein shell called the **capsid**. Some
+viruses add an outer **lipid envelope**, stolen from the host and studded with
+**surface proteins** that help them latch onto host cells (like a coronavirus's
+spikes).
+
+## The parts — 3 core + 1 optional {.beat}
+
+::: parts
+- [1]{.n} [**Genome** — the nucleic acid (DNA or RNA); the instructions you sequence.]{.t}
+- [2]{.n} [**Capsid** — the protein shell that packages and protects the genome.]{.t}
+- [3]{.n} [**Surface / attachment proteins** — how it recognizes and enters a host.]{.t}
+- [+4]{.n .opt} [**Envelope** *(optional)* — a lipid membrane borrowed from the host; only some viruses have one.]{.t .opt}
 :::
 
-Anatomy of a virion, the parts, the morphologies, and the three classification axes: host, gene content, state.
+![Anatomy of a virion.](../assets/img/what/virion-anatomy.svg){#fig-anatomy fig-alt="Cross-section of a virion showing surface proteins, lipid envelope, capsid and genome."}
+
+## And many shapes {.beat}
+
+Same simple idea, built many ways:
+
+::: {.morph .column-body-outset}
+![icosahedral](../assets/img/what/morph-icosahedral.svg){fig-alt="Icosahedral virus silhouette."}
+
+![helical](../assets/img/what/morph-helical.svg){fig-alt="Helical virus silhouette."}
+
+![complex (phage)](../assets/img/what/morph-complex-phage.svg){fig-alt="Complex bacteriophage silhouette with head and tail."}
+
+![enveloped](../assets/img/what/morph-enveloped.svg){fig-alt="Enveloped virus silhouette with surface spikes."}
+:::
+
+::: draftnote
+[Illustration in progress]{.tag}
+
+Final morphologies figure — matched to the anatomy style above. These are quick
+placeholders.
+:::
+
+## The classification — three ways to read a virus {.beat}
+
+Viruses are abundant and extremely diverse, and their phylogeny and taxonomy can
+get complicated. To keep things clear, we'll sort them along **three axes** that
+help us understand their biology and how to explore them: their **host**, their
+**genome type**, and their **physical state**.
+
+### Axis 1 · Host {.axis}
+
+[who we infect — the main one]{.axsub}
+
+Remember we said viruses are barely alive — arguably not alive at all? That comes
+down to one thing: viruses don't carry the machinery to replicate their own
+genome, the way other living organisms do. They borrow that machinery from
+another living being — and that being is what we call the **host**.
+
+::: column-body-outset
+![Viruses aren't a domain of their own — **they sit off the tree**, and each type infects a branch of it. Archaeal and eukaryotic viruses ride the branch that Archaea and Eukarya share.](../assets/img/what/tree-of-life.svg){#fig-tree fig-alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya."}
+:::
+
+### Axis 2 · Gene content {.axis}
+
+[what our genome is made of — RNA or DNA, single or double strands]{.axsub}
+
+Every viral genome is one of four combinations: **RNA or DNA, single- or
+double-stranded**. Depending on what you're looking for, your prep changes: if
+you're after RNA viruses, you need an extra **reverse-transcription** step, so a
+DNA-only prep quietly misses every single one of them.
+
+:::: {.mx .column-body-outset}
+::: mx-corner
+:::
+
+::: mh
+RNA
+:::
+
+::: mh
+DNA
+:::
+
+::: rh
+One strand [(ss)]{.rh-sub}
+:::
+
+::: cell
+![](../assets/img/what/genome-ssrna.svg){fig-alt="Single-stranded RNA genome."}
+
+[ssRNA]{.cell-title}
+
+coronavirus, influenza
+:::
+
+::: cell
+![](../assets/img/what/genome-ssdna.svg){fig-alt="Single-stranded DNA genome."}
+
+[ssDNA]{.cell-title}
+
+Anelloviridae (TTV), Microviridae
+:::
+
+::: rh
+Two strands [(ds)]{.rh-sub}
+:::
+
+::: cell
+![](../assets/img/what/genome-dsrna.svg){fig-alt="Double-stranded RNA genome."}
+
+[dsRNA]{.cell-title}
+
+rotavirus
+:::
+
+::: cell
+![](../assets/img/what/genome-dsdna.svg){fig-alt="Double-stranded DNA genome."}
+
+[dsDNA]{.cell-title}
+
+most phages, herpes, adenovirus
+:::
+::::
+
+### Axis 3 · State {.axis}
+
+[how we live relative to the host — and it branches]{.axsub}
+
+Some viruses live as **free particles**; others are **written right into the
+host's own genome**. This is the axis that matters most when you analyze: a free
+virion is what virus-like particle (VLP) preps enrich for, while an integrated
+one hides inside the host's contigs and needs different tools to spot. Match your
+method to the state you're after, or you may miss the virus entirely.
+
+::::: {.state-tree .column-body-outset}
+:::: st-row
+::: st-main
+[state · 1]{.num}
+
+![](../assets/img/what/state-exogenous.svg){fig-alt="A free viral particle outside a cell."}
+
+[state: exogenous]{.badge}
+
+[Exogenous]{.card-title}
+
+A free particle that infects from outside — the classic virion.
+:::
+
+::: st-arrow
+→ [can integrate into the host genome]{.st-note} →
+:::
+
+::: st-main
+[state · 2]{.num}
+
+![](../assets/img/what/state-endogenous.svg){fig-alt="A viral genome integrated into host DNA."}
+
+[state: endogenous]{.badge}
+
+[Endogenous]{.card-title}
+
+Genome written into the host's DNA — inherited or long-resident, not a free
+particle.
+:::
+::::
+
+:::: st-branch
+[endogenous forms, by host]{.st-branch-label}
+
+::: st-chips
+::: chip
+![](../assets/img/what/endogenous-prophage.svg){fig-alt="Prophage integrated in a bacterial genome."}
+
+**Prophages** [bacterial host]{.chip-sub}
+:::
+
+::: chip
+![](../assets/img/what/endogenous-provirus.svg){fig-alt="Provirus in an archaeal genome."}
+
+**Proviruses** [archaeal host]{.chip-sub}
+:::
+
+::: chip
+![](../assets/img/what/endogenous-erv.svg){fig-alt="Endogenous retrovirus in a eukaryotic genome."}
+
+**ERVs** [eukaryotic host]{.chip-sub}
+
+::: subchips
+[retroviral]{.subchip} [non-retroviral (EVEs)]{.subchip}
+:::
+:::
+:::
+::::
+:::::
+
+::: fivi
+![](../assets/img/fivi-surprised.png){fig-alt="Fivi, looking surprised."}
+
+**Keep this axis in mind.** State is the one that matters most for analysis — it
+can decide whether your method finds me *at all*. We cash it in under
+[How-to](how-to.qmd).
+:::
