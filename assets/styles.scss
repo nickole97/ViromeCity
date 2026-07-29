@@ -8,7 +8,10 @@
 
 $font-family-sans-serif: "Spline Sans", ui-sans-serif, system-ui, sans-serif !default;
 
-$body-bg:    #FFFFFF !default;
+// The page is a warm off-white, not white, so that the white cards figures sit
+// on read as cards. `--paper` below stays #FFFFFF and is what the cards use:
+// the two must not be the same value or the whole effect collapses.
+$body-bg:    #F9F6F1 !default;
 $body-color: #17181C !default;
 $link-color: #3550C9 !default;
 
@@ -22,7 +25,8 @@ $toc-color: #63656E !default;
 
 :root {
   // --- page layer: the quiet one ---
-  --paper:       #FFFFFF;
+  --page:        #F9F6F1;   // the page itself — warm off-white
+  --paper:       #FFFFFF;   // cards and figures, so they lift off the page
   --ink:         #17181C;
   --muted:       #63656E;
   --line:        #E4E5EA;
@@ -347,6 +351,9 @@ figcaption {
   --sb-indent: 14px;
 
   padding-left: var(--sb-pad);
+  // Quarto tints the docked sidebar grey by default, which fights the warm
+  // page. The navigation is part of the page, not a card.
+  background: var(--page);
 
   // --- wordmark: Fivi and the title read as one block, both linking home ---
   .sidebar-header {
