@@ -5,3 +5,4 @@
 # vive en sections/*.qmd, no aquí.
 /_incoming/*
 !/_incoming/LEEME.md
+!/_incoming/brief-para-borradores.md
