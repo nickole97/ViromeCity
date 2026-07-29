@@ -57,8 +57,15 @@ format:
     # The reading measure. Set here rather than as a max-width in the stylesheet
     # so that .column-body-outset and .column-page size themselves against it —
     # capping main.content instead breaks the grid on any page that uses them.
+    #
+    # 584px, not the 736px we actually want on screen: with a docked sidebar
+    # Quarto resolves the body column as `calc(body-width + 200px - 3em)`, so
+    # 584 + 200 - 48 = 736. Declaring 736 here yielded an 888px column, and
+    # because the track left of the body is flexible, the extra width pushed
+    # .column-body-outset 50px underneath the sidebar. Measured, not derived —
+    # re-check it if Quarto's grid changes.
     grid:
-      body-width: 736px
+      body-width: 584px
     toc: true
     toc-title: "On this page"
     toc-depth: 3
