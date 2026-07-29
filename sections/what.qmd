@@ -32,7 +32,7 @@ spikes).
 
 Same simple idea, built many ways:
 
-::: {.morph .column-body-outset}
+::: morph
 ![icosahedral](../assets/img/what/morph-icosahedral.svg){fig-alt="Icosahedral virus silhouette."}
 
 ![helical](../assets/img/what/morph-helical.svg){fig-alt="Helical virus silhouette."}
@@ -65,9 +65,7 @@ down to one thing: viruses don't carry the machinery to replicate their own
 genome, the way other living organisms do. They borrow that machinery from
 another living being — and that being is what we call the **host**.
 
-::: column-body-outset
-![Viruses aren't a domain of their own — **they sit off the tree**, and each type infects a branch of it. Archaeal and eukaryotic viruses ride the branch that Archaea and Eukarya share.](../assets/img/what/tree-of-life.svg){#fig-tree fig-alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya."}
-:::
+![Viruses aren't a domain of their own — **they sit off the tree**, and each type infects a branch of it. Archaeal and eukaryotic viruses ride the branch that Archaea and Eukarya share.](../assets/img/what/tree-of-life.svg){#fig-tree .wide fig-alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya."}
 
 ### Axis 2 · Gene content {.axis}
 
@@ -78,7 +76,7 @@ double-stranded**. Depending on what you're looking for, your prep changes: if
 you're after RNA viruses, you need an extra **reverse-transcription** step, so a
 DNA-only prep quietly misses every single one of them.
 
-:::: {.mx .column-body-outset}
+:::: {.mx .wide}
 ::: mx-corner
 :::
 
@@ -141,7 +139,7 @@ virion is what virus-like particle (VLP) preps enrich for, while an integrated
 one hides inside the host's contigs and needs different tools to spot. Match your
 method to the state you're after, or you may miss the virus entirely.
 
-::::: {.state-tree .column-body-outset}
+::::: {.state-tree .wide}
 :::: st-row
 ::: st-main
 [state · 1]{.num}

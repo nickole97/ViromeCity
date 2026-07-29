@@ -60,15 +60,14 @@ format:
     #
     # 584px, not the 736px we actually want on screen: with a docked sidebar
     # Quarto resolves the body column as `calc(body-width + 200px - 3em)`, so
-    # 584 + 200 - 48 = 736. Declaring 736 here yielded an 888px column, and
-    # because the track left of the body is flexible, the extra width pushed
-    # .column-body-outset 50px underneath the sidebar. Measured, not derived —
-    # re-check it if Quarto's grid changes.
+    # 584 + 200 - 48 = 736. Declaring 736 here yielded an 888px column instead.
+    # Measured, not derived — re-check it if Quarto's grid changes.
     grid:
       body-width: 584px
-    toc: true
-    toc-title: "On this page"
-    toc-depth: 3
+    # No right-hand table of contents. The book is read in order, the sidebar
+    # already lists every chapter, and the margin it frees is what lets a
+    # figure be wider than the prose without colliding with anything.
+    toc: false
     number-sections: false
     link-external-newwindow: true
     fig-cap-location: bottom

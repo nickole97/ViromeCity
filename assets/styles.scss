@@ -525,26 +525,28 @@ figcaption {
 }
 
 // ---------- figure widths ----------
-// Quarto's outset columns run from `body-start-outset` to `body-end-outset`,
-// which sit 50px outside `body-start`/`body-end`. With a docked sidebar those
-// 50px are exactly where the sidebar and the sticky "On this page" list live,
-// so every outset figure rendered on top of the navigation.
+// This book does not use Quarto's `.column-*` classes. That is a decision, not
+// an oversight.
 //
-// `body-start`/`body-end` is the widest span that cannot collide: the sidebar
-// ends at body-start and the margin column begins at body-end. Figures still
-// break out of the reading measure, by the two gutters rather than by 152px.
+// Those classes place an element into Quarto's page grid, and the moment one
+// appears on a page Quarto marks <main> — and every section containing one —
+// `page-columns page-full`, which is spanned screen-start/screen-end with
+// !important and re-resolves a nested grid inside each section. Chasing that
+// cost us: figures rendered on top of the sidebar and the table of contents,
+// the reading column slid underneath the sidebar, and section tints could not
+// be made to contain their own figures.
 //
-// The cost: .column-page can no longer be wider than .column-body-outset,
-// because the space it used to claim belongs to the table of contents. Freeing
-// it means giving up the right-hand TOC on chapter pages.
-//
-// Quarto scopes its own rule as `.page-columns .column-body-outset`, at
-// specificity (0,2,0) — a bare class selector loses to it regardless of order.
-.page-columns .column-body-outset,
-.page-columns .column-page,
-.column-body-outset,
-.column-page {
-  grid-column: body-start / body-end;
+// Width is set here instead, in ordinary CSS, against the reading measure.
+// Anything genuinely too wide for the page becomes its own page and is linked
+// from the chapter — which is what CLAUDE.md already asks for.
+
+// `.wide` is the whole width system now: one class, plain CSS, no grid. It
+// grows to the right into the margin the table of contents used to occupy, and
+// clamps against the viewport so it can never reach the sidebar or overflow.
+// Figures that need more room than this are their own page.
+.wide {
+  width: min(900px, calc(100vw - 320px));
+  max-width: none;
 }
 
 // ---------- chapter: What is a virus? ----------
