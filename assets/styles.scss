@@ -310,6 +310,21 @@ figure {
   img, svg { max-width: 100%; height: auto; }
 }
 
+// The card. Quarto emits `figure.figure` for any captioned image, which is
+// exactly the set that wants one. The portraits inside .fivi, .cell and .chip
+// are bare <p><img> and stay flat — they already sit on a card of their own.
+figure.figure {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.2rem 1.3rem .9rem;
+  margin: 1.5em 0;
+
+  > p { margin: 0; }
+  img, svg { display: block; margin: 0 auto; }
+  figcaption { margin-top: .9rem; }
+}
+
 figcaption {
   font-family: var(--sans);
   font-size: .8rem;
