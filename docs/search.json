@@ -44,7 +44,7 @@
     "href": "sections/what.html",
     "title": "What is a virus?",
     "section": "",
-    "text": "The parts — 3 core + 1 optional\nStarting a new analysis is exciting, but before you jump into methods and sequencing types, you need to understand what you’re actually looking for. This chapter covers the basics: simple ideas, but very important for your virome analysis.\nViruses are the tiniest known packages of life — barely alive, arguably not alive at all — yet the most abundant biological entities on the planet.\nTheir structure is simple: a piece of genetic material — RNA or DNA, single- or double-stranded — wrapped in a protein shell called the capsid. Some viruses add an outer lipid envelope, stolen from the host and studded with surface proteins that help them latch onto host cells (like a coronavirus’s spikes).",
+    "text": "The parts — 3 core + 1 optional",
     "crumbs": [
       "The four questions",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"

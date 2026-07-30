@@ -540,13 +540,22 @@ figcaption {
 // Anything genuinely too wide for the page becomes its own page and is linked
 // from the chapter — which is what CLAUDE.md already asks for.
 
-// `.wide` is the whole width system now: one class, plain CSS, no grid. It
-// grows to the right into the margin the table of contents used to occupy, and
-// clamps against the viewport so it can never reach the sidebar or overflow.
-// Figures that need more room than this are their own page.
-.wide {
-  width: min(900px, calc(100vw - 320px));
-  max-width: none;
+// `.wide` fills the column, which is what the column is for. Prose is what
+// gets capped, not figures.
+.wide { width: 100%; max-width: none; }
+
+// Loose prose — the chapter opening, and any section that is not a block —
+// keeps the same measure the blocks give their own text, so the whole page
+// reads as one column with one right edge rather than two competing widths.
+main.content > p,
+main.content > ul,
+main.content > ol,
+main.content > section > p,
+main.content > section > ul,
+main.content > section > ol,
+main.content > section > .axsub,
+#title-block-header .subtitle {
+  max-width: 40rem;
 }
 
 // ---------- blocks ----------
@@ -559,9 +568,10 @@ figcaption {
 // contrast cost at all. That is the difference between this and tinting a
 // section background, which drops link contrast to 1.34:1 on the blue.
 //
-// `section.` and not a bare class, because Pandoc copies a heading's classes
-// onto its section and we only want to paint the section.
-section.block {
+// `section.` / `div.` and not a bare class, because Pandoc copies a heading's
+// classes onto its section and we must not paint the heading too. A div lets a
+// passage with no heading of its own — a chapter opening — be a block as well.
+section.block, div.block {
   background: var(--paper);
   border-radius: var(--radius);
   border: 1px solid var(--line);
@@ -574,12 +584,7 @@ section.block {
   // down one column.
   margin: 3.2em 0;
 
-  // The card takes the wide measure and the prose stays narrow inside it, so a
-  // figure can use the full width without the text ever running past the line
-  // length the book is set to. Figures fill the card; they no longer need to
-  // break out of anything.
-  width: min(900px, calc(100vw - 320px));
-
+  // The block fills the column; the prose inside keeps the reading measure.
   > p, > ul, > ol, > blockquote, > .parts, > .draftnote {
     max-width: 40rem;
   }
@@ -612,7 +617,7 @@ section.block {
 
 @supports (animation-timeline: view()) {
   @media (prefers-reduced-motion: no-preference) {
-    section.block {
+    section.block, div.block {
       animation: block-in linear both;
       animation-timeline: view();
       // Ends at 30% of the entry phase, not later. The phase lasts as long as
@@ -626,11 +631,11 @@ section.block {
 }
 
 // The stripe carries the same meaning it carries inside a figure.
-section.block-decision { border-left-color: var(--fig-decision); }
-section.block-process  { border-left-color: var(--fig-process);  }
-section.block-branch   { border-left-color: var(--fig-branch);   }
-section.block-aside    { border-left-color: var(--fig-aside);    }
-section.block-output   { border-left-color: var(--fig-output);   }
+section.block-decision, div.block-decision { border-left-color: var(--fig-decision); }
+section.block-process,  div.block-process  { border-left-color: var(--fig-process);  }
+section.block-branch,   div.block-branch   { border-left-color: var(--fig-branch);   }
+section.block-aside,    div.block-aside    { border-left-color: var(--fig-aside);    }
+section.block-output,   div.block-output   { border-left-color: var(--fig-output);   }
 
 // ---------- chapter: What is a virus? ----------
 // Patterns the What chapter introduces. Kept generic where they will recur in
