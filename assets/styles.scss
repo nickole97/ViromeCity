@@ -8,10 +8,10 @@
 
 $font-family-sans-serif: "Spline Sans", ui-sans-serif, system-ui, sans-serif !default;
 
-// The page is a warm off-white, not white, so that the white cards figures sit
-// on read as cards. `--paper` below stays #FFFFFF and is what the cards use:
-// the two must not be the same value or the whole effect collapses.
-$body-bg:    #F9F6F1 !default;
+// The page is white. It was a warm off-white for exactly one commit, as the
+// only way to make a white card read as a card; the blocks now carry their own
+// hairline border and coloured rule, so the tint has nothing left to do.
+$body-bg:    #FFFFFF !default;
 $body-color: #17181C !default;
 $link-color: #3550C9 !default;
 
@@ -25,8 +25,8 @@ $toc-color: #63656E !default;
 
 :root {
   // --- page layer: the quiet one ---
-  --page:        #F9F6F1;   // the page itself — warm off-white
-  --paper:       #FFFFFF;   // cards and figures, so they lift off the page
+  --page:        #FFFFFF;   // the page
+  --paper:       #FFFFFF;   // cards and figures — same white; a border separates them
   --ink:         #17181C;
   --muted:       #63656E;
   --line:        #E4E5EA;
@@ -564,6 +564,7 @@ figcaption {
 section.block {
   background: var(--paper);
   border-radius: var(--radius);
+  border: 1px solid var(--line);
   border-left: 4px solid var(--line-strong);
   box-shadow: 0 3px 15px rgba(23, 24, 28, .05);
   padding: 1.5rem 1.9rem 1.7rem;
