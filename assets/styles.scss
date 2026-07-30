@@ -68,6 +68,24 @@ h3 { font-size: 1.15rem; margin-top: 1.7em; }
 
 p { margin-bottom: 1.05em; }
 
+// Prose is justified with hyphenation, which is what a book does and what
+// stops a ragged right edge from reading as untidy inside a wide block.
+// Hyphenation is not optional here: justifying without it opens rivers of
+// white at this measure. Captions, labels and anything inside a grid cell stay
+// ragged — they are too short to justify without looking stretched.
+main.content p,
+main.content li {
+  text-align: justify;
+  hyphens: auto;
+  -webkit-hyphens: auto;
+}
+
+.axsub, figcaption, .cell p, .chip p, .st-main p, .st-arrow, .draftnote p,
+.badge, .num, .st-branch-label, .fivi p, blockquote p {
+  text-align: left;
+  hyphens: manual;
+}
+
 // The reading column is set with `grid: body-width:` in _quarto.yml, not here.
 // A max-width on main.content breaks any page that uses .column-page or
 // .column-body-outset: Quarto turns <main> into the full-width grid on those
@@ -584,7 +602,16 @@ section.block, div.block {
   // down one column.
   margin: 3.2em 0;
 
-  // The block fills the column; the prose inside keeps the reading measure.
+  // Each block is as wide as its own widest thing, not as wide as the column.
+  // A block of prose stops where the prose stops; a block holding the tree of
+  // life keeps the room the tree needs. Filling the column regardless left a
+  // text block with ~300px of white inside it, which is the same dead margin
+  // the wide column was meant to remove, just moved inside the card.
+  width: fit-content;
+  max-width: 100%;
+
+  // The prose inside keeps the reading measure — at 40rem a line already runs
+  // to about 83 characters, so this is a ceiling, not a target.
   > p, > ul, > ol, > blockquote, > .parts, > .draftnote {
     max-width: 40rem;
   }
