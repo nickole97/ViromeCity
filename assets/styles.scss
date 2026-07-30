@@ -793,6 +793,19 @@ section.block-output,   div.block-output   { border-left-color: var(--fig-output
   margin-bottom: .2em;
 }
 
+// The three axes are numbered by the section that introduces them, not in
+// their own text. The heading source says "Host"; the page shows "Axis 1 ·
+// Host"; the contents list in the margin shows "Host". One clean name, and the
+// numbering follows the order they are written in rather than being retyped.
+section.axes { counter-reset: axis; }
+
+section.axes .axis:not(section)::before {
+  counter-increment: axis;
+  content: "Axis " counter(axis) " · ";
+  color: var(--muted);
+  font-weight: 500;
+}
+
 // The trailing gloss on an axis heading — "who we infect", "what our genome is
 // made of". A separate line so the table of contents stays short.
 .axsub {

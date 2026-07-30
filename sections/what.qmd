@@ -19,8 +19,9 @@ viruses add an outer **lipid envelope**, stolen from the host and studded with
 spikes).
 :::
 
-## The parts — 3 core + 1 optional {.beat .block .block-aside}
+## The parts {.beat}
 
+:::: {.block .block-aside}
 ::: parts
 - [1]{.n} [**Genome** — the nucleic acid (DNA or RNA); the instructions you sequence.]{.t}
 - [2]{.n} [**Capsid** — the protein shell that packages and protects the genome.]{.t}
@@ -29,8 +30,9 @@ spikes).
 :::
 
 ![Anatomy of a virion.](../assets/img/what/virion-anatomy.svg){#fig-anatomy fig-alt="Cross-section of a virion showing surface proteins, lipid envelope, capsid and genome."}
+::::
 
-## And many shapes {.beat .block .block-branch}
+### Morphology {.axis .block .block-branch}
 
 Same simple idea, built many ways:
 
@@ -51,14 +53,16 @@ Final morphologies figure — matched to the anatomy style above. These are quic
 placeholders.
 :::
 
-## The classification — three ways to read a virus {.beat}
+## The classification {.beat .axes}
 
+::: block
 Viruses are abundant and extremely diverse, and their phylogeny and taxonomy can
 get complicated. To keep things clear, we'll sort them along **three axes** that
 help us understand their biology and how to explore them: their **host**, their
 **genome type**, and their **physical state**.
+:::
 
-### Axis 1 · Host {.axis .block .block-branch}
+### Host {.axis .block .block-branch}
 
 [who we infect — the main one]{.axsub}
 
@@ -69,7 +73,7 @@ another living being — and that being is what we call the **host**.
 
 ![Viruses aren't a domain of their own — **they sit off the tree**, and each type infects a branch of it. Archaeal and eukaryotic viruses ride the branch that Archaea and Eukarya share.](../assets/img/what/tree-of-life.svg){#fig-tree .wide fig-alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya."}
 
-### Axis 2 · Gene content {.axis .block .block-process}
+### Gene content {.axis .block .block-process}
 
 [what our genome is made of — RNA or DNA, single or double strands]{.axsub}
 
@@ -131,7 +135,7 @@ most phages, herpes, adenovirus
 :::
 ::::
 
-### Axis 3 · State {.axis .block .block-decision}
+### State {.axis .block .block-decision}
 
 [how we live relative to the host — and it branches]{.axsub}
 
