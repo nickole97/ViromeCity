@@ -568,7 +568,11 @@ section.block {
   border-left: 4px solid var(--line-strong);
   box-shadow: 0 3px 15px rgba(23, 24, 28, .05);
   padding: 1.5rem 1.9rem 1.7rem;
-  margin: 1.7em 0;
+
+  // Enough air that one block tends to hold the screen on its own. This is
+  // most of what makes scrolling feel like moving between pieces rather than
+  // down one column.
+  margin: 3.2em 0;
 
   // The card takes the wide measure and the prose stays narrow inside it, so a
   // figure can use the full width without the text ever running past the line
@@ -591,6 +595,34 @@ section.block {
   }
 
   > :last-child { margin-bottom: 0; }
+}
+
+// Each block arrives as you reach it, which is what makes scrolling read as
+// moving from one piece to the next rather than sliding down a column.
+//
+// Scroll-driven CSS, so there is no JavaScript and no library. `@supports`
+// matters: where `animation-timeline` is unimplemented the rule never applies
+// and every block is simply visible, which is the correct fallback and not a
+// degraded one. Motion is opt-out at the OS level, per the reduced-motion rule
+// at the end of this file.
+@keyframes block-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: none; }
+}
+
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    section.block {
+      animation: block-in linear both;
+      animation-timeline: view();
+      // Ends at 30% of the entry phase, not later. The phase lasts as long as
+      // the block is taller, so a generous range leaves a tall block still
+      // fading while you are already reading its first line: at 45% the State
+      // block sits near 85% opacity exactly when its heading reaches the top
+      // of the window. At 30% every block is fully opaque before it gets there.
+      animation-range: entry 0% entry 30%;
+    }
+  }
 }
 
 // The stripe carries the same meaning it carries inside a figure.
