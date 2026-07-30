@@ -88,10 +88,14 @@ that the design serves finished content instead of forcing it.
 
 | Chapter | Status |
 |---------|--------|
-| What    | Draft |
+| What    | Written |
 | Why     | In preparation |
-| Where   | Draft |
-| How-to  | Draft |
+| Where   | Earlier draft |
+| How-to  | Earlier draft |
 | Fivi's Kitchen | Live |
 
 : {tbl-colwidths="[70,30]"}
+
+The chapters still marked *earlier draft* were written by hand before the book
+moved here. They stay readable while they wait their turn — see the
+[earlier drafts](legacy/index.html).

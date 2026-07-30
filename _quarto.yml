@@ -7,6 +7,9 @@ project:
     # kitchen/ builds image paths in JS (`${IMG}${...}.png`), which Quarto cannot
     # discover by static analysis. Ship the whole folder or those images 404.
     - assets/img/
+    # The hand-written drafts, kept published while the chapters are migrated
+    # one at a time, so that nothing already written stops being reachable.
+    - legacy/
     # GitHub Pages skips folders starting with "_" (e.g. site_libs) without this.
     # Declared as a resource so `quarto render` recreates it on every build.
     - .nojekyll
