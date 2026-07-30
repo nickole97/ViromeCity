@@ -549,6 +549,56 @@ figcaption {
   max-width: none;
 }
 
+// ---------- blocks ----------
+// A chapter reads as a stack of contained pieces rather than one long column
+// of prose. Mark a section `{.block}` and it becomes a white card on the warm
+// page, lifted by a soft shadow, with a coloured rule down its left edge.
+//
+// The rule is where the figure palette is allowed out: it is a 4px stripe
+// beside the text, never behind it, so it carries the semantics with no
+// contrast cost at all. That is the difference between this and tinting a
+// section background, which drops link contrast to 1.34:1 on the blue.
+//
+// `section.` and not a bare class, because Pandoc copies a heading's classes
+// onto its section and we only want to paint the section.
+section.block {
+  background: var(--paper);
+  border-radius: var(--radius);
+  border-left: 4px solid var(--line-strong);
+  box-shadow: 0 3px 15px rgba(23, 24, 28, .05);
+  padding: 1.5rem 1.9rem 1.7rem;
+  margin: 1.7em 0;
+
+  // The card takes the wide measure and the prose stays narrow inside it, so a
+  // figure can use the full width without the text ever running past the line
+  // length the book is set to. Figures fill the card; they no longer need to
+  // break out of anything.
+  width: min(900px, calc(100vw - 320px));
+
+  > p, > ul, > ol, > blockquote, > .parts, > .draftnote {
+    max-width: 40rem;
+  }
+
+  .wide { width: auto; }
+
+  // The heading opens the card, so it drops the rule and the air it would
+  // otherwise need to separate itself from the previous section.
+  > :first-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+  }
+
+  > :last-child { margin-bottom: 0; }
+}
+
+// The stripe carries the same meaning it carries inside a figure.
+section.block-decision { border-left-color: var(--fig-decision); }
+section.block-process  { border-left-color: var(--fig-process);  }
+section.block-branch   { border-left-color: var(--fig-branch);   }
+section.block-aside    { border-left-color: var(--fig-aside);    }
+section.block-output   { border-left-color: var(--fig-output);   }
+
 // ---------- chapter: What is a virus? ----------
 // Patterns the What chapter introduces. Kept generic where they will recur in
 // later chapters (.parts, .axis, .cards) and specific where they will not.

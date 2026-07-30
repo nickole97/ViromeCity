@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-2a70ad602f2b43b648c8335032744faa.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9023ccebdfaa325db51e14c017c65ac5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -200,8 +200,8 @@ ul.task-list li input[type="checkbox"] {
 <p>Starting a new analysis is exciting, but before you jump into methods and sequencing types, you need to understand what you’re actually looking for. This chapter covers the basics: simple ideas, but <strong>very</strong> important for your virome analysis.</p>
 <p>Viruses are the tiniest known packages of <strong>life</strong> — barely alive, arguably not alive at all — yet the <strong>most abundant biological entities</strong> on the planet.</p>
 <p>Their structure is simple: a piece of genetic material — <strong>RNA or DNA</strong>, single- or double-stranded — wrapped in a protein shell called the <strong>capsid</strong>. Some viruses add an outer <strong>lipid envelope</strong>, stolen from the host and studded with <strong>surface proteins</strong> that help them latch onto host cells (like a coronavirus’s spikes).</p>
-<section id="the-parts-3-core-1-optional" class="level2 beat">
-<h2 class="beat anchored" data-anchor-id="the-parts-3-core-1-optional">The parts — 3 core + 1 optional</h2>
+<section id="the-parts-3-core-1-optional" class="level2 beat block block-aside">
+<h2 class="beat block block-aside anchored" data-anchor-id="the-parts-3-core-1-optional">The parts — 3 core + 1 optional</h2>
 <div class="parts">
 <ul>
 <li><span class="n">1</span> <span class="t"><strong>Genome</strong> — the nucleic acid (DNA or RNA); the instructions you sequence.</span></li>
@@ -221,8 +221,8 @@ Figure&nbsp;2.1: Anatomy of a virion.
 </figure>
 </div>
 </section>
-<section id="and-many-shapes" class="level2 beat">
-<h2 class="beat anchored" data-anchor-id="and-many-shapes">And many shapes</h2>
+<section id="and-many-shapes" class="level2 beat block block-branch">
+<h2 class="beat block block-branch anchored" data-anchor-id="and-many-shapes">And many shapes</h2>
 <p>Same simple idea, built many ways:</p>
 <div class="morph">
 <div class="quarto-figure quarto-figure-center">
@@ -258,8 +258,8 @@ Figure&nbsp;2.1: Anatomy of a virion.
 <section id="the-classification-three-ways-to-read-a-virus" class="level2 beat">
 <h2 class="beat anchored" data-anchor-id="the-classification-three-ways-to-read-a-virus">The classification — three ways to read a virus</h2>
 <p>Viruses are abundant and extremely diverse, and their phylogeny and taxonomy can get complicated. To keep things clear, we’ll sort them along <strong>three axes</strong> that help us understand their biology and how to explore them: their <strong>host</strong>, their <strong>genome type</strong>, and their <strong>physical state</strong>.</p>
-<section id="axis-1-host" class="level3 axis">
-<h3 class="axis anchored" data-anchor-id="axis-1-host">Axis 1 · Host</h3>
+<section id="axis-1-host" class="level3 axis block block-branch">
+<h3 class="axis block block-branch anchored" data-anchor-id="axis-1-host">Axis 1 · Host</h3>
 <p><span class="axsub">who we infect — the main one</span></p>
 <p>Remember we said viruses are barely alive — arguably not alive at all? That comes down to one thing: viruses don’t carry the machinery to replicate their own genome, the way other living organisms do. They borrow that machinery from another living being — and that being is what we call the <strong>host</strong>.</p>
 <div id="fig-tree" class="wide quarto-float quarto-figure quarto-figure-center anchored" alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya.">
@@ -273,8 +273,8 @@ Figure&nbsp;2.2: Viruses aren’t a domain of their own — <strong>they sit off
 </figure>
 </div>
 </section>
-<section id="axis-2-gene-content" class="level3 axis">
-<h3 class="axis anchored" data-anchor-id="axis-2-gene-content">Axis 2 · Gene content</h3>
+<section id="axis-2-gene-content" class="level3 axis block block-process">
+<h3 class="axis block block-process anchored" data-anchor-id="axis-2-gene-content">Axis 2 · Gene content</h3>
 <p><span class="axsub">what our genome is made of — RNA or DNA, single or double strands</span></p>
 <p>Every viral genome is one of four combinations: <strong>RNA or DNA, single- or double-stranded</strong>. Depending on what you’re looking for, your prep changes: if you’re after RNA viruses, you need an extra <strong>reverse-transcription</strong> step, so a DNA-only prep quietly misses every single one of them.</p>
 <div class="mx wide">
@@ -315,8 +315,8 @@ Figure&nbsp;2.2: Viruses aren’t a domain of their own — <strong>they sit off
 </div>
 </div>
 </section>
-<section id="axis-3-state" class="level3 axis">
-<h3 class="axis anchored" data-anchor-id="axis-3-state">Axis 3 · State</h3>
+<section id="axis-3-state" class="level3 axis block block-decision">
+<h3 class="axis block block-decision anchored" data-anchor-id="axis-3-state">Axis 3 · State</h3>
 <p><span class="axsub">how we live relative to the host — and it branches</span></p>
 <p>Some viruses live as <strong>free particles</strong>; others are <strong>written right into the host’s own genome</strong>. This is the axis that matters most when you analyze: a free virion is what virus-like particle (VLP) preps enrich for, while an integrated one hides inside the host’s contigs and needs different tools to spot. Match your method to the state you’re after, or you may miss the virus entirely.</p>
 <div class="state-tree wide">
