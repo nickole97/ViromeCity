@@ -3,6 +3,8 @@ title: "What is a virus?"
 subtitle: "The smallest thing you'll spend this whole guide chasing."
 ---
 
+## The short answer {.beat}
+
 ::: block
 Starting a new analysis is exciting, but before you jump into methods and
 sequencing types, you need to understand what you're actually looking for. This

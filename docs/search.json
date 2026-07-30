@@ -44,7 +44,18 @@
     "href": "sections/what.html",
     "title": "What is a virus?",
     "section": "",
-    "text": "The parts",
+    "text": "The short answer",
+    "crumbs": [
+      "The four questions",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/what.html#the-short-answer",
+    "href": "sections/what.html#the-short-answer",
+    "title": "What is a virus?",
+    "section": "",
+    "text": "Starting a new analysis is exciting, but before you jump into methods and sequencing types, you need to understand what you’re actually looking for. This chapter covers the basics: simple ideas, but very important for your virome analysis.\nViruses are the tiniest known packages of life — barely alive, arguably not alive at all — yet the most abundant biological entities on the planet.\nTheir structure is simple: a piece of genetic material — RNA or DNA, single- or double-stranded — wrapped in a protein shell called the capsid. Some viruses add an outer lipid envelope, stolen from the host and studded with surface proteins that help them latch onto host cells (like a coronavirus’s spikes).",
     "crumbs": [
       "The four questions",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
@@ -54,8 +65,8 @@
     "objectID": "sections/what.html#the-parts",
     "href": "sections/what.html#the-parts",
     "title": "What is a virus?",
-    "section": "",
-    "text": "1 Genome — the nucleic acid (DNA or RNA); the instructions you sequence.\n2 Capsid — the protein shell that packages and protects the genome.\n3 Surface / attachment proteins — how it recognizes and enters a host.\n+4 Envelope (optional) — a lipid membrane borrowed from the host; only some viruses have one.\n\n\n\n\n\n\n\n\nFigure 2.1: Anatomy of a virion.\n\n\n\n\n\nMorphology\nSame simple idea, built many ways:\n\n\n\n\nicosahedral\n\n\n\n\n\nhelical\n\n\n\n\n\ncomplex (phage)\n\n\n\n\n\nenveloped\n\n\n\n\nIllustration in progress\nFinal morphologies figure — matched to the anatomy style above. These are quick placeholders.",
+    "section": "The parts",
+    "text": "The parts\n\n\n\n1 Genome — the nucleic acid (DNA or RNA); the instructions you sequence.\n2 Capsid — the protein shell that packages and protects the genome.\n3 Surface / attachment proteins — how it recognizes and enters a host.\n+4 Envelope (optional) — a lipid membrane borrowed from the host; only some viruses have one.\n\n\n\n\n\n\n\n\nFigure 2.1: Anatomy of a virion.\n\n\n\n\n\nMorphology\nSame simple idea, built many ways:\n\n\n\n\nicosahedral\n\n\n\n\n\nhelical\n\n\n\n\n\ncomplex (phage)\n\n\n\n\n\nenveloped\n\n\n\n\nIllustration in progress\nFinal morphologies figure — matched to the anatomy style above. These are quick placeholders.",
     "crumbs": [
       "The four questions",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
