@@ -63,7 +63,18 @@ h1, h2, h3, h4, .quarto-title h1 {
 }
 
 h1 { font-size: 2.15rem; }
-h2 { font-size: 1.45rem; margin-top: 2.2em; }
+
+// A chapter's sections are the questions it answers, so they are headings and
+// not labels. The rule beneath separates one question from the last; Quarto
+// draws one by default in an off-palette grey, so this is that rule made
+// deliberate rather than a new one.
+h2 {
+  font-size: 1.5rem;
+  margin-top: 2.6em;
+  padding-bottom: .35em;
+  border-bottom: 1px solid var(--line);
+}
+
 h3 { font-size: 1.15rem; margin-top: 1.7em; }
 
 p { margin-bottom: 1.05em; }

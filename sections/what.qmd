@@ -3,7 +3,7 @@ title: "How should I think about viruses?"
 subtitle: "District 1 — where the biology decides the method."
 ---
 
-## The short answer {.beat}
+## The short answer
 
 ::: block
 If you're coming from bacterial genomics or metagenomics, it's tempting to
@@ -19,7 +19,7 @@ To understand why viruses require different approaches, you first need to
 understand how they are built.
 :::
 
-## What are they made of? {.beat}
+## What are they made of?
 
 :::: {.block .block-aside}
 ::: parts
@@ -50,7 +50,7 @@ or taxonomic group, let's organize this diversity around three questions:
 - **What is their biological state?**
 :::
 
-## Who do they infect? {.beat}
+## Who do they infect?
 
 ::: {.block .block-branch}
 [Every virus depends on a host.]{.claim}
@@ -70,7 +70,7 @@ shapes where viruses are found, how they evolve, and which experimental and
 computational approaches are most appropriate.
 :::
 
-## What kind of genome do they carry? {.beat}
+## What kind of genome do they carry?
 
 ::: {.block .block-process}
 Unlike other cellular organisms, viruses don't all use the same genetic
@@ -134,7 +134,7 @@ Before you ever sequence a sample, these differences determine which workflows
 are appropriate — and which ones will fail.
 :::
 
-## How do they exist? {.beat}
+## How do they exist?
 
 ::: {.block .block-decision}
 [Not every virus exists as a free viral particle.]{.claim}
