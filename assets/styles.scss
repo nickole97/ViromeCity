@@ -739,26 +739,20 @@ main.content > section > .axsub,
 // `section.` / `div.` and not a bare class, because Pandoc copies a heading's
 // classes onto its section and we must not paint the heading too. A div lets a
 // passage with no heading of its own — a chapter opening — be a block as well.
+// A block is a passage, not a panel. It used to be a card — border, shadow,
+// background — and that read as documentation: prose in a box looks like a
+// callout, and a chapter of callouts looks like a manual. The box is gone and
+// only the coloured rule stays, which was the part carrying meaning anyway.
+//
+// Figures keep their own card. Text does not need one to be a piece.
 section.block, div.block {
-  background: var(--paper);
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  border-left: 4px solid var(--line-strong);
-  box-shadow: 0 3px 15px rgba(23, 24, 28, .05);
-  padding: 1.5rem 1.9rem 1.7rem;
+  border-left: 3px solid var(--line-strong);
+  padding: .15rem 0 .15rem 1.5rem;
 
   // Enough air that one block tends to hold the screen on its own. This is
   // most of what makes scrolling feel like moving between pieces rather than
   // down one column.
   margin: 3.2em 0;
-
-  // Each block is as wide as its own widest thing, not as wide as the column.
-  // A block of prose stops where the prose stops; a block holding the tree of
-  // life keeps the room the tree needs. Filling the column regardless left a
-  // text block with ~300px of white inside it, which is the same dead margin
-  // the wide column was meant to remove, just moved inside the card.
-  width: fit-content;
-  max-width: 100%;
 
   // The prose inside keeps the reading measure — at 40rem a line already runs
   // to about 83 characters, so this is a ceiling, not a target.
