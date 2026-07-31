@@ -3,9 +3,28 @@
 An illustrated guide that walks a researcher from a human-virome sample *idea* to
 the analysis. Mixed audience: PhD/postdoc researchers and beginning students.
 
-**This is a book, not documentation.** It is read in order, it has a narrative arc,
-and it has a guide character (Fivi, a bacteriophage). Design and tone decisions
-should follow from that, not from docs-site conventions.
+**Not a book about viromes — a tool for doing virome analysis.** That distinction
+decides everything else. A reader arrives with a sample and a question, not to be
+taught virology. Explain biology only where it changes what they should do.
+
+**But it is still a book, not documentation.** It is read in order, it has a
+narrative arc, and it has a guide character (Fivi, a bacteriophage). Design and
+tone decisions should follow from that, not from docs-site conventions.
+
+It will also exist **in print**. Anything that only works on a screen — the sidebar,
+the scroll reveal, wide figures — is a screen affordance, not a design decision.
+
+## Chapters are districts
+
+The reader is navigating Virome City, so each chapter is a district: District 1 is
+"How should I think about viruses?", and the How-to district is where methods get
+decided. The city is the structure, not a metaphor sprinkled on top.
+
+**Chapter titles are questions.** Not "What is a virus?" but "How should I think
+about viruses?" — a title states the question the reader arrived with, and the
+chapter answers it. This applies to every chapter from here on.
+
+The name is **Virome City**. Not "Viral City".
 
 ## Stack
 
@@ -50,6 +69,15 @@ pattern to copy.)
 
 **Fivi appears once per screen.** She is a character, not a banner. She speaks in
 first person. Her aside block is `::: fivi`. The cover hero is cover-only.
+
+**Fivi is a scientific guide, not comic relief.** She appears only to flag a common
+misconception, or an idea readers are likely to underestimate. If an aside is not
+correcting something, it should not be Fivi.
+
+**Figures belong to the reading flow**, not to a plate section. They keep their
+number (Quarto generates it) and drop the descriptive caption — the prose around a
+figure is what explains it. A caption that repeats the paragraph is a caption that
+should not exist.
 
 ## Language
 

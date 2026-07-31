@@ -1,88 +1,81 @@
 ---
-title: "What is a virus?"
-subtitle: "The smallest thing you'll spend this whole guide chasing."
+title: "How should I think about viruses?"
+subtitle: "District 1 — where the biology decides the method."
 ---
 
 ## The short answer {.beat}
 
 ::: block
-Starting a new analysis is exciting, but before you jump into methods and
-sequencing types, you need to understand what you're actually looking for. This
-chapter covers the basics: simple ideas, but **very** important for your virome
-analysis.
+If you're coming from bacterial genomics or metagenomics, it's tempting to
+assume viruses can be studied the same way.
 
-Viruses are the tiniest known packages of **life** — barely alive, arguably not
-alive at all — yet the **most abundant biological entities** on the planet.
+[They can't.]{.claim}
 
-Their structure is simple: a piece of genetic material — **RNA or DNA**, single-
-or double-stranded — wrapped in a protein shell called the **capsid**. Some
-viruses add an outer **lipid envelope**, stolen from the host and studded with
-**surface proteins** that help them latch onto host cells (like a coronavirus's
-spikes).
+Viruses don't follow a single experimental or computational workflow. Their
+biology is extraordinarily diverse, and every methodological decision begins
+with understanding what kind of virus you're actually looking for.
+
+To understand why viruses require different approaches, you first need to
+understand how they are built.
 :::
 
-## The parts {.beat}
+## What are they made of? {.beat}
 
 :::: {.block .block-aside}
 ::: parts
 - [1]{.n} [**Genome** — the nucleic acid (DNA or RNA); the instructions you sequence.]{.t}
 - [2]{.n} [**Capsid** — the protein shell that packages and protects the genome.]{.t}
 - [3]{.n} [**Surface / attachment proteins** — how it recognizes and enters a host.]{.t}
-- [+4]{.n .opt} [**Envelope** *(optional)* — a lipid membrane borrowed from the host; only some viruses have one.]{.t .opt}
+- [4]{.n} [**Envelope** *(optional)* — a lipid membrane borrowed from the host; only some viruses have one.]{.t}
 :::
 
-![Anatomy of a virion.](../assets/img/what/virion-anatomy.svg){#fig-anatomy fig-alt="Cross-section of a virion showing surface proteins, lipid envelope, capsid and genome."}
+![](../assets/img/what/virion-anatomy.svg){#fig-anatomy fig-alt="Cross-section of a virion showing surface proteins, lipid envelope, capsid and genome."}
+
+Their structure is simple: a piece of genetic material — RNA or DNA, single- or
+double-stranded — wrapped in a protein shell called the **capsid**. Some viruses
+add an outer **lipid envelope**, stolen from the host and studded with **surface
+proteins** that help them latch onto host cells (like a coronavirus's spikes).
 ::::
 
-### Morphology {.axis .block .block-branch}
-
-Same simple idea, built many ways:
-
-::: morph
-![icosahedral](../assets/img/what/morph-icosahedral.svg){fig-alt="Icosahedral virus silhouette."}
-
-![helical](../assets/img/what/morph-helical.svg){fig-alt="Helical virus silhouette."}
-
-![complex (phage)](../assets/img/what/morph-complex-phage.svg){fig-alt="Complex bacteriophage silhouette with head and tail."}
-
-![enveloped](../assets/img/what/morph-enveloped.svg){fig-alt="Enveloped virus silhouette with surface spikes."}
+::: pull
+In Virome City, biological questions come before methodological ones.
 :::
-
-::: draftnote
-[Illustration in progress]{.tag}
-
-Final morphologies figure — matched to the anatomy style above. These are quick
-placeholders.
-:::
-
-## The classification {.beat .axes}
 
 ::: block
-Viruses are abundant and extremely diverse, and their phylogeny and taxonomy can
-get complicated. To keep things clear, we'll sort them along **three axes** that
-help us understand their biology and how to explore them: their **host**, their
-**genome type**, and their **physical state**.
+Viral diversity can feel overwhelming. Instead of memorizing every viral family
+or taxonomic group, let's organize this diversity around three questions:
+
+- **Who do they infect?**
+- **What kind of genome do they carry?**
+- **What is their biological state?**
 :::
 
-### Host {.axis .block .block-branch}
+## Who do they infect? {.beat}
 
-[who we infect — the main one]{.axsub}
+::: {.block .block-branch}
+[Every virus depends on a host.]{.claim}
 
-Remember we said viruses are barely alive — arguably not alive at all? That comes
-down to one thing: viruses don't carry the machinery to replicate their own
-genome, the way other living organisms do. They borrow that machinery from
-another living being — and that being is what we call the **host**.
+Unlike cellular organisms, viruses cannot replicate on their own. They lack the
+machinery needed to copy their genomes and instead rely on another living
+organism to do the job. That organism is the **host**.
 
-![Viruses aren't a domain of their own — **they sit off the tree**, and each type infects a branch of it. Archaeal and eukaryotic viruses ride the branch that Archaea and Eukarya share.](../assets/img/what/tree-of-life.svg){#fig-tree .wide fig-alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya."}
+Viruses do not form their own branch of the tree of life. Instead, they infect
+organisms across every cellular domain — **Bacteria**, **Archaea** and
+**Eukarya**.
 
-### Gene content {.axis .block .block-process}
+![](../assets/img/what/tree-of-life.svg){#fig-tree .wide fig-alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya."}
 
-[what our genome is made of — RNA or DNA, single or double strands]{.axsub}
+Understanding the host is one of the first questions in viral research because it
+shapes where viruses are found, how they evolve, and which experimental and
+computational approaches are most appropriate.
+:::
 
-Every viral genome is one of four combinations: **RNA or DNA, single- or
-double-stranded**. Depending on what you're looking for, your prep changes: if
-you're after RNA viruses, you need an extra **reverse-transcription** step, so a
-DNA-only prep quietly misses every single one of them.
+## What kind of genome do they carry? {.beat}
+
+::: {.block .block-process}
+Unlike other cellular organisms, viruses don't all use the same genetic
+material. Their genomes may be DNA or RNA, and each can be either single- or
+double-stranded.
 
 :::: {.mx .wide}
 ::: mx-corner
@@ -137,17 +130,19 @@ most phages, herpes, adenovirus
 :::
 ::::
 
-### State {.axis .block .block-decision}
+Before you ever sequence a sample, these differences determine which workflows
+are appropriate — and which ones will fail.
+:::
 
-[how we live relative to the host — and it branches]{.axsub}
+## How do they exist? {.beat}
 
-Some viruses live as **free particles**; others are **written right into the
-host's own genome**. This is the axis that matters most when you analyze: a free
-virion is what virus-like particle (VLP) preps enrich for, while an integrated
-one hides inside the host's contigs and needs different tools to spot. Match your
-method to the state you're after, or you may miss the virus entirely.
+::: {.block .block-decision}
+[Not every virus exists as a free viral particle.]{.claim}
 
-::::: {.state-tree .wide}
+Some remain integrated within their host's genome for part — or even all — of
+their lifecycle.
+
+::::: state-tree
 :::: st-row
 ::: st-main
 [state · 1]{.num}
@@ -208,10 +203,14 @@ particle.
 ::::
 :::::
 
-::: fivi
-![](../assets/img/fivi-surprised.png){fig-alt="Fivi, looking surprised."}
+Their biological state determines how they are detected — and whether they are
+detected at all.
+:::
 
-**Keep this axis in mind.** State is the one that matters most for analysis — it
-can decide whether your method finds me *at all*. We cash it in under
-[How-to](how-to.qmd).
+::: fivi
+![](../assets/img/fivi-surprised.png){fig-alt="Fivi, surprised."}
+
+**Don't overlook this axis.** Biological state may determine whether your
+workflow finds me at all. We'll put this into practice in the
+[How-to district](how-to.qmd).
 :::

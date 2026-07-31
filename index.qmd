@@ -29,11 +29,11 @@ Four questions, in order — then the tool that turns your answers into a method
 ::: route
 
 ::: stop
-[What]{.q}
-[What is a virus?](sections/what.qmd){.stop-title}
+[District 1]{.q}
+[How should I think about viruses?](sections/what.qmd){.stop-title}
 
-Its anatomy, what it's made of, and the three axes we use to classify it: host,
-gene content, and state.
+What a virus is made of, and the three questions that decide your method: who it
+infects, what genome it carries, and what state it is in.
 :::
 
 ::: {.stop .pending}

@@ -32,7 +32,7 @@ book:
     logo: assets/img/Fivi.png
   chapters:
     - index.qmd
-    - part: "The four questions"
+    - part: "The four districts"
       chapters:
         - sections/what.qmd
         - sections/why.qmd

@@ -14,7 +14,7 @@
     "href": "index.html#the-route",
     "title": "Virome City",
     "section": "",
-    "text": "What What is a virus?\nIts anatomy, what it’s made of, and the three axes we use to classify it: host, gene content, and state.\n\n\nWhy Why the virome matters\nShort comic-style stories of how studying viromes has shaped human health — evolution, ecology, medicine.\n\n\nWhere Where viruses hide\nEverywhere, but tiny. How the way you search changes across the body — and where the noise comes from.\n\n\nHow-to How to design the experiment\nConvert, enrich, sequence, analyze. What all of the above means for your protocol, from sampling to bioinformatics.\n\n\nThen the tool Fivi’s Kitchen\nPick your sample, your target and your experience. Fivi cooks a method plan for your exact case — including the times when the honest answer is “you don’t need metagenomics at all.”",
+    "text": "District 1 How should I think about viruses?\nWhat a virus is made of, and the three questions that decide your method: who it infects, what genome it carries, and what state it is in.\n\n\nWhy Why the virome matters\nShort comic-style stories of how studying viromes has shaped human health — evolution, ecology, medicine.\n\n\nWhere Where viruses hide\nEverywhere, but tiny. How the way you search changes across the body — and where the noise comes from.\n\n\nHow-to How to design the experiment\nConvert, enrich, sequence, analyze. What all of the above means for your protocol, from sampling to bioinformatics.\n\n\nThen the tool Fivi’s Kitchen\nPick your sample, your target and your experience. Fivi cooks a method plan for your exact case — including the times when the honest answer is “you don’t need metagenomics at all.”",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Virome City</span>"
     ]
@@ -42,45 +42,67 @@
   {
     "objectID": "sections/what.html",
     "href": "sections/what.html",
-    "title": "What is a virus?",
+    "title": "How should I think about viruses?",
     "section": "",
     "text": "The short answer",
     "crumbs": [
-      "The four questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
+      "The four districts",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
   {
     "objectID": "sections/what.html#the-short-answer",
     "href": "sections/what.html#the-short-answer",
-    "title": "What is a virus?",
+    "title": "How should I think about viruses?",
     "section": "",
-    "text": "Starting a new analysis is exciting, but before you jump into methods and sequencing types, you need to understand what you’re actually looking for. This chapter covers the basics: simple ideas, but very important for your virome analysis.\nViruses are the tiniest known packages of life — barely alive, arguably not alive at all — yet the most abundant biological entities on the planet.\nTheir structure is simple: a piece of genetic material — RNA or DNA, single- or double-stranded — wrapped in a protein shell called the capsid. Some viruses add an outer lipid envelope, stolen from the host and studded with surface proteins that help them latch onto host cells (like a coronavirus’s spikes).",
+    "text": "If you’re coming from bacterial genomics or metagenomics, it’s tempting to assume viruses can be studied the same way.\nThey can’t.\nViruses don’t follow a single experimental or computational workflow. Their biology is extraordinarily diverse, and every methodological decision begins with understanding what kind of virus you’re actually looking for.\nTo understand why viruses require different approaches, you first need to understand how they are built.",
     "crumbs": [
-      "The four questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
+      "The four districts",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
   {
-    "objectID": "sections/what.html#the-parts",
-    "href": "sections/what.html#the-parts",
-    "title": "What is a virus?",
-    "section": "The parts",
-    "text": "The parts\n\n\n\n1 Genome — the nucleic acid (DNA or RNA); the instructions you sequence.\n2 Capsid — the protein shell that packages and protects the genome.\n3 Surface / attachment proteins — how it recognizes and enters a host.\n+4 Envelope (optional) — a lipid membrane borrowed from the host; only some viruses have one.\n\n\n\n\n\n\n\n\nFigure 2.1: Anatomy of a virion.\n\n\n\n\n\nMorphology\nSame simple idea, built many ways:\n\n\n\n\nicosahedral\n\n\n\n\n\nhelical\n\n\n\n\n\ncomplex (phage)\n\n\n\n\n\nenveloped\n\n\n\n\nIllustration in progress\nFinal morphologies figure — matched to the anatomy style above. These are quick placeholders.",
+    "objectID": "sections/what.html#what-are-they-made-of",
+    "href": "sections/what.html#what-are-they-made-of",
+    "title": "How should I think about viruses?",
+    "section": "What are they made of?",
+    "text": "What are they made of?\n\n\n\n1 Genome — the nucleic acid (DNA or RNA); the instructions you sequence.\n2 Capsid — the protein shell that packages and protects the genome.\n3 Surface / attachment proteins — how it recognizes and enters a host.\n4 Envelope (optional) — a lipid membrane borrowed from the host; only some viruses have one.\n\n\n\n\n\n\n\n\nFigure 2.1\n\n\n\nTheir structure is simple: a piece of genetic material — RNA or DNA, single- or double-stranded — wrapped in a protein shell called the capsid. Some viruses add an outer lipid envelope, stolen from the host and studded with surface proteins that help them latch onto host cells (like a coronavirus’s spikes).\n\n\nIn Virome City, biological questions come before methodological ones.\n\n\nViral diversity can feel overwhelming. Instead of memorizing every viral family or taxonomic group, let’s organize this diversity around three questions:\n\nWho do they infect?\nWhat kind of genome do they carry?\nWhat is their biological state?",
     "crumbs": [
-      "The four questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
+      "The four districts",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
   {
-    "objectID": "sections/what.html#the-classification",
-    "href": "sections/what.html#the-classification",
-    "title": "What is a virus?",
-    "section": "The classification",
-    "text": "The classification\n\nViruses are abundant and extremely diverse, and their phylogeny and taxonomy can get complicated. To keep things clear, we’ll sort them along three axes that help us understand their biology and how to explore them: their host, their genome type, and their physical state.\n\n\nHost\nwho we infect — the main one\nRemember we said viruses are barely alive — arguably not alive at all? That comes down to one thing: viruses don’t carry the machinery to replicate their own genome, the way other living organisms do. They borrow that machinery from another living being — and that being is what we call the host.\n\n\n\n\n\n\nFigure 2.2: Viruses aren’t a domain of their own — they sit off the tree, and each type infects a branch of it. Archaeal and eukaryotic viruses ride the branch that Archaea and Eukarya share.\n\n\n\n\n\nGene content\nwhat our genome is made of — RNA or DNA, single or double strands\nEvery viral genome is one of four combinations: RNA or DNA, single- or double-stranded. Depending on what you’re looking for, your prep changes: if you’re after RNA viruses, you need an extra reverse-transcription step, so a DNA-only prep quietly misses every single one of them.\n\n\n\n\n\nRNA\n\n\nDNA\n\n\nOne strand (ss)\n\n\n\nssRNA\ncoronavirus, influenza\n\n\n\nssDNA\nAnelloviridae (TTV), Microviridae\n\n\nTwo strands (ds)\n\n\n\ndsRNA\nrotavirus\n\n\n\ndsDNA\nmost phages, herpes, adenovirus\n\n\n\n\nState\nhow we live relative to the host — and it branches\nSome viruses live as free particles; others are written right into the host’s own genome. This is the axis that matters most when you analyze: a free virion is what virus-like particle (VLP) preps enrich for, while an integrated one hides inside the host’s contigs and needs different tools to spot. Match your method to the state you’re after, or you may miss the virus entirely.\n\n\n\nstate · 1\n\nstate: exogenous\nExogenous\nA free particle that infects from outside — the classic virion.\n\n\n→ can integrate into the host genome →\n\n\nstate · 2\n\nstate: endogenous\nEndogenous\nGenome written into the host’s DNA — inherited or long-resident, not a free particle.\n\n\n\nendogenous forms, by host\n\n\n\nProphages bacterial host\n\n\n\nProviruses archaeal host\n\n\n\nERVs eukaryotic host\n\nretroviral non-retroviral (EVEs)\n\n\n\n\n\n\n\nKeep this axis in mind. State is the one that matters most for analysis — it can decide whether your method finds me at all. We cash it in under How-to.",
+    "objectID": "sections/what.html#who-do-they-infect",
+    "href": "sections/what.html#who-do-they-infect",
+    "title": "How should I think about viruses?",
+    "section": "Who do they infect?",
+    "text": "Who do they infect?\n\nEvery virus depends on a host.\nUnlike cellular organisms, viruses cannot replicate on their own. They lack the machinery needed to copy their genomes and instead rely on another living organism to do the job. That organism is the host.\nViruses do not form their own branch of the tree of life. Instead, they infect organisms across every cellular domain — Bacteria, Archaea and Eukarya.\n\n\n\n\n\n\nFigure 2.2\n\n\n\nUnderstanding the host is one of the first questions in viral research because it shapes where viruses are found, how they evolve, and which experimental and computational approaches are most appropriate.",
     "crumbs": [
-      "The four questions",
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>What is a virus?</span>"
+      "The four districts",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/what.html#what-kind-of-genome-do-they-carry",
+    "href": "sections/what.html#what-kind-of-genome-do-they-carry",
+    "title": "How should I think about viruses?",
+    "section": "What kind of genome do they carry?",
+    "text": "What kind of genome do they carry?\n\nUnlike other cellular organisms, viruses don’t all use the same genetic material. Their genomes may be DNA or RNA, and each can be either single- or double-stranded.\n\n\n\n\n\nRNA\n\n\nDNA\n\n\nOne strand (ss)\n\n\n\nssRNA\ncoronavirus, influenza\n\n\n\nssDNA\nAnelloviridae (TTV), Microviridae\n\n\nTwo strands (ds)\n\n\n\ndsRNA\nrotavirus\n\n\n\ndsDNA\nmost phages, herpes, adenovirus\n\n\nBefore you ever sequence a sample, these differences determine which workflows are appropriate — and which ones will fail.",
+    "crumbs": [
+      "The four districts",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/what.html#how-do-they-exist",
+    "href": "sections/what.html#how-do-they-exist",
+    "title": "How should I think about viruses?",
+    "section": "How do they exist?",
+    "text": "How do they exist?\n\nNot every virus exists as a free viral particle.\nSome remain integrated within their host’s genome for part — or even all — of their lifecycle.\n\n\n\nstate · 1\n\nstate: exogenous\nExogenous\nA free particle that infects from outside — the classic virion.\n\n\n→ can integrate into the host genome →\n\n\nstate · 2\n\nstate: endogenous\nEndogenous\nGenome written into the host’s DNA — inherited or long-resident, not a free particle.\n\n\n\nendogenous forms, by host\n\n\n\nProphages bacterial host\n\n\n\nProviruses archaeal host\n\n\n\nERVs eukaryotic host\n\nretroviral non-retroviral (EVEs)\n\n\n\n\n\nTheir biological state determines how they are detected — and whether they are detected at all.\n\n\n\nDon’t overlook this axis. Biological state may determine whether your workflow finds me at all. We’ll put this into practice in the How-to district.",
+    "crumbs": [
+      "The four districts",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
   {
@@ -90,7 +112,7 @@
     "section": "",
     "text": "This chapter has not been migrated yet. The current draft lives in the old site.\n\n\n\nHuman evolution, ecology, medicine, and life itself — real cases where studying viromes changed what we do.",
     "crumbs": [
-      "The four questions",
+      "The four districts",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Why the virome matters</span>"
     ]
   },
@@ -101,7 +123,7 @@
     "section": "",
     "text": "This chapter has not been migrated yet. The current draft lives in the old site.\n\n\n\nShotgun sequencing, composition across the body, the body heatmap, and the noise problem.",
     "crumbs": [
-      "The four questions",
+      "The four districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where viruses hide</span>"
     ]
   },
@@ -112,7 +134,7 @@
     "section": "",
     "text": "This chapter has not been migrated yet. The current draft lives in the old site.\n\n\n\nConvert (RT), enrich (VLP), pick a platform, then the bioinformatics — ending in the decision tree.",
     "crumbs": [
-      "The four questions",
+      "The four districts",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>How to design the experiment</span>"
     ]
   },
