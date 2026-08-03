@@ -46,10 +46,12 @@ In Virome City, biological questions come before methodological ones.
 ::: block
 Viral diversity can feel overwhelming. Instead of memorizing every viral family
 or taxonomic group, let's organize this diversity around three questions:
+:::
 
-- **Who do they infect?**
-- **What kind of genome do they carry?**
-- **What is their biological state?**
+::: question
+- Who do they infect?
+- What kind of genome do they carry?
+- What is their biological state?
 :::
 
 ## Who do they infect?
