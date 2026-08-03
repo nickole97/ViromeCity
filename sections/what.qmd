@@ -21,7 +21,7 @@ understand how they are built.
 
 ## What are they made of?
 
-:::: {.block .block-aside}
+:::: block
 ::: parts
 - [1]{.n} [**Genome** — the nucleic acid (DNA or RNA); the instructions you sequence.]{.t}
 - [2]{.n} [**Capsid** — the protein shell that packages and protects the genome.]{.t}
@@ -52,19 +52,25 @@ or taxonomic group, let's organize this diversity around three questions:
 
 ## Who do they infect?
 
-::: {.block .block-branch}
+::: block
 [Every virus depends on a host.]{.claim}
 
 Unlike cellular organisms, viruses cannot replicate on their own. They lack the
 machinery needed to copy their genomes and instead rely on another living
 organism to do the job. That organism is the **host**.
 
+:::
+::: insight
 Viruses do not form their own branch of the tree of life. Instead, they infect
 organisms across every cellular domain — **Bacteria**, **Archaea** and
 **Eukarya**.
+:::
+::: block
 
 ![](../assets/img/what/tree-of-life.svg){#fig-tree .wide fig-alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya."}
 
+:::
+::: methodology
 Understanding the host is one of the first questions in viral research because it
 shapes where viruses are found, how they evolve, and which experimental and
 computational approaches are most appropriate.
@@ -72,7 +78,7 @@ computational approaches are most appropriate.
 
 ## What kind of genome do they carry?
 
-::: {.block .block-process}
+::: block
 Unlike other cellular organisms, viruses don't all use the same genetic
 material. Their genomes may be DNA or RNA, and each can be either single- or
 double-stranded.
@@ -130,13 +136,15 @@ most phages, herpes, adenovirus
 :::
 ::::
 
+:::
+::: methodology
 Before you ever sequence a sample, these differences determine which workflows
 are appropriate — and which ones will fail.
 :::
 
 ## How do they exist?
 
-::: {.block .block-decision}
+::: block
 [Not every virus exists as a free viral particle.]{.claim}
 
 Some remain integrated within their host's genome for part — or even all — of
@@ -203,8 +211,18 @@ particle.
 ::::
 :::::
 
+:::
+::: insight
 Their biological state determines how they are detected — and whether they are
 detected at all.
+:::
+
+::: research
+ERVs descend from retroviruses, which integrate into the host genome as a normal
+step in their lifecycle. Non-retroviral EVEs come from viruses that never
+integrate at all — fragments captured by accident and then inherited. The
+distinction matters for detection: a search built around retroviral signatures
+will not find the second kind.
 :::
 
 ::: fivi

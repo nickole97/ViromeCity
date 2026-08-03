@@ -38,27 +38,52 @@ served by GitHub Pages from `main` / `/docs`.
 These were settled deliberately. If something here looks like a mistake, ask
 before changing it.
 
-**Light mode only.** No dark mode, no theme toggle. The figure palette is yellow,
-pink and lavender; it does not survive inversion, and there is no dark yellow that
-still reads as yellow. Maintaining two palettes is not worth it.
+**Light mode only.** No dark mode, no theme toggle.
 
-**Two colour layers, and they never mix.**
-- *Page layer* — `--ink`, `--muted`, `--line`, `--accent` (`#3550C9`). Text, links,
-  rules, navigation.
-- *Figure layer* — `--fig-decision`, `--fig-process`, `--fig-branch`, `--fig-aside`,
-  `--fig-output`. **Only ever inside a figure.** Never behind body text, never as a
-  section background, never in the nav.
+**The design system is version B of the handoff** (`Portada_Virome_City.zip`,
+`Virome-City-Design-System-B.html`), adopted on 2 August. Version A — warm paper,
+Fraunces and Nunito Sans, a red voice — was implemented first and rejected: on the
+page it read as undifferentiated, because the chapter was written in one register
+and three of the six components had no content. B is the cold, scientific
+direction. Both are marked high-fidelity, so the values are implemented exactly.
 
-Every figure colour has a paired ink (`--fig-process-ink` etc.). Use the pair.
-Never black on yellow or on pink.
+**Colour identifies the type of component, never the chapter.** A reader learns
+"cyan is a Figure" once and it holds everywhere. Districts are structural, not
+chromatic — they carry no colour of their own.
 
-The accent is blue because it is the only colour in the palette dark enough to
-work as link text, and because blue means *decision* in the figures — which is the
-thesis of the book. The old green `#0F6E56` was retired; don't reintroduce it.
+| Token | Hex | Role |
+|---|---|---|
+| `--page` / `--paper` | `#ffffff` | lab white; cards are white too, the border separates them |
+| `--ink` | `#14213d` | navy — text, headings |
+| `--muted` / `--ink-secondary` | `#5c6b82` | captions, metadata, secondary copy |
+| `--line` | `#e2e6ec` | card borders and separators |
+| `--line-strong` | `#c7cdd7` | dotted borders |
+| `--c-figure` (structure) | `#0891b2` | Figure and technical data |
+| `--c-question` (voice) | `#e85d4e` | Question, Fivi Note, links |
+| `--c-methodology` (method) | `#d99a1b` | Methodology Tip |
+| `--c-insight` | `#6c63c9` | Insight, on `#eef0fb` |
+| Research Note | `#5c6b82` | neutral, dotted `#c7cdd7`, no accent |
 
-**Body text is sans** (Spline Sans); headings are serif (Fraunces). Since the body
-is sans, the "book" feeling comes from measure, leading and whitespace — roughly
-680px column, 17.5px, line-height 1.65. Don't tighten these to fit more on screen.
+**Three faces, all geometric.** Space Grotesk 500–700 for headings and Fivi's
+voice. IBM Plex Sans 400–700 for body and labels. IBM Plex Mono 500 for technical
+data and for every kicker: `ssRNA`, `dsDNA`, family names, component labels.
+
+Scale: H1 600 40px, H2 27px, body 400 18px/1.6, kicker 700 11px mono with 1.5px
+tracking, technical 500 14px mono.
+
+**Spacing is an 8px scale.** 80px opens a section, 48px sits before and after a
+figure, 32px is a component's inner padding, 24px separates paragraphs. Radius 8px.
+
+*Replaced twice:* first a two-layer scheme where a five-colour figure palette
+carried meaning — blue meant *decision* — with a `#3550C9` accent and Spline Sans;
+then version A. The retired green `#0F6E56` stays retired.
+
+**The six components.** Question, Figure, Insight, Fivi Note, Methodology Tip,
+Research Note. Each has one colour, fixed book-wide. A chapter that uses only one
+or two of them will read as flat no matter how good the palette is — that is what
+sank version A, and it was a content problem, not a colour one. Figures are
+line-art technical diagrams, never photorealistic. Fivi appears only in the margin
+of a note, never inside a diagram.
 
 **One stylesheet: `assets/styles.scss`.** No inline `style="..."`, no `<style>`
 blocks in chapters. New visual patterns become classes there.
@@ -75,9 +100,10 @@ misconception, or an idea readers are likely to underestimate. If an aside is no
 correcting something, it should not be Fivi.
 
 **Figures belong to the reading flow**, not to a plate section. They keep their
-number (Quarto generates it) and drop the descriptive caption — the prose around a
-figure is what explains it. A caption that repeats the paragraph is a caption that
-should not exist.
+number (Quarto generates it). The design system asks for a caption on every figure;
+the chapter text was written to explain each figure in the prose beside it. Where
+both are true, keep the caption short and factual — it names what the figure shows,
+it does not re-argue the paragraph.
 
 ## Language
 
@@ -90,17 +116,16 @@ which is what keeps translation cheap. Do not translate text inside SVGs.
 
 ## Figure widths
 
-The reading column is deliberately narrow; wide figures break out of it.
+**Do not use Quarto's `.column-*` classes.** They place an element into Quarto's
+page grid, and the moment one appears Quarto stamps `page-columns page-full` on
+`<main>` and on every section containing one, spans it screen-start/screen-end with
+`!important`, and re-resolves a nested grid inside each section. That put figures on
+top of the sidebar, slid the reading column underneath it, and made section
+backgrounds unable to contain their own figures. Removing them removed the whole
+class of bug.
 
-| Figure | Class |
-|---|---|
-| Small diagrams, virion anatomy | *(default)* |
-| Classification cards, gene-content matrix | `.column-body-outset` |
-| Decision tree, body heatmap | `.column-page` |
-| Fivi's asides, side notes | `.column-margin` |
-
-Decide the width when migrating a figure, not afterwards — retrofitting means
-reworking every chapter.
+Width is one class, `.wide`, in ordinary CSS. Anything too wide for the column
+becomes its own page, linked from the chapter.
 
 ## Not Quarto
 
@@ -109,18 +134,16 @@ hand-written HTML, declared as `resources` in `_quarto.yml` and copied to the bu
 untouched. Don't convert them to markdown. Heavy interactive widgets live as their
 own pages, linked from chapters — not embedded inside them.
 
-## Design identity is deferred on purpose
-
-The Virome City visual identity — watercolor, city-street motif, cover art — is
-deliberately postponed until the writing is done, so design serves finished content
-instead of forcing it. Don't invent it early.
-
 ## Current state
 
-Skeleton and cover are built. The four chapters are stubs. Their real drafts are
-the legacy HTML in `_archive/sections-html/`, not yet migrated.
+District 1 — "How should I think about viruses?" — is written, migrated and live.
+The other three districts and Fivi's Kitchen are stubs. The hand-written drafts for
+`where` and `how-to` are in `_archive/sections-html/`, still to migrate, and stay
+published at `/legacy/` so nothing already written is unreachable.
 
-Known defects in the legacy HTML, to fix on migration:
-- `what.html` — Fivi embedded as base64 in the CSS; replace with a file reference
-- `what.html` — link to `#how` is broken; should point to the How-to chapter
-- All legacy pages request Fraunces and Spline Sans but never load them
+The three defects the legacy HTML carried are fixed: Fivi is no longer a base64 PNG
+inside the CSS, the broken `#how` link resolves to the How-to district, and the
+fonts load from the document head.
+
+Cover art and the city motif are still to come. The design system defines the
+editorial language; it does not draw the cover.
