@@ -71,8 +71,11 @@ data and for every kicker: `ssRNA`, `dsDNA`, family names, component labels.
 Scale: H1 600 40px, H2 27px, body 400 18px/1.6, kicker 700 11px mono with 1.5px
 tracking, technical 500 14px mono.
 
-**Spacing is an 8px scale.** 80px opens a section, 48px sits before and after a
-figure, 32px is a component's inner padding, 24px separates paragraphs. Radius 8px.
+**Spacing is an 8px scale**, one step below what the handoff specifies. It asks
+for 80 / 48 / 32 / 24; the book uses **56 / 40 / 28 / 20**, because at 18px body
+an 80px section opening reads as four blank lines and the page felt aired rather
+than composed. Same rhythm, less of it — a deliberate departure from the
+high-fidelity brief, and the only one. Radius 8px.
 
 *Replaced twice:* first a two-layer scheme where a five-colour figure palette
 carried meaning — blue meant *decision* — with a `#3550C9` accent and Spline Sans;

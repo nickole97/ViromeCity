@@ -52,11 +52,13 @@ $toc-color: #5c6b82 !default;
   --sans:    "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --mono:    "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
 
-  // 8px base unit.
-  --sp-section:   80px;  // air that opens every major section
-  --sp-figure:    48px;  // before and after a figure
-  --sp-component: 32px;  // inside a component
-  --sp-para:      24px;  // between paragraphs
+  // 8px base unit. The design system specifies 80 / 48 / 32 / 24; these are one
+  // step down on the same scale, because at 18px body the 80px opening read as
+  // four blank lines between sections. Still the system's rhythm, less of it.
+  --sp-section:   56px;  // air that opens every major section
+  --sp-figure:    40px;  // before and after a figure
+  --sp-component: 28px;  // inside a component
+  --sp-para:      20px;  // between paragraphs
 
   --radius: 8px;         // more geometric than version A
 }
@@ -931,7 +933,7 @@ section.block, div.block {
   // Enough air that one block tends to hold the screen on its own. This is
   // most of what makes scrolling feel like moving between pieces rather than
   // down one column.
-  margin: 3.2em 0;
+  margin: 2.4em 0;
 
   // The prose inside keeps the reading measure — at 40rem a line already runs
   // to about 83 characters, so this is a ceiling, not a target.
