@@ -761,6 +761,45 @@ main.content > section > .axsub,
   }
 }
 
+// ---------- district marker ----------
+// Which district the reader has walked into. It announces arrival, so it goes
+// above the title rather than trailing after it in the subtitle, where it was
+// half a sentence.
+//
+// Quarto renders the title block before the body, so the marker is written as
+// the first thing in the chapter and reordered here. `main.content` becomes a
+// flex column purely to allow that; nothing else about the flow changes.
+main.content {
+  display: flex;
+  flex-direction: column;
+
+  > #title-block-header { order: 2; }
+  > p:has(> .district) { order: 1; margin: 0 0 .1rem; }
+  > *:not(#title-block-header):not(:has(> .district)) { order: 3; }
+}
+
+.district {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--c-question);
+  border-bottom: 2px solid var(--c-question);
+  padding-bottom: .3rem;
+}
+
+// The title block loses the air it kept for being first.
+main.content > #title-block-header { margin-top: .5rem; }
+
+// The breadcrumb said "The four districts › How should I think about viruses?",
+// directly above a district marker and a title saying the same two things. Three
+// lines of orientation before a word of the chapter.
+// Bootstrap's `d-lg-block` utility rides on it at `display: block !important`,
+// so this has to answer in kind.
+.quarto-title-breadcrumbs { display: none !important; }
+
 // ---------- claims and pull quotes ----------
 // A claim is a sentence the chapter stops for: "They can't." Set on its own
 // line, in the display face, so the eye lands on it before reading around it.
