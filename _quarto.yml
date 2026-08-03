@@ -46,9 +46,12 @@ book:
   # sections/references.qmd is still in the repo) once there is something to cite.
   # appendices:
   #   - sections/references.qmd
+  # The navy band that closes every page. The spans carry the type; the styles
+  # are .foot-* in assets/styles.scss. Left is what the book is, right is who
+  # keeps it — the Quarto credit moved out of the footer to keep those two.
   page-footer:
-    left: "Virome City — a guide to your first human virome."
-    right: "Built with [Quarto](https://quarto.org)."
+    left: "[Virome City]{.foot-kicker}[A curated guide to human virome analysis]{.foot-title}"
+    right: "[Maintained by Nickole Villabona &amp; Scott Handley and contributors]{.foot-credit}"
 
 lang: en
 

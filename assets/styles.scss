@@ -48,6 +48,17 @@ $toc-color: #5c6b82 !default;
   --accent: var(--c-question);
   --fivi-ink: var(--c-question);
 
+  // --- dark surfaces: the shell (sidebar, footer) ---
+  // The book's chrome is navy and the paper is white. Anything that sits on the
+  // navy takes its ink from here, so the sidebar and the footer cannot drift
+  // apart. The cyan is lightened for the dark ground: the page value #0891b2
+  // reads at 4.34:1 on navy, which fails AA for an 11px kicker.
+  --sb-ink:       #ffffff;
+  --sb-ink-soft:  #9aa8bd;
+  --sb-line:      #2a3854;
+  --sb-rule:      rgba(255, 255, 255, .12);
+  --c-figure-on-dark: #3fc3de;
+
   --display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --sans:    "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --mono:    "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
@@ -426,9 +437,7 @@ figcaption {
   // The navigation is a dark panel against the white page — the reading area
   // is where the paper is, and the shell is where the book keeps its chrome.
   // Everything inside therefore inverts: text, rules, the search field.
-  --sb-ink:        #ffffff;
-  --sb-ink-soft:   #9aa8bd;
-  --sb-line:       #2a3854;
+  // --sb-* live in :root, because the footer is the other half of this shell.
 
   background: var(--ink);
   color: var(--sb-ink);
@@ -1330,4 +1339,76 @@ section.axes .axis:not(section)::before {
 
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; animation: none !important; }
+}
+
+// ---------- page footer ----------
+// The navy band that closes every page — the other half of the shell the
+// sidebar starts, so it draws from the same --sb-* ink. Left says what the
+// book is; right says who keeps it. The two are baseline-aligned, so the
+// credit sits on the same line as the title rather than floating above it.
+footer.footer {
+  background: var(--ink);
+  border-top: 1px solid var(--sb-rule);
+  color: var(--sb-ink-soft);
+  padding: var(--sp-component) 0;
+  margin-top: var(--sp-section);
+
+  // Quarto paints .nav-footer with the body background. Left alone it cuts a
+  // white stripe out of the band and the white title vanishes into it.
+  .nav-footer {
+    background: transparent;
+    align-items: flex-end;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border: 0;
+  }
+
+  // Quarto's centre column exists only to hold the small-screen page actions.
+  // It must not take a third of the band from the two columns that carry text.
+  .nav-footer-center { flex: 0 1 auto; }
+  .nav-footer-left, .nav-footer-right { flex: 1 1 auto; }
+
+  p { margin: 0; }
+  a { color: var(--sb-ink); text-decoration: underline; text-underline-offset: 3px; }
+  a:hover { color: var(--c-figure-on-dark); }
+}
+
+.foot-kicker {
+  display: block;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--c-figure-on-dark);
+  margin-bottom: .55rem;
+}
+
+.foot-title {
+  display: block;
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--sb-ink);
+}
+
+.foot-credit {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: var(--sb-ink-soft);
+}
+
+// Stacked, and left-aligned: at this width the right column would otherwise
+// be a two-word ragged block hard against the edge.
+@media (max-width: 700px) {
+  footer.footer .nav-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--sp-para);
+    text-align: left;
+  }
+  footer.footer .nav-footer-right { text-align: left; }
 }
