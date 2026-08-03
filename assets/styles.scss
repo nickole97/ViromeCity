@@ -420,9 +420,31 @@ figcaption {
   --sb-indent: 14px;
 
   padding-left: var(--sb-pad);
-  // Quarto tints the docked sidebar grey by default, which fights the warm
-  // page. The navigation is part of the page, not a card.
-  background: var(--page);
+
+  // The navigation is a dark panel against the white page — the reading area
+  // is where the paper is, and the shell is where the book keeps its chrome.
+  // Everything inside therefore inverts: text, rules, the search field.
+  --sb-ink:        #ffffff;
+  --sb-ink-soft:   #9aa8bd;
+  --sb-line:       #2a3854;
+
+  background: var(--ink);
+  color: var(--sb-ink);
+  border-right: 0;
+
+  .sidebar-header { border-bottom-color: var(--sb-line); }
+
+  // Quarto's search field is built for a light surface; on the dark panel it
+  // needs its own treatment or it reads as a hole punched in the sidebar.
+  .aa-Autocomplete, .aa-Form, input, .aa-Input {
+    background: transparent;
+    color: var(--sb-ink);
+    border-color: var(--sb-line);
+  }
+
+  .aa-Form { background: rgba(255, 255, 255, .04); }
+  .aa-InputWrapperPrefix .aa-SubmitButton svg { fill: var(--sb-ink-soft); }
+  input::placeholder { color: var(--sb-ink-soft); }
 
   // --- wordmark: Fivi and the title read as one block, both linking home ---
   .sidebar-header {
@@ -469,7 +491,7 @@ figcaption {
       font-size: 17px;
       font-weight: 600;
       letter-spacing: -.01em;
-      color: var(--ink);
+      color: var(--sb-ink);
       text-decoration: none;
 
       &:hover { color: var(--accent); }
@@ -504,7 +526,7 @@ figcaption {
     font-weight: 500;
     letter-spacing: .07em;
     text-transform: uppercase;
-    color: var(--muted);
+    color: var(--sb-ink-soft);
     padding: 0;
     margin: 0;
     pointer-events: none;
@@ -532,7 +554,7 @@ figcaption {
     font-size: 14.5px;
     font-weight: 400;
     line-height: 1.35;
-    color: var(--ink);
+    color: var(--sb-ink);
     text-decoration: none;
     padding: 10px 0;
     position: relative;
@@ -585,7 +607,7 @@ figcaption {
         display: inline-block;
         width: 1.5em;
         text-indent: 0;
-        color: var(--muted);
+        color: var(--sb-ink-soft);
         font-weight: 400;
         font-variant-numeric: tabular-nums;
       }
