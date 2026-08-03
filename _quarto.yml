@@ -49,9 +49,14 @@ book:
   # The navy band that closes every page. The spans carry the type; the styles
   # are .foot-* in assets/styles.scss. Left is what the book is, right is who
   # keeps it — the Quarto credit moved out of the footer to keep those two.
+  # Two tiers. Row one is identity (left) and credit (right), built the same
+  # way so they read as a pair; row two is the colophon, under a hairline.
+  # Quarto only offers left / center / right, so the centre slot is the one
+  # the stylesheet turns into that second row.
   page-footer:
     left: "[Virome City]{.foot-kicker}[A curated guide to human virome analysis]{.foot-title}"
-    right: "[Maintained by Nickole Villabona &amp; Scott Handley and contributors]{.foot-credit}"
+    right: "[Maintained by]{.foot-label}[Nickole Villabona &amp; Scott Handley]{.foot-names}[and contributors]{.foot-names-sub}"
+    center: "[Built with [Quarto](https://quarto.org).]{.foot-colophon}"
 
 lang: en
 

@@ -64,6 +64,17 @@ chromatic — they carry no colour of their own.
 | `--c-insight` | `#6c63c9` | Insight, on `#eef0fb` |
 | Research Note | `#5c6b82` | neutral, dotted `#c7cdd7`, no accent |
 
+**The shell is navy; the paper is white.** The sidebar and the page footer are
+one surface, and they share `--sb-ink #ffffff`, `--sb-ink-soft #9aa8bd`,
+`--sb-line #2a3854` and `--sb-rule rgba(255,255,255,.12)` from `:root`. Anything
+cyan on that navy uses `--c-figure-on-dark #3fc3de`, not the page cyan: `#0891b2`
+reads at 4.34:1 on navy and fails AA at kicker size. The page value is unchanged.
+
+**The footer has two tiers**, because one row reads as a strip and two read as a
+close: identity and credit on the first row — both built as a mono kicker over
+its text, so they read as a pair — then a hairline, then the colophon. Only the
+left kicker is cyan; one accent, not two.
+
 **Three faces, all geometric.** Space Grotesk 500–700 for headings and Fivi's
 voice. IBM Plex Sans 400–700 for body and labels. IBM Plex Mono 500 for technical
 data and for every kicker: `ssRNA`, `dsDNA`, family names, component labels.
