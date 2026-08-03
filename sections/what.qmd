@@ -223,18 +223,18 @@ Their biological state determines how they are detected — and whether they are
 detected at all.
 :::
 
-::: research
-ERVs descend from retroviruses, which integrate into the host genome as a normal
-step in their lifecycle. Non-retroviral EVEs come from viruses that never
-integrate at all — fragments captured by accident and then inherited. The
-distinction matters for detection: a search built around retroviral signatures
-will not find the second kind.
-:::
-
 ::: fivi
 ![](../assets/img/fivi-surprised.png){fig-alt="Fivi, surprised."}
 
 **Don't overlook this axis.** Biological state may determine whether your
 workflow finds me at all. We'll put this into practice in the
 [How-to district](how-to.qmd).
+:::
+
+::: research
+ERVs descend from retroviruses, which integrate into the host genome as a normal
+step in their lifecycle. Non-retroviral EVEs come from viruses that never
+integrate at all — fragments captured by accident and then inherited. The
+distinction matters for detection: a search built around retroviral signatures
+will not find the second kind.
 :::

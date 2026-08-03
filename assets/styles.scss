@@ -955,6 +955,10 @@ main.content > #title-block-header { margin-top: .5rem; }
 }
 
 // The label that names a component: kicker type, in the component's colour.
+// The Fivi note is a flex row — portrait, then text — so its label hangs off
+// the paragraph beside the portrait, not off the card. On the card it would
+// become a third flex item and land to the left of Fivi herself.
+.fivi > p:has(> img) + p::before,
 .insight::before, .methodology::before, .research::before {
   display: block;
   font-family: var(--mono);
@@ -968,6 +972,8 @@ main.content > #title-block-header { margin-top: .5rem; }
 .insight::before     { content: "Insight";     color: var(--c-insight); }
 .methodology::before { content: "Methodology"; color: var(--c-methodology-ink); }
 .research::before    { content: "Research";    color: var(--c-research); }
+// Fivi speaks in the Question colour — it is her voice, not a fourth accent.
+.fivi > p:has(> img) + p::before { content: "Fivi note"; color: var(--c-question); }
 
 // ---------- blocks ----------
 // A chapter reads as a stack of contained pieces rather than one long column
