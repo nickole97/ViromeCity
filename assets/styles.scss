@@ -51,6 +51,7 @@ $toc-color: #5c6b82 !default;
   --display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --sans:    "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
   --mono:    "IBM Plex Mono", ui-monospace, SFMono-Regular, monospace;
+  --kicker:  "Nunito Sans", ui-sans-serif, system-ui, sans-serif;
 
   // 8px base unit.
   --sp-section:   80px;  // air that opens every major section
@@ -778,16 +779,18 @@ main.content {
   > *:not(#title-block-header):not(:has(> .district)) { order: 3; }
 }
 
+// Set as a kicker: heavy, widely tracked, uppercase, and no rule under it —
+// the label is the whole gesture. Nunito Sans 800 rather than the book's other
+// three faces, because at this size and tracking it holds a line of capitals
+// better than Plex Sans does, and mono reads as data rather than as a marker.
 .district {
   display: inline-block;
-  font-family: var(--mono);
-  font-size: 13px;
-  font-weight: 500;
-  letter-spacing: 2px;
+  font-family: var(--kicker);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
-  color: var(--c-question);
-  border-bottom: 2px solid var(--c-question);
-  padding-bottom: .3rem;
+  color: var(--c-figure);
 }
 
 // The title block loses the air it kept for being first.
