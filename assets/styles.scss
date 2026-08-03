@@ -1135,7 +1135,7 @@ section.axes .axis:not(section)::before {
   padding: 1rem 1.1rem;
   text-align: center;
 
-  img { width: 100%; max-width: 76px; height: auto; margin: .2rem auto .5rem; display: block; }
+  img { width: 100%; max-width: 96px; height: auto; margin: .2rem auto .5rem; display: block; }
   p { margin: 0; font-size: .84rem; color: var(--muted); line-height: 1.5; }
 }
 
@@ -1166,7 +1166,7 @@ section.axes .axis:not(section)::before {
 
 .st-arrow {
   font-size: 1.1rem;
-  color: var(--line-strong);
+  color: var(--ink);
   text-align: center;
   line-height: 1.2;
 
@@ -1207,7 +1207,7 @@ section.axes .axis:not(section)::before {
   padding: .8rem .9rem;
   text-align: center;
 
-  img { width: 100%; max-width: 46px; height: auto; margin: 0 auto .35rem; display: block; }
+  img { width: 100%; max-width: 62px; height: auto; margin: 0 auto .4rem; display: block; }
   figure, p:has(> img) { margin: 0; }
   p { margin: 0; }
   strong { display: block; font-size: .92rem; color: var(--ink); }
