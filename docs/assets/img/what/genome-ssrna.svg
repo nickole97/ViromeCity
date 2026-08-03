@@ -1,4 +1,4 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="one RNA strand">
 <ellipse cx="60" cy="60" rx="42" ry="33" fill="#e0f2f7"/>
-<path d="M26 60 Q 45 38 60 60 Q 75 82 94 60" fill="none" stroke="#0891b2" stroke-width="5" stroke-linecap="round"/>
+<path d="M26 50 C40 50 46 70 60 70 C74 70 80 50 94 50" fill="none" stroke="#0891b2" stroke-width="5" stroke-linecap="round"/>
 </svg>

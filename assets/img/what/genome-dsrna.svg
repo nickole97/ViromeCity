@@ -1,13 +1,15 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="two paired RNA strands">
 <ellipse cx="60" cy="60" rx="42" ry="33" fill="#e0f2f7"/>
-<g stroke="#0891b2" stroke-width="2" stroke-linecap="round" opacity="0.55">
-  <line x1="37.0" y1="50.8" x2="37.0" y2="69.2"/>
-  <line x1="44.0" y1="49.0" x2="44.0" y2="71.0"/>
-  <line x1="50.6" y1="50.8" x2="50.6" y2="69.2"/>
-  <line x1="69.4" y1="50.8" x2="69.4" y2="69.2"/>
-  <line x1="76.0" y1="49.0" x2="76.0" y2="71.0"/>
-  <line x1="83.0" y1="50.8" x2="83.0" y2="69.2"/>
+<g stroke="#0891b2" stroke-width="2" stroke-linecap="round" opacity="0.5">
+  <line x1="30.0" y1="50.6" x2="30.0" y2="69.4"/>
+  <line x1="36.2" y1="53.8" x2="36.2" y2="66.2"/>
+  <line x1="49.8" y1="53.8" x2="49.8" y2="66.2"/>
+  <line x1="56.0" y1="50.6" x2="56.0" y2="69.4"/>
+  <line x1="64.0" y1="50.6" x2="64.0" y2="69.4"/>
+  <line x1="70.2" y1="53.8" x2="70.2" y2="66.2"/>
+  <line x1="83.8" y1="53.8" x2="83.8" y2="66.2"/>
+  <line x1="90.0" y1="50.6" x2="90.0" y2="69.4"/>
 </g>
-<path d="M26 60 Q 45 38 60 60 Q 75 82 94 60" fill="none" stroke="#0891b2" stroke-width="4.5" stroke-linecap="round"/>
-<path d="M26 60 Q 45 82 60 60 Q 75 38 94 60" fill="none" stroke="#0891b2" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M26 50 C40 50 46 70 60 70 C74 70 80 50 94 50" fill="none" stroke="#0891b2" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M26 70 C40 70 46 50 60 50 C74 50 80 70 94 70" fill="none" stroke="#0891b2" stroke-width="4.5" stroke-linecap="round"/>
 </svg>

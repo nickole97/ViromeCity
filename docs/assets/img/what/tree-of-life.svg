@@ -1,260 +1,346 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.38 428.51">
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1258.39 728.16">
   <defs>
     <style>
-      .cls-1 {
-        fill: #7f77dd;
-      }
-
-      .cls-1, .cls-2, .cls-3 {
-        stroke: #3c3489;
-      }
-
-      .cls-1, .cls-4, .cls-5, .cls-6, .cls-7 {
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
         stroke-width: 1.25px;
       }
 
-      .cls-1, .cls-8, .cls-3, .cls-9, .cls-5, .cls-10, .cls-7, .cls-11 {
-        stroke-linecap: round;
-      }
-
-      .cls-1, .cls-8, .cls-9, .cls-6, .cls-10, .cls-11 {
+      .cls-1, .cls-7, .cls-8, .cls-9, .cls-4, .cls-10, .cls-5, .cls-6, .cls-11 {
         stroke-linejoin: round;
       }
 
-      .cls-2 {
-        fill: #afa9ec;
+      .cls-1, .cls-4, .cls-6 {
+        stroke: #29627c;
       }
 
-      .cls-2, .cls-4, .cls-12, .cls-13, .cls-3, .cls-5, .cls-14, .cls-7 {
-        stroke-miterlimit: 2;
-      }
-
-      .cls-2, .cls-12, .cls-13, .cls-14 {
-        stroke-width: .75px;
-      }
-
-      .cls-4, .cls-12 {
-        fill: #d85a30;
-      }
-
-      .cls-4, .cls-12, .cls-5, .cls-14 {
-        stroke: #993c1d;
-      }
-
-      .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21 {
-        font-weight: 700;
-      }
-
-      .cls-15, .cls-16, .cls-18, .cls-19, .cls-20, .cls-21 {
-        font-family: Georgia-Bold, Georgia;
-      }
-
-      .cls-15, .cls-16, .cls-20 {
-        font-size: 14px;
-      }
-
-      .cls-15, .cls-18 {
-        fill: #0f6e56;
-      }
-
-      .cls-16, .cls-19 {
-        fill: #993c1d;
+      .cls-1, .cls-12 {
+        fill: #4899c0;
       }
 
       .cls-13 {
-        fill: #5dcaa5;
+        fill: #f7ece8;
       }
 
-      .cls-13, .cls-6, .cls-7 {
-        stroke: #0f6e56;
+      .cls-14, .cls-2, .cls-15, .cls-16, .cls-3, .cls-17 {
+        stroke-miterlimit: 2;
       }
 
-      .cls-8 {
-        stroke: #d85a30;
+      .cls-14, .cls-2, .cls-16, .cls-3 {
+        stroke: #8f442a;
       }
 
-      .cls-8, .cls-22, .cls-3, .cls-9, .cls-5, .cls-10, .cls-7, .cls-11 {
-        fill: none;
+      .cls-14, .cls-2, .cls-18 {
+        fill: #ca633d;
       }
 
-      .cls-8, .cls-9, .cls-10, .cls-11 {
+      .cls-14, .cls-15, .cls-16 {
+        stroke-width: .75px;
+      }
+
+      .cls-19, .cls-20 {
+        fill: #6e6d65;
+      }
+
+      .cls-7 {
+        fill: #9a803c;
+        stroke: #caa868;
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-3, .cls-10, .cls-5, .cls-17, .cls-11 {
+        stroke-linecap: round;
+      }
+
+      .cls-7, .cls-8, .cls-9, .cls-11 {
         stroke-width: 5px;
       }
 
-      .cls-23 {
-        fill: #b7b4a8;
+      .cls-21 {
+        opacity: .29;
       }
 
-      .cls-17 {
-        font-family: CourierNewPS-BoldMT, 'Courier New';
-        font-size: 9.17px;
-        letter-spacing: .05em;
-      }
-
-      .cls-17, .cls-18, .cls-24, .cls-19, .cls-20, .cls-25, .cls-21 {
-        isolation: isolate;
-      }
-
-      .cls-17, .cls-25, .cls-26 {
-        fill: #6e6c63;
-      }
-
-      .cls-27 {
-        fill: #e1f5ee;
+      .cls-21, .cls-6 {
+        fill: #8abeca;
       }
 
       .cls-22 {
-        stroke: #6e6c63;
+        stroke: #6e6d65;
         stroke-miterlimit: 10;
       }
 
-      .cls-18, .cls-19, .cls-21 {
-        font-size: 15.72px;
+      .cls-22, .cls-8, .cls-9, .cls-3, .cls-4, .cls-17, .cls-23, .cls-11 {
+        fill: none;
       }
 
-      .cls-3 {
-        stroke-width: 1.5px;
+      .cls-8 {
+        stroke: #ca633d;
+      }
+
+      .cls-15 {
+        fill: #e5c088;
+      }
+
+      .cls-15, .cls-10, .cls-5, .cls-17 {
+        stroke: #9a803c;
+      }
+
+      .cls-24, .cls-12, .cls-20, .cls-18, .cls-25 {
+        isolation: isolate;
+      }
+
+      .cls-16 {
+        fill: #e49e82;
       }
 
       .cls-9 {
-        stroke: #7f77dd;
+        stroke: #b7b5aa;
       }
 
-      .cls-20, .cls-21 {
-        fill: #3c3489;
+      .cls-26 {
+        letter-spacing: 0em;
       }
 
-      .cls-14 {
-        fill: #f0997b;
+      .cls-27 {
+        opacity: .24;
       }
 
-      .cls-6 {
-        fill: #1d9e75;
+      .cls-27, .cls-10, .cls-5, .cls-25 {
+        fill: #caa868;
       }
 
       .cls-28 {
-        fill: #faece7;
+        letter-spacing: 0em;
+      }
+
+      .cls-12, .cls-18, .cls-25 {
+        font-family: SpaceGrotesk-Bold, 'Space Grotesk';
+        font-size: 31.6px;
+        font-weight: 700;
       }
 
       .cls-10 {
-        stroke: #1d9e75;
+        stroke-width: 1.25px;
       }
 
       .cls-29 {
-        letter-spacing: -.07em;
+        fill: #221f20;
+        font-family: IBMPlexSans, 'IBM Plex Sans';
+        font-size: 18.72px;
+      }
+
+      .cls-17 {
+        stroke-width: 1.5px;
       }
 
       .cls-30 {
-        letter-spacing: -.09em;
-      }
-
-      .cls-25 {
-        font-family: CourierNewPSMT, 'Courier New';
-        font-size: 11px;
+        letter-spacing: -.06em;
       }
 
       .cls-31 {
-        fill: #eeedfe;
-      }
-
-      .cls-11 {
-        stroke: #b7b4a8;
+        letter-spacing: -.02em;
       }
 
       .cls-32 {
-        fill: #6d6b62;
-        font-family: ArialMT, Arial;
-        font-size: 12px;
+        letter-spacing: -.02em;
+      }
+
+      .cls-33 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-34 {
+        letter-spacing: -.05em;
+      }
+
+      .cls-35 {
+        letter-spacing: -.03em;
+      }
+
+      .cls-36 {
+        letter-spacing: 0em;
+      }
+
+      .cls-23 {
+        stroke: #e0e2e9;
+      }
+
+      .cls-37 {
+        letter-spacing: 0em;
+      }
+
+      .cls-38 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        stroke: #4899c0;
+      }
+
+      .cls-39 {
+        letter-spacing: 0em;
+      }
+
+      .cls-40 {
+        letter-spacing: 0em;
+      }
+
+      .cls-41 {
+        letter-spacing: 0em;
+      }
+
+      .cls-42 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-43 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-20 {
+        font-family: IBMPlexMono-SmBld, 'IBM Plex Mono';
+        font-size: 18.43px;
+        letter-spacing: .05em;
+      }
+
+      .cls-44 {
+        letter-spacing: -.01em;
+      }
+
+      .cls-45 {
+        letter-spacing: 0em;
+      }
+
+      .cls-46 {
+        letter-spacing: 0em;
+      }
+
+      .cls-47 {
+        letter-spacing: 0em;
+      }
+
+      .cls-48 {
+        fill: #b7b5aa;
+      }
+
+      .cls-49 {
+        letter-spacing: 0em;
+      }
+
+      .cls-50 {
+        letter-spacing: 0em;
+      }
+
+      .cls-51 {
+        letter-spacing: 0em;
+      }
+
+      .cls-52 {
+        letter-spacing: 0em;
+      }
+
+      .cls-53 {
+        letter-spacing: .01em;
+      }
+
+      .cls-54 {
+        letter-spacing: 0em;
       }
     </style>
   </defs>
   <g id="Layer_1-2" data-name="Layer 1">
-    <g>
-      <g>
-        <g>
-          <polygon class="cls-1" points="79.78 106.91 88.55 113.74 87.17 123.89 76.89 128.13 68.12 121.3 69.5 111.15 79.78 106.91"/>
-          <rect class="cls-1" x="73.95" y="127.14" width="4.37" height="13.03" rx="1" ry="1" transform="translate(18.71 -9.04) rotate(7.75)"/>
-          <rect class="cls-1" x="69.05" y="139.18" width="12.23" height="3.26" rx="1" ry="1" transform="translate(19.67 -8.85) rotate(7.75)"/>
-        </g>
-        <g>
-          <path class="cls-3" d="M70.62,141.83l-7.38,8.86"/>
-          <path class="cls-3" d="M72.35,142.07l-3.17,10.37"/>
-          <path class="cls-3" d="M79.27,143.01l4.74,10.51"/>
-          <path class="cls-3" d="M77.54,142.77l.29,10.84"/>
-        </g>
-        <polygon class="cls-2" points="74.32 114.63 79.02 112.45 82.98 115.8 82.35 120.41 77.64 122.59 73.69 119.24 74.32 114.63"/>
-      </g>
-      <text class="cls-17" transform="translate(55.85 168.09)"><tspan x="0" y="0">infects</tspan></text>
-      <path class="cls-26" d="M79.82,182.86l-3.18,7.14-3.18-7.14h6.35Z"/>
-      <path class="cls-31" d="M38.2,192.55h76.88c7.24,0,13.1,5.87,13.1,13.1h0c0,7.24-5.87,13.1-13.1,13.1H38.2c-7.24,0-13.1-5.87-13.1-13.1h0c0-7.24,5.87-13.1,13.1-13.1Z"/>
-      <text class="cls-21" transform="translate(42.65 210.02)"><tspan x="0" y="0">Bacteria</tspan></text>
-      <line class="cls-22" x1="76.64" y1="182.86" x2="76.64" y2="172.99"/>
+    <rect class="cls-27" x="94.61" y="25.22" width="361.87" height="152.83"/>
+    <rect class="cls-21" x="467.83" y="25.96" width="361.87" height="152.83"/>
+    <rect class="cls-13" x="840.27" y="24.48" width="361.87" height="152.83"/>
+    <g id="marco">
+      <rect class="cls-23" x=".5" y=".5" width="1257.39" height="727.16" rx="12" ry="12"/>
     </g>
     <g>
       <g>
-        <path class="cls-6" d="M242.62,111.31c8.74,7.86,8.74,24.46,0,35.82-8.74-11.36-8.74-27.95,0-35.82Z"/>
-        <ellipse class="cls-13" cx="242.62" cy="128.78" rx="3.93" ry="7.43"/>
-        <g>
-          <path class="cls-7" d="M240.44,146.25c-2.33,2.33-2.77,4.8-1.31,7.43"/>
-          <path class="cls-7" d="M244.81,146.25c2.33,2.33,2.77,4.8,1.31,7.43"/>
-        </g>
+        <polygon class="cls-5" points="299.46 199.88 317.09 213.61 314.32 234.01 293.65 242.54 276.03 228.81 278.8 208.4 299.46 199.88"/>
+        <rect class="cls-10" x="279.02" y="249.26" width="26.19" height="8.78" rx="1" ry="1" transform="translate(1.39 508.9) rotate(-82.25)"/>
+        <rect class="cls-10" x="286.9" y="255.73" width="6.55" height="24.59" rx="1" ry="1" transform="translate(-14.53 519.41) rotate(-82.25)"/>
       </g>
-      <text class="cls-17" transform="translate(221.83 168.09)"><tspan x="0" y="0">infects</tspan></text>
-      <path class="cls-27" d="M204.18,192.55h76.88c7.24,0,13.1,5.87,13.1,13.1h0c0,7.24-5.87,13.1-13.1,13.1h-76.88c-7.24,0-13.1-5.87-13.1-13.1h0c0-7.24,5.87-13.1,13.1-13.1Z"/>
-      <text class="cls-18" transform="translate(209.19 210.02)"><tspan x="0" y="0">Archaea</tspan></text>
-      <path class="cls-26" d="M245.8,184.23l-3.18,7.14-3.18-7.14h6.35Z"/>
-      <line class="cls-22" x1="242.62" y1="184.23" x2="242.62" y2="174.35"/>
-    </g>
-    <g>
       <g>
-        <g>
-          <line class="cls-5" x1="421.71" y1="130.53" x2="427.38" y2="130.53"/>
-          <line class="cls-5" x1="417.77" y1="139.7" x2="421.71" y2="143.63"/>
-          <line class="cls-5" x1="408.6" y1="143.63" x2="408.6" y2="149.31"/>
-          <line class="cls-5" x1="399.43" y1="139.7" x2="395.5" y2="143.63"/>
-          <line class="cls-5" x1="395.5" y1="130.53" x2="389.82" y2="130.53"/>
-          <line class="cls-5" x1="399.43" y1="121.35" x2="395.5" y2="117.42"/>
-          <line class="cls-5" x1="408.6" y1="117.42" x2="408.6" y2="111.74"/>
-          <line class="cls-5" x1="417.77" y1="121.35" x2="421.71" y2="117.42"/>
-        </g>
-        <g>
-          <circle class="cls-12" cx="427.38" cy="130.53" r="1.75"/>
-          <circle class="cls-12" cx="421.71" cy="143.63" r="1.75"/>
-          <circle class="cls-12" cx="408.6" cy="149.31" r="1.75"/>
-          <circle class="cls-12" cx="395.5" cy="143.63" r="1.75"/>
-          <circle class="cls-12" cx="389.82" cy="130.53" r="1.75"/>
-          <circle class="cls-12" cx="395.5" cy="117.42" r="1.75"/>
-          <circle class="cls-12" cx="408.6" cy="111.74" r="1.75"/>
-          <circle class="cls-12" cx="421.71" cy="117.42" r="1.75"/>
-        </g>
-        <circle class="cls-4" cx="408.6" cy="130.53" r="13.1"/>
-        <circle class="cls-14" cx="408.6" cy="130.53" r="5.68"/>
+        <path class="cls-17" d="M281.05,270.08l-14.84,17.81"/>
+        <path class="cls-17" d="M284.53,270.56l-6.37,20.85"/>
+        <path class="cls-17" d="M298.44,272.45l9.53,21.13"/>
+        <path class="cls-17" d="M294.96,271.97l.58,21.79"/>
       </g>
-      <text class="cls-17" transform="translate(387.81 168.09)"><tspan x="0" y="0">infects</tspan></text>
-      <path class="cls-28" d="M370.16,192.55h76.88c7.24,0,13.1,5.87,13.1,13.1h0c0,7.24-5.87,13.1-13.1,13.1h-76.88c-7.24,0-13.1-5.87-13.1-13.1h0c0-7.24,5.87-13.1,13.1-13.1Z"/>
-      <text class="cls-19" transform="translate(374.77 210.02)"><tspan x="0" y="0">Eukarya</tspan></text>
-      <path class="cls-26" d="M411.78,184.23l-3.18,7.14-3.18-7.14h6.35Z"/>
-      <line class="cls-22" x1="408.6" y1="184.23" x2="408.6" y2="174.35"/>
+      <polygon class="cls-15" points="288.49 215.4 297.94 211.02 305.9 217.75 304.63 227.02 295.16 231.4 287.22 224.67 288.49 215.4"/>
     </g>
-    <g>
-      <path class="cls-11" d="M229.57,403.17v-47.26"/>
-      <path class="cls-11" d="M229.57,355.91c64.99-40.44,129.98-80.88,194.97-121.32"/>
-      <path class="cls-9" d="M229.57,355.91c-53.45-36.93-106.9-73.86-160.36-110.78"/>
-      <path class="cls-10" d="M318.59,300.52c-25.32-21.6-50.65-43.21-75.97-64.81"/>
-      <path class="cls-8" d="M318.59,300.52c35.32-21.98,70.64-43.95,105.95-65.93"/>
-    </g>
-    <circle class="cls-23" cx="229.57" cy="405.38" r="4.5"/>
-    <text class="cls-25" transform="translate(184.56 421.03)"><tspan x="0" y="0">shared ancestor</tspan></text>
-    <text class="cls-20" transform="translate(6.7 11.85)"><tspan x="0" y="0">Bacteriophages</tspan></text>
-    <text class="cls-32" transform="translate(0 33.17)"><tspan x="0" y="0">The most abundant virus on </tspan><tspan x="0" y="14.4">Earth — dominates gut and </tspan><tspan x="0" y="28.8">saliva. Injects only its </tspan><tspan x="0" y="43.2">genome; the capsid stays </tspan><tspan x="0" y="57.6">outside.</tspan></text>
     <g class="cls-24">
-      <text class="cls-15" transform="translate(181.15 11.85)"><tspan x="0" y="0">Archaeal viruses</tspan></text>
+      <text class="cls-20" transform="translate(251.36 322.87)"><tspan x="0" y="0">infects</tspan></text>
     </g>
-    <text class="cls-32" transform="translate(176.32 33.44)"><tspan x="0" y="0">Understudied. Hosts range </tspan><tspan x="0" y="14.4">from extremophiles to gut </tspan><tspan x="0" y="28.8">microbes. Wildly diverse </tspan><tspan x="0" y="43.2">morpholog</tspan><tspan class="cls-29" x="56.7" y="43.2">y</tspan><tspan x="61.81" y="43.2">. </tspan></text>
+    <path class="cls-19" d="M299.54,352.56l-6.39,14.35-6.39-14.35h12.79Z"/>
+    <path class="cls-27" d="M215.88,372.04h154.55c14.55,0,26.33,11.8,26.33,26.33h0c0,14.55-11.8,26.33-26.33,26.33h-154.55c-14.55,0-26.33-11.8-26.33-26.33h0c0-14.55,11.8-26.33,26.33-26.33Z"/>
+    <text class="cls-25" transform="translate(228.33 407.15)"><tspan x="0" y="0">B</tspan><tspan class="cls-45" x="20.98" y="0">a</tspan><tspan class="cls-33" x="38.93" y="0">c</tspan><tspan class="cls-31" x="56.94" y="0">t</tspan><tspan x="70.79" y="0">eria</tspan></text>
+    <line class="cls-22" x1="293.15" y1="352.56" x2="293.15" y2="332.72"/>
+    <g>
+      <path class="cls-1" d="M638.51,208.72c17.57,15.8,17.57,49.17,0,72.01-17.57-22.84-17.57-56.19,0-72.01Z"/>
+      <ellipse class="cls-6" cx="638.51" cy="243.84" rx="7.9" ry="14.94"/>
+      <g>
+        <path class="cls-4" d="M634.13,278.96c-4.68,4.68-5.57,9.65-2.63,14.94"/>
+        <path class="cls-4" d="M642.91,278.96c4.68,4.68,5.57,9.65,2.63,14.94"/>
+      </g>
+    </g>
     <g class="cls-24">
-      <text class="cls-16" transform="translate(355.39 12.07)"><tspan x="0" y="0">Eukaryotic viruses</tspan></text>
+      <text class="cls-20" transform="translate(596.71 322.87)"><tspan x="0" y="0">infects</tspan></text>
     </g>
-    <text class="cls-32" transform="translate(357.06 32.25)"><tspan x="0" y="0">Enters the host cell whole. </tspan><tspan x="0" y="14.4">Includes classic pathogens </tspan><tspan x="0" y="28.8">like herpes, papilloma, and </tspan><tspan x="0" y="43.2">HI</tspan><tspan class="cls-30" x="12" y="43.2">V</tspan><tspan x="18.9" y="43.2">.</tspan></text>
+    <path class="cls-21" d="M561.23,372.04h154.55c14.55,0,26.33,11.8,26.33,26.33h0c0,14.55-11.8,26.33-26.33,26.33h-154.55c-14.55,0-26.33-11.8-26.33-26.33h0c0-14.55,11.8-26.33,26.33-26.33Z"/>
+    <text class="cls-12" transform="translate(574.82 407.15)"><tspan x="0" y="0">A</tspan><tspan class="cls-32" x="20.03" y="0">r</tspan><tspan class="cls-28" x="31.98" y="0">ch</tspan><tspan class="cls-45" x="69.96" y="0">a</tspan><tspan x="87.91" y="0">ea</tspan></text>
+    <path class="cls-19" d="M644.9,355.31l-6.39,14.35-6.39-14.35h12.79Z"/>
+    <line class="cls-22" x1="638.51" y1="355.31" x2="638.51" y2="335.45"/>
+    <g>
+      <g>
+        <line class="cls-3" x1="1010.22" y1="247.36" x2="1021.61" y2="247.36"/>
+        <line class="cls-3" x1="1002.3" y1="265.79" x2="1010.22" y2="273.69"/>
+        <line class="cls-3" x1="983.86" y1="273.69" x2="983.86" y2="285.11"/>
+        <line class="cls-3" x1="965.43" y1="265.79" x2="957.53" y2="273.69"/>
+        <line class="cls-3" x1="957.53" y1="247.36" x2="946.11" y2="247.36"/>
+        <line class="cls-3" x1="965.43" y1="228.91" x2="957.53" y2="221.01"/>
+        <line class="cls-3" x1="983.86" y1="221.01" x2="983.86" y2="209.59"/>
+        <line class="cls-3" x1="1002.3" y1="228.91" x2="1010.22" y2="221.01"/>
+      </g>
+      <g>
+        <circle class="cls-14" cx="1021.61" cy="247.36" r="3.52"/>
+        <circle class="cls-14" cx="1010.22" cy="273.69" r="3.52"/>
+        <circle class="cls-14" cx="983.86" cy="285.11" r="3.52"/>
+        <circle class="cls-14" cx="957.53" cy="273.69" r="3.52"/>
+        <circle class="cls-14" cx="946.11" cy="247.36" r="3.52"/>
+        <circle class="cls-14" cx="957.53" cy="221.01" r="3.52"/>
+        <circle class="cls-14" cx="983.86" cy="209.59" r="3.52"/>
+        <circle class="cls-14" cx="1010.22" cy="221.01" r="3.52"/>
+      </g>
+      <circle class="cls-2" cx="983.86" cy="247.36" r="26.33"/>
+      <circle class="cls-16" cx="983.86" cy="247.36" r="11.42"/>
+    </g>
+    <g class="cls-24">
+      <text class="cls-20" transform="translate(942.07 322.87)"><tspan x="0" y="0">infects</tspan></text>
+    </g>
+    <path class="cls-13" d="M906.59,372.04h154.55c14.55,0,26.33,11.8,26.33,26.33h0c0,14.55-11.8,26.33-26.33,26.33h-154.55c-14.55,0-26.33-11.8-26.33-26.33h0c0-14.55,11.8-26.33,26.33-26.33Z"/>
+    <text class="cls-18" transform="translate(919.37 407.15)"><tspan x="0" y="0">Eu</tspan><tspan class="cls-45" x="36.97" y="0">k</tspan><tspan x="54.48" y="0">arya</tspan></text>
+    <path class="cls-19" d="M990.26,355.31l-6.39,14.35-6.39-14.35h12.79Z"/>
+    <line class="cls-22" x1="983.86" y1="355.31" x2="983.86" y2="335.45"/>
+    <g>
+      <path class="cls-9" d="M623.97,668.19v-59.33"/>
+      <path class="cls-9" d="M623.97,608.86c130.64-50.77,261.29-101.54,391.93-152.31"/>
+      <path class="cls-7" d="M623.97,608.86c-107.45-46.36-214.89-92.73-322.36-139.08"/>
+      <path class="cls-11" d="M802.92,539.32c-50.9-27.12-101.82-54.25-152.72-81.37"/>
+      <path class="cls-8" d="M802.92,539.32c71-27.59,142-55.18,212.98-82.77"/>
+    </g>
+    <circle class="cls-48" cx="623.97" cy="659.5" r="9.05"/>
+    <g class="cls-24">
+      <text class="cls-20" transform="translate(533.49 690.96)"><tspan x="0" y="0">shared ancestor</tspan></text>
+    </g>
+    <text class="cls-25" transform="translate(141.3 72.01)"><tspan x="0" y="0">B</tspan><tspan class="cls-45" x="20.98" y="0">a</tspan><tspan class="cls-33" x="38.93" y="0">c</tspan><tspan class="cls-31" x="56.94" y="0">t</tspan><tspan x="70.79" y="0">erioph</tspan><tspan class="cls-44" x="168.91" y="0">a</tspan><tspan x="186.85" y="0">ges</tspan></text>
+    <g class="cls-24">
+      <text class="cls-12" transform="translate(518.05 71.58)"><tspan x="0" y="0">A</tspan><tspan class="cls-32" x="20.03" y="0">r</tspan><tspan class="cls-28" x="31.98" y="0">ch</tspan><tspan class="cls-45" x="69.96" y="0">a</tspan><tspan x="87.91" y="0">eal viruses</tspan></text>
+    </g>
+    <g class="cls-24">
+      <text class="cls-18" transform="translate(873.24 71.58)"><tspan x="0" y="0">Eu</tspan><tspan class="cls-45" x="36.97" y="0">k</tspan><tspan x="54.48" y="0">ary</tspan><tspan class="cls-33" x="104.72" y="0">o</tspan><tspan class="cls-26" x="123.56" y="0">tic viruses</tspan></text>
+    </g>
+    <text class="cls-29" transform="translate(131.3 102.35)"><tspan x="0" y="0">The mo</tspan><tspan class="cls-46" x="62.85" y="0">s</tspan><tspan x="71.83" y="0">t abundant virus on Ea</tspan><tspan class="cls-51" x="258.75" y="0">r</tspan><tspan x="265.69" y="0">th </tspan><tspan x="0" y="22.46">and in human bod</tspan><tspan class="cls-34" x="150.46" y="22.46">y</tspan><tspan x="158.77" y="22.46">. Can be used as </tspan><tspan x="0" y="44.92">t</tspan><tspan class="cls-40" x="6.57" y="44.92">r</tspan><tspan x="13.36" y="44.92">atments a</tspan><tspan class="cls-49" x="97.27" y="44.92">g</tspan><tspan x="107.09" y="44.92">ain</tspan><tspan class="cls-46" x="132.4" y="44.92">s</tspan><tspan x="141.38" y="44.92">t bac</tspan><tspan class="cls-41" x="182.63" y="44.92">t</tspan><tspan x="189.12" y="44.92">eri</tspan><tspan class="cls-54" x="210.95" y="44.92">a</tspan><tspan x="221.13" y="44.92">. </tspan></text>
+    <text class="cls-29" transform="translate(504.04 102.35)"><tspan x="0" y="0">Under</tspan><tspan class="cls-46" x="51.32" y="0">s</tspan><tspan x="60.3" y="0">tudied. Ho</tspan><tspan class="cls-46" x="147.39" y="0">s</tspan><tspan x="156.37" y="0">ts </tspan><tspan class="cls-41" x="176.47" y="0">r</tspan><tspan x="183.27" y="0">an</tspan><tspan class="cls-36" x="203.89" y="0">g</tspan><tspan x="213.66" y="0">e f</tspan><tspan class="cls-38" x="234.42" y="0">r</tspan><tspan x="241.19" y="0">om </tspan><tspan class="cls-42" x="0" y="22.46">e</tspan><tspan x="10.05" y="22.46">xt</tspan><tspan class="cls-39" x="26.11" y="22.46">r</tspan><tspan x="32.88" y="22.46">emophiles </tspan><tspan class="cls-40" x="125.04" y="22.46">t</tspan><tspan x="131.54" y="22.46">o </tspan><tspan class="cls-40" x="146.43" y="22.46">g</tspan><tspan x="156.24" y="22.46">ut mic</tspan><tspan class="cls-39" x="208.29" y="22.46">r</tspan><tspan x="215.06" y="22.46">obiome</tspan><tspan class="cls-38" x="278.17" y="22.46">s</tspan><tspan x="287.19" y="22.46">. </tspan><tspan x="0" y="44.92">Wild</tspan><tspan class="cls-43" x="37.3" y="44.92">l</tspan><tspan x="42.2" y="44.92">y di</tspan><tspan class="cls-47" x="71.49" y="44.92">v</tspan><tspan x="80.55" y="44.92">erse morpholo</tspan><tspan class="cls-50" x="202.73" y="44.92">g</tspan><tspan class="cls-34" x="212.7" y="44.92">y</tspan><tspan x="221.01" y="44.92">.</tspan></text>
+    <text class="cls-29" transform="translate(874.48 102.35)"><tspan class="cls-35" x="0" y="0">V</tspan><tspan x="10.84" y="0">e</tspan><tspan class="cls-53" x="21.11" y="0">r</tspan><tspan x="28.17" y="0">y impo</tspan><tspan class="cls-52" x="84.28" y="0">r</tspan><tspan x="91.22" y="0">tant in human healht, </tspan><tspan class="cls-38" x="0" y="22.46">r</tspan><tspan x="6.77" y="22.46">esposible </tspan><tspan class="cls-36" x="91.93" y="22.46">o</tspan><tspan x="102.3" y="22.46">f cla</tspan><tspan class="cls-37" x="137.28" y="22.46">s</tspan><tspan x="146.28" y="22.46">sic diseases as </tspan><tspan x="0" y="44.92">herped, papilom</tspan><tspan class="cls-53" x="137.56" y="44.92">a</tspan><tspan x="147.74" y="44.92">, HI</tspan><tspan class="cls-30" x="177.97" y="44.92">V</tspan><tspan x="188.24" y="44.92">. </tspan></text>
   </g>
 </svg>
