@@ -62,10 +62,12 @@ machinery needed to copy their genomes and instead rely on another living
 organism to do the job. That organism is the **host**.
 
 :::
-::: insight
-Viruses do not form their own branch of the tree of life. Instead, they infect
-organisms across every cellular domain — **Bacteria**, **Archaea** and
-**Eukarya**.
+::: fivi
+![](../assets/img/fivi-thinking.png){fig-alt="Fivi, thinking."}
+
+**Don't look for us on the tree.** We aren't a branch of it — we're something
+that happens to every branch. I infect bacteria; others infect archaea, and
+others infect you.
 :::
 ::: block
 
