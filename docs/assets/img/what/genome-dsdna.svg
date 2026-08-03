@@ -1,1 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="two paired DNA strands"><ellipse cx="60" cy="60" rx="42" ry="33" fill="#F0DCA0"/><g stroke="#B8860B" stroke-width="2.5" stroke-linecap="round" opacity="0.6"><line x1="38" y1="45" x2="38" y2="63"/><line x1="52" y1="46" x2="52" y2="64"/><line x1="68" y1="55" x2="68" y2="73"/><line x1="82" y1="55" x2="82" y2="73"/></g><path d="M28 50 Q 44 38 60 50 Q 76 62 92 50" fill="none" stroke="#B8860B" stroke-width="4.5" stroke-linecap="round"/><path d="M28 68 Q 44 56 60 68 Q 76 80 92 68" fill="none" stroke="#B8860B" stroke-width="4.5" stroke-linecap="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="two paired DNA strands">
+<ellipse cx="60" cy="60" rx="42" ry="33" fill="#e2e6ec"/>
+<g stroke="#14213d" stroke-width="2" stroke-linecap="round" opacity="0.55">
+  <line x1="37.0" y1="50.8" x2="37.0" y2="69.2"/>
+  <line x1="44.0" y1="49.0" x2="44.0" y2="71.0"/>
+  <line x1="50.6" y1="50.8" x2="50.6" y2="69.2"/>
+  <line x1="69.4" y1="50.8" x2="69.4" y2="69.2"/>
+  <line x1="76.0" y1="49.0" x2="76.0" y2="71.0"/>
+  <line x1="83.0" y1="50.8" x2="83.0" y2="69.2"/>
+</g>
+<path d="M26 60 Q 45 38 60 60 Q 75 82 94 60" fill="none" stroke="#14213d" stroke-width="4.5" stroke-linecap="round"/>
+<path d="M26 60 Q 45 82 60 60 Q 75 38 94 60" fill="none" stroke="#14213d" stroke-width="4.5" stroke-linecap="round"/>
+</svg>
