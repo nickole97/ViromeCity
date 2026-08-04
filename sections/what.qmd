@@ -1,6 +1,5 @@
 ---
 title: "How should I think about viruses?"
-subtitle: "Where the biology decides the method."
 ---
 
 [District 1]{.district}
