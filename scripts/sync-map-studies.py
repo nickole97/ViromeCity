@@ -24,6 +24,7 @@ Stdlib only, on purpose: `quarto render` should work on a fresh clone.
 import csv
 import json
 import re
+import subprocess
 import sys
 from pathlib import Path
 
@@ -39,6 +40,33 @@ PAYLOAD_RE = re.compile(
 def fail(msg):
     print(f"sync-map-studies: {msg}", file=sys.stderr)
     sys.exit(1)
+
+
+MONTHS = ("January February March April May June July August September October "
+          "November December").split()
+
+
+def list_last_updated():
+    """The date the reading list last changed, from git.
+
+    Deliberately not the build date. A stamp that reads "today" every time the
+    site rebuilds tells a reader nothing; what they want to know is when a paper
+    was last added. Returns None outside a git checkout, and the map then omits
+    the line rather than showing a date it cannot stand behind.
+    """
+    try:
+        out = subprocess.run(
+            ["git", "log", "-1", "--format=%cs", "--", str(CSV_PATH.relative_to(ROOT))],
+            cwd=ROOT, capture_output=True, text=True, timeout=10,
+        )
+    except Exception:
+        return None
+    stamp = out.stdout.strip()
+    m = re.fullmatch(r"(\d{4})-(\d{2})-(\d{2})", stamp)
+    if not m:
+        return None
+    y, mo, d = (int(x) for x in m.groups())
+    return f"{d} {MONTHS[mo - 1]} {y}"
 
 
 def write_manifest(rows):
@@ -167,6 +195,14 @@ def main():
     payload["studies"] = studies
     for c in payload["countries"]:
         c["papers"] = by_country.get(c.get("a2"), [])
+
+    meta = payload.setdefault("meta", {})
+    meta["list_count"] = len(studies)
+    updated = list_last_updated()
+    if updated:
+        meta["list_updated"] = updated
+    else:
+        meta.pop("list_updated", None)
 
     # Compact and stable, so an unchanged CSV produces an unchanged file and the
     # map does not churn in git on every render.

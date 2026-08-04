@@ -119,6 +119,21 @@ the sample count, and — above all — **the country the samples came from**. T
 `_incoming/tabla-muestreo-virome.md` saying what you found. The record of the
 first pass is there and is the model to follow.
 
+### The date on the map
+
+The map footer carries `Reading list. 17 papers, last updated 4 August 2026.`
+Both come from the build: the count from the CSV, the date from the last commit
+that touched it.
+
+**Not the build date.** A stamp that reads "today" every time the site rebuilds
+tells a reader nothing. This one only moves when a paper is actually added, which
+is what they want to know.
+
+**And it dates the list, not the map.** The shading comes from a 2022 dataset and
+does not change as papers are added, so the note says so — a bare "updated" would
+imply the figures had been refreshed. Nothing to maintain by hand; outside a git
+checkout the line is omitted rather than guessed.
+
 ### What adding rows does and does not change
 
 It adds papers to the panel that opens when a reader clicks a country. **It does
