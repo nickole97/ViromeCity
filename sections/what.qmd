@@ -38,6 +38,13 @@ add an outer **lipid envelope**, stolen from the host and studded with **surface
 proteins** that help them latch onto host cells (like a coronavirus's spikes).
 ::::
 
+::: insight
+The virus you are looking for decides your bench protocol. An envelope changes
+how the particle survives enrichment; the capsid is what lets you digest free
+nucleic acid away before lysis; and DNA or RNA decides the extraction — and
+whether the run needs a reverse-transcription step at all.
+:::
+
 ::: pull
 In Virome City, biological questions come before methodological ones.
 :::
