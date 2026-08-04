@@ -162,3 +162,40 @@ Three needed correcting.
 GPD's samples (n = 410)", which is stated to come from Figure 1D of Li et al.
 2022. It could not be read from the abstract; check it in the PDF before quoting
 it in prose.
+
+---
+
+## Figure 1D of Li et al. 2022 — read off the panel
+
+Both anchors resolved against the figure itself, so nothing here is inferred.
+
+**GPD pie (n = 28,060 metagenomes).** Segments 8,501 Europe (30.3%), 9,829
+North America (35.0%), 2,321 Asia (8.3%), 3,842 combined (13.7%) and 3,567
+unknown origin (12.7%). The 3,842 breaks out as Oceania 3,432 (12.2%), Africa
+184 (0.7%) and South America 226 (0.8%). Segments sum to 28,060 exactly.
+
+- **Africa + South America = 184 + 226 = 410**, which is 1.46% of 28,060 →
+  **1.5%**. Confirmed as written.
+- **Europe + North America + Asia in GPD = 30.3 + 35.0 + 8.3 = 73.6%.**
+  In CHVD = 23.6 + 52.1 + 18.8 = **94.5%**. MGV = 93.0%, GVD = 80.0%.
+
+**So 73.6–94.5% is the spread across the four catalogues, not an uncertainty
+interval.** The map's wording was ambiguous on this and has been rewritten to
+name all four values.
+
+**The percentages include the unknown-origin samples.** In GPD that is 12.7%
+(3,567), so these are shares of everything deposited, not of everything placed.
+Added to the map's notes.
+
+## The finding worth using
+
+GVD is **18.7% African (504 of 2,697)** — by a distance the most geographically
+balanced of the four — and it is the smallest, at 33,242 vOTUs. GPD is the
+largest at 142,809 genomes and **0.7% African**.
+
+The reference with the most detection power is the one that represents that
+population worst; the one that represents it best gives the least power. That is
+a trade the reader has to resolve when choosing a database, not an absence to be
+lamented — and it fits the chapter's thesis (the unclassified fraction is a
+property of the reference, decided at design time) far better than a flat claim
+that Africa is missing. It is now a Methodology Tip in the chapter.
