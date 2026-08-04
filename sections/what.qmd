@@ -48,7 +48,7 @@ What a virus *is* decides how you handle it at the bench — pin this down befor
 you pick a protocol.
 :::
 
-## Three questions
+## How to classify them?
 
 ::: block
 Viral diversity can feel overwhelming. Instead of memorizing every viral family
