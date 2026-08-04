@@ -806,15 +806,10 @@ main.content {
 
 // The title block loses the air it kept for being first.
 //
-// It gains it back below, at the section unit. Quarto zeroes the margin-top of
-// a chapter's first h2, which was invisible while a subtitle stood between the
-// title and it; with the subtitle gone the 40px title and the 27px heading
-// stack 18px apart and read as one two-line title. This is the same air every
-// other section boundary in the book gets.
-main.content > #title-block-header {
-  margin-top: .5rem;
-  margin-bottom: var(--sp-section);
-}
+// Tried at the section unit below, once the subtitle went — the reasoning was
+// that a chapter opening is a section boundary. On the page it read as a hole:
+// the title and the first heading are one gesture, not two sections.
+main.content > #title-block-header { margin-top: .5rem; }
 
 // The breadcrumb said "The four districts › How should I think about viruses?",
 // directly above a district marker and a title saying the same two things. Three
