@@ -92,10 +92,13 @@ The second example. Sampled in different populations, the same body site gives
 different mixes — and the share that matches nothing in a reference database
 grows as you move away from the places most of that reference was built from.
 
-![The same body site, four populations. The unclassified band grows with distance from where the reference data was collected.](../assets/img/where/geography-composition.svg){#fig-geography fig-alt="Four stacked bars along an industrialisation axis, showing crAss-like phages, other phages, eukaryotic viruses and an unclassified fraction that grows toward less industrialised populations."}
+:::
 
-That last band is not a property of the virus. It is a property of your
-reference.
+::: fig-pending
+**Composition across populations.** The same body site in four populations
+along an industrialisation gradient, with the unclassified fraction growing
+toward the less-sampled end. A draft exists at
+`assets/img/where/geography-composition.svg`; the form is still being decided.
 :::
 
 ## Why is so much of it unclassified?
