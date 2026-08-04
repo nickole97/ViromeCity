@@ -176,7 +176,15 @@ file. Stdlib only, so a fresh clone renders without installing anything, and the
 output is byte-stable so an unchanged CSV produces no diff. A row marked
 `verified: no` is held back from the published map and named at build time —
 three of the first seventeen entries were wrong, so "checked" is a state a row
-reaches, not a promise. See `data/README.md`.
+reaches, not a promise.
+
+The same hook writes `data/references.json`, a manifest for Scott's
+`verify-references` skill (<https://github.com/shandley/washu-claude-skills>),
+which resolves every DOI and checks the record against the row. `EXISTS` is not
+enough — without an expectation anchored to it, the tool can only say an
+identifier is real, not that it is the paper claimed. The manifest anchors the
+title and the year, which is exactly the failure that occurred. Run it before
+publishing new rows. See `data/README.md`.
 
 They cannot import `assets/styles.scss`, so each one **restates the version B
 tokens in its own `:root`** — `--paper`, `--ink`, `--muted`, `--line`, `--surface`,

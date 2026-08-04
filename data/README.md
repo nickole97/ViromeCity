@@ -35,7 +35,21 @@ sync-map-studies: 18 studies across 17 countries
 or, if something is wrong, the line number and the reason — and it will refuse
 to rebuild the map rather than publish something quietly broken.
 
-**5. Commit and push.** `git add data/studies.csv components/sampling-map.html docs`
+**5. Check it.** `verify-references` resolves every DOI and confirms the record
+matches the row:
+
+```bash
+python3 ~/.claude/skills/verify-references/verifier.py verify data/references.json
+```
+
+`data/references.json` is generated from the CSV by the same render, so it can
+never drift. `VERIFIED` means the DOI resolves *and* the title and year match.
+`MISMATCH` means the DOI is real but points at a different paper — the failure
+that bit us once already.
+
+The skill is Scott's: <https://github.com/shandley/washu-claude-skills>.
+
+**6. Commit and push.** `git add data/studies.csv data/references.json components/sampling-map.html docs`
 then commit and push. Both the CSV and the rebuilt map need to go, since the map
 is what the site serves.
 
@@ -51,7 +65,8 @@ is what the site serves.
 | `year` | year of **publication**, not of sample collection |
 | `site` | `gut`, `vaginal`, `blood`, `gut, oropharynx` … |
 | `n` | as the paper states it, **with its unit**: `647 one-year-olds`, `12 samples`, `587 pooled samples`. "40" alone is not useful — forty what? |
-| `label` | the title, or a short faithful version of it |
+| `label` | what the reader sees in the map panel. A short faithful version of the title is fine |
+| `title` | the **exact published title**, as the DOI resolves it. This is what makes the row machine-checkable — do not paraphrase it |
 | `url` | DOI link, or a PMC/PubMed link if there is no DOI |
 
 ### Commas: the one thing that breaks the file
@@ -89,9 +104,9 @@ carried the title and year of one paper and the DOI of a *different* paper from
 the same cohort, so a reader clicking through would have landed somewhere other
 than where they were sent.
 
-**To verify a row:** open the URL and check, against the row, the title, the
-authors, the journal, the year of publication, the sample count and — above all —
-the country the samples came from. Then set `verified` to `yes` and add a line to
+**To verify a row:** run `verify-references` (step 5) — it checks the title and
+the year for you. Then check by hand what it cannot: the authors, the journal,
+the sample count, and — above all — **the country the samples came from**. Then set `verified` to `yes` and add a line to
 `_incoming/tabla-muestreo-virome.md` saying what you found. The record of the
 first pass is there and is the model to follow.
 

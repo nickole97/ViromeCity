@@ -1,18 +1,18 @@
-id,verified,countries,year,site,n,label,url
-rampelli2017,yes,US;IT;TZ;PE,2017,gut,,DNA gut virome across subsistence strategies and geographic origin,https://pubmed.ncbi.nlm.nih.gov/28967228/
-zuo2020,yes,CN,2020,gut,930 adults,"Gut DNA virome across geography, ethnicity and urbanization",https://doi.org/10.1016/j.chom.2020.08.005
-nishijima2022,yes,JP,2022,gut,"4,198 individuals",Gut dsDNA virome in the Japanese 4D cohort,https://doi.org/10.1038/s41467-022-32832-w
-reyes2015,yes,MW,2015,gut,40 children,Gut DNA viromes of Malawian twins discordant for severe acute malnutrition,https://doi.org/10.1073/pnas.1514285112
-malawi_eed2020,yes,MW,2020,gut,,Growth velocity and environmental enteric dysfunction: bacterial and viral taxa,https://doi.org/10.1371/journal.pntd.0008387
-yan2021,yes,CN;PK,2021,gut,60 individuals,Gut DNA and RNA viromes of Chinese residents and visiting Pakistanis,https://doi.org/10.1093/ve/veab022
-ethiopia_amhara,yes,ET,2019,gut,269 children,"Viral species richness and composition in young children with loose or watery stool, Amhara region",https://doi.org/10.1186/s12879-019-3674-3
-southafrica2020,yes,ZA,2020,gut,4 infants,"Enteric RNA virome of infants, Oukasie clinic, North West Province",https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7694487/
-mexico2023,yes,MX,2023,"gut, oropharynx",9 infants,"Faecal and oropharyngeal eukaryotic viromes of healthy infants, Morelos",https://doi.org/10.1038/s41598-022-26707-9
-brazil2024,yes,BR,2024,gut,27 samples,"Microbial diversity in children with gastroenteritis, Amazon region",https://www.ncbi.nlm.nih.gov/pmc/articles/PMC11024607/
-nigeria2020,yes,NG,2025,gut,,"Cosavirus genotypes in faeces of children with non-polio acute flaccid paralysis, samples from 2020",https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12197622/
-china_diarrhea2023,yes,CN,2023,gut,162 children,"Gut virome of diarrhoeal children with rotavirus A, Shanghai and Taizhou",https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10351451/
-copsac2023,yes,DK,2023,gut,647 one-year-olds,"Viral diversity in the healthy infant gut, COPSAC cohort",https://doi.org/10.1038/s41564-023-01345-7
-shkoporov2019,yes,IE,2019,gut,10 individuals,"The human gut virome is diverse, stable and individual-specific",https://doi.org/10.1016/j.chom.2019.09.009
-spain_blood2021,yes,ES,2021,blood,587 pooled samples,"Diversity of the human blood virome, pooled plasma, Valencia",https://doi.org/10.3390/v13112322
-denmark_vaginal2020,yes,DK,2020,vaginal,48 women,Vaginal DNA virome in health and dysbiosis,https://doi.org/10.3390/v12101143
-china_vaginitis,yes,CN,2025,vaginal,267 women,Vaginal virome and vaginitis,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC12003417/
+id,verified,countries,year,site,n,label,title,url
+rampelli2017,yes,US;IT;TZ;PE,2017,gut,,DNA gut virome across subsistence strategies and geographic origin,Characterization of the human DNA gut virome across populations with different subsistence strategies and geographical origin,https://doi.org/10.1111/1462-2920.13938
+zuo2020,yes,CN,2020,gut,930 adults,"Gut DNA virome across geography, ethnicity and urbanization","Human-Gut-DNA Virome Variations across Geography, Ethnicity, and Urbanization",https://doi.org/10.1016/j.chom.2020.08.005
+nishijima2022,yes,JP,2022,gut,"4,198 individuals",Gut dsDNA virome in the Japanese 4D cohort,Extensive gut virome variation and its associations with host and environmental factors in a population-level cohort,https://doi.org/10.1038/s41467-022-32832-w
+reyes2015,yes,MW,2015,gut,40 children,Gut DNA viromes of Malawian twins discordant for severe acute malnutrition,Gut DNA viromes of Malawian twins discordant for severe acute malnutrition,https://doi.org/10.1073/pnas.1514285112
+malawi_eed2020,yes,MW,2020,gut,,Growth velocity and environmental enteric dysfunction: bacterial and viral taxa,Growth velocity in children with Environmental Enteric Dysfunction is associated with specific bacterial and viral taxa of the gastrointestinal tract in Malawian children,https://doi.org/10.1371/journal.pntd.0008387
+yan2021,yes,CN;PK,2021,gut,60 individuals,Gut DNA and RNA viromes of Chinese residents and visiting Pakistanis,Characterization of the gut DNA and RNA Viromes in a Cohort of Chinese Residents and Visiting Pakistanis,https://doi.org/10.1093/ve/veab022
+ethiopia_amhara,yes,ET,2019,gut,269 children,"Viral species richness and composition in young children with loose or watery stool, Amhara region",Viral species richness and composition in young children with loose or watery stool in Ethiopia,https://doi.org/10.1186/s12879-019-3674-3
+southafrica2020,yes,ZA,2020,gut,4 infants,"Enteric RNA virome of infants, Oukasie clinic, North West Province","Metagenomic Analysis of the Enteric RNA Virome of Infants from the Oukasie Clinic, North West Province, South Africa, Reveals Diverse Eukaryotic Viruses",https://doi.org/10.3390/v12111260
+mexico2023,yes,MX,2023,"gut, oropharynx",9 infants,"Faecal and oropharyngeal eukaryotic viromes of healthy infants, Morelos",The fecal and oropharyngeal eukaryotic viromes of healthy infants during the first year of life are personal,https://doi.org/10.1038/s41598-022-26707-9
+brazil2024,yes,BR,2024,gut,27 samples,"Microbial diversity in children with gastroenteritis, Amazon region",Microbial Diversity in Children with Gastroenteritis in the Amazon Region of Brazil: Development and Validation of a Molecular Method for Complete Sequencing of Viral Genomes,https://doi.org/10.7150/jgen.94116
+nigeria2020,yes,NG,2025,gut,,"Cosavirus genotypes in faeces of children with non-polio acute flaccid paralysis, samples from 2020",Ten Previously Unassigned Human Cosavirus Genotypes Detected in Feces of Children with Non-Polio Acute Flaccid Paralysis in Nigeria in 2020,https://doi.org/10.3390/v17060844
+china_diarrhea2023,yes,CN,2023,gut,162 children,"Gut virome of diarrhoeal children with rotavirus A, Shanghai and Taizhou",Viral metagenomics of the gut virome of diarrheal children with Rotavirus A infection,https://doi.org/10.1080/19490976.2023.2234653
+copsac2023,yes,DK,2023,gut,647 one-year-olds,"Viral diversity in the healthy infant gut, COPSAC cohort",Expanding known viral diversity in the healthy infant gut,https://doi.org/10.1038/s41564-023-01345-7
+shkoporov2019,yes,IE,2019,gut,10 individuals,"The human gut virome is diverse, stable and individual-specific","The Human Gut Virome Is Highly Diverse, Stable, and Individual Specific",https://doi.org/10.1016/j.chom.2019.09.009
+spain_blood2021,yes,ES,2021,blood,587 pooled samples,"Diversity of the human blood virome, pooled plasma, Valencia",Exploring the Diversity of the Human Blood Virome,https://doi.org/10.3390/v13112322
+denmark_vaginal2020,yes,DK,2020,vaginal,48 women,Vaginal DNA virome in health and dysbiosis,Characterization of the Vaginal DNA Virome in Health and Dysbiosis,https://doi.org/10.3390/v12101143
+china_vaginitis,yes,CN,2025,vaginal,267 women,Vaginal virome and vaginitis,Metagenomic analysis reveals the diversity of the vaginal virome and its association with vaginitis,https://doi.org/10.3389/fcimb.2025.1582553

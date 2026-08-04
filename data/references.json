@@ -1,0 +1,157 @@
+{
+  "references": [
+    {
+      "id": "rampelli2017",
+      "type": "doi",
+      "value": "10.1111/1462-2920.13938",
+      "expected": {
+        "title_contains": "characterization of the human dna gut",
+        "year": 2017
+      }
+    },
+    {
+      "id": "zuo2020",
+      "type": "doi",
+      "value": "10.1016/j.chom.2020.08.005",
+      "expected": {
+        "title_contains": "human-gut-dna virome variations across geography, ethnicity,",
+        "year": 2020
+      }
+    },
+    {
+      "id": "nishijima2022",
+      "type": "doi",
+      "value": "10.1038/s41467-022-32832-w",
+      "expected": {
+        "title_contains": "extensive gut virome variation and its",
+        "year": 2022
+      }
+    },
+    {
+      "id": "reyes2015",
+      "type": "doi",
+      "value": "10.1073/pnas.1514285112",
+      "expected": {
+        "title_contains": "gut dna viromes of malawian twins",
+        "year": 2015
+      }
+    },
+    {
+      "id": "malawi_eed2020",
+      "type": "doi",
+      "value": "10.1371/journal.pntd.0008387",
+      "expected": {
+        "title_contains": "growth velocity in children with environmental",
+        "year": 2020
+      }
+    },
+    {
+      "id": "yan2021",
+      "type": "doi",
+      "value": "10.1093/ve/veab022",
+      "expected": {
+        "title_contains": "characterization of the gut dna and",
+        "year": 2021
+      }
+    },
+    {
+      "id": "ethiopia_amhara",
+      "type": "doi",
+      "value": "10.1186/s12879-019-3674-3",
+      "expected": {
+        "title_contains": "viral species richness and composition in",
+        "year": 2019
+      }
+    },
+    {
+      "id": "southafrica2020",
+      "type": "doi",
+      "value": "10.3390/v12111260",
+      "expected": {
+        "title_contains": "metagenomic analysis of the enteric rna",
+        "year": 2020
+      }
+    },
+    {
+      "id": "mexico2023",
+      "type": "doi",
+      "value": "10.1038/s41598-022-26707-9",
+      "expected": {
+        "title_contains": "the fecal and oropharyngeal eukaryotic viromes",
+        "year": 2023
+      }
+    },
+    {
+      "id": "brazil2024",
+      "type": "doi",
+      "value": "10.7150/jgen.94116",
+      "expected": {
+        "title_contains": "microbial diversity in children with gastroenteritis",
+        "year": 2024
+      }
+    },
+    {
+      "id": "nigeria2020",
+      "type": "doi",
+      "value": "10.3390/v17060844",
+      "expected": {
+        "title_contains": "ten previously unassigned human cosavirus genotypes",
+        "year": 2025
+      }
+    },
+    {
+      "id": "china_diarrhea2023",
+      "type": "doi",
+      "value": "10.1080/19490976.2023.2234653",
+      "expected": {
+        "title_contains": "viral metagenomics of the gut virome",
+        "year": 2023
+      }
+    },
+    {
+      "id": "copsac2023",
+      "type": "doi",
+      "value": "10.1038/s41564-023-01345-7",
+      "expected": {
+        "title_contains": "expanding known viral diversity in the",
+        "year": 2023
+      }
+    },
+    {
+      "id": "shkoporov2019",
+      "type": "doi",
+      "value": "10.1016/j.chom.2019.09.009",
+      "expected": {
+        "title_contains": "the human gut virome is highly",
+        "year": 2019
+      }
+    },
+    {
+      "id": "spain_blood2021",
+      "type": "doi",
+      "value": "10.3390/v13112322",
+      "expected": {
+        "title_contains": "exploring the diversity of the human",
+        "year": 2021
+      }
+    },
+    {
+      "id": "denmark_vaginal2020",
+      "type": "doi",
+      "value": "10.3390/v12101143",
+      "expected": {
+        "title_contains": "characterization of the vaginal dna virome",
+        "year": 2020
+      }
+    },
+    {
+      "id": "china_vaginitis",
+      "type": "doi",
+      "value": "10.3389/fcimb.2025.1582553",
+      "expected": {
+        "title_contains": "metagenomic analysis reveals the diversity of",
+        "year": 2025
+      }
+    }
+  ]
+}
