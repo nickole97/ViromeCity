@@ -270,17 +270,17 @@ ul.task-list li input[type="checkbox"] {
 <section id="why-is-so-much-of-it-unclassified" class="level2">
 <h2 class="anchored" data-anchor-id="why-is-so-much-of-it-unclassified">Why is so much of it unclassified?</h2>
 <div class="block">
-<p>Most published human virome studies come from a handful of regions, so the databases you classify against are built mostly from those samples. A library from an under-represented population will leave a larger unclassified fraction than one from a well-sampled one — reading not as biology but as a pipeline that failed.</p>
-<div id="fig-sampling" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Six world regions as schematic blocks, each with a circle sized by how much virome sampling it has: North America and Europe well sampled, Asia and Oceania with some studies, Africa and South America with few or none.">
-<figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-sampling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="../assets/img/where/sampling-bias.svg" class="img-fluid figure-img" alt="Six world regions as schematic blocks, each with a circle sized by how much virome sampling it has: North America and Europe well sampled, Asia and Oceania with some studies, Africa and South America with few or none.">
+<p>The databases you classify against were built from public metagenomes, and those metagenomes did not come from everywhere. More than 71% of public human microbiome samples with a known origin come from Europe, the US and Canada — 46.8% from the US alone, a country holding 4.3% of the world’s population. A library from an under-represented population will leave a larger unclassified fraction than one from a well-sampled one, and it will read not as biology but as a pipeline that failed.</p>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sampling-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4.1: Where published human virome sequencing has come from. The tiers are qualitative, not counts.
-</figcaption>
-</figure>
+<div class="embed">
+<p><span class="embed-title">Public samples per country, relative to population</span></p>
+<p>Hover a country to see how much of that population has been sampled, and which virome papers studied it. The sampling data is microbiome-wide rather than virome-specific — but the four major gut virome catalogues were built by mining these same public metagenomes, so this is the substrate your reference was assembled from.</p>
+<iframe src="../components/sampling-map.html" title="Public human microbiome samples per country, relative to population" loading="lazy"></iframe>
+<div class="embed-out">
+<p><a href="../components/sampling-map.html" target="_blank">Open full ↗</a></p>
 </div>
+</div>
+<div class="block">
 <p>Knowing which of the two you are looking at is part of designing the study, not of troubleshooting it afterwards.</p>
 </div>
 <div class="insight">
