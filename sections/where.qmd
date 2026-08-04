@@ -87,9 +87,30 @@ The first example. How many distinct viruses a person carries is not a constant
 :::
 :::
 
-::: fig-pending
-**Geography.** The second example. How virome composition shifts across
-geographic — and social — settings.
+::: block
+The second example. Sampled in different populations, the same body site gives
+different mixes — and the share that matches nothing in a reference database
+grows as you move away from the places most of that reference was built from.
+
+![The same body site, four populations. The unclassified band grows with distance from where the reference data was collected.](../assets/img/where/geography-composition.svg){#fig-geography fig-alt="Four stacked bars along an industrialisation axis, showing crAss-like phages, other phages, eukaryotic viruses and an unclassified fraction that grows toward less industrialised populations."}
+
+That last band is not a property of the virus. It is a property of your
+reference.
+:::
+
+## Why is so much of it unclassified?
+
+::: block
+Most published human virome studies come from a handful of regions, so the
+databases you classify against are built mostly from those samples. A library
+from an under-represented population will leave a larger unclassified fraction
+than one from a well-sampled one — reading not as biology but as a pipeline
+that failed.
+
+![Where published human virome sequencing has come from. The tiers are qualitative, not counts.](../assets/img/where/sampling-bias.svg){#fig-sampling fig-alt="Six world regions as schematic blocks, each with a circle sized by how much virome sampling it has: North America and Europe well sampled, Asia and Oceania with some studies, Africa and South America with few or none."}
+
+Knowing which of the two you are looking at is part of designing the study, not
+of troubleshooting it afterwards.
 :::
 
 ::: insight

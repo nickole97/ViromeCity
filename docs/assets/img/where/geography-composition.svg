@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 400" width="820" height="400" role="img" font-family="'IBM Plex Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+
+  <!-- Virome City — District 3, figure: composition across populations.
+       Palette carried over from the richness curve on purpose: the reader has
+       just learnt that violet is crAss-like phages and coral is eukaryotic
+       viruses, so they mean the same thing one figure later.
+       Proportions are illustrative. -->
+
+  <!-- legend -->
+  <g font-size="12" fill="#14213d">
+    <rect x="68"  y="10" width="12" height="12" rx="2" fill="#6c63c9"/>
+    <text x="88"  y="20">crAss-like phages</text>
+    <rect x="230" y="10" width="12" height="12" rx="2" fill="#0891b2"/>
+    <text x="250" y="20">other phages</text>
+    <rect x="368" y="10" width="12" height="12" rx="2" fill="#e85d4e"/>
+    <text x="388" y="20">eukaryotic viruses</text>
+    <rect x="530" y="10" width="12" height="12" rx="2" fill="#c7cdd7"/>
+    <text x="550" y="20">unclassified</text>
+  </g>
+
+  <!-- baseline -->
+  <line x1="60" y1="270.5" x2="762" y2="270.5" stroke="#c7cdd7" stroke-width="1"/>
+
+  <!-- bar 1 — urban, industrialised -->
+  <g>
+    <rect x="68" y="216" width="104" height="54" fill="#6c63c9"/>
+    <rect x="68" y="148" width="104" height="68" fill="#0891b2"/>
+    <rect x="68" y="122" width="104" height="26" fill="#e85d4e"/>
+    <rect x="68" y="100" width="104" height="22" fill="#eef1f5"/>
+    <rect x="68" y="100" width="104" height="22" fill="none" stroke="#c7cdd7" stroke-width="1"/>
+  </g>
+
+  <!-- bar 2 -->
+  <g>
+    <rect x="262" y="222" width="104" height="48" fill="#6c63c9"/>
+    <rect x="262" y="158" width="104" height="64" fill="#0891b2"/>
+    <rect x="262" y="132" width="104" height="26" fill="#e85d4e"/>
+    <rect x="262" y="100" width="104" height="32" fill="#eef1f5"/>
+    <rect x="262" y="100" width="104" height="32" fill="none" stroke="#c7cdd7" stroke-width="1"/>
+  </g>
+
+  <!-- bar 3 -->
+  <g>
+    <rect x="456" y="228" width="104" height="42" fill="#6c63c9"/>
+    <rect x="456" y="168" width="104" height="60" fill="#0891b2"/>
+    <rect x="456" y="144" width="104" height="24" fill="#e85d4e"/>
+    <rect x="456" y="100" width="104" height="44" fill="#eef1f5"/>
+    <rect x="456" y="100" width="104" height="44" fill="none" stroke="#c7cdd7" stroke-width="1"/>
+  </g>
+
+  <!-- bar 4 -->
+  <g>
+    <rect x="650" y="234" width="104" height="36" fill="#6c63c9"/>
+    <rect x="650" y="180" width="104" height="54" fill="#0891b2"/>
+    <rect x="650" y="158" width="104" height="22" fill="#e85d4e"/>
+    <rect x="650" y="100" width="104" height="58" fill="#eef1f5"/>
+    <rect x="650" y="100" width="104" height="58" fill="none" stroke="#c7cdd7" stroke-width="1"/>
+  </g>
+
+  <!-- population labels -->
+  <g text-anchor="middle" fill="#14213d" font-size="13" font-weight="600">
+    <text x="120" y="292">Urban</text>
+    <text x="314" y="292">Urban</text>
+    <text x="508" y="292">Rural</text>
+    <text x="702" y="292">Rural</text>
+  </g>
+  <g text-anchor="middle" fill="#5c6b82" font-size="12">
+    <text x="120" y="309">industrialised</text>
+    <text x="314" y="309">transitional</text>
+    <text x="508" y="309">transitional</text>
+    <text x="702" y="309">subsistence</text>
+  </g>
+
+  <!-- the axis the four populations sit on -->
+  <line x1="68" y1="342.5" x2="754" y2="342.5" stroke="#e2e6ec" stroke-width="2"/>
+  <path d="M754 342.5 l-8 -4 v8 z" fill="#c7cdd7"/>
+  <g font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace"
+     font-size="11" font-weight="500" letter-spacing="1.2" fill="#5c6b82">
+    <text x="68" y="366">MORE INDUSTRIALISED</text>
+    <text x="754" y="366" text-anchor="end">LESS INDUSTRIALISED</text>
+  </g>
+
+  <!-- the point of the figure, stated inside it -->
+  <text x="68" y="390" font-size="12" fill="#5c6b82" font-style="italic">Schematic — proportions are illustrative.</text>
+</svg>

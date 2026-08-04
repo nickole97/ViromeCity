@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 430" width="820" height="430" role="img" font-family="'IBM Plex Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+
+  <!-- Virome City — District 3, figure: where virome data comes from.
+       Deliberately NOT a map. A choropleth of six sampled countries makes the
+       unsampled world look like data when it is the sampling bias itself, and
+       at reading-column width no coastline survives. Blocks in roughly
+       geographic position, sized circles, three qualitative tiers, no numbers:
+       the claim is "most reference data comes from a few places", and that is
+       all the figure asserts. -->
+
+  <g stroke="#e2e6ec" stroke-width="1.5" fill="#ffffff">
+    <rect x="52"  y="72"  width="168" height="104" rx="10"/>
+    <rect x="150" y="212" width="122" height="146" rx="10"/>
+    <rect x="330" y="60"  width="118" height="78"  rx="10"/>
+    <rect x="322" y="164" width="140" height="164" rx="10"/>
+    <rect x="482" y="70"  width="212" height="126" rx="10"/>
+    <rect x="574" y="292" width="126" height="76"  rx="10"/>
+  </g>
+
+  <!-- Well sampled -->
+  <g fill="#0891b2">
+    <circle cx="136" cy="112" r="27"/>
+    <circle cx="389" cy="94"  r="24"/>
+  </g>
+  <!-- Some studies -->
+  <g fill="#0891b2" fill-opacity=".45">
+    <circle cx="588" cy="118" r="16"/>
+    <circle cx="637" cy="322" r="12"/>
+  </g>
+  <!-- Few or none -->
+  <g fill="none" stroke="#c7cdd7" stroke-width="2" stroke-dasharray="3 3">
+    <circle cx="211" cy="272" r="9"/>
+    <circle cx="392" cy="238" r="9"/>
+  </g>
+
+  <g text-anchor="middle" font-size="12.5" font-weight="600" fill="#14213d">
+    <text x="136" y="162">North America</text>
+    <text x="211" y="344">South America</text>
+    <text x="389" y="128">Europe</text>
+    <text x="392" y="314">Africa</text>
+    <text x="588" y="182">Asia</text>
+    <text x="637" y="354">Oceania</text>
+  </g>
+
+  <!-- legend -->
+  <line x1="52" y1="386.5" x2="768" y2="386.5" stroke="#e2e6ec" stroke-width="1"/>
+  <g font-size="12" fill="#14213d">
+    <circle cx="62"  cy="408" r="10" fill="#0891b2"/>
+    <text   x="80"  y="412">Well sampled</text>
+    <circle cx="228" cy="408" r="7"  fill="#0891b2" fill-opacity=".45"/>
+    <text   x="243" y="412">Some studies</text>
+    <circle cx="392" cy="408" r="5"  fill="none" stroke="#c7cdd7" stroke-width="2" stroke-dasharray="3 3"/>
+    <text   x="405" y="412">Few or none</text>
+  </g>
+  <text x="768" y="412" text-anchor="end" font-size="12" fill="#5c6b82" font-style="italic">Schematic — not a map.</text>
+
+  <g font-family="'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace"
+     font-size="11" font-weight="500" letter-spacing="1.2" fill="#5c6b82">
+    <text x="52" y="34">PUBLISHED HUMAN VIROME STUDIES, BY REGION</text>
+  </g>
+</svg>
