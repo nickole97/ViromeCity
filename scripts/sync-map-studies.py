@@ -52,12 +52,29 @@ def main():
 
     known = {c["a2"] for c in payload["countries"] if c.get("a2")}
 
-    rows = list(csv.DictReader(CSV_PATH.open(encoding="utf-8")))
+    # restkey/restval so a row with the wrong number of fields is visible rather
+    # than silently shifting every column left. An unquoted comma inside `n` or
+    # `label` is the common way that happens, and it used to sail through with
+    # the title landing in the url column.
+    reader = csv.DictReader(CSV_PATH.open(encoding="utf-8"), restkey="_extra", restval=None)
+    fields = reader.fieldnames or []
+    rows = list(reader)
     studies, held, errors, seen = [], [], [], set()
 
     for i, row in enumerate(rows, start=2):  # row 1 is the header
         sid = (row.get("id") or "").strip()
         where = f"{CSV_PATH.name}:{i}"
+
+        if row.get("_extra"):
+            errors.append(
+                f"{where}: {len(fields) + len(row['_extra'])} fields, expected {len(fields)}"
+                " — a comma inside a field must be wrapped in double quotes"
+            )
+            continue
+        missing = [f for f in fields if row.get(f) is None]
+        if missing:
+            errors.append(f"{where}: missing column(s) {', '.join(missing)}")
+            continue
 
         if not sid:
             errors.append(f"{where}: no id")
@@ -70,6 +87,8 @@ def main():
         url = (row.get("url") or "").strip()
         if not url:
             errors.append(f"{where}: '{sid}' has no url — a DOI or PMC link is required")
+        elif not url.startswith("http"):
+            errors.append(f"{where}: '{sid}' — url is not a link: '{url[:48]}'")
 
         codes = [c.strip().upper() for c in (row.get("countries") or "").split(";") if c.strip()]
         if not codes:
