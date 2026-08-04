@@ -119,6 +119,14 @@ the chapter text was written to explain each figure in the prose beside it. Wher
 both are true, keep the caption short and factual — it names what the figure shows,
 it does not re-argue the paragraph.
 
+**Two scaffolding patterns that are not components.** `::: fig-pending` holds the
+slot of a figure that is written but not drawn: dashed, colourless, and with **no
+figure number** — Quarto numbers real figures, and a placeholder that consumed one
+would renumber everything after it when the art lands. `::: launch` is the door to
+an interactive that lives on its own page (`components/`, `kitchen/`); it is
+bordered and kicked in the figure colour, because being interactive does not make
+it a new kind of thing, and its links stay coral like every other link.
+
 ## Language
 
 English is the source of truth. Other languages will live in subfolders (`/es/`,
@@ -148,12 +156,24 @@ hand-written HTML, declared as `resources` in `_quarto.yml` and copied to the bu
 untouched. Don't convert them to markdown. Heavy interactive widgets live as their
 own pages, linked from chapters — not embedded inside them.
 
+They cannot import `assets/styles.scss`, so each one **restates the version B
+tokens in its own `:root`** — `--paper`, `--ink`, `--muted`, `--line`, `--surface`,
+`--accent`, `--purple`, `--coral`, `--star` and the three faces. Change a value in
+the stylesheet and change it in all three. Their data ramps use colours the reader
+already knows: cyan is what you are looking for, slate is the host it is buried in,
+violet is biomass, coral is risk. The active toggle is navy rather than the ramp
+colour, because white on the cyan and coral ends reads at 3.7:1 and 3.4:1.
+
+They each carried a `prefers-color-scheme: dark` block. **Removed** — the book is
+light only, and a widget that inverted on a dark OS was the one place that broke it.
+
 ## Current state
 
 District 1 — "How should I think about viruses?" — is written, migrated and live.
-The other three districts and Fivi's Kitchen are stubs. The hand-written drafts for
-`where` and `how-to` are in `_archive/sections-html/`, still to migrate, and stay
-published at `/legacy/` so nothing already written is unreachable.
+District 3 — "Where do viruses hide?" — is migrated as far as the old draft went,
+with two figures still `fig-pending`. Districts 2 and 4 and Fivi's Kitchen are
+stubs. The hand-written drafts are in `_archive/sections-html/` and stay published
+at `/legacy/` so nothing already written is unreachable.
 
 The three defects the legacy HTML carried are fixed: Fivi is no longer a base64 PNG
 inside the CSS, the broken `#how` link resolves to the How-to district, and the

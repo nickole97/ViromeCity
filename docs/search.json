@@ -161,6 +161,28 @@
     ]
   },
   {
+    "objectID": "sections/where.html#does-it-change-with-the-body-site",
+    "href": "sections/where.html#does-it-change-with-the-body-site",
+    "title": "Where do viruses hide?",
+    "section": "Does it change with the body site?",
+    "text": "Does it change with the body site?\n\nThat sliver isn’t fixed — it varies enormously by where the sample came from. Blood, lung and stool start from completely different mixes.\n\n\nVirome by body compartment\nToggle a variable and hover a compartment to see how the mix changes across the body.\n\nOpen the heatmap ↗ Compare all four ↗",
+    "crumbs": [
+      "The four districts",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/where.html#is-the-site-the-whole-story",
+    "href": "sections/where.html#is-the-site-the-whole-story",
+    "title": "Where do viruses hide?",
+    "section": "Is the site the whole story?",
+    "text": "Is the site the whole story?\n\nSite isn’t the whole story.\nSorting a human virome by collection site alone is too simplistic. The virome shifts with many ecological traits of the host — age, sex, geography, even social setting — and all of these belong in your experimental design. Two examples: age, and geography.\n\n\nViral richness across the lifespan\nThe first example. How many distinct viruses a person carries is not a constant — it changes with age.\n\nOpen the curve ↗\n\n\n\nGeography. The second example. How virome composition shifts across geographic — and social — settings.\n\n\nEvery sample has the same problem underneath: the virus is a tiny fraction buried under everything else. Recovering clean viral signal takes extra steps, and even after them the host and microbial noise is still there.\n\n\n\nHow you pull me out depends on what I’m made of and how I live. There is no single recovery protocol — which steps you need is decided by the genome I carry and the state I’m in. That’s the How-to district.",
+    "crumbs": [
+      "The four districts",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
+    ]
+  },
+  {
     "objectID": "sections/how-to.html",
     "href": "sections/how-to.html",
     "title": "How to design the experiment",

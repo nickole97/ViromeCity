@@ -443,6 +443,79 @@ figure.figure {
   > :last-child { margin-bottom: 0; }
 }
 
+// A figure that is too heavy to sit in the reading column — a heatmap you can
+// toggle, a curve you can hover. It lives as its own page and the chapter opens
+// a door to it.
+//
+// Bordered and kicked in the figure colour, because that is what it is: "cyan
+// is a Figure" holds book-wide, and being interactive does not make it a new
+// kind of thing. The links inside stay coral — links are the book's voice
+// everywhere else and this is not the place to make an exception.
+.launch {
+  background: var(--paper);
+  border: 1px solid var(--c-figure);
+  border-radius: var(--radius);
+  padding: var(--sp-component);
+  margin: var(--sp-figure) 0;
+
+  &::before {
+    content: "Interactive figure";
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--c-figure-ink);
+    margin-bottom: .8rem;
+  }
+
+  .launch-title {
+    display: block;
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-bottom: .4rem;
+  }
+
+  p {
+    margin: 0 0 .6em;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  // The doors, side by side. They are the last thing in the card, so they get
+  // the space between them rather than a margin each.
+  //
+  // The inner <p> is flexed too: Pandoc wraps consecutive links in one
+  // paragraph, so without it the div has a single flex child and the two links
+  // run together on a plain word space.
+  .launch-links, .launch-links p {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6rem;
+  }
+
+  .launch-links {
+    margin: 1rem 0 0;
+    p { margin: 0; font-size: inherit; }
+
+    a {
+      font-family: var(--sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--c-question);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover { border-bottom-color: currentColor; }
+  }
+}
+
 figcaption {
   font-family: var(--sans);
   font-size: .8rem;

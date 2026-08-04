@@ -38,3 +38,63 @@ dietary sequences vastly outnumber viral ones.
 and dietary sequences against the sliver that is viral. Graphic, not
 statistical — the proportions are illustrative.
 :::
+
+## Does it change with the body site?
+
+::: block
+That sliver isn't fixed — it varies enormously by where the sample came from.
+Blood, lung and stool start from completely different mixes.
+:::
+
+::: launch
+[Virome by body compartment]{.launch-title}
+
+Toggle a variable and hover a compartment to see how the mix changes across the
+body.
+
+::: launch-links
+[Open the heatmap ↗](../components/body-heatmap.html){target="_blank"}
+[Compare all four ↗](../components/body-heatmap-smallmultiples.html){target="_blank"}
+:::
+:::
+
+## Is the site the whole story?
+
+::: block
+[Site isn't the whole story.]{.claim}
+
+Sorting a human virome by collection site alone is too simplistic. The virome
+shifts with many ecological traits of the host — age, sex, geography, even
+social setting — and all of these belong in your experimental design. Two
+examples: age, and geography.
+:::
+
+::: launch
+[Viral richness across the lifespan]{.launch-title}
+
+The first example. How many distinct viruses a person carries is not a constant
+— it changes with age.
+
+::: launch-links
+[Open the curve ↗](../components/richness-curve.html){target="_blank"}
+:::
+:::
+
+::: fig-pending
+**Geography.** The second example. How virome composition shifts across
+geographic — and social — settings.
+:::
+
+::: insight
+Every sample has the same problem underneath: the virus is a tiny fraction
+buried under everything else. Recovering clean viral signal takes extra steps,
+and even after them the host and microbial noise is still there.
+:::
+
+::: fivi
+![](../assets/img/fivi-thinking.png){fig-alt="Fivi, thinking."}
+
+**How you pull me out depends on what I'm made of and how I live.** There is no
+single recovery protocol — which steps you need is decided by the genome I carry
+and the state I'm in. That's the [How-to district](how-to.qmd).
+:::

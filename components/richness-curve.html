@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Viral richness across the lifespan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap">
+
 <style>
- :root{ --paper:#FBF9F4; --ink:#20201C; --muted:#6E6C63; --line:#E4E1D8; --surface:#FFFFFF; --accent:#0F6E56;
-   --purple:#7F77DD; --coral:#E88A3C; --star:#D99A00;
-   --sans:"Spline Sans",ui-sans-serif,system-ui,sans-serif; --display:"Fraunces",Georgia,serif; --mono:ui-monospace,monospace; }
- @media (prefers-color-scheme: dark){ :root{ --paper:#17181A; --ink:#ECEAE3; --muted:#9B998F; --line:#33342F; --surface:#1F2022; --accent:#3FB08C; --purple:#A7A0F0; --coral:#F0A45C; --star:#E7B93B; } }
+ :root{
+  /* Virome City design system, version B. These mirror assets/styles.scss —
+     this page is hand-written and cannot import the book's stylesheet, so the
+     tokens are restated here. If a value changes there, change it here too. */
+  --paper:#FFFFFF; --ink:#14213D; --muted:#5C6B82; --line:#E2E6EC; --surface:#FFFFFF;
+  --accent:#0891B2; --purple:#6C63C9; --coral:#E85D4E; --star:#D99A1B;
+  --sans:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+  --display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,monospace;
+}
+ 
  *{box-sizing:border-box}
  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.6;display:flex;justify-content:center;padding:30px 18px}
  .doc{width:100%;max-width:760px}
