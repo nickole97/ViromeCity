@@ -13,3 +13,5 @@
 # site — a ~ai-*.tmp rode along into docs/ for eight commits before this.
 ~ai-*
 *.tmp
+# Y los propios .ai: las fuentes viven en ViromeCity-fuentes/, no en el sitio.
+*.ai
