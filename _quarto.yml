@@ -54,7 +54,7 @@ book:
   # Quarto only offers left / center / right, so the centre slot is the one
   # the stylesheet turns into that second row.
   page-footer:
-    left: "[Virome City]{.foot-kicker}[A curated guide to human virome analysis]{.foot-title}"
+    left: "[Virome City]{.foot-kicker}[A guide to navigate &amp; analyze your first human virome — and not get lost trying.]{.foot-title}"
     right: "[Maintained by]{.foot-label}[Nickole Villabona &amp; Scott Handley]{.foot-names}[and contributors]{.foot-names-sub}"
     center: "[Built with [Quarto](https://quarto.org).]{.foot-colophon}"
 

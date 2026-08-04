@@ -1423,13 +1423,14 @@ footer.footer {
 .foot-title {
   display: block;
   font-family: var(--display);
-  font-size: 22px;
+  font-size: 17px;
   font-weight: 500;
-  line-height: 1.3;
-  letter-spacing: -.01em;
+  line-height: 1.45;
+  letter-spacing: -.005em;
   color: var(--sb-ink);
-  // One line. Capped, it broke as "…to human / virome analysis", which splits
-  // the one term in the sentence that has to stay whole.
+  // It is a sentence now, not a strapline, so it is allowed to wrap — but the
+  // two halves are balanced rather than left with one word on the second line.
+  max-width: 34ch;
   text-wrap: balance;
 }
 
