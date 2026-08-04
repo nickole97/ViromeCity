@@ -35,7 +35,7 @@ counts with measured ones and the map becomes a genuine census.
 | # | Claim | Source |
 |---|---|---|
 | A1 | Over 71% of public human microbiome samples with a known origin come from Europe, the US and Canada — 46.8% from the US alone, a country holding 4.3% of the world's population. Central and southern Asia (India, Pakistan, Bangladesh and neighbours) hold over a quarter of the world's people but supply 1.8% of samples. Based on 444,829 samples across 2,592 studies and 19 body sites. | Abdill, Adamowicz & Blekhman, *PLOS Biology* 2022. doi:10.1371/journal.pbio.3001536 |
-| A2 | Europe, North America and Asia together account for 73.6%–94.5% of the samples behind GPD, MGV, CHVD and GVD — the four major gut virome catalogues. Africa and South America are the thinnest. | Cao et al., *Cell Host & Microbe* 2022. doi:10.1016/j.chom.2022.07.005 |
+| A2 | Europe, North America and Asia together account for 73.6%–94.5% of the samples behind GPD, MGV, CHVD and GVD — the four major gut virome catalogues. Africa and South America together supply 1.5% of GPD's samples (n = 410). | Li, Yang, Xiao & Li, *Cell Host & Microbe* 2022; 30(7):908–916. doi:10.1016/j.chom.2022.06.003 |
 
 A1 is microbiome-wide (16S + shotgun), not virome-specific — say so. A2 is the
 virome-specific version and is the one that speaks directly to *reference*
@@ -56,6 +56,8 @@ primary studies because they are aggregations, not sampling events.
 | `mgv` | Metagenomic Gut Virus catalogue | included in the A2 comparison; sample count not verified in this pass | 2021 | — |
 | `chgv` | Chinese Gut Virus catalogue | 67,096 non-redundant viral genomes, Chinese cohorts | 2025 | 10.1186/s13073-025-01460-6 |
 | `avrc` | Aggregated Gut Viral Catalogue | unifies 8 prior catalogues + IMG/VR; adds infant samples from 9 countries; states the western-adult bias explicitly | 2025 | 10.1371/journal.pcbi.1012268 |
+
+**Correction, this pass:** A2 was first cited here as “Cao et al., doi:10.1016/j.chom.2022.07.005”. Both the author name and the DOI were wrong; the statistic itself is verbatim correct and appears in Figure 1D of the Li et al. paper above.
 
 `avrc` is worth a pointer in the caption: it is a catalogue whose own authors
 name the geographic bias as a limitation of the resource. That is the section's
