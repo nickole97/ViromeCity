@@ -13,6 +13,12 @@ project:
     # GitHub Pages skips folders starting with "_" (e.g. site_libs) without this.
     # Declared as a resource so `quarto render` recreates it on every build.
     - .nojekyll
+  # The sampling map's reading list is edited as data/studies.csv and folded into
+  # components/sampling-map.html here, so nobody hand-edits minified JSON inside a
+  # 145 KB file. Stdlib only — a fresh clone renders without installing anything.
+  # See data/README.md.
+  pre-render:
+    - scripts/sync-map-studies.py
 
 book:
   title: "Virome City"

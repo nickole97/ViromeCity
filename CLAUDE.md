@@ -169,6 +169,15 @@ hidden and the card falls back to its title, its description and the figure's UR
 `::: launch` is still there for a widget too large to sit in a chapter at all —
 Fivi's Kitchen is a whole wizard, not a figure. That one gets a door, not a frame.
 
+**Data a figure reads lives in `data/`, never inside the widget.** The sampling
+map's reading list is `data/studies.csv`; `scripts/sync-map-studies.py` folds it
+in as a Quarto `pre-render` hook. Nobody hand-edits minified JSON inside a 145 KB
+file. Stdlib only, so a fresh clone renders without installing anything, and the
+output is byte-stable so an unchanged CSV produces no diff. A row marked
+`verified: no` is held back from the published map and named at build time —
+three of the first seventeen entries were wrong, so "checked" is a state a row
+reaches, not a promise. See `data/README.md`.
+
 They cannot import `assets/styles.scss`, so each one **restates the version B
 tokens in its own `:root`** — `--paper`, `--ink`, `--muted`, `--line`, `--surface`,
 `--accent`, `--purple`, `--coral`, `--star` and the three faces. Change a value in
