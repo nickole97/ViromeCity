@@ -129,3 +129,36 @@ as tooltip text only, with its unit spelled out per row.
 
 Countries with no row need a visually distinct "no data in this set" fill — not
 the bottom of the cyan ramp, which would read as "sampled a little".
+
+---
+
+## Verification pass — all 17 primary studies, checked one by one
+
+Every DOI, PMC ID and PubMed ID below was resolved and the title, authors,
+journal, year and sample count read off the record. **No entry was fabricated.**
+Three needed correcting.
+
+| id | verdict |
+|---|---|
+| `rampelli2017` | Confirmed. PubMed 28967228. US, Italy, Tanzania (Hadza), Peru (Matses, Tunapuco) — all four countries correct. |
+| `zuo2020` | Confirmed. *Cell Host Microbe* 28(5):741–751.e4. 930 adults, Hong Kong + Yunnan, six ethnicities. |
+| `nishijima2022` | Confirmed. *Nat Commun*, 6 Sep 2022. 4,198 individuals, Japanese 4D cohort. |
+| `reyes2015` | Confirmed. *PNAS* 112(38):11941. 8 concordant + 12 discordant twin pairs = 40 children, Malawi. |
+| `malawi_eed2020` | Confirmed. *PLoS Negl Trop Dis*, 23 Jun 2020, Malawi. |
+| `yan2021` | Confirmed. *Virus Evol* 7(1):veab022. Chinese residents and visiting Pakistanis, one city. |
+| `ethiopia_amhara` | **Corrected.** The title and year described *Enteric virome of Ethiopian children participating in a clean water intervention trial* (PLOS ONE 2018, doi:10.1371/journal.pone.0202054), but the DOI and n = 269 belong to *Viral species richness and composition in young children with loose or watery stool in Ethiopia* (BMC Infect Dis 2019, doi:10.1186/s12879-019-3674-3). Same Amhara cohort, two different papers. Title and year now match the link. |
+| `southafrica2020` | Confirmed. *Viruses*, Nov 2020, PMC7694487. 4 infants, 12 samples, Oukasie clinic, North West Province. |
+| `mexico2023` | Confirmed. *Sci Rep*, 17 Jan 2023. 9 infants, Morelos; 90 oropharyngeal + 97 faecal samples. |
+| `brazil2024` | Confirmed. PMC11024607, 27 inpatients, Amazon region, samples 2012–2016. |
+| `nigeria2020` | **Corrected.** The paper is real (PMC12197622) but was published **June 2025**, not 2020 — "2020" in the title is the year the samples were collected. Year fixed and the label now says so. |
+| `china_diarrhea2023` | Confirmed. *Gut Microbes*, 13 Jul 2023, PMC10351451. 76 + 27 diarrhoeal/healthy in Shanghai and 40 + 19 in Taizhou = 162. |
+| `copsac2023` | Confirmed. *Nat Microbiol*, Apr 2023. 647 one-year-olds, COPSAC, Denmark; 10,021 viral species in 248 families. |
+| `shkoporov2019` | Confirmed. *Cell Host Microbe*, 9 Oct 2019. 10 individuals, longitudinal, Ireland. |
+| `spain_blood2021` | Confirmed. *Viruses*, 21 Nov 2021. Pooled plasma from 587 healthy donors, Spain. |
+| `denmark_vaginal2020` | Confirmed. *Viruses* 12(10):1143. 48 patients in a Danish IVF setting. |
+| `china_vaginitis` | **Corrected.** Year was `null`. It is *Front Cell Infect Microbiol*, 3 Apr 2025, doi:10.3389/fcimb.2025.1582553, PMC12003417 — 24 pooled libraries from 267 women, Nantong. |
+
+**Still unverified:** the figure "Africa and South America together supply 1.5% of
+GPD's samples (n = 410)", which is stated to come from Figure 1D of Li et al.
+2022. It could not be read from the abstract; check it in the PDF before quoting
+it in prose.
