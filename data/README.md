@@ -35,6 +35,15 @@ sync-map-studies: 18 studies across 17 countries
 or, if something is wrong, the line number and the reason — and it will refuse
 to rebuild the map rather than publish something quietly broken.
 
+**4b. Fill the titles.** Leave `title` blank when you add a row — this fetches
+the published title from CrossRef, so nobody transcribes one by hand and nobody
+transcribes one wrong:
+
+```bash
+python3 scripts/fetch-titles.py          # fill blanks
+python3 scripts/fetch-titles.py --check  # just report which rows are missing one
+```
+
 **5. Check it.** `verify-references` resolves every DOI and confirms the record
 matches the row:
 
@@ -139,3 +148,24 @@ prints the CSV line number with the reason. The four it catches:
 
 `quarto render` stops on any of these. It does not half-build: the map on disk
 stays the last good one until the CSV is fixed.
+
+---
+
+## Rows added by Claude Cowork
+
+Cowork can be scheduled to search the literature monthly and append rows here —
+the task is `_incoming/tarea-cowork-papers.md`. It writes to `data/` and nothing
+else, and it always writes `verified: no`.
+
+That is the whole safety design, and it is not a convention anybody has to
+remember: a `no` row cannot reach the published map. Cowork is untrusted input by
+construction. It can be wrong about a paper, a country, or a DOI, and a reader
+never sees it.
+
+What it hands over still needs a person for the one thing no tool checks — that
+the samples came from the country on the row. `fetch-titles.py` and
+`verify-references` cover the rest; the country is yours.
+
+It also writes `data/pendientes.md` each run: what it added, what it discarded
+and why, and anything it could not resolve. Read that before flipping anything
+to `yes`.
