@@ -130,12 +130,34 @@
   {
     "objectID": "sections/where.html",
     "href": "sections/where.html",
-    "title": "Where viruses hide",
+    "title": "Where do viruses hide?",
     "section": "",
-    "text": "This chapter has not been migrated yet. The current draft lives in the old site.\n\n\n\nShotgun sequencing, composition across the body, the body heatmap, and the noise problem.",
+    "text": "The short answer\nDistrict 3",
     "crumbs": [
       "The four districts",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where viruses hide</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/where.html#the-short-answer",
+    "href": "sections/where.html#the-short-answer",
+    "title": "Where do viruses hide?",
+    "section": "",
+    "text": "Viruses are found throughout the human body. They are among the most abundant biological entities associated with us — but they are also among the smallest.\n\n\nThe viral world. Viruses are everywhere in the body and outnumber everything else, but they are tiny, and larger things crowd the frame.\n\n\nHowever, most of what you sequence isn’t viral.",
+    "crumbs": [
+      "The four districts",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/where.html#why-isnt-most-of-it-viral",
+    "href": "sections/where.html#why-isnt-most-of-it-viral",
+    "title": "Where do viruses hide?",
+    "section": "Why isn’t most of it viral?",
+    "text": "Why isn’t most of it viral?\n\nTo look for viruses, researchers often begin with shotgun metagenomic sequencing (NGS), which sequences all nucleic acids in a sample — not just viral ones.\nThe result is a sequencing library where viral sequences represent only a small fraction of the total. In a stool sample, for example, bacterial, host and dietary sequences vastly outnumber viral ones.\n\n\nWhat is in the sample. The composition of a stool library: host, bacterial and dietary sequences against the sliver that is viral. Graphic, not statistical — the proportions are illustrative.",
+    "crumbs": [
+      "The four districts",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
     ]
   },
   {

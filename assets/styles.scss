@@ -411,6 +411,38 @@ figure.figure {
   }
 }
 
+// A figure that has been written but not yet drawn. Scaffolding, not one of the
+// six components — so it is deliberately colourless and dotted, the one visual
+// language in the book that carries no meaning. It holds the slot in the
+// reading flow so a chapter can be read and edited before its art exists, and
+// it is obvious enough that it cannot be published by accident.
+//
+// It takes no figure number: Quarto numbers real figures, and a placeholder
+// that consumed one would renumber everything after it when the art lands.
+.fig-pending {
+  border: 1px dashed var(--line-strong);
+  border-radius: var(--radius);
+  padding: var(--sp-component);
+  margin: var(--sp-figure) 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.55;
+
+  &::before {
+    content: "Figure in progress";
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: .8rem;
+  }
+
+  > :last-child { margin-bottom: 0; }
+}
+
 figcaption {
   font-family: var(--sans);
   font-size: .8rem;

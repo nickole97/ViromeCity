@@ -1,10 +1,40 @@
 ---
-title: "Where viruses hide"
-subtitle: "Everywhere, but tiny."
+title: "Where do viruses hide?"
+subtitle: "They're everywhere, but tiny."
 ---
 
-::: {.callout-note appearance="simple"}
-This chapter has not been migrated yet. The current draft lives in the old site.
+[District 3]{.district}
+
+## The short answer
+
+::: block
+Viruses are found throughout the human body. They are among the most abundant
+biological entities associated with us — but they are also among the smallest.
 :::
 
-Shotgun sequencing, composition across the body, the body heatmap, and the noise problem.
+::: fig-pending
+**The viral world.** Viruses are everywhere in the body and outnumber
+everything else, but they are tiny, and larger things crowd the frame.
+:::
+
+::: block
+[However, most of what you sequence isn't viral.]{.claim}
+:::
+
+## Why isn't most of it viral?
+
+::: block
+To look for viruses, researchers often begin with shotgun metagenomic
+sequencing (NGS), which sequences all nucleic acids in a sample — not just
+viral ones.
+
+The result is a sequencing library where viral sequences represent only a small
+fraction of the total. In a stool sample, for example, bacterial, host and
+dietary sequences vastly outnumber viral ones.
+:::
+
+::: fig-pending
+**What is in the sample.** The composition of a stool library: host, bacterial
+and dietary sequences against the sliver that is viral. Graphic, not
+statistical — the proportions are illustrative.
+:::
