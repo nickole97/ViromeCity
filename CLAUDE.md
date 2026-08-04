@@ -153,8 +153,21 @@ becomes its own page, linked from the chapter.
 
 `kitchen/` (Fivi's Kitchen wizard) and `components/` (body heatmaps) are
 hand-written HTML, declared as `resources` in `_quarto.yml` and copied to the build
-untouched. Don't convert them to markdown. Heavy interactive widgets live as their
-own pages, linked from chapters — not embedded inside them.
+untouched. Don't convert them to markdown.
+
+**They stay their own pages, and a chapter shows one in an `<iframe>`** — `::: embed`.
+Never inline one: their CSS is global (`body`, `h1`, `:root`), so pasting a widget
+into a chapter restyles the chapter. The iframe isolates it completely and still
+puts the figure in the reading flow rather than behind a click.
+
+An iframe has no natural height, so each widget measures itself and posts it to the
+page (`postMessage`); `assets/embed.js`, wired in through `include-after-body`, sets
+it. Each widget also hides its own title and dek when it is not the top-level
+document, because the chapter card already carries both. In print the iframe is
+hidden and the card falls back to its title, its description and the figure's URL.
+
+`::: launch` is still there for a widget too large to sit in a chapter at all —
+Fivi's Kitchen is a whole wizard, not a figure. That one gets a door, not a frame.
 
 They cannot import `assets/styles.scss`, so each one **restates the version B
 tokens in its own `:root`** — `--paper`, `--ink`, `--muted`, `--line`, `--surface`,

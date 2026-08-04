@@ -107,4 +107,34 @@
    <p class="cap"><b>Reading the lines:</b> total richness climbs through infancy, dips in childhood, peaks in adulthood, then falls in old age. Underneath, <span style="color:var(--coral)">eukaryotic viruses</span> are high in infancy then settle low, while <span style="color:var(--purple)">crAss-like phages</span> keep climbing with age. Shape is schematic &#8212; from Gregory et al. 2020 (<i>Cell Host &amp; Microbe</i>), Liang et al. 2020 (<i>Nature</i>) and Lim et al. 2015 (<i>Nat. Medicine</i>) &#8212; not exact values.</p>
  </div>
 </div>
+
+<style>
+/* Embedded in a chapter: the page around the widget belongs to the chapter, so
+   the widget drops its own margins. Standalone, none of this applies. */
+html.embedded body{padding:0}
+html.embedded .card,html.embedded .doc{max-width:none}
+/* The chapter card already gives the figure its title and its one-line
+   description; repeating them inside the frame reads as a stutter. Scoped to
+   direct children so per-panel headings inside the widget survive. */
+html.embedded > body > .card > h1,
+html.embedded > body > .card > .sub,
+html.embedded > body > .doc > .eyebrow,
+html.embedded > body > .doc > h2,
+html.embedded > body > .doc > .dek{display:none}
+</style>
+<script>
+(function(){
+  if (window.self === window.top) return;          // standalone: nothing to do
+  document.documentElement.classList.add('embedded');
+  var post = function(){
+    var h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+    parent.postMessage({viromeEmbed:true, height:h, src:location.pathname}, '*');
+  };
+  // Height changes on resize, on font load, and every time a toggle redraws.
+  if (window.ResizeObserver) new ResizeObserver(post).observe(document.body);
+  window.addEventListener('load', post);
+  document.addEventListener('click', function(){ setTimeout(post, 60); });
+  post();
+})();
+</script>
 </body></html>

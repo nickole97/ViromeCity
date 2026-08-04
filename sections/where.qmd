@@ -46,15 +46,18 @@ That sliver isn't fixed — it varies enormously by where the sample came from.
 Blood, lung and stool start from completely different mixes.
 :::
 
-::: launch
-[Virome by body compartment]{.launch-title}
+::: embed
+[Virome by body compartment]{.embed-title}
 
 Toggle a variable and hover a compartment to see how the mix changes across the
 body.
 
-::: launch-links
-[Open the heatmap ↗](../components/body-heatmap.html){target="_blank"}
-[Compare all four ↗](../components/body-heatmap-smallmultiples.html){target="_blank"}
+```{=html}
+<iframe src="../components/body-heatmap.html" title="Virome by body compartment" loading="lazy"></iframe>
+```
+
+::: embed-out
+[Open full ↗](../components/body-heatmap.html){target="_blank"} · [Compare all four side by side ↗](../components/body-heatmap-smallmultiples.html){target="_blank"}
 :::
 :::
 
@@ -69,14 +72,18 @@ social setting — and all of these belong in your experimental design. Two
 examples: age, and geography.
 :::
 
-::: launch
-[Viral richness across the lifespan]{.launch-title}
+::: embed
+[Viral richness across the lifespan]{.embed-title}
 
 The first example. How many distinct viruses a person carries is not a constant
 — it changes with age.
 
-::: launch-links
-[Open the curve ↗](../components/richness-curve.html){target="_blank"}
+```{=html}
+<iframe src="../components/richness-curve.html" title="Viral richness across the human lifespan" loading="lazy"></iframe>
+```
+
+::: embed-out
+[Open full ↗](../components/richness-curve.html){target="_blank"}
 :::
 :::
 

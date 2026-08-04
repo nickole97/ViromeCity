@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cbe95eadf00ef2b99a3f7b3dc584e5c6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-80ddb1ecf9a2a11b6f23f089eee0ec1d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -236,11 +236,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="block">
 <p>That sliver isn’t fixed — it varies enormously by where the sample came from. Blood, lung and stool start from completely different mixes.</p>
 </div>
-<div class="launch">
-<p><span class="launch-title">Virome by body compartment</span></p>
+<div class="embed">
+<p><span class="embed-title">Virome by body compartment</span></p>
 <p>Toggle a variable and hover a compartment to see how the mix changes across the body.</p>
-<div class="launch-links">
-<p><a href="../components/body-heatmap.html" target="_blank">Open the heatmap ↗</a> <a href="../components/body-heatmap-smallmultiples.html" target="_blank">Compare all four ↗</a></p>
+<iframe src="../components/body-heatmap.html" title="Virome by body compartment" loading="lazy"></iframe>
+<div class="embed-out">
+<p><a href="../components/body-heatmap.html" target="_blank">Open full ↗</a> · <a href="../components/body-heatmap-smallmultiples.html" target="_blank">Compare all four side by side ↗</a></p>
 </div>
 </div>
 </section>
@@ -250,11 +251,12 @@ ul.task-list li input[type="checkbox"] {
 <p><span class="claim">Site isn’t the whole story.</span></p>
 <p>Sorting a human virome by collection site alone is too simplistic. The virome shifts with many ecological traits of the host — age, sex, geography, even social setting — and all of these belong in your experimental design. Two examples: age, and geography.</p>
 </div>
-<div class="launch">
-<p><span class="launch-title">Viral richness across the lifespan</span></p>
+<div class="embed">
+<p><span class="embed-title">Viral richness across the lifespan</span></p>
 <p>The first example. How many distinct viruses a person carries is not a constant — it changes with age.</p>
-<div class="launch-links">
-<p><a href="../components/richness-curve.html" target="_blank">Open the curve ↗</a></p>
+<iframe src="../components/richness-curve.html" title="Viral richness across the human lifespan" loading="lazy"></iframe>
+<div class="embed-out">
+<p><a href="../components/richness-curve.html" target="_blank">Open full ↗</a></p>
 </div>
 </div>
 <div class="fig-pending">
@@ -272,6 +274,29 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<script>
+// The interactive figures are their own pages — their CSS is global (body, h1,
+// :root), so inlining one into a chapter would restyle the chapter. An iframe
+// keeps them isolated and still shows them in the reading flow.
+//
+// The cost of an iframe is that it has no natural height. Each widget measures
+// itself and posts it here; see the script at the foot of components/*.html.
+(function () {
+  var MIN = 320;
+
+  window.addEventListener('message', function (e) {
+    var d = e.data;
+    if (!d || d.viromeEmbed !== true || typeof d.height !== 'number') return;
+
+    document.querySelectorAll('.embed iframe').forEach(function (f) {
+      // Match on the path the widget reported, so two embeds on one page do
+      // not resize each other.
+      if (f.contentWindow !== e.source) return;
+      f.style.height = Math.max(MIN, d.height) + 'px';
+    });
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

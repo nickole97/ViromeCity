@@ -72,4 +72,34 @@ const tip=document.getElementById('tip'),stage=document.querySelector('.stage'),
 zonesG.addEventListener('mouseover',e=>{const c=e.target.closest('.dot');if(!c)return;const z=ZONES[c.dataset.key];tip.innerHTML='<span class="tn">'+z.name+'</span><span class="big">'+VARLABEL[current]+': '+z[current].t+'</span><div class="row">viral '+z.viral.t+' &middot; host '+z.host.t+' &middot; biomass '+z.biomass.t+' &middot; contam '+z.contam.t+'</div>';const br=svg.getBoundingClientRect(),sr=stage.getBoundingClientRect();tip.style.left=(br.left+(z.x/VB.w)*br.width-sr.left)+'px';tip.style.top=(br.top+(z.y/VB.h)*br.height-sr.top)+'px';tip.classList.add('show');c.setAttribute('r',15);});
 zonesG.addEventListener('mouseout',e=>{const c=e.target.closest('.dot');if(c)c.setAttribute('r',12);tip.classList.remove('show');});
 paint();
-</script></body></html>
+</script>
+<style>
+/* Embedded in a chapter: the page around the widget belongs to the chapter, so
+   the widget drops its own margins. Standalone, none of this applies. */
+html.embedded body{padding:0}
+html.embedded .card,html.embedded .doc{max-width:none}
+/* The chapter card already gives the figure its title and its one-line
+   description; repeating them inside the frame reads as a stutter. Scoped to
+   direct children so per-panel headings inside the widget survive. */
+html.embedded > body > .card > h1,
+html.embedded > body > .card > .sub,
+html.embedded > body > .doc > .eyebrow,
+html.embedded > body > .doc > h2,
+html.embedded > body > .doc > .dek{display:none}
+</style>
+<script>
+(function(){
+  if (window.self === window.top) return;          // standalone: nothing to do
+  document.documentElement.classList.add('embedded');
+  var post = function(){
+    var h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+    parent.postMessage({viromeEmbed:true, height:h, src:location.pathname}, '*');
+  };
+  // Height changes on resize, on font load, and every time a toggle redraws.
+  if (window.ResizeObserver) new ResizeObserver(post).observe(document.body);
+  window.addEventListener('load', post);
+  document.addEventListener('click', function(){ setTimeout(post, 60); });
+  post();
+})();
+</script>
+</body></html>

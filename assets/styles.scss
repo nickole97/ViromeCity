@@ -443,6 +443,90 @@ figure.figure {
   > :last-child { margin-bottom: 0; }
 }
 
+// An interactive figure, shown in the reading flow. It is still its own page —
+// its CSS is global (`body`, `h1`, `:root`), so inlining one into a chapter
+// would restyle the chapter — but an iframe isolates it completely and puts it
+// on the page rather than behind a click.
+//
+// The iframe has no natural height, so each widget measures itself and posts
+// it; assets/embed.js sets it here. The height below is only what shows before
+// that message arrives.
+//
+// It carries the figure border and kicker for the same reason .launch does:
+// "cyan is a Figure" holds book-wide, and being interactive does not make it a
+// different kind of thing.
+.embed {
+  background: var(--paper);
+  border: 1px solid var(--c-figure);
+  border-radius: var(--radius);
+  padding: var(--sp-component);
+  margin: var(--sp-figure) 0;
+
+  &::before {
+    content: "Interactive figure";
+    display: block;
+    font-family: var(--mono);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--c-figure-ink);
+    margin-bottom: .8rem;
+  }
+
+  .embed-title {
+    display: block;
+    font-family: var(--display);
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 1.35;
+    color: var(--ink);
+    margin-bottom: .4rem;
+  }
+
+  p {
+    margin: 0 0 .6em;
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--muted);
+  }
+
+  iframe {
+    display: block;
+    width: 100%;
+    height: 520px;
+    border: 0;
+    margin-top: 1rem;
+    // The widget draws its own background; this only covers the moment before
+    // it loads.
+    background: var(--paper);
+  }
+
+  // The way out to the full page — for a bigger view, and the only thing that
+  // survives if scripting is off.
+  .embed-out {
+    margin: .9rem 0 0;
+    font-size: 14px;
+
+    a {
+      font-family: var(--sans);
+      font-weight: 600;
+      color: var(--c-question);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    a:hover { border-bottom-color: currentColor; }
+  }
+}
+
+// In print an iframe renders as an empty box. The card collapses to its title,
+// its description and the URL of the page that holds the figure.
+@media print {
+  .embed iframe { display: none; }
+  .embed .embed-out a::after { content: " (" attr(href) ")"; font-weight: 400; }
+}
+
 // A figure that is too heavy to sit in the reading column — a heatmap you can
 // toggle, a curve you can hover. It lives as its own page and the chapter opens
 // a door to it.

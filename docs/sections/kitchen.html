@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-cbe95eadf00ef2b99a3f7b3dc584e5c6.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-80ddb1ecf9a2a11b6f23f089eee0ec1d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -214,6 +214,29 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<script>
+// The interactive figures are their own pages — their CSS is global (body, h1,
+// :root), so inlining one into a chapter would restyle the chapter. An iframe
+// keeps them isolated and still shows them in the reading flow.
+//
+// The cost of an iframe is that it has no natural height. Each widget measures
+// itself and posts it here; see the script at the foot of components/*.html.
+(function () {
+  var MIN = 320;
+
+  window.addEventListener('message', function (e) {
+    var d = e.data;
+    if (!d || d.viromeEmbed !== true || typeof d.height !== 'number') return;
+
+    document.querySelectorAll('.embed iframe').forEach(function (f) {
+      // Match on the path the widget reported, so two embeds on one page do
+      // not resize each other.
+      if (f.contentWindow !== e.source) return;
+      f.style.height = Math.max(MIN, d.height) + 'px';
+    });
+  });
+})();
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";

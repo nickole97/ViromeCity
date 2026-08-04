@@ -84,3 +84,6 @@ format:
     link-external-newwindow: true
     fig-cap-location: bottom
     include-in-header: assets/fonts.html
+    # Sets the height of an embedded interactive from the height the
+    # widget itself reports. See assets/embed.js.
+    include-after-body: assets/embed.js
