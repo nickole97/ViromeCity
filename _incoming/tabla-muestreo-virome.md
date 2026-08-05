@@ -199,3 +199,37 @@ a trade the reader has to resolve when choosing a database, not an absence to be
 lamented — and it fits the chapter's thesis (the unclassified fraction is a
 property of the reference, decided at design time) far better than a flat claim
 that Africa is missing. It is now a Methodology Tip in the chapter.
+
+---
+
+## india_gut2022 — a paper that does not state its sample size
+
+Insights into the human gut virome by sampling a population from the Indian
+subcontinent. *J Gen Virol* 2022, doi:10.1099/jgv.0.001774.
+
+The `n` column is not filled from the paper, because the paper does not give a
+number. "Subject recruitment and sample collection" defines what counted as
+*healthy* — age 20–35, normal BMI, no antibiotics for six months — and never says
+how many were recruited. "DNA extraction and sequencing" ends with "whole-genome
+shotgun sequencing was performed for all samples", again without a count. The
+PubMed abstract is truncated before any figure, and the full text is paywalled.
+
+It was resolved from the deposits instead:
+
+| | |
+|---|---|
+| `PRJNA792685` | 30 biosamples, *Total microbial genome*, submitted by Regional Centre for Biotechnology |
+| `PRJNA791207` | 30 biosamples, *Unamplified dsDNA virus like particles*, submitted by University of Delhi South Campus |
+
+The two sets are disjoint — zero biosamples in common — and both project
+descriptions restate this paper's abstract. The design is 30 individuals
+sequenced two ways: VLP-enriched for the virome, total for the background.
+
+The link to the paper is not a guess. The ethics clearance quoted in the Methods
+is `RCB-IEC-H-14`, and RCB — Regional Centre for Biotechnology — is the submitting
+organisation of the first BioProject.
+
+So the row reads `30 adults (from deposit)`, and says where it came from. The
+alternative was leaving it blank, which would have been honest but less useful:
+this number is checkable, and arguably better evidence than a sentence of prose
+would have been.
