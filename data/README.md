@@ -154,8 +154,24 @@ Changing the shading would mean recomputing the index from virome-specific
 sample metadata — a different job, described at the top of
 `_incoming/tabla-muestreo-virome.md`.
 
-So sixteen countries currently show a paper and 235 are drawn. Adding rows is how
-that gap closes.
+### The list is biased on purpose, and the map says so
+
+The Cowork task tells it to prioritise countries with little public data and to
+skip "the eighteenth Danish cohort". That is the right instruction for what this
+list is for — finding the thin places — but it has a consequence worth knowing:
+
+**The list is skewed the opposite way to the map.** The United Kingdom has 16,076
+public samples and no entry. Germany has 5,531. Twenty-four countries with over a
+thousand samples each have none. All of them have published virome work; the list
+was not built to find it.
+
+Without saying so, that shape argues the reverse of what the figure argues — a
+reader could read "no papers in the UK, one in Kenya" as evidence the field is
+concentrated in the global south. The map's notes now state the curation policy
+outright. If you ever change the instruction, change that note with it.
+
+So twenty-four countries currently show a paper and 235 are drawn. Adding rows is
+how that gap closes — but it will never close evenly, and it is not meant to.
 
 ### iso-3166.csv
 
