@@ -132,6 +132,35 @@ def main():
         if not c.get("a2") and c.get("n") in iso:
             c["a2"] = iso[c["n"]]
 
+    # Some drawn features are dependencies with no ISO code of their own, so they
+    # join to their parent's and inherit its whole record. Ashmore and Cartier Is.
+    # — uninhabited, in the Timor Sea — was reporting Australia's 9,266 samples
+    # and 25.5 million people, and would have shown Australia's papers too.
+    #
+    # Where several features share a code, the drawn country keeps it and the
+    # dependencies are cleared: a real outline wins over a dot, and the longer
+    # outline wins over a shorter one.
+    from collections import defaultdict
+    groups = defaultdict(list)
+    for c in payload["countries"]:
+        if c.get("a2"):
+            groups[c["a2"]].append(c)
+    demoted = []
+    for code, group in groups.items():
+        if len(group) < 2:
+            continue
+        primary = max(group, key=lambda c: len(c.get("d") or ""))
+        for c in group:
+            if c is primary:
+                continue
+            demoted.append(f"{c['name']} (was {code})")
+            for k in ("a2", "smp", "pop", "idx", "pidx", "reg", "ldc", "imp"):
+                c.pop(k, None)
+            c["papers"] = []
+    if demoted:
+        print("sync-map-studies: dependencies cleared of their parent's record — "
+              + "; ".join(demoted))
+
     known = {c["a2"] for c in payload["countries"] if c.get("a2")}
 
     # restkey/restval so a row with the wrong number of fields is visible rather
