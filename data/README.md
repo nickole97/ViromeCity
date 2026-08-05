@@ -102,6 +102,17 @@ study you labelled `US` actually sampled in Peru.
 Multi-country studies are listed under each: `US;IT;TZ;PE` puts the paper in
 four countries' panels.
 
+**But only where the virome was actually sequenced.** A paper often screens extra
+cohorts by PCR for one specific virus, and those countries do not count. The 2016
+South American diarrhoea paper sequenced 58 Peruvian samples and then PCR-screened
+Nicaragua (51), Chile (100), Brazil (170) and Venezuela (40) for a single viral
+group — the last two entirely negative. Counting them would put a paper on
+Venezuela's panel on the strength of having looked for one virus and not found it.
+The row is `PE`.
+
+Watch for this: those extra cohorts are usually in the body of the paper, not the
+abstract, so anything working from abstracts will miss them.
+
 ### verified
 
 `no` means nobody has resolved the identifier and read the record. **A row marked

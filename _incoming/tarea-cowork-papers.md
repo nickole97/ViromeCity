@@ -66,7 +66,7 @@ Rellena así:
 
 Las comas dentro de un campo van entre comillas dobles: `"4,198 individuals"`.
 
-## Las tres reglas que no puedes romper
+## Las cuatro reglas que no puedes romper
 
 **1. `verified` es siempre `no`.** Tú no verificas nada. Una persona resuelve
 después el DOI y confirma el registro. Una fila marcada `no` no aparece en el
@@ -79,7 +79,13 @@ campo que ninguna herramienta puede comprobar por ti, y el que más se equivoca.
 Si el paper no lo dice con claridad, **no adivines**: pon el país que sí puedas
 sostener y anótalo en el informe.
 
-**3. No inventes DOIs.** Si no encuentras el identificador, no añadas la fila.
+**3. El país cuenta solo donde se secuenció el viroma.** Muchos papers tamizan
+cohortes extra por PCR buscando un virus concreto; esos países **no** cuentan. Y
+suelen estar en el cuerpo del artículo, no en el abstract — si solo lees el
+abstract no los verás, así que ante un estudio multipaís di en el informe qué
+pudiste comprobar y qué no.
+
+**4. No inventes DOIs.** Si no encuentras el identificador, no añadas la fila.
 Prefiero una lista corta a una con un enlace que no lleva a ninguna parte.
 
 ## Qué entregar
