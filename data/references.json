@@ -152,6 +152,105 @@
         "title_contains": "metagenomic analysis reveals the diversity of",
         "year": 2025
       }
+    },
+    {
+      "id": "india_gut2022",
+      "type": "doi",
+      "value": "10.1099/jgv.0.001774",
+      "expected": {
+        "title_contains": "insights into the human gut virome",
+        "year": 2022
+      }
+    },
+    {
+      "id": "cameroon2019",
+      "type": "doi",
+      "value": "10.1128/msphere.00585-18",
+      "expected": {
+        "title_contains": "gut virome analysis of cameroonians reveals",
+        "year": 2019
+      }
+    },
+    {
+      "id": "bangladesh2020",
+      "type": "doi",
+      "value": "10.1038/s41598-020-71791-4",
+      "expected": {
+        "title_contains": "metagenomic sequencing of stool samples in",
+        "year": 2020
+      }
+    },
+    {
+      "id": "iran_blood2023",
+      "type": "doi",
+      "value": "10.3390/v15071425",
+      "expected": {
+        "title_contains": "characterization of the human blood virome",
+        "year": 2023
+      }
+    },
+    {
+      "id": "vietnam2025",
+      "type": "doi",
+      "value": "10.3390/pathogens14100985",
+      "expected": {
+        "title_contains": "metagenomic analysis of the gastrointestinal phageome",
+        "year": 2025
+      }
+    },
+    {
+      "id": "latam_diarrhea2016",
+      "type": "doi",
+      "value": "10.1007/s00705-016-2756-4",
+      "expected": {
+        "title_contains": "the fecal virome of south and",
+        "year": 2016
+      }
+    },
+    {
+      "id": "spain_oral2018",
+      "type": "doi",
+      "value": "10.1371/journal.pone.0191867",
+      "expected": {
+        "title_contains": "the analysis of the oral dna",
+        "year": 2018
+      }
+    },
+    {
+      "id": "southafrica_resp2022",
+      "type": "doi",
+      "value": "10.3390/v14112516",
+      "expected": {
+        "title_contains": "metagenomic analysis of respiratory rna virome",
+        "year": 2022
+      }
+    },
+    {
+      "id": "kuwait2020",
+      "type": "doi",
+      "value": "10.1186/s12985-020-1287-5",
+      "expected": {
+        "title_contains": "analysis of viral diversity in stool",
+        "year": 2020
+      }
+    },
+    {
+      "id": "kenya_infants2026",
+      "type": "doi",
+      "value": "10.1016/j.isci.2026.114900",
+      "expected": {
+        "title_contains": "comparison of gut virome in kenyan",
+        "year": 2026
+      }
+    },
+    {
+      "id": "qatar2022",
+      "type": "doi",
+      "value": "10.1016/j.meegid.2022.105367",
+      "expected": {
+        "title_contains": "viral metagenomics analysis of stool specimens",
+        "year": 2022
+      }
     }
   ]
 }

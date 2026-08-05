@@ -32,6 +32,7 @@ ROOT = Path(__file__).resolve().parent.parent
 CSV_PATH = ROOT / "data" / "studies.csv"
 MAP_PATH = ROOT / "components" / "sampling-map.html"
 MANIFEST_PATH = ROOT / "data" / "references.json"
+ISO_PATH = ROOT / "data" / "iso-3166.csv"
 PAYLOAD_RE = re.compile(
     r'(<script id="payload" type="application/json">)(.*?)(</script>)', re.S
 )
@@ -115,6 +116,21 @@ def main():
     if not match:
         fail("no payload block in components/sampling-map.html")
     payload = json.loads(match.group(2))
+
+    # The map arrived with an alpha-2 code only on the 112 countries that have
+    # samples in the Abdill dataset; the other 123 were drawn but unnamed, so a
+    # paper could not be attached to them. That is backwards for this figure —
+    # "no public samples, and here is the one study" is the case most worth
+    # showing. Fill the rest from data/iso-3166.csv, joined on the numeric code
+    # the boundaries already carry.
+    iso = {}
+    if ISO_PATH.exists():
+        for r in csv.DictReader(ISO_PATH.open(encoding="utf-8")):
+            if r["numeric"].isdigit():
+                iso[int(r["numeric"])] = r["alpha2"]
+    for c in payload["countries"]:
+        if not c.get("a2") and c.get("n") in iso:
+            c["a2"] = iso[c["n"]]
 
     known = {c["a2"] for c in payload["countries"] if c.get("a2")}
 

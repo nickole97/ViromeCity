@@ -146,6 +146,21 @@ sample metadata — a different job, described at the top of
 So sixteen countries currently show a paper and 235 are drawn. Adding rows is how
 that gap closes.
 
+### iso-3166.csv
+
+Numeric ISO code → alpha-2, for the 249 countries ISO 3166-1 defines. The map's
+boundaries carry the numeric code, `studies.csv` carries alpha-2, and this joins
+them.
+
+It exists because the map arrived with an alpha-2 code on only the 112 countries
+that have samples in the Abdill dataset — the other 123 were drawn but unnamed,
+so no paper could be attached to them. That is backwards here: "no public samples
+at all, and this is the one study" is the case most worth showing.
+
+Committed rather than fetched, so the build stays offline. Verified on import
+against the 112 pairs the map already carried: all 112 matched, none conflicted.
+Source: <https://github.com/datasets/country-codes>.
+
 ### If the build fails
 
 The script refuses to rebuild the map rather than shipping a broken one, and
