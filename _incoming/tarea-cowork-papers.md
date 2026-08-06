@@ -24,6 +24,9 @@ encuentre su propia población y llegue al paper.
 
 ## Qué buscar
 
+Los criterios canónicos están en `data/README.md`, sección "What qualifies as a
+study" — léela. Lo de abajo es el resumen.
+
 Estudios primarios que **secuencien el viroma de sujetos humanos**: intestino,
 vaginal, sangre, oral, piel, respiratorio, cualquier sitio corporal.
 

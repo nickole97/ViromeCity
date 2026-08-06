@@ -251,6 +251,15 @@
         "title_contains": "viral metagenomics analysis of stool specimens",
         "year": 2022
       }
+    },
+    {
+      "id": "colombia2026",
+      "type": "doi",
+      "value": "10.1186/s13099-026-00811-x",
+      "expected": {
+        "title_contains": "metagenomic analysis of the human gut",
+        "year": 2026
+      }
     }
   ]
 }

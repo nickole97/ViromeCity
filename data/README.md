@@ -64,6 +64,48 @@ is what the site serves.
 
 ---
 
+## What qualifies as a study
+
+A row belongs here if **all** of these are true:
+
+- **It is a primary study.** Not a review, not a commentary.
+- **The subjects are human.**
+- **It sequenced the virome** — viral metagenomics, VLP enrichment, DNA or RNA
+  virome — and characterised the community. Any body site.
+- **The country the samples came from can be determined** from the paper.
+- **It has a resolvable DOI.**
+
+It does not belong here if:
+
+- It is an **aggregate catalogue** — GPD, MGV, CHVD, GVD and the rest are handled
+  separately, in the map's notes, because they are assemblies of other people's
+  samples rather than sampling events.
+- It is **targeted detection**: PCR or genotyping of specific viruses, pathogen
+  surveillance, a single-virus study. Cowork discarded studies from Gabon, Congo
+  and Burkina Faso on this rule, each of which would have been a new country.
+- The country **cannot be pinned down**. A skin virome paper was left out for this
+  and is still noted in `pendientes.md`; skin remains the one uncovered body site.
+
+**And a country only counts where the virome was actually sequenced.** See the
+multi-country note above: the 2016 South American paper sequenced Peru and then
+PCR-screened four other countries, two of them entirely negative. It is one row,
+and that row is `PE`.
+
+## Why a country has a paper, and another does not
+
+Not because of the criteria. Almost every country on this map has published
+virome work that would qualify.
+
+**A country has a paper here because somebody went looking for it.** That is the
+whole mechanism. The list is 29 studies against a literature of hundreds; it was
+assembled in one pass, told to look where public data is thin, and it stopped at
+around thirty. Colombia had nothing until someone asked why — and the paper was
+found in a single search, published February 2026, well inside the criteria.
+
+So an empty country is a statement about how much attention the list has had, and
+nothing else. That is why the map says so on the panel and in the notes, and why
+this file says the list will never close evenly.
+
 ## The columns
 
 | column | what goes in it |
