@@ -33,10 +33,19 @@ fraction of the total. In a stool sample, for example, bacterial, host and
 dietary sequences vastly outnumber viral ones.
 :::
 
-::: fig-pending
-**What is in the sample.** The composition of a stool library: host, bacterial
-and dietary sequences against the sliver that is viral. Graphic, not
-statistical — the proportions are illustrative.
+::: embed
+[What's in the sample?]{.embed-title}
+
+Sequencing reads everything. What competes with your virus — and whether you can
+recover it at all — depends on where the sample came from. Click a column.
+
+```{=html}
+<iframe src="../components/whats-in-the-sample.html" title="What is in the sample: host, background and viral fraction across four body sites" loading="lazy"></iframe>
+```
+
+::: embed-out
+[Open full ↗](../components/whats-in-the-sample.html){target="_blank"}
+:::
 :::
 
 ## Does it change with the body site?
