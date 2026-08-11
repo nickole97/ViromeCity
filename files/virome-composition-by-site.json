@@ -1,0 +1,417 @@
+{
+  "meta": {
+    "title": "Viral composition by body compartment",
+    "purpose": "Feeds the \"virus type\" variable of the body-compartment heatmap.",
+    "source": "ViroForge v0.14.0 literature layer: data/reference_profiles/virome_composition.yaml + validation/dossiers/*.json",
+    "source_url": "https://github.com/shandley/viroforge",
+    "what_this_is": "Literature EXPECTATIONS with per-site citations, not measurements and not ViroForge generator output.",
+    "phage_fraction_definition": "phage / (phage + eukaryotic virus), abundance-weighted on the classified fraction. Unknown-host genomes excluded.",
+    "catalog_verdict_note": "Compares ViroForge generated data against the expectation. A bad grade flags the CATALOGUE, not the expectation.",
+    "extracted": "2026-08-05"
+  },
+  "compartments": {
+    "gut": {
+      "viroforge_collection_id": 1,
+      "viroforge_collection_name": "Gut Virome - Adult Healthy (Western Diet)",
+      "is_proxy": false,
+      "proxy_note": null,
+      "phage_fraction": {
+        "low": 0.8,
+        "expected": 0.92,
+        "high": 0.98
+      },
+      "rna_fraction_expected": 0.02,
+      "dominance": "phage",
+      "expected_phage_vs_eukaryote": "Overwhelmingly phage-dominated (~85-95%); eukaryotic virus low single digits.",
+      "expected_na_type": "Predominantly dsDNA (tailed phages) + ssDNA (Microviridae); RNA minor.",
+      "signature_taxa": [
+        {
+          "family": "Suoliviridae",
+          "role": "dominant"
+        },
+        {
+          "family": "Microviridae",
+          "role": "present"
+        }
+      ],
+      "catalog_verdict": {
+        "grade": "PLAUSIBLE",
+        "text": "PLAUSIBLE / GOOD. phage 88.5% / euk 3% / DNA 90.3% match consensus. Top family Suoliviridae is a valid crAss-like Crassvirales family. No red flags."
+      },
+      "citations": [
+        {
+          "pmid": "37293229",
+          "doi": "10.3389/fmicb.2023.963173",
+          "first_author": "Pargin",
+          "year": "2023",
+          "journal": "Frontiers in Microbiology",
+          "title": "The human gut virome: composition, colonization, interactions, and impacts on human health.",
+          "supports": "Healthy adult gut virome dominated by bacteriophages, predominantly Crassvirales (crAss-like) in industrialized populations; large dark-matter fraction."
+        },
+        {
+          "pmid": "34665009",
+          "doi": "10.1128/mSystems.00382-21",
+          "first_author": "Van Espen",
+          "year": "2021",
+          "journal": "mSystems",
+          "title": "A Previously Undescribed Highly Prevalent Phage Identified in a Danish Enteric Virome Catalog.",
+          "supports": "Gut viromes of 91 healthy subjects dominated by phages; crAss-like phage among the two most prevalent worldwide."
+        }
+      ]
+    },
+    "oral": {
+      "viroforge_collection_id": 2,
+      "viroforge_collection_name": "Oral Virome - Saliva (Healthy)",
+      "is_proxy": false,
+      "proxy_note": null,
+      "phage_fraction": {
+        "low": 0.65,
+        "expected": 0.85,
+        "high": 0.95
+      },
+      "rna_fraction_expected": 0.01,
+      "dominance": "phage",
+      "expected_phage_vs_eukaryote": "Strongly bacteriophage-dominated (vast majority of reads phage); eukaryotic viruses minor (~10-25%).",
+      "expected_na_type": "DNA-dominated; RNA negligible.",
+      "signature_taxa": [
+        {
+          "family": "Microviridae",
+          "role": "present"
+        }
+      ],
+      "catalog_verdict": {
+        "grade": "MATCH",
+        "text": "MATCH with one top-family flag. Phage dominance (66%) correct direction (arguably low side); DNA-only correct. Flag: top family Microviridae, but saliva viromes are dominated by tailed Caudovirales (Siphoviridae), not Microviridae."
+      },
+      "citations": [
+        {
+          "pmid": "22158393",
+          "doi": "10.1038/ismej.2011.169",
+          "first_author": "Pride",
+          "year": "2012",
+          "journal": "The ISME Journal",
+          "title": "Evidence of a robust resident bacteriophage population revealed through analysis of the human salivary virome.",
+          "supports": "Healthy saliva viral communities dominated by bacteriophages; DNA virome."
+        },
+        {
+          "pmid": "24846382",
+          "doi": "10.1128/mBio.01133-14",
+          "first_author": "Ly",
+          "year": "2014",
+          "journal": "mBio",
+          "title": "Altered oral viral ecology in association with periodontal disease.",
+          "supports": "Saliva and oral biofilm viromes composed largely of bacteriophage; predators of bacteria dominate."
+        }
+      ]
+    },
+    "skin": {
+      "viroforge_collection_id": 3,
+      "viroforge_collection_name": "Skin Virome - Sebaceous Sites (Healthy)",
+      "is_proxy": false,
+      "proxy_note": null,
+      "phage_fraction": {
+        "low": 0.4,
+        "expected": 0.7,
+        "high": 0.9
+      },
+      "rna_fraction_expected": 0.01,
+      "dominance": "phage",
+      "expected_phage_vs_eukaryote": "Phage-DOMINANT (~80-95%+ of identifiable reads); eukaryotic papilloma/polyoma a small minority; large phage dark matter.",
+      "expected_na_type": "dsDNA-dominant; RNA negligible.",
+      "signature_taxa": [
+        {
+          "family": "Papillomaviridae",
+          "role": "present"
+        }
+      ],
+      "catalog_verdict": {
+        "grade": "NOT PLAUSIBLE",
+        "text": "NOT PLAUSIBLE / likely error. Observed phage 0%, euk 49%, unknown-fam 51%. Skin sebaceous virome is bacteriophage-DOMINATED (Cutibacterium/Staphylococcus/Corynebacterium phages). 0% phage contradicts primary literature; phage genomes appear missing or unlabeled."
+      },
+      "citations": [
+        {
+          "pmid": "26489866",
+          "doi": "10.1128/mBio.01578-15",
+          "first_author": "Hannigan",
+          "year": "2015",
+          "journal": "mBio",
+          "title": "The human skin double-stranded DNA virome: topographical and temporal diversity, genetic enrichment, and dynamic associations with the host microbiome.",
+          "supports": "Healthy skin dsDNA VLP virome dominated by temperate tailed bacteriophages."
+        },
+        {
+          "pmid": "36949545",
+          "doi": "10.1186/s12985-023-02012-3",
+          "first_author": "Graham",
+          "year": "2023",
+          "journal": "Virology Journal",
+          "title": "The persistence and stabilization of auxiliary genes in the human skin virome.",
+          "supports": "Cutaneous bacteriophage populations across 60 subjects mainly tailed Caudovirales phages."
+        }
+      ]
+    },
+    "throat": {
+      "viroforge_collection_id": 4,
+      "viroforge_collection_name": "Respiratory Virome - Nasopharynx (Healthy)",
+      "is_proxy": true,
+      "proxy_note": "Nasopharynx used as proxy for upper airway / throat.",
+      "phage_fraction": {
+        "low": 0.1,
+        "expected": 0.3,
+        "high": 0.5
+      },
+      "rna_fraction_expected": 0.05,
+      "dominance": "eukaryotic",
+      "expected_phage_vs_eukaryote": "Eukaryote-dominated, led by Anelloviridae; bacteriophages present but comparatively low in health.",
+      "expected_na_type": "Predominantly DNA (Anelloviridae ssDNA); small RNA fraction (rhinovirus).",
+      "signature_taxa": [
+        {
+          "family": "Anelloviridae",
+          "role": "dominant"
+        }
+      ],
+      "catalog_verdict": {
+        "grade": "MISMATCH",
+        "text": "MISMATCH (balance inverted + wrong top taxon). Observed phage 50 > euk 35 (phage-dominated); healthy nasopharynx is eukaryote/Anellovirus-dominated. Top family should be Anelloviridae, not a phage family (Aliceevansviridae). Caveat: strongest evidence pediatric/asthma cohorts, but Anellovirus dominance robust."
+      },
+      "citations": [
+        {
+          "pmid": "26802214",
+          "doi": "10.1016/j.cmi.2016.01.006",
+          "first_author": "Wang",
+          "year": "2016",
+          "journal": "Clinical Microbiology and Infection",
+          "title": "Metagenomic analysis of viral genetic diversity in respiratory samples from children with severe acute respiratory infection in China.",
+          "supports": "Respiratory virome of children without severe infection dominated by Anelloviridae."
+        },
+        {
+          "pmid": "37221274",
+          "doi": "10.1038/s41598-023-34730-7",
+          "first_author": "Megremis",
+          "year": "2023",
+          "journal": "Scientific Reports",
+          "title": "Respiratory eukaryotic virome expansion and bacteriophage deficiency characterize childhood asthma.",
+          "supports": "Nasopharyngeal virome dominated by eukaryotic viruses; Anelloviridae most abundant family; bacteriophages low."
+        },
+        {
+          "pmid": "28671295",
+          "doi": "10.1002/jmv.24895",
+          "first_author": "Xu",
+          "year": "2017",
+          "journal": "Journal of Medical Virology",
+          "title": "Characterization of the nasopharyngeal viral microbiome from children with community-acquired pneumonia but negative for Luminex xTAG respiratory viral panel assay detection.",
+          "supports": "Nasopharyngeal virome dominated by eukaryotic respiratory viruses (Paramyxo/Herpes/Anello/Polyoma)."
+        }
+      ]
+    },
+    "vaginal": {
+      "viroforge_collection_id": 16,
+      "viroforge_collection_name": "Vaginal Virome (Healthy)",
+      "is_proxy": false,
+      "proxy_note": null,
+      "phage_fraction": {
+        "low": 0.75,
+        "expected": 0.92,
+        "high": 0.98
+      },
+      "rna_fraction_expected": 0.0,
+      "dominance": "phage",
+      "expected_phage_vs_eukaryote": "Phage-DOMINANT; eukaryotic viruses only ~4% of reads (Jakobsen 2020).",
+      "expected_na_type": "dsDNA-dominant; RNA negligible.",
+      "signature_taxa": [],
+      "catalog_verdict": {
+        "grade": "PARTIAL",
+        "text": "PARTIAL match with family-rank/proxy problem. Phage-present DNA-only structure is directionally correct, but eukaryotic fraction (25%) far above ~4%; top family Herelleviridae is a proxy artifact (large Firmicutes phages, not temperate Lactobacillus siphophages). Consistent with documented dairy-proxy limitation."
+      },
+      "citations": [
+        {
+          "pmid": "33050261",
+          "doi": "10.3390/v12101143",
+          "first_author": "Jakobsen",
+          "year": "2020",
+          "journal": "Viruses",
+          "title": "Characterization of the Vaginal DNA Virome in Health and Dysbiosis.",
+          "supports": "Majority of vaginal viruses are dsDNA bacteriophages; eukaryotic viruses only ~4% of reads."
+        },
+        {
+          "pmid": "35343798",
+          "doi": "10.1128/msystems.00064-22",
+          "first_author": "Kaelin",
+          "year": "2022",
+          "journal": "mSystems",
+          "title": "Cervicovaginal DNA Virome Alterations Are Associated with Genital Inflammation and Microbiota Composition.",
+          "supports": "Lactobacillus bacteriophages closely associated with Lactobacillus abundance."
+        }
+      ]
+    },
+    "blood": {
+      "viroforge_collection_id": 17,
+      "viroforge_collection_name": "Blood/Plasma Virome (Healthy)",
+      "is_proxy": false,
+      "proxy_note": null,
+      "phage_fraction": {
+        "low": 0.0,
+        "expected": 0.02,
+        "high": 0.15
+      },
+      "rna_fraction_expected": 0.05,
+      "dominance": "eukaryotic",
+      "expected_phage_vs_eukaryote": "Eukaryote-DOMINANT and Anellovirus-dominant (~97% of viral reads, Cebria-Mendoza 2021); herpesviruses minor; phage ~0.",
+      "expected_na_type": "ssDNA-dominant (Anelloviridae); herpesviruses dsDNA; RNA ~0.",
+      "signature_taxa": [
+        {
+          "family": "Anelloviridae",
+          "role": "dominant"
+        }
+      ],
+      "catalog_verdict": {
+        "grade": "PARTIAL",
+        "text": "PARTIAL match with clear TOP-FAMILY RANK ERROR. Eukaryote-dominant DNA-based phage-~0 structure correct, but top family Orthoherpesviridae is WRONG: healthy plasma should be Anelloviridae-DOMINATED, herpesviruses secondary."
+      },
+      "citations": [
+        {
+          "pmid": "33767340",
+          "doi": "10.1038/s41598-021-86427-4",
+          "first_author": "Cebria-Mendoza",
+          "year": "2021",
+          "journal": "Scientific Reports",
+          "title": "Deep viral blood metagenomics reveals extensive anellovirus diversity in healthy humans.",
+          "supports": "Anellovirus sequences ~97% of total viral reads in 120 healthy donors."
+        },
+        {
+          "pmid": "37199659",
+          "doi": "10.1128/spectrum.04928-22",
+          "first_author": "Cebria-Mendoza",
+          "year": "2023",
+          "journal": "Microbiology Spectrum",
+          "title": "Human Anelloviruses: Influence of Demographic Factors, Recombination, and Worldwide Diversity.",
+          "supports": "Anelloviruses the major and most diverse component of the healthy human virome; detected in 86% of blood donors."
+        },
+        {
+          "pmid": "29979780",
+          "doi": "10.1371/journal.pone.0200428",
+          "first_author": "Segura-Wang",
+          "year": "2018",
+          "journal": "PLoS One",
+          "title": "Temporal dynamics of the lung and plasma viromes in lung transplant recipients.",
+          "supports": "In plasma, Anelloviridae most abundant, followed by Herpesviridae and Coronaviridae."
+        }
+      ]
+    },
+    "lung": {
+      "viroforge_collection_id": 19,
+      "viroforge_collection_name": "Lower Respiratory (Lung) Virome (Healthy)",
+      "is_proxy": false,
+      "proxy_note": null,
+      "phage_fraction": {
+        "low": 0.15,
+        "expected": 0.3,
+        "high": 0.5
+      },
+      "rna_fraction_expected": 0.05,
+      "dominance": "eukaryotic",
+      "expected_phage_vs_eukaryote": "Eukaryote-dominated, led by Anelloviridae/TTV; phages of respiratory bacteria secondary.",
+      "expected_na_type": "DNA-dominated; small RNA fraction.",
+      "signature_taxa": [
+        {
+          "family": "Anelloviridae",
+          "role": "dominant"
+        }
+      ],
+      "catalog_verdict": {
+        "grade": "MISMATCH",
+        "text": "MISMATCH on top taxon and unknown fraction (euk-dominance direction correct). euk 47 > phage 20 correct; but top family Unknown where Anelloviridae expected; unknown-fam 33.6% too high and suspiciously near-identical to CF 33.4% (shared-default tell)."
+      },
+      "citations": [
+        {
+          "pmid": "25403800",
+          "doi": "10.1111/ajt.13031",
+          "first_author": "Young",
+          "year": "2015",
+          "journal": "American Journal of Transplantation",
+          "title": "Viral metagenomics reveal blooms of anelloviruses in the respiratory tract of lung transplant recipients.",
+          "supports": "All BAL samples (including healthy controls) contained anelloviruses; anelloviruses define the respiratory DNA virome."
+        },
+        {
+          "pmid": "27731934",
+          "doi": "10.1111/ajt.14076",
+          "first_author": "Abbas",
+          "year": "2017",
+          "journal": "American Journal of Transplantation",
+          "title": "The Perioperative Lung Transplant Virome: Torque Teno Viruses Are Elevated in Donor Lungs and Show Divergent Dynamics in Primary Graft Dysfunction.",
+          "supports": "Lung/BAL virome mainly Torque teno viruses (Anellovirus) and bacteriophages of respiratory bacteria."
+        },
+        {
+          "pmid": "30344303",
+          "doi": "10.3390/medicina54050072",
+          "first_author": "Jankauskaite",
+          "year": "2018",
+          "journal": "Medicina",
+          "title": "Lower Airway Virology in Health and Disease-From Invaders to Symbionts.",
+          "supports": "Review: lower airway virome includes Anelloviridae, Herpesviridae, bacteriophages (secondary support)."
+        }
+      ]
+    },
+    "urine": {
+      "viroforge_collection_id": 20,
+      "viroforge_collection_name": "Urinary Virome (Healthy)",
+      "is_proxy": false,
+      "proxy_note": null,
+      "phage_fraction": {
+        "low": 0.25,
+        "expected": 0.45,
+        "high": 0.65
+      },
+      "rna_fraction_expected": 0.0,
+      "dominance": "mixed",
+      "expected_phage_vs_eukaryote": "Phage present and usually the largest identifiable fraction by richness, with a substantial signature eukaryotic DNA-virus signal (HPV, BK/JC).",
+      "expected_na_type": "dsDNA-dominant; RNA negligible.",
+      "signature_taxa": [
+        {
+          "family": "Papillomaviridae",
+          "role": "present"
+        },
+        {
+          "family": "Polyomaviridae",
+          "role": "present"
+        }
+      ],
+      "catalog_verdict": {
+        "grade": "PARTIAL",
+        "text": "PARTIAL match. Top family Papillomaviridae well supported (HPV ~95% prevalence); DNA-only correct; Polyomaviridae expected. But phage at 14% with euk 68% likely under-represents bacteriophages."
+      },
+      "citations": [
+        {
+          "pmid": "25667584",
+          "doi": "10.3389/fmicb.2015.00014",
+          "first_author": "Santiago-Rodriguez",
+          "year": "2015",
+          "journal": "Frontiers in Microbiology",
+          "title": "The human urine virome in association with urinary tract infections.",
+          "supports": "Most identifiable urine viruses were bacteriophages; HPV in 95% of subjects."
+        },
+        {
+          "pmid": "29889019",
+          "doi": "10.1099/jgv.0.001097",
+          "first_author": "Garretto",
+          "year": "2018",
+          "journal": "Journal of General Virology",
+          "title": "Detecting viral genomes in the female urinary microbiome.",
+          "supports": "Female bladder virome contains bacteriophages and the eukaryotic JC polyomavirus."
+        },
+        {
+          "pmid": "38916313",
+          "doi": "10.1128/spectrum.04055-23",
+          "first_author": "Maqsood",
+          "year": "2024",
+          "journal": "Microbiology Spectrum",
+          "title": "Longitudinal alterations in the urinary virome of kidney transplant recipients are influenced by BK viremia and patient sex.",
+          "supports": "Urinary virome carries anelloviruses and BK polyomavirus."
+        }
+      ]
+    }
+  },
+  "unmapped": {
+    "brain": "ViroForge has no brain/CSF collection.",
+    "milk": "ViroForge has no breast-milk collection."
+  }
+}

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>What's in the sample?</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14213d; --cream:#FAF6EF; --muted:#6B6459; --faint:#A39A8C;
+  --rule:rgba(20,33,61,.13);
+  --rest:#E8B04B; --host:#B5626F; --virus:#0891B2; --bio:#5F7A6A;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--cream);color:var(--ink);
+  font-family:"IBM Plex Sans",system-ui,sans-serif;font-size:15px;line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+.card{max-width:860px;margin:0 auto;padding:34px 22px 52px}
+.kicker{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--virus);margin-bottom:9px}
+h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(23px,3.4vw,29px);
+  line-height:1.15;letter-spacing:-.015em;margin:0 0 9px}
+.sub{color:var(--muted);max-width:58ch;margin:0 0 22px}
+
+.legend{display:flex;flex-wrap:wrap;gap:18px;margin-bottom:18px;font-size:12.5px;color:var(--muted)}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend i{width:11px;height:11px;border-radius:2px;display:block}
+
+.chart{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.colbtn{background:none;border:0;padding:0;font:inherit;cursor:pointer;text-align:center;
+  display:flex;flex-direction:column;transition:opacity .18s}
+.colbtn:focus-visible{outline:2px solid var(--virus);outline-offset:4px;border-radius:5px}
+.icon svg{height:38px;width:38px;display:block;margin:0 auto 12px}
+.stack{height:300px;display:flex;flex-direction:column;border:1.1px solid var(--ink);
+  border-radius:3px;overflow:hidden;transition:transform .18s,box-shadow .18s}
+.stack i{display:block;width:100%}
+.colbtn:hover .stack{transform:translateY(-3px)}
+.colbtn[aria-pressed="true"] .stack{box-shadow:0 0 0 2.5px var(--ink);transform:translateY(-3px)}
+.chart.has-sel .colbtn:not([aria-pressed="true"]){opacity:.42}
+.nm{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:14.5px;margin-top:14px}
+.dag{font-size:10px;color:var(--faint)}
+.val{font-family:"IBM Plex Mono",monospace;font-size:11.5px;margin-top:4px}
+.val.h{color:var(--host)} .val.v{color:var(--virus)}
+
+.bio{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule)}
+.biolab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:1.2px;color:var(--faint)}
+.biogrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px;text-align:center}
+.dots{display:flex;justify-content:center;gap:4px;margin-bottom:5px}
+.dots b{width:8px;height:8px;border-radius:50%;display:block;background:var(--bio)}
+.dots b.off{background:none;border:1px solid var(--bio);opacity:.4}
+.biotxt{font-size:11.5px;color:var(--bio)}
+
+.detail{margin-top:24px;border:1px solid var(--rule);border-radius:9px;padding:20px 22px;
+  background:#fff;min-height:150px}
+.detail h2{font-family:"Space Grotesk",sans-serif;font-size:17px;font-weight:700;margin:0 0 4px}
+.detail .lead{font-size:13px;color:var(--faint);margin:0 0 14px;
+  font-family:"IBM Plex Mono",monospace}
+.rows{display:grid;gap:11px}
+.row{display:grid;grid-template-columns:5px 1fr;gap:12px;align-items:start}
+.row i{border-radius:2px;height:100%;min-height:34px;display:block}
+.row b{display:block;font-size:13.5px;font-weight:600}
+.row p{margin:1px 0 0;font-size:13px;color:var(--muted)}
+.verdict{margin-top:16px;padding:11px 14px;border-left:3px solid var(--virus);
+  background:rgba(8,145,178,.06);border-radius:0 5px 5px 0;font-size:13.5px}
+.src{margin-top:13px;font-size:11.5px;color:var(--faint);line-height:1.5}
+.hint{text-align:center;color:var(--faint);font-size:13px;padding:34px 10px}
+.note{margin-top:22px;font-size:11px;color:var(--faint);line-height:1.6}
+@media(max-width:600px){
+  .stack{height:210px}
+  .icon svg{height:30px;width:30px}
+  .nm{font-size:12.5px} .val{font-size:10px}
+  .chart,.biogrid{gap:9px}
+}
+@media(prefers-reduced-motion:reduce){.stack{transition:none}}
+</style>
+</head>
+<body>
+<div class="card">
+
+  <div class="kicker">Interactive figure</div>
+  <h1>What's in the sample?</h1>
+  <p class="sub">Sequencing reads everything. What competes with your virus — and whether you can recover it at all — depends on where the sample came from. Tap a column.</p>
+
+  <div class="legend">
+    <span><i style="background:var(--rest)"></i>Everything else</span>
+    <span><i style="background:var(--host)"></i>Host (human DNA)</span>
+    <span><i style="background:var(--virus)"></i>Virus</span>
+  </div>
+
+  <div class="chart" id="chart"></div>
+
+  <div class="bio">
+    <div class="biolab">BIOMASS</div>
+    <div class="biogrid" id="biogrid"></div>
+  </div>
+
+  <div class="detail" id="detail"></div>
+
+  <p class="note">Educational and schematic, not statistical — bar heights are illustrative and thin bands are drawn thicker so they stay visible. Adult samples; values shift with collection, extraction and library protocol. † Sources disagree: HMP swab data report &gt;90% host for vaginal and skin. Biomass, not host fraction, is what predicts recovery.</p>
+</div>
+
+<script>
+"use strict";
+
+const ICONS={
+  stool:`<svg viewBox="0 0 48 48" fill="#14213d" aria-hidden="true"><g transform="translate(4.01,3.99) scale(0.2347)">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="DgeGME.tif">
+      <path d="M129.65,50.08l-7.1-.98c-5.95,4.48-13.26,5.75-20.89,4.49-9.28,2.99-18.96,3.14-28.01-.57-6.99.96-12.49-2.95-18.54-5.27-4.54-1.74-8.98-1.98-14.41-4.8,5.58,6.68,8.87,12.53,5.11,20.14,4.69,5.82,6.49,13.18,4.37,20.52,3.52,2.82,6.1,5.91,7.51,10.55,19.68-1.15,42.13,3.2,42.72,24.31.43,15.3-2.83,31.62-10.36,44.81-3.37,5.89-9.57,8.09-15.22,6.86-14.79-3.2-9.43-26.49-8.85-43.63-5.98.81-10.78,3.4-16.28,4.89-16.21,4.37-34.93-.64-42.18-16.33-4.74-10.26-3.45-20.49,2.42-29.27-5.37-8.1-6.63-17.43-4.9-27C-.14,51.45-1.68,42.2,2.08,33.91-.53,25-.1,15.92,5.61,8.51,19.52-4.57,41.25-2.28,52.7,13.39c7.82.35,14.99,2.18,22.21,5.56,8.3-2.08,16.5-2.4,24.64-.43,7.45-4.94,16.14-7.05,24.81-4.52,7.9-4.27,16.46-5.61,25.1-4.18,11.39,1.92,18.96,11.46,18.01,23.14,3.54,6.65,3.83,13.82.64,20.73,2.64,7.24,2.36,14.68-1.27,21.12,1.04,8.19.29,16.14-3.04,23.65,3.98,7.75,2.58,16.71-3.23,23.19-6.96,7.76-17.12,9.08-27.2,7.28-2.75-.49-6.04,4.88-5.66,7.23.94,5.77,10.26,6.63,7.82,12.54-.73,1.77-3.6,3.11-6.05,1.99-3.13-1.43-5.52-4.08-7.58-6.23-6.2-6.47-2.33-14.42,1.47-19.88-6.13-6.98-9.91-16.1-5.57-26.02l3.01-6.88c-4.39-10.81-1.13-22.67,7.67-30.31.2-3.92.23-7.47,1.16-11.31Z"/>
+    </g>
+  </g>
+</g></svg>`,
+  vaginal:`<svg viewBox="0 0 48 48" fill="#14213d" aria-hidden="true"><g transform="translate(1.00,8.23) scale(0.2057)">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="xP5phe.tif">
+      <path d="M121.42,151.49c-2.53,2.89-8.32,1.48-11.47,1.68s-7.69.44-9.24-2.63c-4.11-8.15-8.74-15.54-13.83-22.95-4.19-6.11-3.5-13.45,2.29-17.98,3.26-2.55,4.28-9.18.71-11.9-20.27-15.49-33.57-36.91-34.26-62.62-.13-5.02-4.66-7.74-8.88-8.73-14-3.28-33.06-7.48-33.56,5.56-.21,5.33,1.33,11.07,4.71,15.09,2.38,2.84,5.99,2.09,9.26,2.81,13.58,2.96,24.07,14.87,24.53,28.65.18,5.4-1.92,10.1-5.1,13.2-3.57,3.49-9.03,5.09-14.64,4.26-14.91-2.21-26.72-15.96-25.92-31.14.17-3.28,2.37-6.63.81-9.67C3.67,48.98,1,42.82.18,35.92-1.49,21.68,8.36,10.84,22.68,10.15c10.85-.52,21.53,1.64,32.03,5.11,9.69,3.2,12.99-8.89,32.69-12.85,15.65-3.14,31.45-3.17,47.17-.37,9.58,1.71,17.85,5.79,25.16,11.86,6.82,5.66,18.72-4.86,41.37-3.75,14.16.7,24.1,11.6,22.38,25.67-.87,7.11-3.95,13.21-7.39,19.37-1.61,2.88.8,6.43.92,9.53.65,15.77-11.72,29.54-27.22,31.23-5.29.58-10.21-1.17-13.54-4.42s-5.28-8.47-4.82-14.12c1.09-13.7,12.15-26.05,26.04-27.73,5.13-.62,8.44-1.53,10.23-6.94,1.36-4.11,2.88-8.99,1.47-13.65-2.98-9.82-22.92-6.05-35.26-1.94-4.22,1.4-6.76,5.4-6.75,9.74.01,23.25-14.13,45.61-32.5,59.44-2.44,1.84-3.53,4.09-3.6,6.74s.97,4.97,3.3,6.97c4.97,4.25,6.01,11.41,2.07,17.1-5.39,7.77-10.02,15.68-14.98,24.34Z"/>
+    </g>
+  </g>
+</g></svg>`,
+  skin:`<svg viewBox="0 0 48 48" fill="#14213d" aria-hidden="true"><g transform="translate(5.51,2.36) scale(0.2389)">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="vZ3JYt.tif">
+      <path d="M93.31,181.05c-13.76-1.17-27.15-.64-36.79-9.7-9.28-8.72-18.29-17.65-25.15-28.58-7.63-12.17-15.08-24.25-26.56-33.15-4.29-3.32-6.46-8.24-3.33-12.92s9-5.14,13.61-1.39c8.63,7.02,17.74,13.51,23.95,22.84l1.79,2.7c.51.77,3.85.88,4.08-.46,1.59-9.52,4.11-19.77,2.3-29.84-4.2-23.33-8.98-46-11.35-69.61-.44-4.36,4.25-7.51,7.29-7.68,4.15-.24,7.69,2.27,8.61,6.72,2.82,13.64,12.23,56.55,14.6,59.41.52.63,2.62.62,2.76-.26,3.61-22.64,5.31-45.12,5.21-68.26-.02-5.56,2.47-10,8.01-10.79,4.71-.67,10.13,3.07,10.13,8.85l.09,66.7c0,.78,2.28,1.02,2.48.38,6.23-19.29,10.77-38.67,13.61-58.81.64-4.54,4.67-6.88,8.32-6.6,4.7.35,7.59,4.27,6.91,9.29l-9.42,69.58c-.21,1.52.53,2.63,1.57,2.86.93.2,1.88-.45,2.44-1.78,6.3-15.09,13.87-29.27,18.43-45.09,1.61-5.59,5.46-9.59,11.75-7.99,5.02,1.28,7.03,6.69,5.76,12.16-3.34,14.44-8.3,27.38-13.86,40.97-5.88,14.4-6.7,29.84-8.83,45.04-1.11,7.95-4.43,14.87-6.35,22.48-3.72,14.79-16.31,24.26-32.08,22.92Z"/>
+    </g>
+  </g>
+</g></svg>`,
+  blood:`<svg viewBox="0 0 48 48" fill="#14213d" aria-hidden="true"><g transform="translate(5.62,2.24) scale(0.2494)">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="LUPsCA.tif">
+      <path d="M97.79,157.61c-28.65,21.66-68.28,25.32-87.6-5.98C-22.65,98.39,28.93,3.53,93.12.08c18.1-.97,34.71,7.31,44.12,22.88,8,13.24,11.05,28.27,9.9,44.26-2.54,35.57-21.02,68.97-49.36,90.39ZM19.19,95.36c-2.72,8.88-2,17.76-.02,26.28,3.95,17.02,19.65,27.48,36.81,24.8,39.16-6.1,67.82-55.04,60.65-92.81-2.08-10.94-7.82-21.87-18.69-25.78,6.35,5.99,11.28,11.3,13.24,19.58,8.86,37.36-23.43,86.28-57.38,92.57-13.16,2.44-24.59-4.51-30.05-16.36-4.13-8.97-3.9-17.88-4.56-28.28Z"/>
+    </g>
+  </g>
+</g></svg>`,
+};
+
+const SITES=[
+ {id:"stool", name:"Stool", dag:false,
+  draw:{rest:95,host:2,virus:3}, host:"&lt;1%", virus:"~1–5%",
+  bio:4, biotxt:"very high",
+  rest:"The gut's own microbiome, plus dietary DNA and a large unclassified fraction. The densest microbial background in the body.",
+  hostWhy:"Barely any human DNA survives the trip. Stool is the rare human sample where you are not the problem.",
+  virusWhy:"Measured at 2.4% of reads by bulk DNA-seq — and it rises to 63–73% once you enrich for particles.",
+  verdict:"The easy case. Rich viral community, complex background, and enrichment works beautifully.",
+  src:"Host: HMP via Marotz et al. 2018, Microbiome (PMID 29482639). Virus: bulk vs VLP comparison, bioRxiv 2025.10.23.683462. Diet: Diener &amp; Gibbons, Nat Metab 2025."},
+
+ {id:"vaginal", name:"Vaginal", dag:true,
+  draw:{rest:72,host:25,virus:3}, host:"low–med", virus:"~1–5%",
+  bio:3, biotxt:"high",
+  rest:"A dense but low-diversity community, dominated by Lactobacillus.",
+  hostWhy:"Epithelial cells shed into the swab. Note that HMP swab data put this above 90% — far higher than the estimate drawn here.",
+  virusWhy:"Comparable to stool, and there is enough material to go after it.",
+  verdict:"High host and high biomass at once. The host fraction looks discouraging, but the material is there — this is a recoverable sample.",
+  src:"Host: HMP via Marotz et al. 2018 (n=103 vaginal); estimate shown follows the body-compartment figure."},
+
+ {id:"skin", name:"Skin", dag:true,
+  draw:{rest:63,host:35,virus:2}, host:"20–50%", virus:"~0.1–2%",
+  bio:2, biotxt:"low–medium",
+  rest:"A real but sparse community — and at this biomass, reagent contamination starts competing with biology.",
+  hostWhy:"Keratinocytes come off with every swab. Reported anywhere from 50% to over 90% depending on the study.",
+  virusWhy:"Present, but thin enough that what you recover depends heavily on protocol.",
+  verdict:"The awkward middle. Not a mucosal surface, yet colonised — so host and microbes compete at the same time, on little material.",
+  src:"Host: HMP via Marotz et al. 2018 (n=29 skin); ~50% average reported in Comms Biol 2024 (s42003-024-07290-3)."},
+
+ {id:"blood", name:"Blood / plasma", dag:false,
+  draw:{rest:10,host:88,virus:2}, host:"80–95%", virus:"&lt;0.1%",
+  bio:1, biotxt:"very low",
+  rest:"There is no resident community here. Most of what is left is reagent contamination and unclassified reads.",
+  hostWhy:"Circulating cell-free human DNA. The sample is mostly you — around 97% in plasma and 99.9% in whole blood.",
+  virusWhy:"Vanishingly small, and deeper sequencing barely helps.",
+  verdict:"The column inverts. And low biomass means particle enrichment can fail outright — in BAL, an equally sparse sample, it recovered no viral contigs at all.",
+  src:"Host: Pereira-Marques et al. 2019, Front Microbiol; whole blood/plasma figures from mNGS literature. Enrichment failure in low-biomass samples: bioRxiv 2025.10.23.683462."}
+];
+
+const chart=document.getElementById("chart");
+const biogrid=document.getElementById("biogrid");
+const detail=document.getElementById("detail");
+
+SITES.forEach(s=>{
+  const b=document.createElement("button");
+  b.type="button"; b.className="colbtn"; b.dataset.id=s.id;
+  b.setAttribute("aria-pressed","false");
+  b.innerHTML=`<span class="icon">${ICONS[s.id]}</span><span class="stack">
+      <i style="flex:${s.draw.rest};background:var(--rest)"></i>
+      <i style="flex:${s.draw.host};min-height:6px;background:var(--host)"></i>
+      <i style="flex:${s.draw.virus};min-height:6px;background:var(--virus)"></i>
+    </span>
+    <span class="nm">${s.name}${s.dag?' <span class="dag">†</span>':''}</span>
+    <span class="val h">host ${s.host}</span>
+    <span class="val v">virus ${s.virus}</span>`;
+  b.addEventListener("click",()=>select(s.id));
+  chart.appendChild(b);
+
+  const d=document.createElement("div");
+  d.innerHTML=`<span class="dots">${
+    [1,2,3,4].map(n=>`<b class="${n<=s.bio?'':'off'}"></b>`).join("")
+  }</span><span class="biotxt">${s.biotxt}</span>`;
+  biogrid.appendChild(d);
+});
+
+function select(id){
+  const s=SITES.find(x=>x.id===id);
+  const already=document.querySelector(`.colbtn[data-id="${id}"]`).getAttribute("aria-pressed")==="true";
+  document.querySelectorAll(".colbtn").forEach(b=>
+    b.setAttribute("aria-pressed", (!already && b.dataset.id===id) ? "true":"false"));
+  chart.classList.toggle("has-sel", !already);
+  if(already){ blank(); return; }
+
+  detail.innerHTML=`
+    <h2>${s.name}</h2>
+    <p class="lead">host ${s.host} · virus ${s.virus} · biomass ${s.biotxt}</p>
+    <div class="rows">
+      <div class="row"><i style="background:var(--rest)"></i>
+        <div><b>Everything else</b><p>${s.rest}</p></div></div>
+      <div class="row"><i style="background:var(--host)"></i>
+        <div><b>Host</b><p>${s.hostWhy}</p></div></div>
+      <div class="row"><i style="background:var(--virus)"></i>
+        <div><b>Virus</b><p>${s.virusWhy}</p></div></div>
+    </div>
+    <div class="verdict">${s.verdict}</div>
+    <p class="src">${s.src}</p>`;
+}
+
+function blank(){
+  detail.innerHTML=`<p class="hint">Tap a column to see what the background is made of there, and whether the sample is worth enriching.</p>`;
+}
+blank();
+</script>
+</body>
+</html>
