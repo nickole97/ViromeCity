@@ -17,6 +17,12 @@ state decides whether enrichment will find it or destroy it. Everything in this
 chapter follows from those two.
 :::
 
+::: {.question .wide}
+- Does the sequencer need a copy first?
+- Should I enrich?
+- Which platform?
+:::
+
 ## Does the sequencer need a copy first?
 
 ::: block
@@ -51,6 +57,23 @@ What survives is encapsidated: a genome inside a protein shell is protected from
 the enzymes, and everything naked is not.
 
 ![One VLP protocol, end to end. Volumes, speeds and timings are this laboratory's; the sequence of gates is general.](../assets/img/lab_vlp_enrichment_magnapure_seven_step_strip.svg){#fig-vlp fig-alt="Seven panels of a VLP enrichment protocol: chip and weigh frozen stool, homogenise in SM buffer, clarify by centrifugation, filter at 0.45 micrometres, digest with lysozyme and DNase, stop with EDTA, and extract on a MagNA Pure."}
+:::
+
+::: fivi
+![](../assets/img/fivi-annoyed.png){fig-alt="Fivi, annoyed."}
+
+**Enrichment does not purify me — it selects for me.** Every gate is a physical
+property, not a test for "virus". Some of what passes is not viral, and some of
+what I am is thrown out with the rest. A VLP prep is a bet on the shape you are
+chasing.
+:::
+
+::: research
+There is no standard VLP protocol. Filter pore size, nuclease cocktail, gradient
+step and extraction chemistry all differ between laboratories, and each choice
+shifts which particles survive. Two published "viromes" from the same body site
+may not be comparable if the preps differ — read the methods before you compare
+composition across studies.
 :::
 
 ## When does enrichment cost more than it gains?
@@ -130,6 +153,12 @@ plan: the steps you need, in what order, and what each one costs you.
 ::: launch-links
 [Open the kitchen ↗](../kitchen/index.html){target="_blank"}
 :::
+:::
+
+::: insight
+Nothing in this district was decided by the sample alone. The genome decided the
+chemistry, the state decided the enrichment, and the question decided the
+platform — the sample only decided how little material you had to work with.
 :::
 
 ::: fivi
