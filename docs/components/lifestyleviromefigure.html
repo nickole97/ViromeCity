@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Lifestyle shapes the human virome at the margins · FiVi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14213d;--structure:#0891b2;--insight:#6c63c9;--line:#e3e7ee;--soft:#f7f9fc;--gray:#A6AEB6}
+*{box-sizing:border-box}
+html,body{margin:0;background:#fff;color:var(--ink)}
+body{font-family:'IBM Plex Sans',system-ui,sans-serif;-webkit-font-smoothing:antialiased;padding:14px}
+.figbox{position:relative;max-width:1240px;margin:0 auto;border:2.5px solid var(--ink);
+  border-radius:4px;background:#fff;box-shadow:5px 5px 0 var(--ink);padding:10px 12px 12px}
+.figscroll{overflow-x:auto;-webkit-overflow-scrolling:touch}
+svg#ga{display:block;width:100%;height:auto;min-width:880px}
+
+/* ---- SVG type ---- */
+.figtitle{font-family:'Space Grotesk',sans-serif;font-size:22px;font-weight:700;fill:#14213d;letter-spacing:-.02em}
+.figtitle .hl{fill:#0891b2}
+.figsub{font-family:'IBM Plex Sans',sans-serif;font-size:12.5px;fill:#14213d;opacity:.75}
+.band{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700;letter-spacing:.04em;fill:#14213d}
+.bandsub{font-family:'IBM Plex Sans',sans-serif;font-size:11.5px;fill:#14213d;opacity:.72}
+.nlab{font-family:'IBM Plex Sans',sans-serif;font-size:11.5px;font-weight:600;fill:#14213d}
+.ncite{font-family:'IBM Plex Mono',monospace;font-size:9px;fill:#14213d;opacity:.62}
+.axl{font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.11em;fill:#14213d;opacity:.75}
+.axy,.ytick{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.11em;fill:#14213d;opacity:.55}
+.anno{font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:.1em;fill:#6c63c9}
+.annosub{font-family:'IBM Plex Sans',sans-serif;font-size:12px;fill:#14213d;opacity:.8}
+.claim{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;fill:#14213d;letter-spacing:-.01em}
+.claim2{font-family:'IBM Plex Sans',sans-serif;font-size:13px;fill:#14213d;opacity:.8}
+.node{cursor:pointer}
+.node:hover .halo,.node:focus .halo,.node.on .halo{opacity:.20}
+.node:focus{outline:none}
+.node.dim{opacity:.26}
+
+/* ---- keys inside the box ---- */
+.keys{border-top:1.5px solid var(--line);margin-top:6px;padding-top:10px}
+.krow{display:flex;flex-wrap:wrap;align-items:center;gap:7px 18px}
+.krow+.krow{margin-top:8px}
+.klab{font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:.12em;
+  text-transform:uppercase;opacity:.55;margin-right:2px}
+.dm{display:inline-flex;align-items:center;gap:7px;font-size:12.3px;font-weight:500}
+.dm i{width:13px;height:13px;border-radius:50%;border:1.5px solid var(--ink);flex:0 0 auto}
+.enc{display:inline-flex;align-items:center;gap:7px;font-size:12.3px}
+.enc .sw{width:15px;height:15px;border-radius:50%;border:2.5px solid var(--ink);flex:0 0 auto}
+.enc .sw.fill{background:var(--ink);opacity:.8}
+.enc .sw.ring{background:#fff;border-width:4px}
+.note{margin-top:9px;font-size:11.2px;line-height:1.5;opacity:.72;max-width:112ch}
+.note b{font-family:'Space Grotesk',sans-serif}
+.scrollhint{display:none;font-family:'IBM Plex Mono',monospace;font-size:10px;
+  letter-spacing:.08em;text-transform:uppercase;opacity:.55;margin:4px 2px 0}
+@media(max-width:920px){.scrollhint{display:block}}
+
+/* ---- tooltip ---- */
+#tip{position:absolute;z-index:30;width:330px;background:#fff;border:1.5px solid var(--ink);
+  border-left-width:5px;border-radius:3px;padding:11px 13px;box-shadow:3px 3px 0 rgba(20,33,61,.18);
+  pointer-events:none;opacity:0;visibility:hidden;transition:opacity .1s}
+#tip.show{opacity:1;visibility:visible}
+#tip.pinned{pointer-events:auto;box-shadow:4px 4px 0 rgba(20,33,61,.32)}
+#tip.pinned::after{content:'click anywhere to close';position:absolute;right:11px;bottom:-9px;
+  background:#fff;padding:0 5px;font-family:'IBM Plex Mono',monospace;font-size:8.5px;
+  letter-spacing:.08em;text-transform:uppercase;opacity:.5}
+#tip .amb{font-family:'IBM Plex Mono',monospace;font-size:9.3px;letter-spacing:.12em;
+  text-transform:uppercase;opacity:.65;margin-bottom:4px}
+#tip h4{font-family:'Space Grotesk',sans-serif;font-size:14.5px;margin:0 0 6px;letter-spacing:-.01em}
+#tip p{margin:0 0 7px;font-size:12.6px;line-height:1.48}
+#tip .cite{font-style:italic;font-size:11.6px;opacity:.82;display:block;margin-bottom:3px}
+#tip a{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--insight);
+  text-decoration:none;border-bottom:1px solid rgba(108,99,201,.4)}
+#tip a:hover{background:rgba(108,99,201,.12)}
+@media print{#tip{display:none}.figbox{box-shadow:none}}
+</style>
+</head>
+<body>
+<div class="figbox" id="box">
+  <div class="figscroll"><svg id="ga" viewBox="0 0 1200 464" role="img"
+  aria-label="Figure: lifestyle factors ordered from structural and early to everyday and adult; the magnitude of the effect on the human virome declines from left to right.">
+ <defs>
+  <pattern id="ind" width="7" height="7" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="0" y2="7" stroke="#14213d" stroke-width="1" opacity=".13"/>
+  </pattern>
+  <marker id="ah" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+    <path d="M0,0 L9,4.5 L0,9 z" fill="#14213d"/>
+  </marker>
+ </defs>
+
+ <path d="M104,72 C420,76 470,256 1128,292" fill="none" stroke="#14213d"
+       stroke-width="2" stroke-dasharray="9 7" opacity=".3" stroke-linecap="round"/>
+
+ <text class="axy" x="40" y="196" text-anchor="middle" transform="rotate(-90 40 196)">EFFECT MAGNITUDE</text>
+ <line x1="66" y1="46" x2="66" y2="360" stroke="#14213d" stroke-width="1.5" opacity=".3"/>
+ <text class="ytick" x="58" y="56.0" text-anchor="end">high</text>
+ <text class="ytick" x="58" y="326.0" text-anchor="end">low</text>
+
+ <g class="node" data-id="n0" tabindex="0" role="button" aria-label="Geography & — Honap et al., PLOS ONE, 2020"><circle class="halo" cx="97.6" cy="52.0" r="41.0" fill="#d99a1b" opacity="0"/><circle class="bub" cx="97.6" cy="52.0" r="32.0" fill="#d99a1b" fill-opacity=".82" stroke="#d99a1b" stroke-width="2.2"/><text class="nlab" x="97.6" y="101.0" text-anchor="middle">Geography &</text><text class="nlab" x="97.6" y="114.0" text-anchor="middle">industrialization</text><text class="ncite" x="97.6" y="128.0" text-anchor="middle">Honap 2020</text></g><g class="node" data-id="n1" tabindex="0" role="button" aria-label="Urban vs rural — Camarillo-Guerrero et al., Cell, 2021"><circle class="halo" cx="186.0" cy="119.5" r="36.4" fill="#d99a1b" opacity="0"/><circle class="bub" cx="186.0" cy="119.5" r="27.4" fill="#d99a1b" fill-opacity=".82" stroke="#d99a1b" stroke-width="2.2"/><text class="nlab" x="186.0" y="190.9" text-anchor="middle">Urban vs rural</text><text class="nlab" x="186.0" y="203.9" text-anchor="middle">westernization</text><text class="ncite" x="186.0" y="217.9" text-anchor="middle">Camarillo-G. 2021</text><line x1="186.0" y1="149.9" x2="186.0" y2="177.9" stroke="#d99a1b" stroke-width="1" opacity=".45"/></g><g class="node" data-id="n2" tabindex="0" role="button" aria-label="Childhood — Reyes et al., PNAS, 2015"><circle class="halo" cx="269.2" cy="119.5" r="36.4" fill="#A9741A" opacity="0"/><circle class="bub" cx="269.2" cy="119.5" r="27.4" fill="#A9741A" fill-opacity=".82" stroke="#A9741A" stroke-width="2.2"/><text class="nlab" x="269.2" y="217.9" text-anchor="middle">Childhood</text><text class="nlab" x="269.2" y="230.9" text-anchor="middle">malnutrition</text><text class="ncite" x="269.2" y="244.9" text-anchor="middle">Reyes 2015</text><line x1="269.2" y1="149.9" x2="269.2" y2="204.9" stroke="#A9741A" stroke-width="1" opacity=".45"/></g><g class="node" data-id="n3" tabindex="0" role="button" aria-label="Delivery mode — Siranosian et al., Nature Communications, 2020"><circle class="halo" cx="352.4" cy="187.0" r="31.8" fill="#e85d4e" opacity="0"/><circle class="bub" cx="352.4" cy="187.0" r="22.8" fill="#e85d4e" fill-opacity=".82" stroke="#e85d4e" stroke-width="2.2"/><text class="nlab" x="352.4" y="226.8" text-anchor="middle">Delivery mode</text><text class="ncite" x="352.4" y="240.8" text-anchor="middle">Siranosian 2020</text></g><g class="node" data-id="n4" tabindex="0" role="button" aria-label="Breastfeeding — Liang et al., Nature, 2020"><circle class="halo" cx="430.4" cy="187.0" r="31.8" fill="#e85d4e" opacity="0"/><circle class="bub" cx="430.4" cy="187.0" r="22.8" fill="#e85d4e" fill-opacity=".82" stroke="#e85d4e" stroke-width="2.2"/><text class="nlab" x="430.4" y="253.8" text-anchor="middle">Breastfeeding</text><text class="nlab" x="430.4" y="266.8" text-anchor="middle">vs formula</text><text class="ncite" x="430.4" y="280.8" text-anchor="middle">Liang 2020</text><line x1="430.4" y1="212.8" x2="430.4" y2="240.8" stroke="#e85d4e" stroke-width="1" opacity=".45"/></g><g class="node" data-id="n5" tabindex="0" role="button" aria-label="Daycare & — Boulund et al., Nature Communications, 2025"><circle class="halo" cx="508.4" cy="254.5" r="27.2" fill="#e85d4e" opacity="0"/><circle class="bub" cx="508.4" cy="254.5" r="18.2" fill="#e85d4e" fill-opacity=".82" stroke="#e85d4e" stroke-width="2.2"/><text class="nlab" x="508.4" y="343.7" text-anchor="middle">Daycare &</text><text class="nlab" x="508.4" y="356.7" text-anchor="middle">siblings</text><text class="ncite" x="508.4" y="370.7" text-anchor="middle">Boulund 2025</text><line x1="508.4" y1="275.7" x2="508.4" y2="330.7" stroke="#e85d4e" stroke-width="1" opacity=".45"/></g><g class="node" data-id="n6" tabindex="0" role="button" aria-label="Immunosuppression — Boukadida et al., Microbiome, 2024"><circle class="halo" cx="591.6" cy="119.5" r="36.4" fill="#A9741A" opacity="0"/><circle class="bub" cx="591.6" cy="119.5" r="27.4" fill="#ffffff" fill-opacity="1" stroke="#A9741A" stroke-width="4.5"/><text class="nlab" x="591.6" y="163.9" text-anchor="middle">Immunosuppression</text><text class="nlab" x="591.6" y="176.9" text-anchor="middle">(HIV)</text><text class="ncite" x="591.6" y="190.9" text-anchor="middle">Boukadida 2024</text></g><g class="node" data-id="n7" tabindex="0" role="button" aria-label="Antibiotics — Pfeifer et al., Cell Reports, 2025"><circle class="halo" cx="680.0" cy="119.5" r="36.4" fill="#9A93DE" opacity="0"/><circle class="bub" cx="680.0" cy="119.5" r="27.4" fill="#ffffff" fill-opacity="1" stroke="#9A93DE" stroke-width="4.5"/><text class="nlab" x="680.0" y="190.9" text-anchor="middle">Antibiotics</text><text class="ncite" x="680.0" y="204.9" text-anchor="middle">Pfeifer 2025</text><line x1="680.0" y1="149.9" x2="680.0" y2="177.9" stroke="#9A93DE" stroke-width="1" opacity=".45"/></g><g class="node" data-id="n8" tabindex="0" role="button" aria-label="Other — Nishijima et al., Nature Communications, 2022"><circle class="halo" cx="763.2" cy="254.5" r="27.2" fill="#9A93DE" opacity="0"/><circle class="bub" cx="763.2" cy="254.5" r="18.2" fill="#ffffff" fill-opacity="1" stroke="#9A93DE" stroke-width="4.5"/><text class="nlab" x="763.2" y="343.7" text-anchor="middle">Other</text><text class="nlab" x="763.2" y="356.7" text-anchor="middle">drugs</text><text class="ncite" x="763.2" y="370.7" text-anchor="middle">Nishijima 2022</text><line x1="763.2" y1="275.7" x2="763.2" y2="330.7" stroke="#9A93DE" stroke-width="1" opacity=".45"/></g><g class="node" data-id="n9" tabindex="0" role="button" aria-label="Alcohol — Jiang et al., Hepatology, 2020"><circle class="halo" cx="846.4" cy="187.0" r="31.8" fill="#0891b2" opacity="0"/><circle class="bub" cx="846.4" cy="187.0" r="22.8" fill="#ffffff" fill-opacity="1" stroke="#0891b2" stroke-width="4.5"/><text class="nlab" x="846.4" y="226.8" text-anchor="middle">Alcohol</text><text class="ncite" x="846.4" y="240.8" text-anchor="middle">Jiang 2020</text></g><g class="node" data-id="n10" tabindex="0" role="button" aria-label="Smoking — Gregory et al., Respiratory Research, 2018"><circle class="halo" cx="929.6" cy="254.5" r="27.2" fill="#0891b2" opacity="0"/><circle class="bub" cx="929.6" cy="254.5" r="18.2" fill="#ffffff" fill-opacity="1" stroke="#0891b2" stroke-width="4.5"/><text class="nlab" x="929.6" y="316.7" text-anchor="middle">Smoking</text><text class="ncite" x="929.6" y="330.7" text-anchor="middle">Gregory 2018</text><line x1="929.6" y1="275.7" x2="929.6" y2="303.7" stroke="#0891b2" stroke-width="1" opacity=".45"/></g><g class="node" data-id="n11" tabindex="0" role="button" aria-label="Weight — de Jonge et al., Nature Communications, 2022"><circle class="halo" cx="992.0" cy="254.5" r="27.2" fill="#6c63c9" opacity="0"/><circle class="bub" cx="992.0" cy="254.5" r="18.2" fill="#ffffff" fill-opacity="1" stroke="#6c63c9" stroke-width="4.5"/><text class="nlab" x="992.0" y="343.7" text-anchor="middle">Weight</text><text class="ncite" x="992.0" y="357.7" text-anchor="middle">de Jonge 2022</text><line x1="992.0" y1="275.7" x2="992.0" y2="330.7" stroke="#6c63c9" stroke-width="1" opacity=".45"/></g><g class="node" data-id="n12" tabindex="0" role="button" aria-label="Diet — Istvan et al., Nature Communications, 2024"><circle class="halo" cx="1054.4" cy="254.5" r="27.2" fill="#CD8F7C" opacity="0"/><circle class="bub" cx="1054.4" cy="254.5" r="18.2" fill="#ffffff" fill-opacity="1" stroke="#CD8F7C" stroke-width="4.5"/><text class="nlab" x="1054.4" y="289.7" text-anchor="middle">Diet</text><text class="ncite" x="1054.4" y="303.7" text-anchor="middle">Istvan 2024</text></g><g class="node" data-id="n13" tabindex="0" role="button" aria-label="Exercise — Istvan et al., Nature Communications, 2024"><circle class="halo" cx="1111.6" cy="254.5" r="27.2" fill="#0891b2" opacity="0"/><circle class="bub" cx="1111.6" cy="254.5" r="18.2" fill="#ffffff" fill-opacity="1" stroke="#0891b2" stroke-width="4.5"/><text class="nlab" x="1111.6" y="316.7" text-anchor="middle">Exercise</text><text class="ncite" x="1111.6" y="330.7" text-anchor="middle">Istvan 2024</text><line x1="1111.6" y1="275.7" x2="1111.6" y2="303.7" stroke="#0891b2" stroke-width="1" opacity=".45"/></g>
+
+ <path d="M707.0,85.5 C756.0,57.5 820.0,45.5 863.0,56.5"
+       fill="none" stroke="#14213d" stroke-width="1.3" opacity=".55" marker-start="url(#ah)"/>
+ <text class="anno" x="872.0" y="48">THE EXCEPTION THAT PROVES THE RULE</text>
+ <text class="annosub" x="872.0" y="65">antibiotics hit hard — but late,</text>
+ <text class="annosub" x="872.0" y="79">and the phageome becomes yours again</text>
+
+ <line x1="70" y1="420" x2="1134" y2="420" stroke="#14213d" stroke-width="2" marker-end="url(#ah)"/>
+ <text class="axl" x="70" y="444" text-anchor="start">STRUCTURAL · EARLY · HARD TO UNDO</text>
+ <text class="axl" x="1134" y="444" text-anchor="end">EVERYDAY · ADULT · REVERSIBLE</text>
+
+</svg></div>
+  <div class="scrollhint">↔ scroll horizontally to see the full figure</div>
+
+  <div class="keys">
+    <div class="krow"><span class="klab">Colour · domain</span><span class="dm"><i style="background:#d99a1b"></i>Urbanization & geography</span><span class="dm"><i style="background:#A9741A"></i>Socioeconomic context</span><span class="dm"><i style="background:#e85d4e"></i>Early life</span><span class="dm"><i style="background:#9A93DE"></i>Medication</span><span class="dm"><i style="background:#0891b2"></i>Exercise, smoking & alcohol</span><span class="dm"><i style="background:#6c63c9"></i>Weight & metabolism</span><span class="dm"><i style="background:#CD8F7C"></i>Diet</span></div>
+    <div class="krow">
+      <span class="klab">Encoding</span>
+      <span class="enc"><span class="sw fill"></span>lasting imprint</span>
+      <span class="enc"><span class="sw ring"></span>reversible</span>
+      <span class="enc">bubble size &amp; height = effect magnitude</span>
+      <span class="enc">horizontal position = how early and structural the exposure is</span>
+    </div>
+    <p class="note"><b>How to read magnitude.</b> An ordinal 1–5 scale assigned from the strength and
+    reproducibility of each finding, <b>not</b> a meta-analytic effect size; the studies use different
+    methods and cohorts and are not strictly comparable. <b>Scale check:</b> in large population cohorts all lifestyle factors combined explain
+    less than 1% of virome variance at the vOTU level — every bubble here lives inside that margin.
+    Hover or tap any bubble for the full finding and its DOI. · My First Virome (FiVi), 2026</p>
+  </div>
+
+  <div id="tip" role="tooltip"></div>
+</div>
+
+<script>
+const D = [{"id": "n0", "lab": ["Geography &", "industrialization"], "amb": "Urbanization & geography", "dato": "None of the 67 Hadza samples were positive for crAssphage — the most abundant human gut virus — versus 14–36% in industrialized populations.", "cita": "Honap et al., PLOS ONE, 2020", "doi": "10.1371/journal.pone.0226930", "c": "#d99a1b"}, {"id": "n1", "lab": ["Urban vs rural", "westernization"], "amb": "Urbanization & geography", "dato": "The Gubaphage clade reaches ~40% in Europeans, 3% in Africans and 0% in South Americans. Continents separate with R²=0.36.", "cita": "Camarillo-Guerrero et al., Cell, 2021", "doi": "10.1016/j.cell.2021.01.029", "c": "#d99a1b"}, {"id": "n2", "lab": ["Childhood", "malnutrition"], "amb": "Socioeconomic context", "dato": "In discordant Malawian twin pairs, virome maturation was delayed in BOTH twins — including the healthy one — and ready-to-use therapeutic food did not correct the delay.", "cita": "Reyes et al., PNAS, 2015", "doi": "10.1073/pnas.1514285112", "c": "#A9741A"}, {"id": "n3", "lab": ["Delivery mode"], "amb": "Early life", "dato": "All 21 infants born by caesarean section were negative for crAssphage; the 19 positive infants were all vaginally delivered (p=0.043).", "cita": "Siranosian et al., Nature Communications, 2020", "doi": "10.1038/s41467-019-14103-3", "c": "#e85d4e"}, {"id": "n4", "lab": ["Breastfeeding", "vs formula"], "amb": "Early life", "dato": "Exclusively formula-fed infants carried more human viruses in stool and a greater richness of active temperate phages (p=0.003) than breastfed infants.", "cita": "Liang et al., Nature, 2020", "doi": "10.1038/s41586-020-2192-1", "c": "#e85d4e"}, {"id": "n5", "lab": ["Daycare &", "siblings"], "amb": "Early life", "dato": "In 647 Danish children, daycare attendance lowered anellovirus abundance (p=0.002) and alpha diversity (p=1e−08). Each older sibling added to the effect.", "cita": "Boulund et al., Nature Communications, 2025", "doi": "10.1038/s41467-025-66732-6", "c": "#e85d4e"}, {"id": "n6", "lab": ["Immunosuppression", "(HIV)"], "amb": "Socioeconomic context", "dato": "Anelloviruses were present in 70% of people with CD4<200 and in 0% of controls. Baseline detection predicted immune recovery at 24 months.", "cita": "Boukadida et al., Microbiome, 2024", "doi": "10.1186/s40168-024-01925-7", "c": "#A9741A"}, {"id": "n7", "lab": ["Antibiotics"], "amb": "Medication", "dato": "Three days of cephalosporin wiped out 20.4% of phage richness and triggered blooms of virulent phages — yet the phageome stayed individual-specific and recovered.", "cita": "Pfeifer et al., Cell Reports, 2025", "doi": "10.1016/j.celrep.2025.116020", "c": "#9A93DE"}, {"id": "n8", "lab": ["Other", "drugs"], "amb": "Medication", "dato": "In 4,198 adults, medication was the metadata category explaining the MOST variance of all... and even so, that was 0.5%.", "cita": "Nishijima et al., Nature Communications, 2022", "doi": "10.1038/s41467-022-32832-w", "c": "#9A93DE"}, {"id": "n9", "lab": ["Alcohol"], "amb": "Exercise, smoking & alcohol", "dato": "Faecal viral diversity rises in alcoholic hepatitis and specific phages predict 90-day mortality. Two weeks of abstinence already restore phage populations.", "cita": "Jiang et al., Hepatology, 2020", "doi": "10.1002/hep.31459", "c": "#0891b2"}, {"id": "n10", "lab": ["Smoking"], "amb": "Exercise, smoking & alcohol", "dato": "Lower viral richness, Shannon diversity and Pielou's evenness in bronchoalveolar lavage from smokers (p<0.01), with Prevotella phages ~2× more abundant.", "cita": "Gregory et al., Respiratory Research, 2018", "doi": "10.1186/s12931-018-0878-9", "c": "#0891b2"}, {"id": "n11", "lab": ["Weight"], "amb": "Weight & metabolism", "dato": "Metabolic syndrome is associated with lower phage richness (p=7.1e−07) in adults — but in children with obesity the signal runs the opposite way.", "cita": "de Jonge et al., Nature Communications, 2022", "doi": "10.1038/s41467-022-31390-5", "c": "#6c63c9"}, {"id": "n12", "lab": ["Diet"], "amb": "Diet", "dato": "Fibre and carbohydrates move virome composition, but the signals track their bacterial hosts: the effect travels through the bacteria.", "cita": "Istvan et al., Nature Communications, 2024", "doi": "10.1038/s41467-024-46033-0", "c": "#CD8F7C"}, {"id": "n13", "lab": ["Exercise"], "amb": "Exercise, smoking & alcohol", "dato": "Physical activity was among the factors with the largest effect size on viral alpha diversity — within a total explained-variance ceiling below 1%.", "cita": "Istvan et al., Nature Communications, 2024", "doi": "10.1038/s41467-024-46033-0", "c": "#0891b2"}];
+const byId = Object.fromEntries(D.map(d=>[d.id,d]));
+const box = document.getElementById("box");
+const tip = document.getElementById("tip");
+let pinned = null;
+
+function place(node, d){
+  const c = node.querySelector(".bub").getBoundingClientRect();
+  const b = box.getBoundingClientRect();
+  tip.style.borderLeftColor = d.c;
+  tip.innerHTML = `<div class="amb">${d.amb}</div><h4>${d.lab.join(" ")}</h4>
+    <p>${d.dato}</p><span class="cite">${d.cita}</span>
+    <a href="https://doi.org/${d.doi}" target="_blank" rel="noopener">${d.doi}</a>`;
+  tip.classList.add("show");
+  const w = tip.offsetWidth, h = tip.offsetHeight;
+  let x = c.left - b.left + c.width/2 - w/2;
+  x = Math.max(8, Math.min(x, b.width - w - 8));
+  let y = c.top - b.top - h - 12;
+  if(y < 6) y = c.bottom - b.top + 12;
+  tip.style.left = x + "px";
+  tip.style.top  = y + "px";
+}
+function hide(){ tip.classList.remove("show","pinned"); }
+function focusNode(id){
+  document.querySelectorAll(".node").forEach(n=>{
+    n.classList.toggle("dim", id !== null && n.dataset.id !== id);
+    n.classList.toggle("on", n.dataset.id === id);
+  });
+}
+
+document.querySelectorAll(".node").forEach(n=>{
+  const d = byId[n.dataset.id];
+  const open  = ()=>{ place(n, d); focusNode(d.id); };
+  const close = ()=>{ hide(); focusNode(null); };
+  n.addEventListener("mouseenter", ()=>{ if(!pinned) open(); });
+  n.addEventListener("mouseleave", ()=>{ if(!pinned) close(); });
+  n.addEventListener("focus", open);
+  n.addEventListener("blur", ()=>{ if(!pinned) close(); });
+  n.addEventListener("click", e=>{
+    e.stopPropagation();
+    if(pinned === d.id){ pinned = null; close(); }
+    else { pinned = d.id; open(); tip.classList.add("pinned"); }
+  });
+  n.addEventListener("keydown", e=>{
+    if(e.key==="Enter"||e.key===" "){ e.preventDefault(); n.click(); }
+    if(e.key==="Escape"){ pinned = null; close(); n.blur(); }
+  });
+});
+document.addEventListener("click", e=>{
+  if(!e.target.closest(".node") && !e.target.closest("#tip")){ pinned = null; hide(); focusNode(null); }
+});
+window.addEventListener("resize", ()=>{ pinned = null; hide(); focusNode(null); });
+
+/* iframe auto-height */
+function postH(){
+  if(window.parent !== window)
+    parent.postMessage({fiviEmbed:"lifestyle-virome-figure",
+                        fiviHeight: document.documentElement.scrollHeight}, "*");
+}
+new ResizeObserver(postH).observe(document.documentElement);
+window.addEventListener("load", postH); postH();
+</script>
+
+<style>
+html.embedded body{padding:0;margin:0}
+html.embedded > body > h1, html.embedded > body > .sub, html.embedded > body > .dek{display:none}
+</style>
+<script>
+(function(){
+  if (window.self === window.top) return;
+  document.documentElement.classList.add('embedded');
+  var post = function(){
+    var h = Math.ceil(document.documentElement.getBoundingClientRect().height);
+    parent.postMessage({viromeEmbed:true, height:h, src:location.pathname}, '*');
+  };
+  if (window.ResizeObserver) new ResizeObserver(post).observe(document.body);
+  window.addEventListener('load', post);
+  document.addEventListener('click', function(){ setTimeout(post, 80); });
+  post();
+})();
+</script>
+</body>
+</html>
