@@ -734,9 +734,18 @@ requestAnimationFrame(frame);
 </div>
 
 <style>
+/* Embedded in a chapter, this is the animation and nothing else. The title and
+   the description are on the chapter's card, and the summary tables — 2,235px
+   of them against the canvas's 360 — are what "Open full" is for. The reader
+   gets the picture here and the numbers one click away. */
 html.embedded body{padding:0;margin:0}
-html.embedded > body > h1, html.embedded > body > .sub, html.embedded > body > .dek,
-html.embedded > body > header, html.embedded .page-title{display:none}
+html.embedded .wrap{max-width:none;padding:0}
+html.embedded > body h1,
+html.embedded .sub,
+html.embedded .cards,
+html.embedded .compare,
+html.embedded details,
+html.embedded .note{display:none}
 </style>
 <script>
 (function(){
