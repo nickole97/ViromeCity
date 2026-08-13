@@ -1687,22 +1687,23 @@ footer.footer {
 
 // ---------- the sidebar wordmark ----------
 // The identity is a picture, not a lockup: Fivi in the city, spanning the full
-// width of the panel. There is no name beside it, because the book's name was
-// appearing twice — as the wordmark and again as the first menu item, 150px
-// apart — and the two were cancelling each other out. The footer carries the
-// name, and the cover is one click away through the image.
+// width of the panel, with no name beside it.
+//
+// The menu keeps its "Virome City" entry, and that is deliberate. It was hidden
+// while the wordmark carried the name too — two copies 150px apart, cancelling
+// each other out — but a picture-only wordmark says nothing about what the book
+// is called, so the menu has to.
 #quarto-sidebar {
   .sidebar-header {
     border-bottom: 0;
     padding: 0;
-    margin: 12px var(--sb-pad) 10px;
+    margin: 12px var(--sb-pad) 0;
     display: block;
-    position: relative;
   }
 
   .sidebar-logo-link { display: block; }
 
-  // Quarto caps the logo at a small height; this is a plate, not an icon.
+  // Quarto caps the logo at icon size; this is a plate, not an icon.
   .sidebar-logo {
     width: 100% !important;
     height: auto !important;
@@ -1711,26 +1712,31 @@ footer.footer {
     border-radius: 10px;
   }
 
-  // The title element still carries the repo link, so it stays in the tree with
-  // only its text hidden.
-  .sidebar-title > a { display: none; }
+  .sidebar-title { display: none; }
 
-  // The repo link. Neither text-align nor justify-content reaches it: Quarto
-  // makes .sidebar-title a flex row and the tools shrink to their 25px of
-  // content, so there is no free space inside them to justify against.
-  // margin-left:auto pushes the whole item to the end of the row instead.
-  .sidebar-tools-main {
-    position: static;
-    display: flex;
-    margin: 4px 2px 0 auto;
+  // The search sits directly under the image. Quarto's default gap reads as a
+  // hole once the logo is a full-width plate rather than a small icon.
+  .sidebar-search { margin-top: 0; }
+  > .mt-2 { margin-top: 6px !important; }
 
-    a { color: var(--sb-ink-soft); padding: 0; }
+  // The panel becomes a column so the footer can be pushed to its foot; without
+  // this the link just trails the last chapter.
+  display: flex;
+  flex-direction: column;
+
+  .sidebar-menu-container { flex: 1 0 auto; }
+
+  // The repo link, at the foot of the panel. It is a tool, not a chapter, so it
+  // sits below a hairline and in the quiet ink rather than in the menu's.
+  .quarto-sidebar-footer {
+    flex: 0 0 auto;
+    margin: var(--sp-component) var(--sb-pad) 0;
+    padding: 14px 0 20px;
+    border-top: 1px solid var(--sb-rule);
+    font-size: 13px;
+
+    p { margin: 0; }
+    a { color: var(--sb-ink-soft); text-decoration: none; }
     a:hover { color: var(--c-figure-on-dark); }
   }
-}
-
-// The cover is reachable through the wordmark above, so the menu does not need
-// a second link to it — that duplicate is what made the wordmark hard to find.
-#quarto-sidebar .sidebar-menu-container > ul > li.sidebar-item:first-child {
-  display: none;
 }

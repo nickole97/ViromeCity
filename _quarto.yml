@@ -39,6 +39,9 @@ book:
     # are fixed, not accordions; the chevrons and collapse triggers are turned
     # off in assets/styles.scss.
     logo: assets/img/fivi_bogota_mejor.svg
+    # El enlace al repositorio, al pie del panel en vez de flotando sobre la
+    # ilustración. La marca es una imagen; una herramienta encima la ensucia.
+    footer: "[Source on GitHub](https://github.com/nickole97/ViromeCity/)"
   chapters:
     - index.qmd
     - part: "The four districts"
