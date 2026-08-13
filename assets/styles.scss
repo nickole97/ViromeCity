@@ -1719,6 +1719,24 @@ footer.footer {
   .sidebar-search { margin-top: 0; }
   > .mt-2 { margin-top: 6px !important; }
 
+  // And the menu starts right under the search. Quarto stacks 26px of margin,
+  // 18px of padding and two more margins on the ul and the first item — 51px in
+  // total, which reads as a break rather than a list beginning.
+  .sidebar-menu-container {
+    margin-top: 0 !important;
+    padding-top: 14px;
+
+    > ul { margin-top: 0 !important; }
+    > ul > li.sidebar-item:first-child { margin-top: 0; }
+  }
+
+  // "Virome City" is a group of one. The 28px that separates a finished group
+  // from the next label is right between real groups and too much after a single
+  // orphan item, so that first gap is smaller.
+  .sidebar-menu-container > ul > li.sidebar-item:first-child + li {
+    margin-top: 18px;
+  }
+
   // The panel becomes a column so the footer can be pushed to its foot; without
   // this the link just trails the last chapter.
   display: flex;
