@@ -33,9 +33,12 @@ book:
   sidebar:
     style: docked
     collapse-level: 2
-    # Fivi is the wordmark. The groups are fixed, not accordions — the chevrons
-    # and the collapse triggers are turned off in assets/styles.scss.
-    logo: assets/img/Fivi.png
+    # The wordmark is the illustration: Fivi in the city, spanning the sidebar.
+    # There is no name beside it — the footer carries "Virome City", and a
+    # second copy in the menu is what made the first one hard to see. The groups
+    # are fixed, not accordions; the chevrons and collapse triggers are turned
+    # off in assets/styles.scss.
+    logo: assets/img/fivi_bogota_mejor.svg
   chapters:
     - index.qmd
     - part: "The four districts"

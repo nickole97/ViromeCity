@@ -17,3 +17,7 @@
 *.tmp
 # Y los propios .ai: las fuentes viven en ViromeCity-fuentes/, no en el sitio.
 *.ai
+# Y los editables en general. assets/ y components/ se copian al sitio, así que
+# un PDF de trabajo ahí acaba publicado. Los maestros viven en ViromeCity-fuentes/.
+*.pdf
+**/Editables/

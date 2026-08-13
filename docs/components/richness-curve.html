@@ -34,12 +34,25 @@
  .anno{font-family:var(--sans);font-size:11px;fill:var(--muted);font-style:italic}
  .star{font-size:18px;fill:var(--star)}
  .starnum{font-family:var(--mono);font-size:10px;font-weight:700;fill:var(--star)}
+ /* A star is a citation: it opens the paper the claim comes from. It keeps the
+    star colour rather than the link coral — the reader learns the glyph, and a
+    coral star would read as a sixth component. */
+ .starlink{cursor:pointer}
+ .starlink text{transition:opacity .15s}
+ .starlink:hover text{opacity:.55}
  .notes{margin:14px 2px 2px;border-top:1px solid var(--line);padding-top:12px}
- .notes h3{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 9px}
- .notes ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+ .notes h3{font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin:0 0 3px}
+ .hint{font-size:11.5px;color:var(--muted);margin:0 0 10px}
+ .notes ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
  .notes li{display:flex;gap:9px;font-size:12.5px;line-height:1.45}
- .notes .st{color:var(--star);font-weight:700;flex:0 0 auto;font-family:var(--mono)}
+ .notes .st{color:var(--star);font-weight:700;flex:0 0 auto;font-family:var(--mono);text-decoration:none}
+ .notes a.st:hover{text-decoration:underline}
+ .src{display:block;margin-top:2px;font-size:11.5px;color:var(--muted)}
+ .src a{color:var(--coral);text-decoration:none;border-bottom:1px solid rgba(232,93,78,.35)}
+ .src a:hover{border-bottom-color:var(--coral)}
  .cap{font-size:12px;color:var(--muted);line-height:1.5;margin:12px 2px 4px;border-top:1px solid var(--line);padding-top:10px}
+ .cap a{color:var(--coral);text-decoration:none;border-bottom:1px solid rgba(232,93,78,.35)}
+ .cap a:hover{border-bottom-color:var(--coral)}
 </style></head><body>
 <div class="doc">
  <p class="eyebrow">Virome × age</p>
@@ -77,11 +90,31 @@
      <text x="565" y="46" class="anno" text-anchor="middle">peak</text>
 
      <g>
-       <text x="72"  y="352" class="star" text-anchor="middle">&#10022;</text><text x="83" y="347" class="starnum">1</text>
-       <text x="126" y="278" class="star" text-anchor="middle">&#10022;</text><text x="137" y="273" class="starnum">2</text>
-       <text x="182" y="206" class="star" text-anchor="middle">&#10022;</text><text x="193" y="201" class="starnum">3</text>
-       <text x="246" y="134" class="star" text-anchor="middle">&#10022;</text><text x="257" y="129" class="starnum">4</text>
-       <text x="712" y="176" class="star" text-anchor="middle">&#10022;</text><text x="723" y="171" class="starnum">5</text>
+       <a class="starlink" href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">
+         <title>&#10022;1 &#8212; Liang et al. 2020, Nature. Opens the paper.</title>
+         <rect x="60" y="334" width="34" height="24" fill="transparent"/>
+         <text x="72"  y="352" class="star" text-anchor="middle">&#10022;</text><text x="83" y="347" class="starnum">1</text>
+       </a>
+       <a class="starlink" href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">
+         <title>&#10022;2 &#8212; Liang et al. 2020, Nature. Opens the paper.</title>
+         <rect x="114" y="260" width="34" height="24" fill="transparent"/>
+         <text x="126" y="278" class="star" text-anchor="middle">&#10022;</text><text x="137" y="273" class="starnum">2</text>
+       </a>
+       <a class="starlink" href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">
+         <title>&#10022;3 &#8212; Liang et al. 2020, Nature. Opens the paper.</title>
+         <rect x="170" y="188" width="34" height="24" fill="transparent"/>
+         <text x="182" y="206" class="star" text-anchor="middle">&#10022;</text><text x="193" y="201" class="starnum">3</text>
+       </a>
+       <a class="starlink" href="https://doi.org/10.1016/j.chom.2020.08.003" target="_blank" rel="noopener">
+         <title>&#10022;4 &#8212; Gregory et al. 2020, Cell Host &amp; Microbe. Opens the paper.</title>
+         <rect x="234" y="116" width="34" height="24" fill="transparent"/>
+         <text x="246" y="134" class="star" text-anchor="middle">&#10022;</text><text x="257" y="129" class="starnum">4</text>
+       </a>
+       <a class="starlink" href="https://doi.org/10.1080/19490976.2024.2431648" target="_blank" rel="noopener">
+         <title>&#10022;5 &#8212; James et al. 2024, Gut Microbes. Opens the paper.</title>
+         <rect x="700" y="158" width="34" height="24" fill="transparent"/>
+         <text x="712" y="176" class="star" text-anchor="middle">&#10022;</text><text x="723" y="171" class="starnum">5</text>
+       </a>
      </g>
 
      <g text-anchor="middle">
@@ -95,16 +128,22 @@
 
    <div class="notes">
      <h3>&#10022; odd &amp; interesting moments</h3>
+     <p class="hint">Every star opens the paper the claim comes from.</p>
      <ul>
-       <li><span class="st">&#10022;1</span><span><b>At birth &#8212; nearly virus-free.</b> The newborn gut starts almost empty; particles reach ~10&#8319;/g within a month.</span></li>
-       <li><span class="st">&#10022;2</span><span><b>~1 month &#8212; viruses from within.</b> The first wave isn't caught from outside &#8212; they're <b>prophages induced from the baby's own pioneer bacteria</b>.</span></li>
-       <li><span class="st">&#10022;3</span><span><b>~4 months &#8212; milk shapes the virome.</b> Viruses that infect human cells appear, and <b>breastfeeding</b> modulates which ones take hold.</span></li>
-       <li><span class="st">&#10022;4</span><span><b>Infancy &#8212; a virus that mirrors immunity.</b> <b>Anelloviruses (TTV)</b> dominate, tracking an immature immune system, then fall as immunity matures.</span></li>
-       <li><span class="st">&#10022;5</span><span><b>Old age &#8212; the sleepers wake.</b> <b>Latent viruses reactivate</b>, and virome shifts have been linked to cognitive decline.</span></li>
+       <li><a class="st" href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">&#10022;1</a><span><b>At birth &#8212; nearly virus-free.</b> The newborn gut starts almost empty; particles reach ~10&#8319;/g within a month.
+         <span class="src"><a href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">Liang et al. 2020, <i>Nature</i></a></span></span></li>
+       <li><a class="st" href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">&#10022;2</a><span><b>~1 month &#8212; viruses from within.</b> The first wave isn't caught from outside &#8212; they're <b>prophages induced from the baby's own pioneer bacteria</b>.
+         <span class="src"><a href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">Liang et al. 2020, <i>Nature</i></a></span></span></li>
+       <li><a class="st" href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">&#10022;3</a><span><b>~4 months &#8212; milk shapes the virome.</b> Viruses that infect human cells appear, and <b>breastfeeding</b> modulates which ones take hold.
+         <span class="src"><a href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">Liang et al. 2020, <i>Nature</i></a></span></span></li>
+       <li><a class="st" href="https://doi.org/10.1016/j.chom.2020.08.003" target="_blank" rel="noopener">&#10022;4</a><span><b>Infancy &#8212; a virus that mirrors immunity.</b> <b>Anelloviruses (TTV)</b> dominate, tracking an immature immune system, then fall as immunity matures.
+         <span class="src"><a href="https://doi.org/10.1016/j.chom.2020.08.003" target="_blank" rel="noopener">Gregory et al. 2020, <i>Cell Host &amp; Microbe</i></a></span></span></li>
+       <li><a class="st" href="https://doi.org/10.1080/19490976.2024.2431648" target="_blank" rel="noopener">&#10022;5</a><span><b>Old age &#8212; the sleepers wake.</b> <b>Latent viruses reactivate</b>, and virome shifts have been linked to cognitive decline.
+         <span class="src"><a href="https://doi.org/10.1080/19490976.2024.2431648" target="_blank" rel="noopener">James et al. 2024, <i>Gut Microbes</i></a> &#183; <a href="https://doi.org/10.1371/journal.pone.0180841" target="_blank" rel="noopener">Thomasini et al. 2017, <i>PLOS ONE</i></a> (reactivation)</span></span></li>
      </ul>
    </div>
 
-   <p class="cap"><b>Reading the lines:</b> total richness climbs through infancy, dips in childhood, peaks in adulthood, then falls in old age. Underneath, <span style="color:var(--coral)">eukaryotic viruses</span> are high in infancy then settle low, while <span style="color:var(--purple)">crAss-like phages</span> keep climbing with age. Shape is schematic &#8212; from Gregory et al. 2020 (<i>Cell Host &amp; Microbe</i>), Liang et al. 2020 (<i>Nature</i>) and Lim et al. 2015 (<i>Nat. Medicine</i>) &#8212; not exact values.</p>
+   <p class="cap"><b>Reading the lines:</b> total richness climbs through infancy, dips in childhood, peaks in adulthood, then falls in old age. Underneath, <span style="color:var(--coral)">eukaryotic viruses</span> are high in infancy then settle low, while <span style="color:var(--purple)">crAss-like phages</span> keep climbing with age. Shape is schematic &#8212; all three trends are as reported by <a href="https://doi.org/10.1016/j.chom.2020.08.003" target="_blank" rel="noopener">Gregory et al. 2020 (<i>Cell Host &amp; Microbe</i>)</a>, with early-life detail from <a href="https://doi.org/10.1038/s41586-020-2192-1" target="_blank" rel="noopener">Liang et al. 2020 (<i>Nature</i>)</a> and <a href="https://doi.org/10.1038/nm.3950" target="_blank" rel="noopener">Lim et al. 2015 (<i>Nat. Medicine</i>)</a> &#8212; not exact values.</p>
  </div>
 </div>
 

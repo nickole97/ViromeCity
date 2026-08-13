@@ -14,7 +14,7 @@
 <text class="b" x="44" y="72" font-size="13.5" fill="#6B6459">Sequencing reads everything. What competes with your virus — and whether you can recover<tspan x="44" dy="18">it at all — depends on where the sample came from.</tspan></text>
 
 <g class="b" font-size="12" fill="#6B6459">
-  <rect x="44" y="118" width="11" height="11" rx="2" fill="#E8B04B"/><text x="61" y="128">Everything else</text>
+  <rect x="44" y="118" width="11" height="11" rx="2" fill="#E8B04B"/><text x="61" y="128">Background</text>
   <rect x="176" y="118" width="11" height="11" rx="2" fill="#B5626F"/><text x="193" y="128">Host (human DNA)</text>
   <rect x="330" y="118" width="11" height="11" rx="2" fill="#0891B2"/><text x="347" y="128">Virus</text>
 </g>

@@ -1684,3 +1684,53 @@ footer.footer {
   footer.footer .nav-footer-center { margin-top: 0; }
   .foot-title { font-size: 20px; }
 }
+
+// ---------- the sidebar wordmark ----------
+// The identity is a picture, not a lockup: Fivi in the city, spanning the full
+// width of the panel. There is no name beside it, because the book's name was
+// appearing twice — as the wordmark and again as the first menu item, 150px
+// apart — and the two were cancelling each other out. The footer carries the
+// name, and the cover is one click away through the image.
+#quarto-sidebar {
+  .sidebar-header {
+    border-bottom: 0;
+    padding: 0;
+    margin: 12px var(--sb-pad) 10px;
+    display: block;
+    position: relative;
+  }
+
+  .sidebar-logo-link { display: block; }
+
+  // Quarto caps the logo at a small height; this is a plate, not an icon.
+  .sidebar-logo {
+    width: 100% !important;
+    height: auto !important;
+    max-width: none !important;
+    display: block;
+    border-radius: 10px;
+  }
+
+  // The title element still carries the repo link, so it stays in the tree with
+  // only its text hidden.
+  .sidebar-title > a { display: none; }
+
+  // The repo link. Neither text-align nor justify-content reaches it: Quarto
+  // makes .sidebar-title a flex row and the tools shrink to their 25px of
+  // content, so there is no free space inside them to justify against.
+  // margin-left:auto pushes the whole item to the end of the row instead.
+  .sidebar-tools-main {
+    position: static;
+    display: flex;
+    margin: 4px 2px 0 auto;
+
+    a { color: var(--sb-ink-soft); padding: 0; }
+    a:hover { color: var(--c-figure-on-dark); }
+  }
+}
+
+// The cover is reachable through the wordmark above, so the menu does not need
+// a second link to it — that duplicate is what made the wordmark hard to find.
+#quarto-sidebar .sidebar-menu-container > ul > li.sidebar-item:first-child {
+  display: none;
+}

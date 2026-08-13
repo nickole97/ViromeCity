@@ -11,7 +11,7 @@
 :root{
   --ink:#14213d; --cream:#ffffff; --muted:#5c6b82; --faint:#5c6b82;
   --rule:#e2e6ec;
-  --rest:#E8B04B; --host:#B5626F; --virus:#0891B2; --bio:#5F7A6A;--host-ink:#8E3F4C;--bio-ink:#4A6153;
+  --rest:#f4efe9; --host:#c9d8db; --virus:#0891B2; --bio:#5F7A6A;--host-ink:#2f6a86;--bio-ink:#4A6153;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--cream);color:var(--ink);
@@ -84,7 +84,7 @@ h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(23px,3
   <p class="sub">Sequencing reads everything. What competes with your virus — and whether you can recover it at all — depends on where the sample came from. Tap a column.</p>
 
   <div class="legend">
-    <span><i style="background:var(--rest)"></i>Everything else</span>
+    <span><i style="background:var(--rest)"></i>Background</span>
     <span><i style="background:var(--host)"></i>Host (human DNA)</span>
     <span><i style="background:var(--virus)"></i>Virus</span>
   </div>
@@ -139,7 +139,7 @@ const SITES=[
  {id:"stool", name:"Stool", dag:false,
   draw:{rest:95,host:2,virus:3}, host:"&lt;1%", virus:"~1–5%",
   bio:4, biotxt:"very high",
-  rest:"The gut's own microbiome, plus dietary DNA and a large unclassified fraction. The densest microbial background in the body.",
+  rest:"The gut's own microbiome, plus dietary DNA and a large unclassified fraction.",
   hostWhy:"Barely any human DNA survives the trip. Stool is the rare human sample where you are not the problem.",
   virusWhy:"Measured at 2.4% of reads by bulk DNA-seq — and it rises to 63–73% once you enrich for particles.",
   verdict:"The easy case. Rich viral community, complex background, and enrichment works beautifully.",
@@ -212,7 +212,7 @@ function select(id){
     <p class="lead">host ${s.host} · virus ${s.virus} · biomass ${s.biotxt}</p>
     <div class="rows">
       <div class="row"><i style="background:var(--rest)"></i>
-        <div><b>Everything else</b><p>${s.rest}</p></div></div>
+        <div><b>Background</b><p>${s.rest}</p></div></div>
       <div class="row"><i style="background:var(--host)"></i>
         <div><b>Host</b><p>${s.hostWhy}</p></div></div>
       <div class="row"><i style="background:var(--virus)"></i>
