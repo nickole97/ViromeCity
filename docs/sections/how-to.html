@@ -254,20 +254,6 @@ Figure&nbsp;5.1: Reverse transcription, step by step. The template is RNA; what 
 <div class="block">
 <p>Remember the noise problem from District 3: the virus is a sliver under everything else. There is a way to lift that fraction before sequencing — <strong>VLP enrichment</strong>, for virus-like particles.</p>
 <p>The principle is a series of gates, each removing things by a physical property. Filter out cells and debris by size; digest free nucleic acid with nucleases. What survives is encapsidated: a genome inside a protein shell is protected from the enzymes, and everything naked is not.</p>
-</div>
-<div class="block">
-<p>There is a third route that is neither enrichment nor plain sequencing: <strong>probe capture</strong>, which hybridises against a panel and recovers only what the panel already knows about. The three are worth watching side by side, because each gate rejects things for a different physical reason.</p>
-</div>
-<div class="embed">
-<p><span class="embed-title">One sample, three protocols</span></p>
-<p>The same population enters VLP enrichment, bulk shotgun and probe capture. Each gate removes particles by a physical property — diameter at the filter, buoyant density at the gradient, capsid protection at the nuclease, panel membership at hybridisation. Watch what reaches sequencing.</p>
-<iframe src="../components/enrichment-simulator.html" title="One sample, three protocols: VLP enrichment, bulk shotgun and probe capture compared" loading="lazy"></iframe>
-<div class="embed-out">
-<p><a href="../components/enrichment-simulator.html" target="_blank">Open full ↗</a></p>
-</div>
-</div>
-<div class="block">
-<p>That is the principle. This is one laboratory’s version of it, start to finish.</p>
 <div id="fig-vlp" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Seven panels of a VLP enrichment protocol: chip and weigh frozen stool, homogenise in SM buffer, clarify by centrifugation, filter at 0.45 micrometres, digest with lysozyme and DNase, stop with EDTA, and extract on a MagNA Pure.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-vlp-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -284,6 +270,14 @@ Figure&nbsp;5.2: One VLP protocol, end to end. Volumes, speeds and timings are t
 <h2 class="anchored" data-anchor-id="when-does-enrichment-cost-more-than-it-gains">When does enrichment cost more than it gains?</h2>
 <div class="block">
 <p>Enrichment is not free, and it is not always right. It removes things — and some of what it removes is what you came for.</p>
+</div>
+<div class="embed">
+<p><span class="embed-title">One sample, three protocols</span></p>
+<p>The same population enters VLP enrichment, bulk shotgun and probe capture. Each gate removes particles by a physical property — diameter at the filter, buoyant density at the gradient, capsid protection at the nuclease, panel membership at hybridisation. Watch what reaches sequencing.</p>
+<iframe src="../components/enrichment-simulator.html" title="One sample, three protocols: VLP enrichment, bulk shotgun and probe capture compared" loading="lazy"></iframe>
+<div class="embed-out">
+<p><a href="../components/enrichment-simulator.html" target="_blank">Open full ↗</a></p>
+</div>
 </div>
 <div class="methodology">
 <p><strong>An integrated target does not survive it.</strong> A provirus, a prophage or an ERV is not a free particle: it sits inside a host genome, so the filter removes it with the cell and the nuclease digests what is left. If you are looking for integrated viruses, skip VLP and sequence total nucleic acid.</p>

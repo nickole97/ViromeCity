@@ -49,13 +49,15 @@ The principle is a series of gates, each removing things by a physical property.
 Filter out cells and debris by size; digest free nucleic acid with nucleases.
 What survives is encapsidated: a genome inside a protein shell is protected from
 the enzymes, and everything naked is not.
+
+![One VLP protocol, end to end. Volumes, speeds and timings are this laboratory's; the sequence of gates is general.](../assets/img/lab_vlp_enrichment_magnapure_seven_step_strip.svg){#fig-vlp fig-alt="Seven panels of a VLP enrichment protocol: chip and weigh frozen stool, homogenise in SM buffer, clarify by centrifugation, filter at 0.45 micrometres, digest with lysozyme and DNase, stop with EDTA, and extract on a MagNA Pure."}
 :::
 
+## When does enrichment cost more than it gains?
+
 ::: block
-There is a third route that is neither enrichment nor plain sequencing:
-**probe capture**, which hybridises against a panel and recovers only what the
-panel already knows about. The three are worth watching side by side, because
-each gate rejects things for a different physical reason.
+Enrichment is not free, and it is not always right. It removes things — and
+some of what it removes is what you came for.
 :::
 
 ::: embed
@@ -73,19 +75,6 @@ hybridisation. Watch what reaches sequencing.
 ::: embed-out
 [Open full ↗](../components/enrichment-simulator.html){target="_blank"}
 :::
-:::
-
-::: block
-That is the principle. This is one laboratory's version of it, start to finish.
-
-![One VLP protocol, end to end. Volumes, speeds and timings are this laboratory's; the sequence of gates is general.](../assets/img/lab_vlp_enrichment_magnapure_seven_step_strip.svg){#fig-vlp fig-alt="Seven panels of a VLP enrichment protocol: chip and weigh frozen stool, homogenise in SM buffer, clarify by centrifugation, filter at 0.45 micrometres, digest with lysozyme and DNase, stop with EDTA, and extract on a MagNA Pure."}
-:::
-
-## When does enrichment cost more than it gains?
-
-::: block
-Enrichment is not free, and it is not always right. It removes things — and
-some of what it removes is what you came for.
 :::
 
 ::: methodology
