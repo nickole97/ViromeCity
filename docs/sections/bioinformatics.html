@@ -218,8 +218,15 @@ ul.task-list li input[type="checkbox"] {
 <p>Once the sequences come back, the analysis splits into two layers: first what everyone does, then the lens you read it through.</p>
 <p>It starts the same way for everyone — quality-control the reads, remove the host. After that the path forks by what you are after, and it forks twice.</p>
 </div>
-<div class="fig-pending">
-<p><strong>The standard pipeline.</strong> Conceptual and tool-free: QC and host removal, then a fork by biology (phages or eukaryotic viruses), then a second fork inside each, then all routes re-merging into vOTUs and taxonomy.</p>
+<div id="fig-pipeline" class="quarto-float quarto-figure quarto-figure-center anchored" alt="A decision flow: raw sequences go through QC and host removal, then split by what you are after — phages, which fork again into integrated or free, and eukaryotic viruses, which fork by goal into genomics or detection.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../assets/img/how-to/pipeline-first-fork.svg" class="img-fluid figure-img" alt="A decision flow: raw sequences go through QC and host removal, then split by what you are after — phages, which fork again into integrated or free, and eukaryotic viruses, which fork by goal into genomics or detection.">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6.1: The first decision, before any tool is chosen. Quality control and host removal are the same for everyone; after that the path forks by what you are after.
+</figcaption>
+</figure>
 </div>
 <div class="block">
 <p><strong>Phages fork by where the virus lives</strong> — the free-versus-integrated split from District 1. Integrated prophages ride inside bacterial genomes, so you assemble the whole community, bin out the bacterial genomes, and predict the prophages sitting within them. Free virions come from the VLP fraction: assemble, optionally bin, predict directly.</p>

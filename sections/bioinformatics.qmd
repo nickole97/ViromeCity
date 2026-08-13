@@ -14,11 +14,7 @@ It starts the same way for everyone — quality-control the reads, remove the
 host. After that the path forks by what you are after, and it forks twice.
 :::
 
-::: fig-pending
-**The standard pipeline.** Conceptual and tool-free: QC and host removal, then
-a fork by biology (phages or eukaryotic viruses), then a second fork inside
-each, then all routes re-merging into vOTUs and taxonomy.
-:::
+![The first decision, before any tool is chosen. Quality control and host removal are the same for everyone; after that the path forks by what you are after.](../assets/img/how-to/pipeline-first-fork.svg){#fig-pipeline fig-alt="A decision flow: raw sequences go through QC and host removal, then split by what you are after — phages, which fork again into integrated or free, and eukaryotic viruses, which fork by goal into genomics or detection."}
 
 ::: block
 **Phages fork by where the virus lives** — the free-versus-integrated split from
