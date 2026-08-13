@@ -542,8 +542,11 @@ figure.figure {
   padding: var(--sp-component);
   margin: var(--sp-figure) 0;
 
+  // Not "Interactive figure": a door leads to something too large to be a figure
+  // at all. Fivi's Kitchen is a whole wizard, and calling it a figure was the one
+  // place the two patterns blurred.
   &::before {
-    content: "Interactive figure";
+    content: "Interactive tool";
     display: block;
     font-family: var(--mono);
     font-size: 11px;
@@ -571,6 +574,18 @@ figure.figure {
     color: var(--muted);
   }
 
+  // A door to Fivi's Kitchen is a door to her room, so that one card carries a
+  // portrait. She floats rather than sitting in a flex row, so the "Interactive
+  // figure" kicker keeps the full width above her and the copy closes back
+  // underneath. Quarto wraps a lone image in <figure>; collapse it — this is a
+  // portrait, not a figure.
+  figure, p:has(> img) {
+    float: right;
+    margin: 0 0 .7rem 1.2rem;
+  }
+
+  img { width: 88px; height: auto; display: block; }
+
   // The doors, side by side. They are the last thing in the card, so they get
   // the space between them rather than a margin each.
   //
@@ -584,6 +599,7 @@ figure.figure {
   }
 
   .launch-links {
+    clear: both;
     margin: 1rem 0 0;
     p { margin: 0; font-size: inherit; }
 

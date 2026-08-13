@@ -93,18 +93,39 @@ filter; sample with great care instead, and carry heavy controls and replicates.
 ## Which platform?
 
 ::: block
-Driven by your question, not by your sample.
+The bench work is done; what is left is the sequencer. That choice is driven by
+your question, not by your sample.
 
-- [1]{.n} [**Short reads** — detection, abundance, most viromes.]{.t}
-- [2]{.n} [**Long reads** — integration sites, full genome structure, resolving repeats.]{.t}
+**Short reads are the default, and for most viromes they are also the right
+answer.** They cost less, they go deeper for the same money, and every tool in
+the next district was built for them. If you are asking what is there and how
+much of it, stop here.
+
+**Long reads earn their cost when the question is structural.** Where a prophage
+sits in its host chromosome, whether two contigs belong to one genome, what a
+repeat is hiding — those answers are longer than a short read, so no amount of
+depth will settle them.
+:::
+
+::: block
+Look back at how many forks this district asked you to take: the genome you are
+chasing, the state it is in, the site it came from, whether to enrich, and now
+the platform. None of them is decided on its own, and no chapter can decide them
+for your sample.
+
+So we built something that takes the details of your experiment and works them
+through for you.
 :::
 
 ::: launch
+![](../assets/img/fivi-seasoning.png){fig-alt="Fivi, seasoning a pot."}
+
 [Fivi's Kitchen]{.launch-title}
 
-Everything up to here — your sample, your enrichment, your platform — is a chain
-of choices, and the right one depends on your question and your data. The
-kitchen walks you through it and cooks a method plan for your case.
+Tell it what you have and what you are after — the site you sampled, whether you
+want one virus or a community, whether integrated viruses count, which genomes —
+and Fivi runs this district's forks against your case and hands back a method
+plan: the steps you need, in what order, and what each one costs you.
 
 ::: launch-links
 [Open the kitchen ↗](../kitchen/index.html){target="_blank"}

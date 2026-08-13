@@ -41,7 +41,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-66144f48e7c678ac80c7baeb2f6778fd.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-6914951bc1beaa7bba83dec1feffc3d0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -289,15 +289,18 @@ Figure&nbsp;5.2: One VLP protocol, end to end. Volumes, speeds and timings are t
 <section id="which-platform" class="level2">
 <h2 class="anchored" data-anchor-id="which-platform">Which platform?</h2>
 <div class="block">
-<p>Driven by your question, not by your sample.</p>
-<ul>
-<li><span class="n">1</span> <span class="t"><strong>Short reads</strong> — detection, abundance, most viromes.</span></li>
-<li><span class="n">2</span> <span class="t"><strong>Long reads</strong> — integration sites, full genome structure, resolving repeats.</span></li>
-</ul>
+<p>The bench work is done; what is left is the sequencer. That choice is driven by your question, not by your sample.</p>
+<p><strong>Short reads are the default, and for most viromes they are also the right answer.</strong> They cost less, they go deeper for the same money, and every tool in the next district was built for them. If you are asking what is there and how much of it, stop here.</p>
+<p><strong>Long reads earn their cost when the question is structural.</strong> Where a prophage sits in its host chromosome, whether two contigs belong to one genome, what a repeat is hiding — those answers are longer than a short read, so no amount of depth will settle them.</p>
+</div>
+<div class="block">
+<p>Look back at how many forks this district asked you to take: the genome you are chasing, the state it is in, the site it came from, whether to enrich, and now the platform. None of them is decided on its own, and no chapter can decide them for your sample.</p>
+<p>So we built something that takes the details of your experiment and works them through for you.</p>
 </div>
 <div class="launch">
+<p><img src="../assets/img/fivi-seasoning.png" class="img-fluid" alt="Fivi, seasoning a pot."></p>
 <p><span class="launch-title">Fivi’s Kitchen</span></p>
-<p>Everything up to here — your sample, your enrichment, your platform — is a chain of choices, and the right one depends on your question and your data. The kitchen walks you through it and cooks a method plan for your case.</p>
+<p>Tell it what you have and what you are after — the site you sampled, whether you want one virus or a community, whether integrated viruses count, which genomes — and Fivi runs this district’s forks against your case and hands back a method plan: the steps you need, in what order, and what each one costs you.</p>
 <div class="launch-links">
 <p><a href="../kitchen/index.html" target="_blank">Open the kitchen ↗</a></p>
 </div>
