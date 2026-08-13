@@ -46,7 +46,7 @@
     "section": "",
     "text": "The short answer\nDistrict 1",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
@@ -57,7 +57,7 @@
     "section": "",
     "text": "If you’re coming from bacterial genomics or metagenomics, it’s tempting to assume viruses can be studied the same way.\nThey can’t.\nViruses don’t follow a single experimental or computational workflow. Their biology is extraordinarily diverse, and every methodological decision begins with understanding what kind of virus you’re actually looking for.\nTo understand why viruses require different approaches, you first need to understand how they are built.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
@@ -68,7 +68,7 @@
     "section": "What are they made of?",
     "text": "What are they made of?\n\n\n\n1 Genome — the nucleic acid (DNA or RNA); the instructions you sequence.\n2 Capsid — the protein shell that packages and protects the genome.\n3 Surface / attachment proteins — how it recognizes and enters a host.\n4 Envelope (optional) — a lipid membrane borrowed from the host; only some viruses have one.\n\n\n\n\n\n\n\n\nFigure 2.1\n\n\n\nTheir structure is simple: a piece of genetic material — RNA or DNA, single- or double-stranded — wrapped in a protein shell called the capsid. Some viruses add an outer lipid envelope, stolen from the host and studded with surface proteins that help them latch onto host cells (like a coronavirus’s spikes).\nEach of those parts costs you a decision at the bench. The envelope changes how the particle survives enrichment; the capsid is what lets you digest free nucleic acid away before lysis; and whether the genome is DNA or RNA decides the extraction — and whether the run needs a reverse-transcription step at all.\n\n\nWhat a virus is decides how you handle it at the bench — pin this down before you pick a protocol.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
@@ -79,7 +79,7 @@
     "section": "How do we classify them?",
     "text": "How do we classify them?\n\nViral diversity can feel overwhelming. Instead of memorizing every viral family or taxonomic group, let’s organize this diversity around three questions:\n\n\n\nWho do they infect?\nWhat kind of genome do they carry?\nWhat is their biological state?",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
@@ -90,7 +90,7 @@
     "section": "Who do they infect?",
     "text": "Who do they infect?\n\nEvery virus depends on a host.\nUnlike cellular organisms, viruses cannot replicate on their own. They lack the machinery needed to copy their genomes and instead rely on another living organism to do the job. That organism is the host.\n\n\n\nDon’t look for us on the tree. We aren’t a branch of it — we’re something that happens to every branch. I infect bacteria; others infect archaea, and others infect you.\n\n\n\n\n\n\n\n\nFigure 2.2\n\n\n\n\n\nUnderstanding the host is one of the first questions in viral research because it shapes where viruses are found, how they evolve, and which experimental and computational approaches are most appropriate.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
@@ -101,7 +101,7 @@
     "section": "What kind of genome do they carry?",
     "text": "What kind of genome do they carry?\n\nUnlike other cellular organisms, viruses don’t all use the same genetic material. Their genomes may be DNA or RNA, and each can be either single- or double-stranded.\n\n\n\n\n\nRNA\n\n\nDNA\n\n\nOne strand (ss)\n\n\n\nssRNA\ncoronavirus, influenza\n\n\n\nssDNA\nAnelloviridae (TTV), Microviridae\n\n\nTwo strands (ds)\n\n\n\ndsRNA\nrotavirus\n\n\n\ndsDNA\nmost phages, herpes, adenovirus\n\n\n\n\nBefore you ever sequence a sample, these differences determine which workflows are appropriate — and which ones will fail.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
@@ -112,7 +112,7 @@
     "section": "How do they exist?",
     "text": "How do they exist?\n\nNot every virus exists as a free viral particle.\nSome remain integrated within their host’s genome for part — or even all — of their lifecycle.\n\n\n\nstate · 1\n\nstate: exogenous\nExogenous\nA free particle that infects from outside — the classic virion.\n\n\n→ can integrate into the host genome →\n\n\nstate · 2\n\nstate: endogenous\nEndogenous\nGenome written into the host’s DNA — inherited or long-resident, not a free particle.\n\n\n\nendogenous forms, by host\n\n\n\nProphages bacterial host\n\n\n\nProviruses archaeal host\n\n\n\nERVs eukaryotic host\n\nretroviral non-retroviral (EVEs)\n\n\n\n\n\n\n\nTheir biological state determines how they are detected — and whether they are detected at all.\n\n\n\nDon’t overlook this axis. Biological state may determine whether your workflow finds me at all. We’ll put this into practice in the How-to district.\n\n\nERVs descend from retroviruses, which integrate into the host genome as a normal step in their lifecycle. Non-retroviral EVEs come from viruses that never integrate at all — fragments captured by accident and then inherited. The distinction matters for detection: a search built around retroviral signatures will not find the second kind.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>How should I think about viruses?</span>"
     ]
   },
@@ -123,7 +123,7 @@
     "section": "",
     "text": "This chapter has not been migrated yet. The current draft lives in the old site.\n\n\n\nHuman evolution, ecology, medicine, and life itself — real cases where studying viromes changed what we do.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Why the virome matters</span>"
     ]
   },
@@ -134,7 +134,7 @@
     "section": "",
     "text": "The short answer\nDistrict 3",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
     ]
   },
@@ -145,7 +145,7 @@
     "section": "",
     "text": "Viruses are found throughout the human body. They are among the most abundant biological entities associated with us — but they are also among the smallest.\n\n\nThe viral world. Viruses are everywhere in the body and outnumber everything else, but they are tiny, and larger things crowd the frame.\n\n\nHowever, most of what you sequence isn’t viral.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
     ]
   },
@@ -156,7 +156,7 @@
     "section": "Why isn’t most of it viral?",
     "text": "Why isn’t most of it viral?\n\nTo look for viruses, researchers often begin with shotgun metagenomic sequencing (NGS), which sequences all nucleic acids in a sample — not just viral ones.\nThe result is a sequencing library where viral sequences represent only a small fraction of the total. In a stool sample, for example, bacterial, host and dietary sequences vastly outnumber viral ones.\n\n\n\n\n\n\n\nFigure 4.1: What a stool sequencing library is made of.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
     ]
   },
@@ -167,7 +167,7 @@
     "section": "Does it change with the body site?",
     "text": "Does it change with the body site?\n\nThat sliver isn’t fixed — it varies enormously by where the sample came from. Blood, lung and stool start from completely different mixes.\n\n\nVirome by body compartment\nToggle a variable and hover a compartment to see how the mix changes across the body.\n\n\nOpen full ↗ · Compare all four side by side ↗\n\n\n\nThe map shows that it changes. This shows by how much: the same three bands, in four places.\n\n\nWhat’s in the sample?\nSequencing reads everything. What competes with your virus — and whether you can recover it at all — depends on where the sample came from. Click a column.\n\n\nOpen full ↗",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
     ]
   },
@@ -178,7 +178,7 @@
     "section": "Is the site the whole story?",
     "text": "Is the site the whole story?\n\nSite isn’t the whole story.\nSorting a human virome by collection site alone is too simplistic. The virome shifts with many ecological traits of the host — age, sex, geography, even social setting — and all of these belong in your experimental design. Two examples: age, and geography.\n\n\nViral richness across the lifespan\nThe first example. How many distinct viruses a person carries is not a constant — it changes with age.\n\n\nOpen full ↗\n\n\n\nThe second example. Sampled in different populations, the same body site gives different mixes — and the share that matches nothing in a reference database grows as you move away from the places most of that reference was built from.\n\n\nComposition across populations. The same body site in four populations along an industrialisation gradient, with the unclassified fraction growing toward the less-sampled end. A draft exists at assets/img/where/geography-composition.svg; the form is still being decided.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
     ]
   },
@@ -189,7 +189,7 @@
     "section": "Why is so much of it unclassified?",
     "text": "Why is so much of it unclassified?\n\nThe databases you classify against were built from public metagenomes, and those metagenomes did not come from everywhere. More than 71% of public human microbiome samples with a known origin come from Europe, the US and Canada — 46.8% from the US alone, a country holding 4.3% of the world’s population. A library from an under-represented population will leave a larger unclassified fraction than one from a well-sampled one, and it will read not as biology but as a pipeline that failed.\n\n\nPublic samples per country, relative to population\nHover a country to see how much of that population has been sampled, and which virome papers studied it. The sampling data is microbiome-wide rather than virome-specific — but the four major gut virome catalogues were built by mining these same public metagenomes, so this is the substrate your reference was assembled from.\n\n\nOpen full ↗\n\n\n\nKnowing which of the two you are looking at is part of designing the study, not of troubleshooting it afterwards.\n\n\nThe catalogue you align against is a choice with a cost, and it does not run the way you would expect. GVD is the most geographically balanced of the four — 18.7% of its samples are African — and it is also the smallest, at 2,697 metagenomes and 33,242 vOTUs. GPD is the largest, at 142,809 genomes, and 0.7% African. The reference that gives you the most detection power is the one that represents that population worst. There is no free choice here; pick knowing which trade you are making.\n\n\nEvery sample has the same problem underneath: the virus is a tiny fraction buried under everything else. Recovering clean viral signal takes extra steps, and even after them the host and microbial noise is still there.\n\n\n\nHow you pull me out depends on what I’m made of and how I live. There is no single recovery protocol — which steps you need is decided by the genome I carry and the state I’m in. That’s the How-to district.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
     ]
   },
@@ -200,7 +200,7 @@
     "section": "",
     "text": "The short answer\nDistrict 4",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>How do I recover them?</span>"
     ]
   },
@@ -211,7 +211,7 @@
     "section": "",
     "text": "From District 1 you know three things about a virus: who it infects, what genome it carries, and what state it is in.\nTwo of those now decide your molecular biology.\nThe genome type decides whether the sequencer can read it at all. The physical state decides whether enrichment will find it or destroy it. Everything in this chapter follows from those two.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>How do I recover them?</span>"
     ]
   },
@@ -222,7 +222,7 @@
     "section": "Does the sequencer need a copy first?",
     "text": "Does the sequencer need a copy first?\n\nSequencers read double-stranded DNA. Whatever your genome is, it has to get there first — and how far it has to travel depends on what it started as.\n\n1 RNA — reverse transcription, RNA to cDNA.\n2 Single-stranded — second-strand synthesis.\n3 Double-stranded DNA — already there.\n\nThen library prep, and into the run.\n\n\n\n\n\n\nFigure 5.1: Reverse transcription, step by step. The template is RNA; what reaches the library is double-stranded DNA.\n\n\n\n\n\nViral RNA rarely has a poly-A tail, so the priming step cannot rely on one. That is why the protocol uses random hexamers rather than oligo-dT — a detail that decides whether you recover an RNA virome at all.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>How do I recover them?</span>"
     ]
   },
@@ -233,7 +233,7 @@
     "section": "Should I enrich?",
     "text": "Should I enrich?\n\nRemember the noise problem from District 3: the virus is a sliver under everything else. There is a way to lift that fraction before sequencing — VLP enrichment, for virus-like particles.\nThe principle is a series of gates, each removing things by a physical property. Filter out cells and debris by size; digest free nucleic acid with nucleases. What survives is encapsidated: a genome inside a protein shell is protected from the enzymes, and everything naked is not.\n\n\nThere is a third route that is neither enrichment nor plain sequencing: probe capture, which hybridises against a panel and recovers only what the panel already knows about. The three are worth watching side by side, because each gate rejects things for a different physical reason.\n\n\nOne sample, three protocols\nThe same population enters VLP enrichment, bulk shotgun and probe capture. Each gate removes particles by a physical property — diameter at the filter, buoyant density at the gradient, capsid protection at the nuclease, panel membership at hybridisation. Watch what reaches sequencing.\n\n\nOpen full ↗\n\n\n\nThat is the principle. This is one laboratory’s version of it, start to finish.\n\n\n\n\n\n\nFigure 5.2: One VLP protocol, end to end. Volumes, speeds and timings are this laboratory’s; the sequence of gates is general.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>How do I recover them?</span>"
     ]
   },
@@ -244,7 +244,7 @@
     "section": "When does enrichment cost more than it gains?",
     "text": "When does enrichment cost more than it gains?\n\nEnrichment is not free, and it is not always right. It removes things — and some of what it removes is what you came for.\n\n\nAn integrated target does not survive it. A provirus, a prophage or an ERV is not a free particle: it sits inside a host genome, so the filter removes it with the cell and the nuclease digests what is left. If you are looking for integrated viruses, skip VLP and sequence total nucleic acid.\n\n\nVery low biomass does not survive it either. Blood, CSF and other sparse sites give you little material to begin with, and every gate loses some. Do not filter; sample with great care instead, and carry heavy controls and replicates.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>How do I recover them?</span>"
     ]
   },
@@ -253,21 +253,32 @@
     "href": "sections/how-to.html#which-platform",
     "title": "How do I recover them?",
     "section": "Which platform?",
-    "text": "Which platform?\n\nDriven by your question, not by your sample.\n\n1 Short reads — detection, abundance, most viromes.\n2 Long reads — integration sites, full genome structure, resolving repeats.\n\n\n\nFivi’s Kitchen\nEverything up to here — your sample, your enrichment, your platform — is a chain of choices, and the right one depends on your question and your data. The kitchen walks you through it and cooks a method plan for your case.\n\nOpen the kitchen ↗",
+    "text": "Which platform?\n\nDriven by your question, not by your sample.\n\n1 Short reads — detection, abundance, most viromes.\n2 Long reads — integration sites, full genome structure, resolving repeats.\n\n\n\nFivi’s Kitchen\nEverything up to here — your sample, your enrichment, your platform — is a chain of choices, and the right one depends on your question and your data. The kitchen walks you through it and cooks a method plan for your case.\n\nOpen the kitchen ↗\n\n\n\n\nThat is the bench done. Everything so far decided what physically reaches the sequencer. What comes back is a pile of reads, and none of it is sorted yet — that is the next district.",
     "crumbs": [
-      "The four districts",
+      "The five districts",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>How do I recover them?</span>"
     ]
   },
   {
-    "objectID": "sections/how-to.html#what-happens-after-the-run",
-    "href": "sections/how-to.html#what-happens-after-the-run",
-    "title": "How do I recover them?",
-    "section": "What happens after the run?",
-    "text": "What happens after the run?\n\nOnce the sequences come back, the analysis splits into two layers: first what everyone does, then the lens you read it through.\nIt starts the same way for everyone — quality-control the reads, remove the host. After that the path forks by what you are after, and it forks twice.\n\n\nThe standard pipeline. Conceptual and tool-free: QC and host removal, then a fork by biology (phages or eukaryotic viruses), then a second fork inside each, then all routes re-merging into vOTUs and taxonomy.\n\n\nPhages fork by where the virus lives — the free-versus-integrated split from District 1. Integrated prophages ride inside bacterial genomes, so you assemble the whole community, bin out the bacterial genomes, and predict the prophages sitting within them. Free virions come from the VLP fraction: assemble, optionally bin, predict directly.\nEukaryotic viruses fork by your question instead. If you want composition, map reads against known references and read off an abundance table. If you want the genomes themselves — for phylogeny, or for novelty — assemble and predict. In practice the two are often done together.\nHowever you got there, all routes re-merge: viral sequences are clustered into vOTUs, then given a taxonomy as far as the databases allow.\n\n\nThen the honest step. A large fraction will match nothing known, and that fraction gets reported, not hidden. District 3 showed you why: the databases were built from a handful of places, so how much goes unmatched depends partly on where your sample came from.\n\n\nWe name the reasoning, not the tools. Tools change every year; why the path forks does not. Any current assembler, binner or viral predictor slots into the same shape.\n\n\n\nYou made it through the city. You know what I am, where I hide, and how to get me out of a sample and onto a screen. What is left is the cooking — and for that, my kitchen is open.",
+    "objectID": "sections/bioinformatics.html",
+    "href": "sections/bioinformatics.html",
+    "title": "How do I find them in the data?",
+    "section": "",
+    "text": "The short answer\nDistrict 5",
     "crumbs": [
-      "The four districts",
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>How do I recover them?</span>"
+      "The five districts",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>How do I find them in the data?</span>"
+    ]
+  },
+  {
+    "objectID": "sections/bioinformatics.html#the-short-answer",
+    "href": "sections/bioinformatics.html#the-short-answer",
+    "title": "How do I find them in the data?",
+    "section": "",
+    "text": "Once the sequences come back, the analysis splits into two layers: first what everyone does, then the lens you read it through.\nIt starts the same way for everyone — quality-control the reads, remove the host. After that the path forks by what you are after, and it forks twice.\n\n\nThe standard pipeline. Conceptual and tool-free: QC and host removal, then a fork by biology (phages or eukaryotic viruses), then a second fork inside each, then all routes re-merging into vOTUs and taxonomy.\n\n\nPhages fork by where the virus lives — the free-versus-integrated split from District 1. Integrated prophages ride inside bacterial genomes, so you assemble the whole community, bin out the bacterial genomes, and predict the prophages sitting within them. Free virions come from the VLP fraction: assemble, optionally bin, predict directly.\nEukaryotic viruses fork by your question instead. If you want composition, map reads against known references and read off an abundance table. If you want the genomes themselves — for phylogeny, or for novelty — assemble and predict. In practice the two are often done together.\nHowever you got there, all routes re-merge: viral sequences are clustered into vOTUs, then given a taxonomy as far as the databases allow.\n\n\nThen the honest step. A large fraction will match nothing known, and that fraction gets reported, not hidden. District 3 showed you why: the databases were built from a handful of places, so how much goes unmatched depends partly on where your sample came from.\n\n\nWe name the reasoning, not the tools. Tools change every year; why the path forks does not. Any current assembler, binner or viral predictor slots into the same shape.\n\n\n\nYou made it through the city. You know what I am, where I hide, and how to get me out of a sample and onto a screen. What is left is the cooking — and for that, my kitchen is open.",
+    "crumbs": [
+      "The five districts",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>How do I find them in the data?</span>"
     ]
   },
   {
@@ -278,7 +289,7 @@
     "text": "This chapter has not been migrated yet. The current draft lives in the old site.\n\n\n\nPick your sample, your target and your experience. Fivi cooks a method plan for your exact case.\nOpen Fivi’s Kitchen →",
     "crumbs": [
       "Then the tool",
-      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Fivi's Kitchen</span>"
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Fivi's Kitchen</span>"
     ]
   }
 ]

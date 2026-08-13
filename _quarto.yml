@@ -44,12 +44,13 @@ book:
     footer: "[Source on GitHub](https://github.com/nickole97/ViromeCity/)"
   chapters:
     - index.qmd
-    - part: "The four districts"
+    - part: "The five districts"
       chapters:
         - sections/what.qmd
         - sections/why.qmd
         - sections/where.qmd
         - sections/how-to.qmd
+        - sections/bioinformatics.qmd
     - part: "Then the tool"
       chapters:
         - sections/kitchen.qmd

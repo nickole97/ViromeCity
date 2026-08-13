@@ -122,55 +122,10 @@ kitchen walks you through it and cooks a method plan for your case.
 :::
 :::
 
-## What happens after the run?
-
-::: block
-Once the sequences come back, the analysis splits into two layers: first what
-everyone does, then the lens you read it through.
-
-It starts the same way for everyone — quality-control the reads, remove the
-host. After that the path forks by what you are after, and it forks twice.
-:::
-
-::: fig-pending
-**The standard pipeline.** Conceptual and tool-free: QC and host removal, then
-a fork by biology (phages or eukaryotic viruses), then a second fork inside
-each, then all routes re-merging into vOTUs and taxonomy.
-:::
-
-::: block
-**Phages fork by where the virus lives** — the free-versus-integrated split from
-District 1. Integrated prophages ride inside bacterial genomes, so you assemble
-the whole community, bin out the bacterial genomes, and predict the prophages
-sitting within them. Free virions come from the VLP fraction: assemble,
-optionally bin, predict directly.
-
-**Eukaryotic viruses fork by your question instead.** If you want composition,
-map reads against known references and read off an abundance table. If you want
-the genomes themselves — for phylogeny, or for novelty — assemble and predict.
-In practice the two are often done together.
-
-However you got there, all routes re-merge: viral sequences are clustered into
-vOTUs, then given a taxonomy as far as the databases allow.
-:::
-
-::: insight
-Then the honest step. A large fraction will match nothing known, and that
-fraction gets reported, not hidden. District 3 showed you why: the databases
-were built from a handful of places, so how much goes unmatched depends partly
-on where your sample came from.
-:::
-
-::: research
-We name the reasoning, not the tools. Tools change every year; why the path
-forks does not. Any current assembler, binner or viral predictor slots into the
-same shape.
-:::
-
 ::: fivi
-![](../assets/img/fivi-happy.png){fig-alt="Fivi, pleased."}
+![](../assets/img/fivi-thinking.png){fig-alt="Fivi, thinking."}
 
-**You made it through the city.** You know what I am, where I hide, and how to
-get me out of a sample and onto a screen. What is left is the cooking — and for
-that, [my kitchen](../kitchen/index.html) is open.
+**That is the bench done.** Everything so far decided what physically reaches the
+sequencer. What comes back is a pile of reads, and none of it is sorted yet —
+that is the [next district](bioinformatics.qmd).
 :::

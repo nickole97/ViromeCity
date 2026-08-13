@@ -17,8 +17,13 @@ the scroll reveal, wide figures — is a screen affordance, not a design decisio
 ## Chapters are districts
 
 The reader is navigating Virome City, so each chapter is a district: District 1 is
-"How should I think about viruses?", and the How-to district is where methods get
-decided. The city is the structure, not a metaphor sprinkled on top.
+"How should I think about viruses?", and the city is the structure, not a metaphor
+sprinkled on top.
+
+**There are five, not four.** "How to recover them" was one chapter until it was
+split at Fivi's Kitchen: District 4 is the bench and District 5 is the screen.
+They are different trades, done by different people on different days, and one
+chapter carrying both was two reading sessions pretending to be one.
 
 **Chapter titles are questions.** Not "What is a virus?" but "How should I think
 about viruses?" — a title states the question the reader arrived with, and the
@@ -200,10 +205,12 @@ light only, and a widget that inverted on a dark OS was the one place that broke
 ## Current state
 
 District 1 — "How should I think about viruses?" — is written, migrated and live.
-District 3 — "Where do viruses hide?" — is migrated as far as the old draft went,
-with two figures still `fig-pending`. Districts 2 and 4 and Fivi's Kitchen are
-stubs. The hand-written drafts are in `_archive/sections-html/` and stay published
-at `/legacy/` so nothing already written is unreachable.
+District 3 — "Where do viruses hide?" — is migrated, with one figure still
+`fig-pending`. Districts 4 and 5 — the bench and the screen — are migrated from
+the old draft, with the pipeline figure pending. **District 2, "Why the virome
+matters", is still a three-line stub, and it is the one that tells the reader why
+any of the rest matters.** Fivi's Kitchen is a stub too. The hand-written drafts
+are in `_archive/sections-html/` and stay published at `/legacy/`.
 
 The three defects the legacy HTML carried are fixed: Fivi is no longer a base64 PNG
 inside the CSS, the broken `#how` link resolves to the How-to district, and the
