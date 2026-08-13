@@ -224,7 +224,7 @@ function mulberry32(a){ return function(){
 
 /* --------------------------------- geometry -------------------------------- */
 const W = 1240, H = 620;
-const LANE_X0 = 186, FINISH = 1052, BIN_X = 1068, BIN_W = 160;
+const LANE_X0 = 250, FINISH = 1052, BIN_X = 1068, BIN_W = 160;
 const LANE_CY = [150, 320, 490], BAND = 64;
 
 function radiusFor(t){
@@ -497,12 +497,12 @@ function draw(){
     ctx.fill(); ctx.globalAlpha = 1;
 
     // route label
-    ctx.fillStyle = C.ink; ctx.font = '600 14px -apple-system, Helvetica, Arial, sans-serif';
+    ctx.fillStyle = C.ink; ctx.font = '600 23.8px -apple-system, Helvetica, Arial, sans-serif';
     ctx.textAlign = 'left';
-    ctx.fillText(lane.route.name, 14, cy - 6);
-    ctx.fillStyle = C.muted; ctx.font = '11.5px -apple-system, Helvetica, Arial, sans-serif';
-    ctx.fillText(lane.route.sub, 14, cy + 11);
-    ctx.fillText(lane.recovered + ' of ' + s.total + ' through', 14, cy + 30);
+    ctx.fillText(lane.route.name, 14, cy - 12);
+    ctx.fillStyle = C.muted; ctx.font = '19.6px -apple-system, Helvetica, Arial, sans-serif';
+    ctx.fillText(lane.route.sub, 14, cy + 13);
+    ctx.fillText(lane.recovered + ' of ' + s.total + ' through', 14, cy + 36);
 
     // gates
     lane.gates.forEach(g => {
@@ -513,10 +513,10 @@ function draw(){
       ctx.setLineDash([]); ctx.globalAlpha = 1;
 
       ctx.textAlign = 'center';
-      ctx.fillStyle = C.ink; ctx.font = '600 10.5px -apple-system, Helvetica, Arial, sans-serif';
-      ctx.fillText(g.label, g.x, cy - BAND - 16);
-      ctx.fillStyle = C.muted; ctx.font = '9.5px -apple-system, Helvetica, Arial, sans-serif';
-      ctx.fillText(g.hint, g.x, cy - BAND - 5);
+      ctx.fillStyle = C.ink; ctx.font = '600 17.8px -apple-system, Helvetica, Arial, sans-serif';
+      ctx.fillText(g.label, g.x, cy - BAND - 30);
+      ctx.fillStyle = C.muted; ctx.font = '16.1px -apple-system, Helvetica, Arial, sans-serif';
+      ctx.fillText(g.hint, g.x, cy - BAND - 8);
       // loss counts are drawn in an overlay pass below, so particles cannot bury them
     });
 
@@ -529,7 +529,7 @@ function draw(){
   });
 
   ctx.textAlign = 'center';
-  ctx.fillStyle = C.muted; ctx.font = '600 10px -apple-system, Helvetica, Arial, sans-serif';
+  ctx.fillStyle = C.muted; ctx.font = '600 17px -apple-system, Helvetica, Arial, sans-serif';
   ctx.fillText('SEQUENCED', BIN_X + BIN_W / 2, 34);
 
   for (const p of s.parts){
@@ -543,7 +543,7 @@ function draw(){
     lane.gates.forEach(g => {
       if (!g.lost) return;
       const txt = '−' + g.lost, y = lane.cy + BAND - 12;
-      ctx.font = '700 11.5px -apple-system, Helvetica, Arial, sans-serif';
+      ctx.font = '700 19.6px -apple-system, Helvetica, Arial, sans-serif';
       const w = ctx.measureText(txt).width + 12;
       ctx.fillStyle = C.panel; ctx.globalAlpha = 0.94;
       ctx.beginPath();

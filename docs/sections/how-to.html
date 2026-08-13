@@ -251,8 +251,16 @@ Figure&nbsp;5.1: Reverse transcription, step by step. The template is RNA; what 
 <p>Remember the noise problem from District 3: the virus is a sliver under everything else. There is a way to lift that fraction before sequencing — <strong>VLP enrichment</strong>, for virus-like particles.</p>
 <p>The principle is a series of gates, each removing things by a physical property. Filter out cells and debris by size; digest free nucleic acid with nucleases. What survives is encapsidated: a genome inside a protein shell is protected from the enzymes, and everything naked is not.</p>
 </div>
-<div class="fig-pending">
-<p><strong>Before and after VLP.</strong> The stool bar from District 3, redrawn after enrichment: the sliver becomes most of the sample. Measured at 2.4% of reads by bulk sequencing, rising to 63–73% after enrichment.</p>
+<div class="block">
+<p>There is a third route that is neither enrichment nor plain sequencing: <strong>probe capture</strong>, which hybridises against a panel and recovers only what the panel already knows about. The three are worth watching side by side, because each gate rejects things for a different physical reason.</p>
+</div>
+<div class="embed">
+<p><span class="embed-title">One sample, three protocols</span></p>
+<p>The same population enters VLP enrichment, bulk shotgun and probe capture. Each gate removes particles by a physical property — diameter at the filter, buoyant density at the gradient, capsid protection at the nuclease, panel membership at hybridisation. Watch what reaches sequencing.</p>
+<iframe src="../components/enrichment-simulator.html" title="One sample, three protocols: VLP enrichment, bulk shotgun and probe capture compared" loading="lazy"></iframe>
+<div class="embed-out">
+<p><a href="../components/enrichment-simulator.html" target="_blank">Open full ↗</a></p>
+</div>
 </div>
 <div class="block">
 <p>That is the principle. This is one laboratory’s version of it, start to finish.</p>
@@ -278,18 +286,6 @@ Figure&nbsp;5.2: One VLP protocol, end to end. Volumes, speeds and timings are t
 </div>
 <div class="methodology">
 <p><strong>Very low biomass does not survive it either.</strong> Blood, CSF and other sparse sites give you little material to begin with, and every gate loses some. Do not filter; sample with great care instead, and carry heavy controls and replicates.</p>
-</div>
-<div class="block">
-<p>And there is a third route that is neither: <strong>probe capture</strong>, which hybridises against a panel and recovers only what the panel already knows about.</p>
-<p>The three are worth watching side by side, because each gate rejects things for a different physical reason.</p>
-</div>
-<div class="embed">
-<p><span class="embed-title">One sample, three protocols</span></p>
-<p>The same population enters VLP enrichment, bulk shotgun and probe capture. Each gate removes particles by a physical property — diameter at the filter, buoyant density at the gradient, capsid protection at the nuclease, panel membership at hybridisation. Watch what reaches sequencing.</p>
-<iframe src="../components/enrichment-simulator.html" title="One sample, three protocols: VLP enrichment, bulk shotgun and probe capture compared" loading="lazy"></iframe>
-<div class="embed-out">
-<p><a href="../components/enrichment-simulator.html" target="_blank">Open full ↗</a></p>
-</div>
 </div>
 </section>
 <section id="which-platform" class="level2">

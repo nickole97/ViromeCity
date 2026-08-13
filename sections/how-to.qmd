@@ -51,10 +51,28 @@ What survives is encapsidated: a genome inside a protein shell is protected from
 the enzymes, and everything naked is not.
 :::
 
-::: fig-pending
-**Before and after VLP.** The stool bar from District 3, redrawn after
-enrichment: the sliver becomes most of the sample. Measured at 2.4% of reads by
-bulk sequencing, rising to 63–73% after enrichment.
+::: block
+There is a third route that is neither enrichment nor plain sequencing:
+**probe capture**, which hybridises against a panel and recovers only what the
+panel already knows about. The three are worth watching side by side, because
+each gate rejects things for a different physical reason.
+:::
+
+::: embed
+[One sample, three protocols]{.embed-title}
+
+The same population enters VLP enrichment, bulk shotgun and probe capture. Each
+gate removes particles by a physical property — diameter at the filter, buoyant
+density at the gradient, capsid protection at the nuclease, panel membership at
+hybridisation. Watch what reaches sequencing.
+
+```{=html}
+<iframe src="../components/enrichment-simulator.html" title="One sample, three protocols: VLP enrichment, bulk shotgun and probe capture compared" loading="lazy"></iframe>
+```
+
+::: embed-out
+[Open full ↗](../components/enrichment-simulator.html){target="_blank"}
+:::
 :::
 
 ::: block
@@ -81,31 +99,6 @@ integrated viruses, skip VLP and sequence total nucleic acid.
 **Very low biomass does not survive it either.** Blood, CSF and other sparse
 sites give you little material to begin with, and every gate loses some. Do not
 filter; sample with great care instead, and carry heavy controls and replicates.
-:::
-
-::: block
-And there is a third route that is neither: **probe capture**, which hybridises
-against a panel and recovers only what the panel already knows about.
-
-The three are worth watching side by side, because each gate rejects things for
-a different physical reason.
-:::
-
-::: embed
-[One sample, three protocols]{.embed-title}
-
-The same population enters VLP enrichment, bulk shotgun and probe capture. Each
-gate removes particles by a physical property — diameter at the filter, buoyant
-density at the gradient, capsid protection at the nuclease, panel membership at
-hybridisation. Watch what reaches sequencing.
-
-```{=html}
-<iframe src="../components/enrichment-simulator.html" title="One sample, three protocols: VLP enrichment, bulk shotgun and probe capture compared" loading="lazy"></iframe>
-```
-
-::: embed-out
-[Open full ↗](../components/enrichment-simulator.html){target="_blank"}
-:::
 :::
 
 ## Which platform?
