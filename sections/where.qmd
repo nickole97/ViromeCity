@@ -157,25 +157,11 @@ assembled from.
 :::
 :::
 
-::: block
-Knowing which of the two you are looking at is part of designing the study, not
-of troubleshooting it afterwards.
-:::
-
-::: methodology
-The catalogue you align against is a choice with a cost, and it does not run the
-way you would expect. GVD is the most geographically balanced of the four —
-18.7% of its samples are African — and it is also the smallest, at 2,697
-metagenomes and 33,242 vOTUs. GPD is the largest, at 142,809 genomes, and 0.7%
-African. The reference that gives you the most detection power is the one that
-represents that population worst. There is no free choice here; pick knowing
-which trade you are making.
-:::
-
 ::: insight
-Every sample has the same problem underneath: the virus is a tiny fraction
-buried under everything else. Recovering clean viral signal takes extra steps,
-and even after them the host and microbial noise is still there.
+All of this is ecology. A person is an ecosystem, and ecosystems move when small
+things change — a course of antibiotics, a move to a city, a different diet.
+When your subjects are people, their circumstances are not context around the
+study. They are variables in it, and they belong in the design.
 :::
 
 ::: fivi
