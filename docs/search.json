@@ -297,7 +297,7 @@
     "href": "sections/tools.html",
     "title": "More useful tools",
     "section": "",
-    "text": "The Handley Lab builds tools for exploring the human virome. Some are for the bench, some for the screen, and some — like Fivi’s Kitchen — are for the hour before either, when the design is still being decided.\nThey are listed here because a book can tell you why a path forks, but a tool is what walks it with you.\n\n\n\nHecatombthe virome pipeline, end to end\n\nViroForgesynthetic viromes for benchmarking a pipeline\nFivi’s Kitchenturns your experiment into a method plan\nverify-referencesresolves DOIs and accessions against their source\nin development\n\n\n\nTwo of these were not chosen for this page — they are already load-bearing elsewhere in the book. ViroForge supplies the phage-versus-eukaryote layer of the body heatmap in District 3, and verify-references checked every one of the 29 references behind the sampling map.",
+    "text": "In the Handley Lab we have built several tools that can be useful in exploring the human virome.\n\n\n\nHecatombthe virome pipeline, end to end\n\nViroForgesynthetic viromes for benchmarking a pipeline\nverify-referencesresolves DOIs and accessions against their source\nin development",
     "crumbs": [
       "Tools",
       "<span class='chapter-number'>8</span>  <span class='chapter-title'>More useful tools</span>"
