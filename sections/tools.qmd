@@ -1,0 +1,28 @@
+---
+title: "More useful tools"
+---
+
+::: block
+The Handley Lab builds tools for exploring the human virome. Some are for the
+bench, some for the screen, and some — like Fivi's Kitchen — are for the hour
+before either, when the design is still being decided.
+
+They are listed here because a book can tell you why a path forks, but a tool is
+what walks it with you.
+:::
+
+::: {.hexes}
+- [[Hecatomb]{.name}[the virome pipeline, end to end]{.what}](https://github.com/shandley/hecatomb){target="_blank"}
+- [![microFGT — integrative analysis of female genital tract microbiome data](../assets/img/microFGT_Flower.png)](https://github.com/shandley/microFGT){.sticker target="_blank"}
+- [[ViroForge]{.name}[synthetic viromes for benchmarking a pipeline]{.what}](https://github.com/shandley){target="_blank"}
+- [[Fivi's Kitchen]{.name}[turns your experiment into a method plan]{.what}](../kitchen/index.html){target="_blank"}
+- [[verify-references]{.name}[resolves DOIs and accessions against their source]{.what}](https://github.com/shandley/washu-claude-skills){target="_blank"}
+- [[in development]{.slot}]{}
+:::
+
+::: research
+Two of these were not chosen for this page — they are already load-bearing
+elsewhere in the book. ViroForge supplies the phage-versus-eukaryote layer of the
+body heatmap in District 3, and `verify-references` checked every one of the 29
+references behind the sampling map.
+:::

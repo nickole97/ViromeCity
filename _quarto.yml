@@ -51,9 +51,10 @@ book:
         - sections/where.qmd
         - sections/how-to.qmd
         - sections/bioinformatics.qmd
-    - part: "Then the tool"
+    - part: "Tools"
       chapters:
         - sections/kitchen.qmd
+        - sections/tools.qmd
   # Appendices are out of the book until References has content — an empty
   # appendix group in the sidebar reads as a defect. Restore this block (and
   # sections/references.qmd is still in the repo) once there is something to cite.
