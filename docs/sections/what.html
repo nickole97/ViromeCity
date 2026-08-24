@@ -227,7 +227,7 @@ ul.task-list li input[type="checkbox"] {
 <div class="block">
 <p>If you’re coming from bacterial genomics or metagenomics, it’s tempting to assume viruses can be studied the same way.</p>
 <p><span class="claim">They can’t.</span></p>
-<p>Viruses don’t follow a single experimental or computational workflow. Their biology is extraordinarily diverse, and every methodological decision begins with understanding what kind of virus you’re actually looking for.</p>
+<p>Viruses don’t follow a single experimental or computational workflow. Their biology is extraordinarily diverse, and depending on your question, your methodology can change completely.</p>
 <p>To understand why viruses require different approaches, you first need to understand how they are built.</p>
 </div>
 </section>
@@ -253,16 +253,25 @@ Figure&nbsp;2.1
 </figure>
 </div>
 <p>Their structure is simple: a piece of genetic material — RNA or DNA, single- or double-stranded — wrapped in a protein shell called the <strong>capsid</strong>. Some viruses add an outer <strong>lipid envelope</strong>, stolen from the host and studded with <strong>surface proteins</strong> that help them latch onto host cells (like a coronavirus’s spikes).</p>
-<p>Each of those parts costs you a decision at the bench. The envelope changes how the particle survives enrichment; the capsid is what lets you digest free nucleic acid away before lysis; and whether the genome is DNA or RNA decides the extraction — and whether the run needs a reverse-transcription step at all.</p>
 </div>
 <div class="insight">
-<p>What a virus <em>is</em> decides how you handle it at the bench — pin this down before you pick a protocol.</p>
+<p>Each of those structures will shape your decisions at the bench.</p>
+</div>
+<div class="block">
+<p>So when you design a protocol, go part by part: the envelope decides how the particle survives enrichment; the capsid is what lets you digest free nucleic acid away before lysis; and whether the genome is DNA or RNA decides the extraction — and whether the run needs a reverse-transcription step at all.</p>
 </div>
 </section>
 <section id="how-do-we-classify-them" class="level2">
 <h2 class="anchored" data-anchor-id="how-do-we-classify-them">How do we classify them?</h2>
 <div class="block">
-<p>Viral diversity can feel overwhelming. Instead of memorizing every viral family or taxonomic group, let’s organize this diversity around three questions:</p>
+<p>Viral diversity can feel overwhelming — they are extremely diverse, fast-evolving creatures.</p>
+</div>
+<div class="fivi">
+<p><img src="../assets/img/fivi-thinking.png" class="img-fluid" alt="Fivi, thinking."></p>
+<p><strong>Don’t look for us on the tree.</strong> We aren’t a branch of it — we’re something that happens to every branch. Almost every living organism has viruses inside it. I infect bacteria; others infect archaea, and others infect you.</p>
+</div>
+<div class="block">
+<p>So instead of memorizing every viral family or taxonomic group — which can change from one month to the next — let’s organize this diversity around three questions:</p>
 </div>
 <div class="question wide">
 <ul>
@@ -277,12 +286,6 @@ Figure&nbsp;2.1
 <div class="block">
 <p><span class="claim">Every virus depends on a host.</span></p>
 <p>Unlike cellular organisms, viruses cannot replicate on their own. They lack the machinery needed to copy their genomes and instead rely on another living organism to do the job. That organism is the <strong>host</strong>.</p>
-</div>
-<div class="fivi">
-<p><img src="../assets/img/fivi-thinking.png" class="img-fluid" alt="Fivi, thinking."></p>
-<p><strong>Don’t look for us on the tree.</strong> We aren’t a branch of it — we’re something that happens to every branch. I infect bacteria; others infect archaea, and others infect you.</p>
-</div>
-<div class="block">
 <div id="fig-tree" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tree-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -295,7 +298,7 @@ Figure&nbsp;2.2
 </div>
 </div>
 <div class="methodology">
-<p>Understanding the host is one of the first questions in viral research because it shapes where viruses are found, how they evolve, and which experimental and computational approaches are most appropriate.</p>
+<p><strong>Settle which host you are after before you touch the sample.</strong> A human virome is not only human viruses — the gut is full of bacteria, so it is full of their phages too. Whether you are chasing eukaryotic viruses, phages or both decides where you look, which reference you search, and how you read what comes back.</p>
 </div>
 </section>
 <section id="what-kind-of-genome-do-they-carry" class="level2">
@@ -341,7 +344,7 @@ Figure&nbsp;2.2
 </div>
 </div>
 <div class="methodology">
-<p>Before you ever sequence a sample, these differences determine which workflows are appropriate — and which ones will fail.</p>
+<p><strong>RNA forks into two protocols, and it is your sample that picks which one.</strong> With material to spare, you deplete the ribosomal RNA that dominates it and build the library by ligation, and the run stays quantitative. With almost nothing to start from, you have to amplify at random before there is anything to ligate — which buys you a library you could not otherwise build, and costs you the abundances. The <a href="../sections/how-to.html">How-to district</a> runs both.</p>
 </div>
 </section>
 <section id="how-do-they-exist" class="level2">

@@ -58,6 +58,12 @@
  .recipe li.warn .k{color:#B77413}
  @media(prefers-color-scheme:dark){.recipe li.warn{background:#3A2E18;border-color:#7A5A22}}
  .foot{margin-top:12px;font-size:11.5px;color:var(--muted);text-align:center;border-top:1px solid var(--line);padding-top:10px}
+ /* What the recipe is and is not. A wizard that hands you a protocol has to say
+    on the same screen that it is a recommendation — a caveat that lives only in
+    the chapter is a caveat in the wrong place. Dotted and neutral, the way the
+    book sets a Research Note. */
+ .scope{margin-top:16px;border:1px dashed var(--line);border-radius:8px;padding:11px 13px;font-size:12.5px;line-height:1.5;color:var(--muted)}
+ .scope b{color:var(--ink);font-weight:600}
 
  .opts.grid2{grid-template-columns:1fr 1fr;gap:9px}
  .opts.grid2 .opt{flex-direction:column;align-items:center;text-align:center;gap:5px;padding:12px 8px}
@@ -373,6 +379,7 @@ function drawSplit(S, A, B, note, note2){
       ${methodBlock("Method A","Integrated prophages","bulk metagenomics · no VLP", A, "integrated")}
       ${methodBlock("Method B","Free virions","VLP-enriched library", B, "free")}
     </div>
+    <p class="scope"><b>This is what we would do, not the only thing that works.</b> Fivi's recipes are the standard practice of one laboratory. A protocol that departs from this one for a stated reason is a good protocol — what the kitchen leaves out on purpose is the merely possible, so that a route you take is a route someone has walked.</p>
     <p class="foot">Two libraries, one honest picture. Fixed-logic demo, driven by the same estimates as the body heatmap.</p>
     <div class="nav" style="margin-top:14px"><button class="btn ghost" id="again">↺ Cook again</button><span></span></div>
    </div>`;
@@ -449,7 +456,8 @@ function draw(S,r){
    <p class="recipe-meta">${meta}</p>
    ${legendBlock(S, recipeUsesVLP())}
    <ul class="recipe">${r.map(x=>`<li class="${x[2]?'warn':''}"><span class="k">${x[0]}</span><span>${x[1]}</span></li>`).join("")}</ul>
-   <p class="foot">Fixed-logic demo, driven by the same estimates as the body heatmap. Soon: Fivi will reason your recipe live via an AI model.</p>
+   <p class="scope"><b>This is what we would do, not the only thing that works.</b> Fivi's recipes are the standard practice of one laboratory. A protocol that departs from this one for a stated reason is a good protocol — what the kitchen leaves out on purpose is the merely possible, so that a route you take is a route someone has walked.</p>
+    <p class="foot">Fixed-logic demo, driven by the same estimates as the body heatmap. Soon: Fivi will reason your recipe live via an AI model.</p>
    <div class="nav" style="margin-top:14px"><button class="btn ghost" id="again">↺ Cook again</button><span></span></div>
   </div>`;
  document.getElementById("again").onclick=()=>{step=-1;ans.sample=ans.target=ans.state=ans.genome=null;render();};
