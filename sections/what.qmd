@@ -13,8 +13,8 @@ assume viruses can be studied the same way.
 [They can't.]{.claim}
 
 Viruses don't follow a single experimental or computational workflow. Their
-biology is extraordinarily diverse, and every methodological decision begins
-with understanding what kind of virus you're actually looking for.
+biology is extraordinarily diverse, and depending on your question, your
+methodology can change completely.
 
 To understand why viruses require different approaches, you first need to
 understand how they are built.
@@ -36,23 +36,38 @@ Their structure is simple: a piece of genetic material — RNA or DNA, single- o
 double-stranded — wrapped in a protein shell called the **capsid**. Some viruses
 add an outer **lipid envelope**, stolen from the host and studded with **surface
 proteins** that help them latch onto host cells (like a coronavirus's spikes).
-
-Each of those parts costs you a decision at the bench. The envelope changes how
-the particle survives enrichment; the capsid is what lets you digest free
-nucleic acid away before lysis; and whether the genome is DNA or RNA decides the
-extraction — and whether the run needs a reverse-transcription step at all.
 ::::
 
 ::: insight
-What a virus *is* decides how you handle it at the bench — pin this down before
-you pick a protocol.
+Each of those structures will shape your decisions at the bench.
+:::
+
+::: block
+So when you design a protocol, go part by part: the envelope decides how the
+particle survives enrichment; the capsid is what lets you digest free nucleic
+acid away before lysis; and whether the genome is DNA or RNA decides the
+extraction — and whether the run needs a reverse-transcription step at all.
 :::
 
 ## How do we classify them?
 
 ::: block
-Viral diversity can feel overwhelming. Instead of memorizing every viral family
-or taxonomic group, let's organize this diversity around three questions:
+Viral diversity can feel overwhelming — they are extremely diverse, fast-evolving
+creatures.
+:::
+
+::: fivi
+![](../assets/img/fivi-thinking.png){fig-alt="Fivi, thinking."}
+
+**Don't look for us on the tree.** We aren't a branch of it — we're something
+that happens to every branch. Almost every living organism has viruses inside
+it. I infect bacteria; others infect archaea, and others infect you.
+:::
+
+::: block
+So instead of memorizing every viral family or taxonomic group — which can
+change from one month to the next — let's organize this diversity around three
+questions:
 :::
 
 ::: {.question .wide}
@@ -70,23 +85,15 @@ Unlike cellular organisms, viruses cannot replicate on their own. They lack the
 machinery needed to copy their genomes and instead rely on another living
 organism to do the job. That organism is the **host**.
 
-:::
-::: fivi
-![](../assets/img/fivi-thinking.png){fig-alt="Fivi, thinking."}
-
-**Don't look for us on the tree.** We aren't a branch of it — we're something
-that happens to every branch. I infect bacteria; others infect archaea, and
-others infect you.
-:::
-::: block
-
 ![](../assets/img/what/tree-of-life.svg){#fig-tree .wide fig-alt="Tree of life showing which virus type infects each domain: bacteriophages infect Bacteria, archaeal viruses infect Archaea, eukaryotic viruses infect Eukarya."}
 
 :::
+
 ::: methodology
-Understanding the host is one of the first questions in viral research because it
-shapes where viruses are found, how they evolve, and which experimental and
-computational approaches are most appropriate.
+**Settle which host you are after before you touch the sample.** A human virome
+is not only human viruses — the gut is full of bacteria, so it is full of their
+phages too. Whether you are chasing eukaryotic viruses, phages or both decides
+where you look, which reference you search, and how you read what comes back.
 :::
 
 ## What kind of genome do they carry?
@@ -151,8 +158,12 @@ most phages, herpes, adenovirus
 
 :::
 ::: methodology
-Before you ever sequence a sample, these differences determine which workflows
-are appropriate — and which ones will fail.
+**RNA forks into two protocols, and it is your sample that picks which one.**
+With material to spare, you deplete the ribosomal RNA that dominates it and
+build the library by ligation, and the run stays quantitative. With almost
+nothing to start from, you have to amplify at random before there is anything to
+ligate — which buys you a library you could not otherwise build, and costs you
+the abundances. The [How-to district](how-to.qmd) runs both.
 :::
 
 ## How do they exist?
