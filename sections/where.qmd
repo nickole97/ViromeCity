@@ -8,8 +8,10 @@ subtitle: "They're everywhere, but tiny."
 ## The short answer
 
 ::: block
-Viruses are found throughout the human body. They are among the most abundant
-biological entities associated with us — but they are also among the smallest.
+Everywhere! From the Antarctic ice, the deep sea and every gram of soil to your
+fingernail. Nobody has yet looked into an ecosystem and found it free of them.
+
+The human body is one of those ecosystems, and it is the one this book is about.
 :::
 
 ::: fig-pending
@@ -18,19 +20,23 @@ everything else, but they are tiny, and larger things crowd the frame.
 :::
 
 ::: block
-[However, most of what you sequence isn't viral.]{.claim}
+But being everywhere does not make them easy to find:
+
+[Most of what you sequence isn't viral.]{.claim}
 :::
 
 ## Why isn't most of it viral?
 
 ::: block
-To look for viruses, researchers often begin with shotgun metagenomic
-sequencing (NGS), which sequences all nucleic acids in a sample — not just
-viral ones.
+Today the most common way to study viral diversity and discover new viruses is
+shotgun metagenomic sequencing. But shotgun is not virus-specific: it reads
+every nucleic acid in the sample, and viral genomes are a small minority of what
+is there. In a stool sample, for example, bacterial, host and dietary sequences
+vastly outnumber viral ones.
 
-The result is a sequencing library where viral sequences represent only a small
-fraction of the total. In a stool sample, for example, bacterial, host and
-dietary sequences vastly outnumber viral ones.
+And a virus carries very little of it. Tens of kilobases against the few
+megabases of the bacterium it infects. Abundance is counted in particles;
+sequencing is counted in bases.
 :::
 
 ![What a stool sequencing library is made of.](../assets/img/where/stool-composition.svg){#fig-stool fig-alt="A colon, coloured along its length: almost all of it is bacterial and dietary background, with a small viral fraction and a host fraction at the end."}
