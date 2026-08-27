@@ -623,6 +623,21 @@ figcaption {
   line-height: 1.5;
 }
 
+// A housekeeping line under a figure: "this one is being redrawn". Deliberately
+// not a component — no colour, no border, no kicker — because it is about the
+// figure's status and not its content, and it is meant to be deleted when the
+// new art lands rather than lived with. Quieter than a caption for the same
+// reason. Distinct from .fig-pending, which holds the slot of a figure that does
+// not exist yet; this one annotates a figure that does.
+.fig-note {
+  display: block;
+  font-family: var(--sans);
+  font-size: .76rem;
+  line-height: 1.5;
+  color: var(--muted);
+  margin: -.4rem 0 var(--sp-para);
+}
+
 // ---------- sidebar ----------
 // The book's spine. The job here is hierarchy: a reader should tell a group
 // label from a chapter at a glance, without reading either. Group labels borrow

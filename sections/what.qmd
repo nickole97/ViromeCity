@@ -229,11 +229,13 @@ particle.
 ::::
 :::::
 
+[\* This figure is being redrawn.]{.fig-note}
+
 :::
 ::: fivi
 ![](../assets/img/fivi-surprised.png){fig-alt="Fivi, surprised."}
 
-**Don't overlook this axis.** Biological state may determine whether your
+**Don't forget this axis.** Biological state may determine whether your
 workflow finds me at all. We'll put this into practice in the
 [How-to district](how-to.qmd).
 :::
