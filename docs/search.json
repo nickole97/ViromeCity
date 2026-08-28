@@ -154,7 +154,7 @@
     "href": "sections/where.html#the-short-answer",
     "title": "Where do viruses hide?",
     "section": "",
-    "text": "Everywhere! From the Antarctic ice, the deep sea and every gram of soil to your fingernail. Nobody has yet looked into an ecosystem and found it free of them.\nThe human body is one of those ecosystems, and it is the one this book is about.\n\n\nThe viral world. Viruses are everywhere in the body and outnumber everything else, but they are tiny, and larger things crowd the frame.\n\n\nBut being everywhere does not make them easy to find:\nMost of what you sequence isn’t viral.",
+    "text": "From the Antarctic ice, the deep sea and every gram of soil to your fingernail. Nobody has yet looked into an ecosystem and found it free of them.\nThe human body is one of those ecosystems, and it is the one this book is about.\n\n\nThe viral world. Viruses are everywhere in the body and outnumber everything else, but they are tiny, and larger things crowd the frame.\n\n\nBut being everywhere does not make them easy to find:\nMost of what you sequence isn’t viral.",
     "crumbs": [
       "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
@@ -165,7 +165,7 @@
     "href": "sections/where.html#why-isnt-most-of-it-viral",
     "title": "Where do viruses hide?",
     "section": "Why isn’t most of it viral?",
-    "text": "Why isn’t most of it viral?\n\nToday the most common way to study viral diversity and discover new viruses is shotgun metagenomic sequencing. But shotgun is not virus-specific: it reads every nucleic acid in the sample, and viral genomes are a small minority of what is there. In a stool sample, for example, bacterial, host and dietary sequences vastly outnumber viral ones.\nAnd a virus carries very little of it. Tens of kilobases against the few megabases of the bacterium it infects. Abundance is counted in particles; sequencing is counted in bases.\n\n\n\n\n\n\n\nFigure 4.1: What a stool sequencing library is made of.",
+    "text": "Why isn’t most of it viral?\n\nToday the most common way to study viral diversity and discover new viruses is shotgun metagenomic sequencing. But shotgun is not virus-specific: it reads every nucleic acid in the sample, and viral genomes are a small minority of what is there. In a stool sample, for example, bacterial, host and dietary sequences vastly outnumber viral ones.\nAnd a virus carries very little of it. Tens of kilobases against the few megabases of the bacterium it infects. Abundance is counted in particles; sequencing is counted in bases.\n\n\n\n\n\n\n\nFigure 4.1: What a stool sequencing library is made of.\n\n\n\n\nThis is the hardest thing about sequencing a virome. You are after the smallest thing in the sample, and the machine counts bases, not particles. Everything the bench does about it, from filtering to digesting to enriching, is the How-to district.",
     "crumbs": [
       "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
@@ -176,7 +176,7 @@
     "href": "sections/where.html#does-it-change-with-the-body-site",
     "title": "Where do viruses hide?",
     "section": "Does it change with the body site?",
-    "text": "Does it change with the body site?\n\nThat sliver isn’t fixed — it varies enormously by where the sample came from. Blood, lung and stool start from completely different mixes.\n\n\nVirome by body compartment\nToggle a variable and hover a compartment to see how the mix changes across the body.\n\n\nOpen full ↗ · Compare all four side by side ↗\n\n\n\nThe map shows that it changes. This shows by how much: the same three bands, in four places.\n\n\nWhat’s in the sample?\nSequencing reads everything. What competes with your virus — and whether you can recover it at all — depends on where the sample came from. Click a column.\n\n\nOpen full ↗",
+    "text": "Does it change with the body site?\n\nHave you ever seen a tiger at the North Pole, or a wax palm growing in Switzerland? Living things belong to specific ecosystems, decided by their physiology and their evolution. The microorganisms are no different, viruses included.\nThe human body is not one habitat but many. The gut is warm, crowded and without oxygen; the skin is dry, salty and exposed. Different conditions, different diversity (richness and abundance).\n\n\nHere is a closer look at what you would find across four body sites, if you sequenced each of them in bulk.\n\n\nWhat’s in the sample?\nSequencing reads everything. What competes with your virus, and whether you can recover it at all, depends on where the sample came from. Click a column.\n\n\nOpen full ↗\n\n\n\nEach site differs in what lives there. It also differs in how hard it is to reach: how much host you are fighting, how little material you have to start from, and how much of what you detect never came from the body at all.\n\n\nVirome by body compartment\nToggle a variable and hover a compartment to see how the mix changes across the body.\n\n\nOpen full ↗ · Compare all four side by side ↗",
     "crumbs": [
       "The five districts",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Where do viruses hide?</span>"
