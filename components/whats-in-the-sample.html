@@ -52,6 +52,17 @@ h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(23px,3
 .dots b.off{background:none;border:1px solid var(--bio);opacity:.4}
 .biotxt{font-size:11.5px;color:var(--bio-ink)}
 
+/* The viral band drawn honestly is a hairline, which is the argument — but four
+   hairlines cannot be compared to each other. This strip re-plots just that band
+   on a log axis, because the real values span from 3% to 0.05% and a linear
+   magnification leaves blood invisible all over again. */
+.vzoom{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule)}
+.vzoomlab{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:1.2px;color:var(--faint)}
+.vzoomgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:10px;text-align:center}
+.vbar{height:56px;display:flex;align-items:flex-end;justify-content:center}
+.vbar i{display:block;width:24px;background:var(--virus);border-radius:2px 2px 0 0;min-height:2px}
+.vtxt{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--virus);margin-top:6px}
+
 .detail{margin-top:24px;border:1px solid var(--rule);border-radius:9px;padding:20px 22px;
   background:#fff;min-height:150px}
 .detail h2{font-family:"Space Grotesk",sans-serif;font-size:17px;font-weight:700;margin:0 0 4px}
@@ -96,9 +107,14 @@ h1{font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:clamp(23px,3
     <div class="biogrid" id="biogrid"></div>
   </div>
 
+  <div class="vzoom">
+    <div class="vzoomlab">VIRAL FRACTION ALONE &middot; LOG SCALE</div>
+    <div class="vzoomgrid" id="vzoomgrid"></div>
+  </div>
+
   <div class="detail" id="detail"></div>
 
-  <p class="note">Educational and schematic, not statistical — bar heights are illustrative and thin bands are drawn thicker so they stay visible. Adult samples; values shift with collection, extraction and library protocol. † Sources disagree: HMP swab data report &gt;90% host for vaginal and skin. Biomass, not host fraction, is what predicts recovery.</p>
+  <p class="note">The stacked bars are drawn to scale: the viral band really is a hairline, and in blood it is thinner than the line that draws it. The strip below re-plots that band alone on a log axis, because the four sites span from about 3% down to under 0.1% and no linear magnification shows all four at once. Adult samples; values shift with collection, extraction and library protocol. † Sources disagree: HMP swab data report &gt;90% host for vaginal and skin. Biomass, not host fraction, is what predicts recovery.</p>
 </div>
 
 <script>
@@ -137,7 +153,7 @@ const ICONS={
 
 const SITES=[
  {id:"stool", name:"Stool", dag:false,
-  draw:{rest:95,host:2,virus:3}, host:"&lt;1%", virus:"~1–5%",
+  draw:{rest:95,host:2,virus:3}, vtrue:3, host:"&lt;1%", virus:"~1–5%",
   bio:4, biotxt:"very high",
   rest:"The gut's own microbiome, plus dietary DNA and a large unclassified fraction.",
   hostWhy:"Barely any human DNA survives the trip. Stool is the rare human sample where you are not the problem.",
@@ -146,7 +162,7 @@ const SITES=[
   src:"Host: HMP via Marotz et al. 2018, Microbiome (PMID 29482639). Virus: bulk vs VLP comparison, bioRxiv 2025.10.23.683462. Diet: Diener &amp; Gibbons, Nat Metab 2025."},
 
  {id:"vaginal", name:"Vaginal", dag:true,
-  draw:{rest:72,host:25,virus:3}, host:"low–med", virus:"~1–5%",
+  draw:{rest:72,host:25,virus:3}, vtrue:3, host:"low–med", virus:"~1–5%",
   bio:3, biotxt:"high",
   rest:"A dense but low-diversity community, dominated by Lactobacillus.",
   hostWhy:"Epithelial cells shed into the swab. Note that HMP swab data put this above 90% — far higher than the estimate drawn here.",
@@ -155,7 +171,7 @@ const SITES=[
   src:"Host: HMP via Marotz et al. 2018 (n=103 vaginal); estimate shown follows the body-compartment figure."},
 
  {id:"skin", name:"Skin", dag:true,
-  draw:{rest:63,host:35,virus:2}, host:"20–50%", virus:"~0.1–2%",
+  draw:{rest:64,host:35,virus:1}, vtrue:1, host:"20–50%", virus:"~0.1–2%",
   bio:2, biotxt:"low–medium",
   rest:"A real but sparse community — and at this biomass, reagent contamination starts competing with biology.",
   hostWhy:"Keratinocytes come off with every swab. Reported anywhere from 50% to over 90% depending on the study.",
@@ -164,7 +180,7 @@ const SITES=[
   src:"Host: HMP via Marotz et al. 2018 (n=29 skin); ~50% average reported in Comms Biol 2024 (s42003-024-07290-3)."},
 
  {id:"blood", name:"Blood / plasma", dag:false,
-  draw:{rest:10,host:88,virus:2}, host:"80–95%", virus:"&lt;0.1%",
+  draw:{rest:11.95,host:88,virus:0.05}, vtrue:0.05, host:"80–95%", virus:"&lt;0.1%",
   bio:1, biotxt:"very low",
   rest:"There is no resident community here. Most of what is left is reagent contamination and unclassified reads.",
   hostWhy:"Circulating cell-free human DNA. The sample is mostly you — around 97% in plasma and 99.9% in whole blood.",
@@ -175,6 +191,7 @@ const SITES=[
 
 const chart=document.getElementById("chart");
 const biogrid=document.getElementById("biogrid");
+const vzoomgrid=document.getElementById("vzoomgrid");
 const detail=document.getElementById("detail");
 
 SITES.forEach(s=>{
@@ -184,7 +201,7 @@ SITES.forEach(s=>{
   b.innerHTML=`<span class="icon">${ICONS[s.id]}</span><span class="stack">
       <i style="flex:${s.draw.rest};background:var(--rest)"></i>
       <i style="flex:${s.draw.host};min-height:6px;background:var(--host)"></i>
-      <i style="flex:${s.draw.virus};min-height:6px;background:var(--virus)"></i>
+      <i style="flex:${s.draw.virus};min-height:1px;background:var(--virus)"></i>
     </span>
     <span class="nm">${s.name}${s.dag?' <span class="dag">†</span>':''}</span>
     <span class="val h">host ${s.host}</span>
@@ -197,6 +214,13 @@ SITES.forEach(s=>{
     [1,2,3,4].map(n=>`<b class="${n<=s.bio?'':'off'}"></b>`).join("")
   }</span><span class="biotxt">${s.biotxt}</span>`;
   biogrid.appendChild(d);
+
+  // log10 mapped over 0.01%–10%, the range the four sites live in.
+  const h = Math.max(2, Math.round((Math.log10(s.vtrue) + 2) / 3 * 56));
+  const v = document.createElement("div");
+  v.innerHTML = `<span class="vbar"><i style="height:${h}px"></i></span>` +
+                `<span class="vtxt">${s.virus}</span>`;
+  vzoomgrid.appendChild(v);
 });
 
 function select(id){
