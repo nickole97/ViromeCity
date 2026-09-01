@@ -49,7 +49,7 @@ the techniques for dealing with it in the [How-to district](how-to.qmd).
 ## Does it change with the body site?
 
 ::: block
-Have you ever seen a tiger at the North Pole, or a wax palm growing in
+Have you ever seen a tiger at the North Pole, or a baobab growing in
 Switzerland? Living things belong to specific ecosystems, decided by their
 physiology and their evolution. The microorganisms are no different, viruses
 included.
