@@ -194,7 +194,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#why-isnt-most-of-it-viral" id="toc-why-isnt-most-of-it-viral" class="nav-link" data-scroll-target="#why-isnt-most-of-it-viral">Why isn’t most of it viral?</a></li>
   <li><a href="#does-it-change-with-the-body-site" id="toc-does-it-change-with-the-body-site" class="nav-link" data-scroll-target="#does-it-change-with-the-body-site">Does it change with the body site?</a></li>
   <li><a href="#is-the-site-the-whole-story" id="toc-is-the-site-the-whole-story" class="nav-link" data-scroll-target="#is-the-site-the-whole-story">Is the site the whole story?</a></li>
-  <li><a href="#why-is-so-much-of-it-unclassified" id="toc-why-is-so-much-of-it-unclassified" class="nav-link" data-scroll-target="#why-is-so-much-of-it-unclassified">Why is so much of it unclassified?</a></li>
+  <li><a href="#what-other-barriers-are-there" id="toc-what-other-barriers-are-there" class="nav-link" data-scroll-target="#what-other-barriers-are-there">What other barriers are there?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/nickole97/ViromeCity/edit/main/sections/where.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nickole97/ViromeCity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -288,20 +288,8 @@ Figure&nbsp;4.1: What a stool sequencing library is made of.
 <section id="is-the-site-the-whole-story" class="level2">
 <h2 class="anchored" data-anchor-id="is-the-site-the-whole-story">Is the site the whole story?</h2>
 <div class="block">
-<p><span class="claim">Site isn’t the whole story.</span></p>
-<p>Sorting a human virome by collection site alone is too simplistic. The virome shifts with many ecological traits of the host — age, sex, geography, even social setting — and all of these belong in your experimental design.</p>
-<p>Age is the one with the clearest shape.</p>
-</div>
-<div class="embed">
-<p><span class="embed-title">Viral richness across the lifespan</span></p>
-<p>How many distinct viruses a person carries is not a constant — it changes with age.</p>
-<iframe src="../components/richness-curve.html" title="Viral richness across the human lifespan" loading="lazy"></iframe>
-<div class="embed-out">
-<p><a href="../components/richness-curve.html" target="_blank">Open full ↗</a></p>
-</div>
-</div>
-<div class="block">
-<p>And it is not alone. Everything from where you were born to what you took last month has been measured against the virome, and the findings sort themselves along one axis: how early and how structural the exposure is.</p>
+<p>Would you expect someone born in the United States, eating a classic Western diet, to carry the same viruses as someone living in the Amazon on an Indigenous diet? Intuitively, no: lifestyle, diet, age and geography all shape these communities. But even two people living under the same roof may carry different ones, because of something as simple as what they eat or who they spend their days with.</p>
+<p>This is worth holding on to before you design an experiment, because host ecology will either strengthen your conclusions or undermine them, depending on whether you planned for it. So here is the whole landscape at once: which variables move with the ecology of the host, and how much they actually move.</p>
 </div>
 <div class="embed">
 <p><span class="embed-title">What shapes a virome, and how much</span></p>
@@ -311,11 +299,28 @@ Figure&nbsp;4.1: What a stool sequencing library is made of.
 <p><a href="../components/lifestyleviromefigure.html" target="_blank">Open full ↗</a></p>
 </div>
 </div>
-</section>
-<section id="why-is-so-much-of-it-unclassified" class="level2">
-<h2 class="anchored" data-anchor-id="why-is-so-much-of-it-unclassified">Why is so much of it unclassified?</h2>
 <div class="block">
-<p>The databases you classify against were built from public metagenomes, and those metagenomes did not come from everywhere. More than 71% of public human microbiome samples with a known origin come from Europe, the US and Canada — 46.8% from the US alone, a country holding 4.3% of the world’s population. A library from an under-represented population will leave a larger unclassified fraction than one from a well-sampled one, and it will read not as biology but as a pipeline that failed.</p>
+<p>Most of these turn out to be weak, and the hollow ones wash out again. Age is different. It has a shape clear enough to design around.</p>
+</div>
+<div class="embed">
+<p><span class="embed-title">Viral richness across the lifespan</span></p>
+<p>How many distinct viruses a person carries is not a constant. It changes with age.</p>
+<iframe src="../components/richness-curve.html" title="Viral richness across the human lifespan" loading="lazy"></iframe>
+<div class="embed-out">
+<p><a href="../components/richness-curve.html" target="_blank">Open full ↗</a></p>
+</div>
+</div>
+</section>
+<section id="what-other-barriers-are-there" class="level2">
+<h2 class="anchored" data-anchor-id="what-other-barriers-are-there">What other barriers are there?</h2>
+<div class="block">
+<p>A bias that is easy to miss: what has never been sequenced cannot be in the database you classify against. Sequencing has spread a great deal, but when 444,829 public human microbiome samples were catalogued in 2021, 71.2% of those with an identifiable origin came from Europe, the US and Canada; 46.8% from the US alone, a country holding 4.3% of the world’s population.</p>
+<p>That gap is not only scientific. It tracks funding and infrastructure, which means the populations missing from the reference are usually the ones with least access to the sequencing that would put them in it.</p>
+<p>For viromes the gap is wider still. A 2025 Chinese gut virus catalogue checked its 93,462 viral operational taxonomic units (vOTUs) against four existing references and found 73.2% of them absent. An atlas of six sites across four African countries recovered 40,135 viral genomes unknown to the reference, alongside 1,005 prokaryotic ones, from the same samples and the same pipeline. Those are different units measured against references of very different sizes, so the ratio means little. The direction does not: the bacterial side of that data was largely described already, and the viral side was not.</p>
+<p>The consequence is concrete. A library from an under-represented population will leave a larger unclassified fraction than one from a well-sampled population. That is not your pipeline failing, and it belongs in your conclusions.</p>
+</div>
+<div class="block">
+<p>The map below counts what was public in 2021. Burkina Faso appears on it with 17 samples; the African atlas has since added 384 from one site alone.</p>
 </div>
 <div class="embed">
 <p><span class="embed-title">Public samples per country, relative to population</span></p>

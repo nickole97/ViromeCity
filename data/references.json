@@ -260,6 +260,24 @@
         "title_contains": "metagenomic analysis of the human gut",
         "year": 2026
       }
+    },
+    {
+      "id": "maghini2025",
+      "type": "doi",
+      "value": "10.1038/s41586-024-08485-8",
+      "expected": {
+        "title_contains": "expanding the human gut microbiome atlas",
+        "year": 2025
+      }
+    },
+    {
+      "id": "yan2025",
+      "type": "doi",
+      "value": "10.1186/s13073-025-01460-6",
+      "expected": {
+        "title_contains": "the chinese gut virus catalogue reveals",
+        "year": 2025
+      }
     }
   ]
 }

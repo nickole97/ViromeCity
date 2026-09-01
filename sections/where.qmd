@@ -103,34 +103,17 @@ body.
 ## Is the site the whole story?
 
 ::: block
-[Site isn't the whole story.]{.claim}
+Would you expect someone born in the United States, eating a classic Western
+diet, to carry the same viruses as someone living in the Amazon on an Indigenous
+diet? Intuitively, no: lifestyle, diet, age and geography all shape these
+communities. But even two people living under the same roof may carry different
+ones, because of something as simple as what they eat or who they spend their
+days with.
 
-Sorting a human virome by collection site alone is too simplistic. The virome
-shifts with many ecological traits of the host — age, sex, geography, even
-social setting — and all of these belong in your experimental design.
-
-Age is the one with the clearest shape.
-:::
-
-::: embed
-[Viral richness across the lifespan]{.embed-title}
-
-How many distinct viruses a person carries is not a constant — it changes with
-age.
-
-```{=html}
-<iframe src="../components/richness-curve.html" title="Viral richness across the human lifespan" loading="lazy"></iframe>
-```
-
-::: embed-out
-[Open full ↗](../components/richness-curve.html){target="_blank"}
-:::
-:::
-
-::: block
-And it is not alone. Everything from where you were born to what you took last
-month has been measured against the virome, and the findings sort themselves
-along one axis: how early and how structural the exposure is.
+This is worth holding on to before you design an experiment, because host
+ecology will either strengthen your conclusions or undermine them, depending on
+whether you planned for it. So here is the whole landscape at once: which
+variables move with the ecology of the host, and how much they actually move.
 :::
 
 ::: embed
@@ -150,16 +133,56 @@ its DOI.
 :::
 :::
 
-## Why is so much of it unclassified?
+::: block
+Most of these turn out to be weak, and the hollow ones wash out again. Age is
+different. It has a shape clear enough to design around.
+:::
+
+::: embed
+[Viral richness across the lifespan]{.embed-title}
+
+How many distinct viruses a person carries is not a constant. It changes with
+age.
+
+```{=html}
+<iframe src="../components/richness-curve.html" title="Viral richness across the human lifespan" loading="lazy"></iframe>
+```
+
+::: embed-out
+[Open full ↗](../components/richness-curve.html){target="_blank"}
+:::
+:::
+
+## What other barriers are there?
 
 ::: block
-The databases you classify against were built from public metagenomes, and those
-metagenomes did not come from everywhere. More than 71% of public human
-microbiome samples with a known origin come from Europe, the US and Canada —
-46.8% from the US alone, a country holding 4.3% of the world's population. A
-library from an under-represented population will leave a larger unclassified
-fraction than one from a well-sampled one, and it will read not as biology but
-as a pipeline that failed.
+A bias that is easy to miss: what has never been sequenced cannot be in the
+database you classify against. Sequencing has spread a great deal, but when
+444,829 public human microbiome samples were catalogued in 2021, 71.2% of those
+with an identifiable origin came from Europe, the US and Canada; 46.8% from the
+US alone, a country holding 4.3% of the world's population.
+
+That gap is not only scientific. It tracks funding and infrastructure, which
+means the populations missing from the reference are usually the ones with least
+access to the sequencing that would put them in it.
+
+For viromes the gap is wider still. A 2025 Chinese gut virus catalogue checked
+its 93,462 viral operational taxonomic units (vOTUs) against four existing
+references and found 73.2% of them absent. An atlas of six sites across four
+African countries recovered 40,135 viral genomes unknown to the reference,
+alongside 1,005 prokaryotic ones, from the same samples and the same pipeline.
+Those are different units measured against references of very different sizes,
+so the ratio means little. The direction does not: the bacterial side of that
+data was largely described already, and the viral side was not.
+
+The consequence is concrete. A library from an under-represented population will
+leave a larger unclassified fraction than one from a well-sampled population.
+That is not your pipeline failing, and it belongs in your conclusions.
+:::
+
+::: block
+The map below counts what was public in 2021. Burkina Faso appears on it with 17
+samples; the African atlas has since added 384 from one site alone.
 :::
 
 ::: embed
