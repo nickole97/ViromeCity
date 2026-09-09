@@ -278,6 +278,15 @@
         "title_contains": "the chinese gut virus catalogue reveals",
         "year": 2025
       }
+    },
+    {
+      "id": "wang2025cgvr",
+      "type": "doi",
+      "value": "10.1186/s40168-025-02185-9",
+      "expected": {
+        "title_contains": "the genetic diversity and populational specificity",
+        "year": 2025
+      }
     }
   ]
 }

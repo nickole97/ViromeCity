@@ -163,27 +163,34 @@ live in, or for the way the same disease gets treated at five and at fifty?
 ## What other barriers are there?
 
 ::: block
-A bias that is easy to miss: what has never been sequenced cannot be in the
-database you classify against. Sequencing has spread a great deal, but when
-444,829 public human microbiome samples were catalogued in 2021, 71.2% of those
-with an identifiable origin came from Europe, the US and Canada; 46.8% from the
-US alone, a country holding 4.3% of the world's population.
+There is one more challenge when analysing human viromes. Like all genomic
+science, virome analysis leans on reference databases, and most of the world's
+viral genome sequences come from the Global North. Of 444,829 public human
+microbiome samples catalogued in 2021, more than 71% of those with an
+identifiable origin came from Europe, the United States and Canada; the United
+States alone accounted for 46.8%, from 4.3% of the world's population. The
+Unified Human Gut Virome catalogue, which merges twelve existing datasets, draws
+about 83% of its metagenomic samples from Western populations.
 
 That gap is not only scientific. It tracks funding and infrastructure, which
 means the populations missing from the reference are usually the ones with least
 access to the sequencing that would put them in it.
 
-For viromes the gap is wider still. A 2025 Chinese gut virus catalogue checked
-its 93,462 viral operational taxonomic units (vOTUs) against four existing
-references and found 73.2% of them absent. An atlas of six sites across four
-African countries recovered 40,135 viral genomes unknown to the reference,
-beside 1,005 prokaryotic ones, from the same samples and the same pipeline. Not
-a ratio to quote, but the direction is not subtle: the bacterial side of that
-data was largely described already, and the viral side was not.
+For viromes it is wider still. In 2025 a group deeply sequenced 3,234 faecal
+samples from across China and assembled 72,751 viral operational taxonomic units
+(vOTUs); nearly 90% of them appear to be absent from existing databases. Those
+viruses were not new. The database was simply missing them.
 
-The consequence is concrete. A library from an under-represented population will
-leave a larger unclassified fraction than one from a well-sampled population.
-That is not your pipeline failing, and it belongs in your conclusions.
+A virus that is common where nobody has sequenced is a virus your pipeline
+cannot name, and it comes back to you as dark matter. That is not your pipeline
+failing, and it belongs in your conclusions.
+:::
+
+::: research
+Where the numbers in this section come from. The 2021 census of public samples:
+[Abdill, Adamowicz & Blekhman, *PLOS Biology* 2022](https://doi.org/10.1371/journal.pbio.3001536).
+The Chinese Gut Viral Reference, and the 83% figure for the UHGV catalogue:
+[Wang et al., *Microbiome* 2025](https://doi.org/10.1186/s40168-025-02185-9).
 :::
 
 ::: embed
