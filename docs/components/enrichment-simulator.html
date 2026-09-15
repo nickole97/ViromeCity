@@ -4,9 +4,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>One sample, three protocols</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;700&display=swap">
 <style>
   :root {
-    --paper:#ffffff; --panel:#fafafa; --ink:#16181c; --muted:#5f6570; --line:#dcdee3;
+    /* Version B, restated: this page cannot import assets/styles.scss. The data
+       ramp below is Okabe-Ito and is deliberately left colourblind-safe. */
+    --paper:#ffffff; --panel:#F7F9FB; --ink:#14213D; --muted:#5C6B82; --line:#E2E6EC;
     --dsDNA:#0072B2; --ssDNA:#56B4E9; --ssRNA:#D55E00; --dsRNA:#CC79A7;
     --bact:#8a8f98; --host:#6f747d; --dna:#a8adb5;
     --ok:#009E73; --warn:#E69F00; --lost:#D55E00;
@@ -15,11 +20,15 @@
   * { box-sizing:border-box; }
   body {
     margin:0; background:var(--paper); color:var(--ink);
-    font:14px/1.5 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font:14px/1.5 "IBM Plex Sans", ui-sans-serif, system-ui, sans-serif;
     -webkit-font-smoothing:antialiased;
   }
   .wrap { max-width:1280px; margin:0 auto; padding:28px 20px 60px; }
-  h1 { font-size:22px; margin:0 0 6px; letter-spacing:-0.2px; }
+  h1 { font-family:"Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+       font-weight:600; font-size:22px; margin:0 0 6px; letter-spacing:-0.2px; }
+  h3 { font-family:"Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+       font-weight:600; }
+  .status, .metric, .legend { font-family:"IBM Plex Mono", ui-monospace, monospace; }
   .sub { color:var(--muted); font-size:13.5px; margin:0 0 22px; max-width:820px; }
 
   .controls {
@@ -258,7 +267,6 @@ function readTheme(){
   };
 }
 readTheme();
-if (window.matchMedia) matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => { readTheme(); draw(); });
 
 /* body colour: an integrated virus is drawn as its carrier, because that is what
    the protocol physically handles. The viral payload is drawn inside it. */

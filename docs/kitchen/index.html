@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Fivi's Kitchen — Virome City</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;700&display=swap">
 <style>
- :root{ --paper:#FBF9F4; --ink:#20201C; --muted:#6E6C63; --line:#E4E1D8; --surface:#FFFFFF; --accent:#0F6E56; --pink:#FBEAF0; --pinkink:#72243E;
-   --sans:"Spline Sans",ui-sans-serif,system-ui,sans-serif; --display:"Fraunces",Georgia,serif; --mono:ui-monospace,monospace; }
- @media (prefers-color-scheme: dark){ :root{ --paper:#17181A; --ink:#ECEAE3; --muted:#9B998F; --line:#33342F; --surface:#1F2022; --accent:#3FB08C; --pink:#3A2430; --pinkink:#F3C9D8; } }
+ /* Version B of the design system, restated here because this page cannot import
+    assets/styles.scss. Change a value in the stylesheet and change it here too.
+    No dark block: the book is light only, and a widget that inverted on a dark
+    OS was the one place that broke it. */
+ :root{ --paper:#FFFFFF; --ink:#14213D; --muted:#5C6B82; --line:#E2E6EC; --surface:#FFFFFF;
+   --accent:#0891B2; --purple:#6C63C9; --coral:#E85D4E; --star:#D99A1B;
+   --wash:#F7F9FB; --radius:8px;
+   --sans:"IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+   --display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+   --mono:"IBM Plex Mono",ui-monospace,monospace; }
  *{box-sizing:border-box}
  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--sans);line-height:1.55;display:flex;justify-content:center;padding:26px 18px;min-height:100vh}
  .doc{width:100%;max-width:580px;transition:max-width .25s ease}
@@ -13,10 +23,10 @@
  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);text-align:center;margin:0 0 6px}
  h1{font-family:var(--display);font-weight:600;font-size:34px;margin:0 0 6px;text-align:center;letter-spacing:-.01em}
  .dek{font-size:14px;color:var(--muted);text-align:center;margin:0 auto 20px;max-width:440px}
- .card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px 22px;box-shadow:0 3px 14px rgba(0,0,0,.05)}
+ .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;box-shadow:0 3px 14px rgba(0,0,0,.05)}
  /* hero */
- .hero{width:100%;border-radius:20px;border:1px solid var(--line);margin-bottom:16px;box-shadow:0 3px 14px rgba(0,0,0,.06)}
- .btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:13px 26px;border-radius:12px;cursor:pointer;border:1px solid var(--accent);background:var(--accent);color:#fff;transition:transform .1s, opacity .15s}
+ .hero{width:100%;border-radius:var(--radius);border:1px solid var(--line);margin-bottom:16px;box-shadow:0 3px 14px rgba(0,0,0,.06)}
+ .btn{font-family:var(--sans);font-size:15px;font-weight:600;padding:13px 26px;border-radius:var(--radius);cursor:pointer;border:1px solid var(--ink);background:var(--ink);color:#fff;transition:transform .1s, opacity .15s}
  .btn:hover{opacity:.92}.btn:active{transform:scale(.98)}
  .btn.ghost{background:var(--surface);color:var(--ink);border-color:var(--line)}
  .btn:disabled{opacity:.4;cursor:not-allowed}
@@ -28,16 +38,16 @@
  .step-tag{font-family:var(--mono);font-size:11px;color:var(--muted);margin:0 0 4px}
  .q{font-family:var(--display);font-size:21px;font-weight:600;margin:0 0 15px}
  .opts{display:grid;gap:10px;margin-bottom:14px}
- .opt{text-align:left;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:11px}
+ .opt{text-align:left;font-family:var(--sans);font-size:15px;color:var(--ink);background:var(--paper);border:1.5px solid var(--line);border-radius:var(--radius);padding:13px 15px;cursor:pointer;transition:all .15s;display:flex;align-items:center;gap:11px}
  .opt .emoji{font-size:19px}
  .opt:hover{border-color:var(--accent)}
- .opt.sel{border-color:var(--accent);background:rgba(15,110,86,.09);font-weight:600}
+ .opt.sel{border-color:var(--accent);background:rgba(8,145,178,.08);font-weight:600}
  /* Fivi speech bubble */
- .bubble{display:flex;gap:12px;align-items:center;background:var(--pink);border-radius:14px;padding:11px 14px;margin:6px 0 16px;opacity:0;transform:translateY(6px);transition:opacity .25s, transform .25s}
+ .bubble{display:flex;gap:12px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:11px 14px;margin:6px 0 16px;opacity:0;transform:translateY(6px);transition:opacity .25s, transform .25s}
  .bubble.show{opacity:1;transform:none}
  .bubble img{width:52px;height:auto;flex:0 0 auto}
- .bubble p{margin:0;font-size:13.5px;line-height:1.45;color:var(--pinkink)}
- .bubble .name{font-weight:700}
+ .bubble p{margin:0;font-family:var(--display);font-size:13.5px;font-weight:500;line-height:1.45;color:var(--ink)}
+ .bubble .name{font-weight:700;color:var(--coral)}
  .nav{display:flex;justify-content:space-between;gap:10px;margin-top:4px}
  /* cooking */
  .cooking{text-align:center;padding:14px 0 18px}
@@ -52,11 +62,10 @@
  .recipe-head h2{font-family:var(--display);font-size:24px;margin:0}
  .recipe-meta{font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em;margin:0 0 14px}
  .recipe{list-style:none;margin:0;padding:0;display:grid;gap:10px}
- .recipe li{display:flex;gap:11px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px 14px;font-size:14px}
+ .recipe li{display:flex;gap:11px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:12px 14px;font-size:14px}
  .recipe .k{font-family:var(--mono);font-size:10.5px;color:var(--accent);flex:0 0 70px;padding-top:2px;text-transform:uppercase;font-weight:700}
- .recipe li.warn{background:#FFF4E0;border-color:#E4B062}
- .recipe li.warn .k{color:#B77413}
- @media(prefers-color-scheme:dark){.recipe li.warn{background:#3A2E18;border-color:#7A5A22}}
+ .recipe li.warn{background:#FDF4E3;border-color:#E8C77A}
+ .recipe li.warn .k{color:#9A6B0F}
  .foot{margin-top:12px;font-size:11.5px;color:var(--muted);text-align:center;border-top:1px solid var(--line);padding-top:10px}
  /* What the recipe is and is not. A wizard that hands you a protocol has to say
     on the same screen that it is a recommendation — a caveat that lives only in
@@ -74,18 +83,17 @@
 
  .methods{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:2px 0 4px}
  @media(max-width:640px){.methods{grid-template-columns:1fr}}
- .method{border:1px solid var(--line);border-radius:16px;padding:16px 16px 6px;background:var(--paper);margin:0}
+ .method{border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 6px;background:var(--paper);margin:0}
  .method-head{display:flex;align-items:center;gap:9px;margin:0 0 3px}
- .method-head .tag{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--accent);border-radius:6px;padding:2px 8px;letter-spacing:.03em}
+ .method-head .tag{font-family:var(--mono);font-size:11px;font-weight:700;color:#fff;background:var(--ink);border-radius:6px;padding:2px 8px;letter-spacing:.03em}
  .method-head h4{margin:0;font-family:var(--display);font-size:18px;color:var(--ink)}
  .method-head .micon{width:46px;height:46px;margin-left:auto;margin-top:0}
  .micon{display:inline-flex;width:72px;height:72px;flex:0 0 auto;vertical-align:middle;margin-left:8px;margin-top:6px}
  .micon svg{width:100%;height:100%;display:block}
  .method .msub{font-family:var(--mono);font-size:10px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:0 0 12px}
- .split-note{display:flex;gap:11px;align-items:center;background:#FFF4E0;border:1px solid #E4B062;border-radius:12px;padding:11px 14px;margin:4px 0 16px}
+ .split-note{display:flex;gap:11px;align-items:center;background:#FDF4E3;border:1px solid #E8C77A;border-radius:var(--radius);padding:11px 14px;margin:4px 0 16px}
  .split-note img{width:44px;height:auto;flex:0 0 auto}
- .split-note p{margin:0;font-size:13px;color:#6A4A18;line-height:1.45}
- @media(prefers-color-scheme:dark){.split-note{background:#3A2E18;border-color:#7A5A22}.split-note p{color:#E7CFA0}}
+ .split-note p{margin:0;font-size:13px;color:#5C4310;line-height:1.45}
 </style></head><body>
 <div class="doc" id="app"></div>
 <script>
