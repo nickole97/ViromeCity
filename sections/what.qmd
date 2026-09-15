@@ -168,68 +168,7 @@ can filter and concentrate. In a biopsy there's nothing to filter. The
 Some remain integrated within their host's genome for part, or even all, of
 their lifecycle.
 
-::::: state-tree
-:::: st-row
-::: st-main
-[state · 1]{.num}
-
-![](../assets/img/what/state-exogenous.svg){fig-alt="A free viral particle outside a cell."}
-
-[state: exogenous]{.badge}
-
-[Exogenous]{.card-title}
-
-A free particle that infects from outside — the classic virion.
-:::
-
-::: st-arrow
-→ [can integrate into the host genome]{.st-note} →
-:::
-
-::: st-main
-[state · 2]{.num}
-
-![](../assets/img/what/state-endogenous.svg){fig-alt="A viral genome integrated into host DNA."}
-
-[state: endogenous]{.badge}
-
-[Endogenous]{.card-title}
-
-Genome written into the host's DNA — inherited or long-resident, not a free
-particle.
-:::
-::::
-
-:::: st-branch
-[endogenous forms, by host]{.st-branch-label}
-
-::: st-chips
-::: chip
-![](../assets/img/what/endogenous-prophage.svg){fig-alt="Prophage integrated in a bacterial genome."}
-
-**Prophages** [bacterial host]{.chip-sub}
-:::
-
-::: chip
-![](../assets/img/what/endogenous-provirus.svg){fig-alt="Provirus in an archaeal genome."}
-
-**Proviruses** [archaeal host]{.chip-sub}
-:::
-
-::: chip
-![](../assets/img/what/endogenous-erv.svg){fig-alt="Endogenous viral element in a eukaryotic genome."}
-
-**EVEs** [eukaryotic host]{.chip-sub}
-
-::: subchips
-[retroviral (ERVs)]{.subchip} [non-retroviral]{.subchip}
-:::
-:::
-:::
-::::
-:::::
-
-[\* This figure is being redrawn.]{.fig-note}
+![How a virus exists: a free particle outside the cell, or a genome written into the host's DNA. The endogenous forms are named by the host they sit in.](../assets/img/what/viral-states.svg){#fig-states .wide fig-alt="Two states side by side. On the left, exogenous: a free viral particle that infects from outside, the classic virion. An arrow marks that it can integrate into the host genome. On the right, endogenous: a genome written into the host's DNA, inherited or long-resident, not a free particle. Below, the endogenous forms by host: prophages in a bacterial host, proviruses in an archaeal host, and EVEs in a eukaryotic host."}
 
 :::
 ::: fivi
