@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Fivi, a bacteriophage capsid">
+  <!-- Fivi's head: the icosahedral capsid seen head-on, silhouette only.
+       Her eyes and mouth are gone on purpose — at 16px they turn to noise, and
+       the hexagon with its facets is what reads as a phage at any size.
+       Colours sampled from assets/img/fivi-happy.png: #482810 outline, and the
+       three yellows of the facets. -->
+  <g stroke="#482810" stroke-width="5" stroke-linejoin="round" stroke-linecap="round">
+    <!-- the capsid, filled pale so the facet lines read against it -->
+    <path d="M32 4 58 19 58 45 32 60 6 45 6 19Z" fill="#f8f0d0"/>
+    <!-- the two lit faces, right side warmer, as in the illustration -->
+    <path d="M32 4 58 19 32 32Z" fill="#f8e090" stroke="none"/>
+    <path d="M58 19 58 45 32 32Z" fill="#f8d068" stroke="none"/>
+    <path d="M58 45 32 60 32 32Z" fill="#f8e098" stroke="none"/>
+    <!-- outline again on top of the fills, so the silhouette stays crisp -->
+    <path d="M32 4 58 19 58 45 32 60 6 45 6 19Z" fill="none"/>
+    <!-- facets: centre to each vertex -->
+    <path d="M32 32 32 4M32 32 58 19M32 32 58 45M32 32 32 60M32 32 6 45M32 32 6 19" fill="none"/>
+  </g>
+</svg>

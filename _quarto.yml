@@ -25,6 +25,10 @@ book:
   subtitle: "Adventures in the human virome"
   author: "Nickole"
   site-url: https://nickole97.github.io/ViromeCity/
+  # Fivi's capsid, silhouette only — see assets/img/favicon.svg for why the face
+  # is not in it. SVG rather than .ico: it stays crisp at every size a browser
+  # asks for, and it is 800 bytes.
+  favicon: assets/img/favicon.svg
   repo-url: https://github.com/nickole97/ViromeCity/
   repo-branch: main
   repo-actions: [edit, issue]
