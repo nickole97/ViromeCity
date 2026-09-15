@@ -4,6 +4,8 @@ title: "How do I recover them?"
 
 [District 4]{.district}
 
+## There is no short answer
+
 ::: block
 From District 1 you know three things about a virus: who it infects, what
 genome it carries, and what state it is in.
@@ -22,16 +24,31 @@ but not standard practice.
 :::
 
 ::: {.question .wide}
-- Does the sequencer need a copy first?
+- Am I looking for DNA, RNA, or both?
 - Should I enrich?
 - Which platform?
 :::
 
-## Does the sequencer need a copy first?
+## Am I looking for DNA, RNA, or both?
 
 ::: block
-Sequencers read double-stranded DNA. Whatever your genome is, it has to get
-there first — and how far it has to travel depends on what it started as.
+Have you ever wondered why the flu vaccine is given every year, while one shot
+of the smallpox vaccine was enough for life? It comes down to how each virus
+copies itself. Most RNA viruses copy without checking their work: mistakes slip
+through, and the virus drifts so fast that within a year your immune system no
+longer recognises it. Most DNA viruses proofread as they go, and stay almost the
+same for decades.
+
+That speed is an advantage for the virus. Mutating fast is what lets it escape a
+body that already knows it. For you it is a different problem: RNA is a fragile
+molecule and it falls apart easily, so catching an RNA virus calls for careful
+handling, and it has to be turned into DNA before it can be sequenced at all.
+:::
+
+::: block
+That is because sequencers read double-stranded DNA. Whatever your genome is,
+it has to get there first, and how far it has to travel depends on what it
+started as.
 
 - [1]{.n} [**RNA** — reverse transcription, RNA to cDNA.]{.t}
 - [2]{.n} [**Single-stranded** — second-strand synthesis.]{.t}
