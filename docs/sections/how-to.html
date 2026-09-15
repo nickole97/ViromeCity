@@ -192,9 +192,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#there-is-no-short-answer" id="toc-there-is-no-short-answer" class="nav-link active" data-scroll-target="#there-is-no-short-answer">There is no short answer</a></li>
   <li><a href="#am-i-looking-for-dna-rna-or-both" id="toc-am-i-looking-for-dna-rna-or-both" class="nav-link" data-scroll-target="#am-i-looking-for-dna-rna-or-both">Am I looking for DNA, RNA, or both?</a></li>
-  <li><a href="#should-i-enrich" id="toc-should-i-enrich" class="nav-link" data-scroll-target="#should-i-enrich">Should I enrich?</a></li>
+  <li><a href="#who-is-it-infecting" id="toc-who-is-it-infecting" class="nav-link" data-scroll-target="#who-is-it-infecting">Who is it infecting?</a></li>
   <li><a href="#when-does-enrichment-cost-more-than-it-gains" id="toc-when-does-enrichment-cost-more-than-it-gains" class="nav-link" data-scroll-target="#when-does-enrichment-cost-more-than-it-gains">When does enrichment cost more than it gains?</a></li>
-  <li><a href="#which-platform" id="toc-which-platform" class="nav-link" data-scroll-target="#which-platform">Which platform?</a></li>
+  <li><a href="#is-my-sample-rich-in-bacteria" id="toc-is-my-sample-rich-in-bacteria" class="nav-link" data-scroll-target="#is-my-sample-rich-in-bacteria">Is my sample rich in bacteria?</a></li>
   </ul>
 <div class="toc-actions"><ul><li><a href="https://github.com/nickole97/ViromeCity/edit/main/sections/how-to.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/nickole97/ViromeCity/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
@@ -224,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 <section id="there-is-no-short-answer" class="level2">
 <h2 class="anchored" data-anchor-id="there-is-no-short-answer">There is no short answer</h2>
 <div class="block">
-<p>From District 1 you know three things about a virus: who it infects, what genome it carries, and what state it is in.</p>
+<p>From the previous districts you know three things: what genome your virus carries, who it infects, and what kind of sample it is hiding in.</p>
 <p><span class="claim">Those three decide how you recover it.</span></p>
 <p>That is what we will explore in this district.</p>
 </div>
@@ -234,8 +234,8 @@ ul.task-list li input[type="checkbox"] {
 <div class="question wide">
 <ul>
 <li>Am I looking for DNA, RNA, or both?</li>
-<li>Should I enrich?</li>
-<li>Which platform?</li>
+<li>Who is it infecting?</li>
+<li>What kind of sample do I have?</li>
 </ul>
 </div>
 </section>
@@ -275,10 +275,11 @@ Figure&nbsp;5.1: Reverse transcription, step by step. The template is RNA; what 
 <p><strong>Two water controls, not one.</strong> Run a blank as the first sample of the batch and another as the last. The first tells you whether a reagent arrived contaminated; the last tells you whether signal moved from tube to tube while you worked. One blank cannot tell those apart, and they have different fixes — a new aliquot in one case, a change in how you handle the bench in the other.</p>
 </div>
 </section>
-<section id="should-i-enrich" class="level2">
-<h2 class="anchored" data-anchor-id="should-i-enrich">Should I enrich?</h2>
+<section id="who-is-it-infecting" class="level2">
+<h2 class="anchored" data-anchor-id="who-is-it-infecting">Who is it infecting?</h2>
 <div class="block">
-<p>Remember the noise problem from District 3: the virus is a sliver under everything else. There is a way to lift that fraction before sequencing — <strong>VLP enrichment</strong>, for virus-like particles.</p>
+<p>Answer this one before you touch a protocol, because it decides whether the main enrichment step in virome work applies to you at all. A virus infecting a human cell is usually out in the open as a free particle. A phage may be out there too, or it may be sitting inside the chromosome of the bacterium it infected, in which case it is not a particle at all.</p>
+<p>Why that matters: remember the noise problem from District 3, where the virus is a sliver under everything else. There is a way to lift that fraction before sequencing, <strong>VLP enrichment</strong>, for virus-like particles.</p>
 <p>The principle is a series of gates, each removing things by a physical property. Filter out cells and debris by size; digest free nucleic acid with nucleases. What survives is encapsidated: a genome inside a protein shell is protected from the enzymes, and everything naked is not.</p>
 <div id="fig-vlp" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Seven panels of a VLP enrichment protocol: chip and weigh frozen stool, homogenise in SM buffer, clarify by centrifugation, filter at 0.45 micrometres, digest with lysozyme and DNase, stop with EDTA, and extract on a MagNA Pure.">
 <figure class="quarto-float quarto-float-fig figure">
@@ -294,6 +295,9 @@ Figure&nbsp;5.2: One VLP protocol, end to end. Volumes, speeds and timings are t
 <div class="fivi">
 <p><img src="../assets/img/fivi-annoyed.png" class="img-fluid" alt="Fivi, annoyed."></p>
 <p><strong>Enrichment does not purify me — it selects for me.</strong> Every gate is a physical property, not a test for “virus”. Some of what passes is not viral, and some of what I am is thrown out with the rest. A VLP prep is a bet on the shape you are chasing.</p>
+</div>
+<div class="methodology">
+<p><strong>An integrated target does not survive it.</strong> A provirus, a prophage or an ERV is not a free particle: it sits inside a host genome, so the filter removes it with the cell and the nuclease digests what is left. If you are looking for integrated viruses, skip VLP and sequence total nucleic acid.</p>
 </div>
 <div class="research">
 <p>There is no standard VLP protocol. Filter pore size, nuclease cocktail, gradient step and extraction chemistry all differ between laboratories, and each choice shifts which particles survive. Two published “viromes” from the same body site may not be comparable if the preps differ — read the methods before you compare composition across studies.</p>
@@ -312,22 +316,25 @@ Figure&nbsp;5.2: One VLP protocol, end to end. Volumes, speeds and timings are t
 <p><a href="../components/enrichment-simulator.html" target="_blank">Open full ↗</a></p>
 </div>
 </div>
-<div class="methodology">
-<p><strong>An integrated target does not survive it.</strong> A provirus, a prophage or an ERV is not a free particle: it sits inside a host genome, so the filter removes it with the cell and the nuclease digests what is left. If you are looking for integrated viruses, skip VLP and sequence total nucleic acid.</p>
+</section>
+<section id="is-my-sample-rich-in-bacteria" class="level2">
+<h2 class="anchored" data-anchor-id="is-my-sample-rich-in-bacteria">Is my sample rich in bacteria?</h2>
+<div class="block">
+<p>You have just seen what enrichment costs. The last question is whether your sample can pay it, and that comes down to how much is living in it. A gram of stool and a millilitre of plasma are not the same starting point: one is dense with material, the other is mostly you.</p>
+<p>Sampling sites sort into four kinds, and the sort is what decides whether VLP applies at all.</p>
+<ul>
+<li><span class="t"><strong>Mucosal</strong></span> <span class="t">gut, mouth, throat, vagina. Colonised and dense, with the bacteria and the phages that live in them. <strong>This is where VLP belongs.</strong></span></li>
+<li><span class="t"><strong>Transitional</strong></span> <span class="t">milk, urine, skin. Secretions, excretions and outer surfaces: some community, much less of it.</span></li>
+<li><span class="t"><strong>Sterile fluids</strong></span> <span class="t">blood, CSF, lung. A community is there to find, but no resident bacteria, so no prophages either, and very little material to start from.</span></li>
+<li><span class="t"><strong>Solid tissue</strong></span> <span class="t">a biopsy. There is nothing to fractionate: no free particles to filter for.</span></li>
+</ul>
+<p>Only the first of those four is a candidate for enrichment.</p>
 </div>
 <div class="methodology">
 <p><strong>Very low biomass does not survive it either.</strong> Blood, CSF and other sparse sites give you little material to begin with, and every gate loses some. Do not filter; sample with great care instead, and carry heavy controls and replicates.</p>
 </div>
-</section>
-<section id="which-platform" class="level2">
-<h2 class="anchored" data-anchor-id="which-platform">Which platform?</h2>
 <div class="block">
-<p>The bench work is done; what is left is the sequencer. That choice is driven by your question, not by your sample.</p>
-<p><strong>Short reads are the default, and for most viromes they are also the right answer.</strong> They cost less, they go deeper for the same money, and every tool in the next district was built for them. If you are asking what is there and how much of it, stop here.</p>
-<p><strong>Long reads earn their cost when the question is structural.</strong> Where a prophage sits in its host chromosome, whether two contigs belong to one genome, what a repeat is hiding — those answers are longer than a short read, so no amount of depth will settle them.</p>
-</div>
-<div class="block">
-<p>Look back at how many forks this district asked you to take: the genome you are chasing, the state it is in, the site it came from, whether to enrich, and now the platform. None of them is decided on its own, and no chapter can decide them for your sample.</p>
+<p>Look back at how many forks this district asked you to take: the genome you are chasing, who it infects and whether it is a particle at all, the sample you have to work with, and whether to enrich it. None of them is decided on its own, and no chapter can decide them for your sample.</p>
 <p>So we built something that takes the details of your experiment and works them through for you.</p>
 </div>
 <div class="launch">
@@ -339,7 +346,7 @@ Figure&nbsp;5.2: One VLP protocol, end to end. Volumes, speeds and timings are t
 </div>
 </div>
 <div class="insight">
-<p>Nothing in this district was decided by the sample alone. The genome decided the chemistry, the state decided the enrichment, and the question decided the platform — the sample only decided how little material you had to work with.</p>
+<p>One fork is left, and it is the one that matters least. Short reads are the default and, for most viromes, the right answer: they cost less, they go deeper for the same money, and every tool in the next district was built for them. Long reads earn their cost only when the question is structural, like where a prophage sits in its host chromosome or whether two contigs belong to one genome.</p>
 </div>
 <div class="fivi">
 <p><img src="../assets/img/fivi-thinking.png" class="img-fluid" alt="Fivi, thinking."></p>

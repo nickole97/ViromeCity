@@ -7,8 +7,8 @@ title: "How do I recover them?"
 ## There is no short answer
 
 ::: block
-From District 1 you know three things about a virus: who it infects, what
-genome it carries, and what state it is in.
+From the previous districts you know three things: what genome your virus
+carries, who it infects, and what kind of sample it is hiding in.
 
 [Those three decide how you recover it.]{.claim}
 
@@ -25,8 +25,8 @@ but not standard practice.
 
 ::: {.question .wide}
 - Am I looking for DNA, RNA, or both?
-- Should I enrich?
-- Which platform?
+- Who is it infecting?
+- What kind of sample do I have?
 :::
 
 ## Am I looking for DNA, RNA, or both?
@@ -89,12 +89,18 @@ you worked. One blank cannot tell those apart, and they have different fixes —
 a new aliquot in one case, a change in how you handle the bench in the other.
 :::
 
-## Should I enrich?
+## Who is it infecting?
 
 ::: block
-Remember the noise problem from District 3: the virus is a sliver under
-everything else. There is a way to lift that fraction before sequencing —
-**VLP enrichment**, for virus-like particles.
+Answer this one before you touch a protocol, because it decides whether the main
+enrichment step in virome work applies to you at all. A virus infecting a human
+cell is usually out in the open as a free particle. A phage may be out there
+too, or it may be sitting inside the chromosome of the bacterium it infected, in
+which case it is not a particle at all.
+
+Why that matters: remember the noise problem from District 3, where the virus is
+a sliver under everything else. There is a way to lift that fraction before
+sequencing, **VLP enrichment**, for virus-like particles.
 
 The principle is a series of gates, each removing things by a physical property.
 Filter out cells and debris by size; digest free nucleic acid with nucleases.
@@ -111,6 +117,13 @@ the enzymes, and everything naked is not.
 property, not a test for "virus". Some of what passes is not viral, and some of
 what I am is thrown out with the rest. A VLP prep is a bet on the shape you are
 chasing.
+:::
+
+::: methodology
+**An integrated target does not survive it.** A provirus, a prophage or an ERV
+is not a free particle: it sits inside a host genome, so the filter removes it
+with the cell and the nuclease digests what is left. If you are looking for
+integrated viruses, skip VLP and sequence total nucleic acid.
 :::
 
 ::: research
@@ -145,11 +158,23 @@ hybridisation. Watch what reaches sequencing.
 :::
 :::
 
-::: methodology
-**An integrated target does not survive it.** A provirus, a prophage or an ERV
-is not a free particle: it sits inside a host genome, so the filter removes it
-with the cell and the nuclease digests what is left. If you are looking for
-integrated viruses, skip VLP and sequence total nucleic acid.
+## Is my sample rich in bacteria?
+
+::: block
+You have just seen what enrichment costs. The last question is whether your
+sample can pay it, and that comes down to how much is living in it. A gram of
+stool and a millilitre of plasma are not the same starting point: one is dense
+with material, the other is mostly you.
+
+Sampling sites sort into four kinds, and the sort is what decides whether VLP
+applies at all.
+
+- [**Mucosal**]{.t} [gut, mouth, throat, vagina. Colonised and dense, with the bacteria and the phages that live in them. **This is where VLP belongs.**]{.t}
+- [**Transitional**]{.t} [milk, urine, skin. Secretions, excretions and outer surfaces: some community, much less of it.]{.t}
+- [**Sterile fluids**]{.t} [blood, CSF, lung. A community is there to find, but no resident bacteria, so no prophages either, and very little material to start from.]{.t}
+- [**Solid tissue**]{.t} [a biopsy. There is nothing to fractionate: no free particles to filter for.]{.t}
+
+Only the first of those four is a candidate for enrichment.
 :::
 
 ::: methodology
@@ -158,28 +183,11 @@ sites give you little material to begin with, and every gate loses some. Do not
 filter; sample with great care instead, and carry heavy controls and replicates.
 :::
 
-## Which platform?
-
-::: block
-The bench work is done; what is left is the sequencer. That choice is driven by
-your question, not by your sample.
-
-**Short reads are the default, and for most viromes they are also the right
-answer.** They cost less, they go deeper for the same money, and every tool in
-the next district was built for them. If you are asking what is there and how
-much of it, stop here.
-
-**Long reads earn their cost when the question is structural.** Where a prophage
-sits in its host chromosome, whether two contigs belong to one genome, what a
-repeat is hiding — those answers are longer than a short read, so no amount of
-depth will settle them.
-:::
-
 ::: block
 Look back at how many forks this district asked you to take: the genome you are
-chasing, the state it is in, the site it came from, whether to enrich, and now
-the platform. None of them is decided on its own, and no chapter can decide them
-for your sample.
+chasing, who it infects and whether it is a particle at all, the sample you have
+to work with, and whether to enrich it. None of them is decided on its own, and
+no chapter can decide them for your sample.
 
 So we built something that takes the details of your experiment and works them
 through for you.
@@ -201,9 +209,11 @@ plan: the steps you need, in what order, and what each one costs you.
 :::
 
 ::: insight
-Nothing in this district was decided by the sample alone. The genome decided the
-chemistry, the state decided the enrichment, and the question decided the
-platform — the sample only decided how little material you had to work with.
+One fork is left, and it is the one that matters least. Short reads are the
+default and, for most viromes, the right answer: they cost less, they go deeper
+for the same money, and every tool in the next district was built for them. Long
+reads earn their cost only when the question is structural, like where a prophage
+sits in its host chromosome or whether two contigs belong to one genome.
 :::
 
 ::: fivi
