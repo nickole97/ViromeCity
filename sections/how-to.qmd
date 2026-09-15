@@ -4,26 +4,21 @@ title: "How do I recover them?"
 
 [District 4]{.district}
 
-## The short answer
-
 ::: block
 From District 1 you know three things about a virus: who it infects, what
 genome it carries, and what state it is in.
 
-[Two of those now decide your molecular biology.]{.claim}
+[Those three decide how you recover it.]{.claim}
 
-The genome type decides whether the sequencer can read it at all. The physical
-state decides whether enrichment will find it or destroy it. Everything in this
-chapter follows from those two.
+That is what we will explore in this district.
 :::
 
 ::: research
-**What this district recommends is what this laboratory does.** Every fork here
-has alternatives, and a protocol that departs from ours for a stated reason is
-not a worse protocol — it is how methods improve. What the district leaves out
-on purpose is the merely possible: routes that work in principle but are not
-standard practice. A guide that lists everything technically achievable stops
-being a guide, and the reader who needed one is the reader it fails.
+**What this district recommends comes from our own experience.** Every fork has
+alternatives, and there may be techniques not described here that suit your
+study better. Use it as a starting point, not a boundary: read further, and ask
+people who have done it. What it leaves out is left out on purpose: possible,
+but not standard practice.
 :::
 
 ::: {.question .wide}
